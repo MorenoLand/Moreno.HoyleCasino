@@ -22,6 +22,7 @@
 extern ApiEnt *wasm_current;
 extern u32 wasm_current_ecx;
 int wasm_peek_event(int *type, int *x, int *y, int *key);
+int wasm_peek_event_ex(int *type, int *x, int *y, int *key, int consume);
 
 static u32 *args;
 
@@ -316,7 +317,7 @@ static u64 user32(u32 *a)
         u32 msg = a[0];
         if (msg) memset((void *)(uintptr_t)msg, 0, 28);
         int type, x, y, key;
-        if (wasm_peek_event(&type, &x, &y, &key)) {
+        if (wasm_peek_event_ex(&type, &x, &y, &key, (int)a[4] & 1)) {
             g_cursor_x = x; g_cursor_y = y;
             if (type == 1) g_keys[1] = 1;
             else if (type == 2) g_keys[1] = 0;

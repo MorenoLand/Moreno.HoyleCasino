@@ -19,13 +19,18 @@ EMSCRIPTEN_KEEPALIVE void wasm_input(int type, int x, int y, int key)
 
 EMSCRIPTEN_KEEPALIVE void wasm_start(void) {}
 
-int wasm_peek_event(int *type, int *x, int *y, int *key)
+int wasm_peek_event_ex(int *type, int *x, int *y, int *key, int consume)
 {
     if (tail == head) return 0;
     *type = queue[tail].type;
     *x = queue[tail].x;
     *y = queue[tail].y;
     *key = queue[tail].key;
-    tail = (tail + 1) & 255;
+    if (consume) tail = (tail + 1) & 255;
     return 1;
+}
+
+int wasm_peek_event(int *type, int *x, int *y, int *key)
+{
+    return wasm_peek_event_ex(type, x, y, key, 1);
 }

@@ -169,6 +169,12 @@ static const char *wasm_path(const char *p)
         const char *rest = p + 20;
         snprintf(fcmap, sizeof fcmap, "/data/FaceCreator%s", rest);
         for (char *q = fcmap; *q; ++q) if (*q == '\\') *q = '/';
+        char *dot = strrchr(fcmap, '.');
+        if (dot && (!strcasecmp(dot, ".prf") || !strcasecmp(dot, ".fac") || !strcasecmp(dot, ".voc"))) {
+            dot[1] = (char)toupper((unsigned char)dot[1]);
+            dot[2] = (char)toupper((unsigned char)dot[2]);
+            dot[3] = (char)toupper((unsigned char)dot[3]);
+        }
         return fcmap;
     }
     if (!rooted && (p[0] == '/' || p[0] == '\\')) snprintf(raw, sizeof raw, "%s", p);

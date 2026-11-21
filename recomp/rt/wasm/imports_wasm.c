@@ -9,6 +9,7 @@
 #include "windows_wasm.h"
 #include <emscripten.h>
 #include <ctype.h>
+#include <dirent.h>
 #include <errno.h>
 #include <math.h>
 #include <stdarg.h>
@@ -138,6 +139,23 @@ static int wasm_vformat(char *dst, const char *fmt, const u32 *v, int nv)
     return o;
 }
 
+static char g_cwd[900] = "/data";
+
+static int path_is_rel(const char *p)
+{
+    return p && p[0] && p[0] != '/' && p[0] != '\\' && !(p[0] && p[1] == ':') &&
+           strncmp(p, "C:/game", 7) && strncmp(p, "C:\\game", 7) &&
+           strncmp(p, "..\\Hoyle FaceCreator", 20) && strncmp(p, "../Hoyle FaceCreator", 20);
+}
+
+static const char *path_fallback(const char *p, char *buf, size_t n)
+{
+    if (!path_is_rel(p)) return NULL;
+    snprintf(buf, n, "/data/%s", p);
+    for (char *q = buf; *q; ++q) if (*q == '\\') *q = '/';
+    return buf;
+}
+
 static const char *wasm_path(const char *p)
 {
     static char raw[1024], buf[1024];
@@ -146,9 +164,16 @@ static const char *wasm_path(const char *p)
     if (!strncmp(p, "C:/game", 7) || !strncmp(p, "c:/game", 7) ||
         !strncmp(p, "C:\\game", 7) || !strncmp(p, "c:\\game", 7)) { p += 7; rooted = 1; }
     if (rooted) while (*p == '/' || *p == '\\') ++p;
+    if (!strncmp(p, "..\\Hoyle FaceCreator", 20) || !strncmp(p, "../Hoyle FaceCreator", 20)) {
+        static char fcmap[1024];
+        const char *rest = p + 20;
+        snprintf(fcmap, sizeof fcmap, "/data/FaceCreator%s", rest);
+        for (char *q = fcmap; *q; ++q) if (*q == '\\') *q = '/';
+        return fcmap;
+    }
     if (!rooted && (p[0] == '/' || p[0] == '\\')) snprintf(raw, sizeof raw, "%s", p);
     else if (!rooted && p[0] && p[1] == ':') snprintf(raw, sizeof raw, "%s", p);
-    else snprintf(raw, sizeof raw, "/data/%s", p);
+    else snprintf(raw, sizeof raw, "%s/%s", g_cwd, p);
     size_t o = 0;
     for (size_t i = 0; raw[i] && o + 1 < sizeof buf; ++i) buf[o++] = raw[i] == '\\' ? '/' : raw[i];
     buf[o] = 0;
@@ -208,13 +233,18 @@ static u64 kernel32(u32 *a)
     }
     if (!strcmp(n, "GetFileAttributesA")) {
         FILE *f = fopen(wasm_path((const char *)(uintptr_t)a[0]), "rb");
+        char alt[1024];
+        if (!f && path_fallback((const char *)(uintptr_t)a[0], alt, sizeof alt)) f = fopen(alt, "rb");
         if (!f) { g_last_error = 2; return 0xFFFFFFFFu; }
         fclose(f); return 0x20; /* FILE_ATTRIBUTE_ARCHIVE */
     }
     if (!strcmp(n, "CreateFileA")) {
-        const char *p = wasm_path((const char *)(uintptr_t)a[0]);
+        const char *gp = (const char *)(uintptr_t)a[0];
+        const char *p = wasm_path(gp);
         const char *mode = (a[1] & 0x40000000u) ? "wb" : ((a[1] & 0x80000000u) ? "rb" : "rb");
         FILE *f = fopen(p, mode);
+        char alt[1024];
+        if (!f && path_fallback(gp, alt, sizeof alt)) f = fopen(alt, mode);
         if (!f) { g_last_error = 2; return 0xFFFFFFFFu; }
         return (u32)(uintptr_t)f;
     }
@@ -254,7 +284,7 @@ static u64 kernel32(u32 *a)
 }
 
 /* ---------- USER32 ---------- */
-typedef struct { u32 hwnd, proc, wl[32]; } WasmWnd;
+typedef struct { u32 hwnd, proc, wl[32]; int x, y, w, h; } WasmWnd;
 static WasmWnd g_wnds[16];
 static int g_wndn;
 static struct { char name[64]; u32 proc; } g_classes[16];
@@ -273,7 +303,7 @@ static u64 user32(u32 *a)
             u32 proc = R32(a[0] + 4);
             const char *cn = (const char *)(uintptr_t)R32(a[0] + 36);
             if (cn && g_classn < 16) { snprintf(g_classes[g_classn].name, 64, "%s", cn); g_classes[g_classn].proc = proc; ++g_classn; }
-            if (!g_wndproc) g_wndproc = proc;
+            g_wndproc = proc;
         }
         return 1;
     }
@@ -281,7 +311,21 @@ static u64 user32(u32 *a)
         const char *cn = (const char *)(uintptr_t)a[1];
         u32 proc = cn ? class_proc(cn) : 0;
         u32 hwnd = g_hwnd_next++;
-        if (g_wndn < 16) { WasmWnd *w = &g_wnds[g_wndn++]; w->hwnd = hwnd; w->proc = proc; memset(w->wl, 0, sizeof w->wl); }
+        int wx = (int)a[4], wy = (int)a[5], ww = (int)a[6], wh = (int)a[7];
+        if (wx == (int)0x80000000) wx = 0;
+        if (wy == (int)0x80000000) wy = 0;
+        if (ww <= 0) ww = (int)g_dd_w;
+        if (wh <= 0) wh = (int)g_dd_h;
+        if (g_wndn < 16) { WasmWnd *w = &g_wnds[g_wndn++]; w->hwnd = hwnd; w->proc = proc; w->x = wx; w->y = wy; w->w = ww; w->h = wh; memset(w->wl, 0, sizeof w->wl); }
+        if (g_have_main && proc) {
+            u32 cs[12];
+            cs[0] = a[11]; cs[1] = a[10]; cs[2] = a[9]; cs[3] = a[8];
+            cs[4] = a[7]; cs[5] = a[6]; cs[6] = a[5]; cs[7] = a[4];
+            cs[8] = a[3]; cs[9] = a[2]; cs[10] = a[1]; cs[11] = a[0];
+            u32 m[4] = { hwnd, 0x0001, 0, (u32)(uintptr_t)cs };
+            rt_guest_callback(proc, 4, m);
+        }
+        if (g_have_main && a[11]) { WasmWnd *w = wnd_find(hwnd); if (w) w->wl[0] = a[11]; }
         if (!g_have_main) {
             g_have_main = 1; g_hwnd = hwnd;
             g_main_obj = a[11];
@@ -325,12 +369,20 @@ static u64 user32(u32 *a)
         if (wasm_peek_event_ex(&type, &x, &y, &key, (int)a[4] & 1)) {
             g_cursor_x = x; g_cursor_y = y;
             if (g_main_obj && !g_linked) { g_linked = 1; g_wnds[0].wl[0] = g_main_obj; W32(g_main_obj + 0x8cu, g_hwnd); }
+            u32 target = g_hwnd;
+            if (type <= 2) {
+                for (int i = g_wndn - 1; i >= 0; --i) {
+                    WasmWnd *w = &g_wnds[i];
+                    if (w->hwnd && x >= w->x && x < w->x + w->w && y >= w->y && y < w->y + w->h) { target = w->hwnd; break; }
+                }
+            }
             if (type == 1) g_keys[1] = 1;
             else if (type == 2) g_keys[1] = 0;
             else if (type == 3) g_keys[key & 0xff] = 1;
             else if (type == 4) g_keys[key & 0xff] = 0;
             if (msg) {
                 u32 m = 0x0200, wp = 0;
+                if (type == 0) wp = g_keys[1] ? 1u : 0;
                 if (type == 1) { m = 0x0201; wp = 1; }
                 else if (type == 2) m = 0x0202;
                 else if (type == 3) { m = 0x0100; wp = (u32)key; }
@@ -614,6 +666,68 @@ static u32 wasm_rtdynamiccast(void *inptr, u32 vfdelta, u32 S, u32 T, int is_ref
     return 0;
 }
 
+static int wild_match(const char *pat, const char *name)
+{
+    const char *star = NULL, *mark = NULL;
+    while (*name) {
+        if (*pat == '?' || tolower((unsigned char)*pat) == tolower((unsigned char)*name)) { ++pat; ++name; }
+        else if (*pat == '*') { star = pat++; mark = name; }
+        else if (star) { pat = star + 1; name = ++mark; }
+        else return 0;
+    }
+    while (*pat == '*') ++pat;
+    return *pat == 0;
+}
+
+typedef struct { DIR *d; char dir[900]; char pat[260]; } FindIt;
+static FindIt g_find[8];
+
+static int find_fill(int slot, u32 info)
+{
+    FindIt *f = &g_find[slot];
+    struct dirent *e;
+    while ((e = readdir(f->d))) {
+        if (!strcmp(e->d_name, ".") || !strcmp(e->d_name, "..")) continue;
+        if (!wild_match(f->pat, e->d_name)) continue;
+        char full[1200];
+        snprintf(full, sizeof full, "%s/%s", f->dir, e->d_name);
+        struct stat st;
+        int ok = stat(wasm_path(full), &st) == 0;
+        memset((void *)(uintptr_t)info, 0, 296);
+        W32(info, ok ? (S_ISDIR(st.st_mode) ? 0x10u : 0x20u) : 0x20u);
+        W32(info + 32, ok ? (u32)st.st_size : 0);
+        snprintf((char *)(uintptr_t)(info + 36), 260, "%s", e->d_name);
+        return 1;
+    }
+    return 0;
+}
+
+static u32 find_first(const char *spec, u32 info)
+{
+    char dir[900];
+    const char *pat = spec;
+    const char *bs = strrchr(spec, '\\'), *fs = strrchr(spec, '/');
+    if (fs > bs) bs = fs;
+    if (bs) { size_t l = (size_t)(bs - spec); if (l >= sizeof dir) l = sizeof dir - 1; memcpy(dir, spec, l); dir[l] = 0; pat = bs + 1; }
+    else strcpy(dir, ".");
+    DIR *d = opendir(wasm_path(dir));
+    if (!d && path_is_rel(dir)) {
+        char alt[1024];
+        if (path_fallback(dir, alt, sizeof alt)) d = opendir(alt);
+    }
+    if (!d) { g_last_error = 2; return 0xFFFFFFFFu; }
+    int slot = -1;
+    for (int i = 0; i < 8; ++i) if (!g_find[i].d) { slot = i; break; }
+    if (slot < 0) { closedir(d); return 0xFFFFFFFFu; }
+    g_find[slot].d = d;
+    snprintf(g_find[slot].dir, sizeof g_find[slot].dir, "%s", dir);
+    snprintf(g_find[slot].pat, sizeof g_find[slot].pat, "%s", pat);
+    if (find_fill(slot, info)) return (u32)slot + 1;
+    closedir(d);
+    g_find[slot].d = NULL;
+    return 0xFFFFFFFFu;
+}
+
 static u64 msvcr80(u32 *a)
 {
     const char *n = wasm_current->name;
@@ -659,7 +773,14 @@ static u64 msvcr80(u32 *a)
     }
     if (S("sprintf")) { wasm_vformat((char *)(uintptr_t)a[0], (const char *)(uintptr_t)a[1], a + 2, 16); return (u32)strlen((char *)(uintptr_t)a[0]); }
     if (S("vsprintf")) { wasm_vformat((char *)(uintptr_t)a[0], (const char *)(uintptr_t)a[1], (const u32 *)(uintptr_t)a[2], 16); return (u32)strlen((char *)(uintptr_t)a[0]); }
-    if (S("fopen")) { const char *path = wasm_path((const char *)(uintptr_t)a[0]); FILE *f = fopen(path, (const char *)(uintptr_t)a[1]); return (u32)(uintptr_t)f; }
+    if (S("fopen")) {
+        const char *gp = (const char *)(uintptr_t)a[0];
+        const char *path = wasm_path(gp);
+        FILE *f = fopen(path, (const char *)(uintptr_t)a[1]);
+        char alt[1024];
+        if (!f && path_fallback(gp, alt, sizeof alt)) f = fopen(alt, (const char *)(uintptr_t)a[1]);
+        return (u32)(uintptr_t)f;
+    }
     if (S("fclose")) return (u32)fclose((FILE *)(uintptr_t)a[0]);
     if (S("fread")) return (u32)fread((void *)(uintptr_t)a[0], a[1], a[2], (FILE *)(uintptr_t)a[3]);    if (S("fwrite")) return (u32)fwrite((const void *)(uintptr_t)a[0], a[1], a[2], (FILE *)(uintptr_t)a[3]);
     if (S("fseek")) return (u32)fseek((FILE *)(uintptr_t)a[0], (long)(int)a[1], (int)a[2]);
@@ -683,14 +804,28 @@ static u64 msvcr80(u32 *a)
     if (S("fflush")) return (u32)fflush((FILE *)(uintptr_t)a[0]);
     if (S("_mkdir")) return (u32)mkdir(wasm_path((const char *)(uintptr_t)a[0]), 0777);
     if (S("_rmdir")) return (u32)rmdir(wasm_path((const char *)(uintptr_t)a[0]));
-    if (S("_chdir")) return (u32)chdir(wasm_path((const char *)(uintptr_t)a[0]));
+    if (S("_chdir")) {
+        char p[1024];
+        snprintf(p, sizeof p, "%s", wasm_path((const char *)(uintptr_t)a[0]));
+        int r = chdir(p);
+        if (r == 0) snprintf(g_cwd, sizeof g_cwd, "%s", p);
+        return (u32)r;
+    }
     if (S("remove")) return (u32)remove(wasm_path((const char *)(uintptr_t)a[0]));
     if (S("rename")) return (u32)rename(wasm_path((const char *)(uintptr_t)a[0]), wasm_path((const char *)(uintptr_t)a[1]));
     if (S("_lock") || S("_unlock")) return 0;
     if (S("_strdate")) { strcpy((char *)(uintptr_t)a[0], "01/01/00"); return 0; }
-    if (S("_findfirst64i32")) return 0xFFFFFFFFu;
-    if (S("_findnext64i32")) return 0xFFFFFFFFu;
-    if (S("_findclose")) return 0;
+    if (S("_findfirst64i32")) return find_first((const char *)(uintptr_t)a[0], a[1]);
+    if (S("_findnext64i32")) {
+        int slot = (int)a[0] - 1;
+        if (slot < 0 || slot >= 8 || !g_find[slot].d) return 0xFFFFFFFFu;
+        return find_fill(slot, a[1]) ? 0 : 0xFFFFFFFFu;
+    }
+    if (S("_findclose")) {
+        int slot = (int)a[0] - 1;
+        if (slot >= 0 && slot < 8 && g_find[slot].d) { closedir(g_find[slot].d); g_find[slot].d = NULL; }
+        return 0;
+    }
     if (S("_time64")) {
         uint64_t t = (uint64_t)time(NULL);
         if (a[0]) { W32(a[0], (u32)t); W32(a[0] + 4, (u32)(t >> 32)); }
@@ -713,7 +848,11 @@ static u64 msvcr80(u32 *a)
     if (S("strftime")) return (u32)strftime((char *)(uintptr_t)a[0], a[1], (const char *)(uintptr_t)a[2], (const struct tm *)(uintptr_t)a[3]);
     if (S("_stat64i32")) {
         struct stat st;
-        if (!a[1] || stat(wasm_path((const char *)(uintptr_t)a[0]), &st) != 0) return 0xFFFFFFFFu;
+        const char *gp = (const char *)(uintptr_t)a[0];
+        int ok = a[1] && stat(wasm_path(gp), &st) == 0;
+        char alt[1024];
+        if (!ok && a[1] && path_fallback(gp, alt, sizeof alt) && stat(alt, &st) == 0) ok = 1;
+        if (!ok) return 0xFFFFFFFFu;
         u32 out = a[1];
         memset((void *)(uintptr_t)out, 0, 56);
         W16(out + 6, st.st_mode); W16(out + 8, 1); W32(out + 16, 0);
@@ -737,7 +876,7 @@ static u64 msvcr80(u32 *a)
     if (S("_onexit")) return a[0];
     if (S("__getmainargs")) {
         if (a[0]) W32(a[0], 1);
-        if (a[1]) { u32 argv = (u32)(uintptr_t)malloc(8); W32(argv, (u32)(uintptr_t)"hoyle.exe"); W32(argv + 4, 0); W32(a[1], argv); }
+        if (a[1]) { u32 argv = (u32)(uintptr_t)malloc(8); W32(argv, (u32)(uintptr_t)"HoyleCasino.exe"); W32(argv + 4, 0); W32(a[1], argv); }
         if (a[2]) W32(a[2], 0);
         return 0;
     }

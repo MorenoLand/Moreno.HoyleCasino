@@ -7,6 +7,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <sys/stat.h>
 
 int rt_load_image(const char *path);
 extern const ApiStatic api_static[];
@@ -29,14 +30,15 @@ int main(void)
         return 77;
     }
     gil_init();
-    snprintf(rt_guest_exe, sizeof rt_guest_exe, "C:\\game\\Hoyle Casino Classic.exe");
+    snprintf(rt_guest_exe, sizeof rt_guest_exe, "C:\\game\\HoyleCasino.exe");
+    mkdir("/data/Hoyle Casino", 0777);
 
     for (int i = 0; i < api_static_n; ++i) {
         const ApiStatic *s = &api_static[i];
         if (!strcmp(s->name, "_acmdln")) {
             char *text = (char *)malloc(32);
             u32 cell = (u32)(uintptr_t)malloc(4);
-            strcpy(text, "hoyle.exe");
+            strcpy(text, "HoyleCasino.exe");
             W32(cell, (u32)(uintptr_t)text);
             W32(s->ea, cell);
             continue;

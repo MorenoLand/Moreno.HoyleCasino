@@ -66,6 +66,8 @@ static int g_cursor_x = 320, g_cursor_y = 240;
 static u32 g_dd_w = 640, g_dd_h = 480, g_dd_bpp = 32;
 static u32 g_wl[32];
 static unsigned char g_keys[256];
+static u32 g_main_obj;
+static int g_linked;
 
 static void write_u32(u32 p, u32 v) { if (p) W32(p, v); }
 static void write_rect(u32 p, int l, int t, int r, int b)
@@ -280,7 +282,10 @@ static u64 user32(u32 *a)
         u32 proc = cn ? class_proc(cn) : 0;
         u32 hwnd = g_hwnd_next++;
         if (g_wndn < 16) { WasmWnd *w = &g_wnds[g_wndn++]; w->hwnd = hwnd; w->proc = proc; memset(w->wl, 0, sizeof w->wl); }
-        if (!g_have_main) { g_have_main = 1; g_hwnd = hwnd; }
+        if (!g_have_main) {
+            g_have_main = 1; g_hwnd = hwnd;
+            g_main_obj = a[11];
+        }
         return hwnd;
     }
     if (!strcmp(n, "DestroyWindow")) { WasmWnd *w = wnd_find(a[0]); if (w) w->hwnd = 0; return 1; }
@@ -319,6 +324,7 @@ static u64 user32(u32 *a)
         int type, x, y, key;
         if (wasm_peek_event_ex(&type, &x, &y, &key, (int)a[4] & 1)) {
             g_cursor_x = x; g_cursor_y = y;
+            if (g_main_obj && !g_linked) { g_linked = 1; g_wnds[0].wl[0] = g_main_obj; W32(g_main_obj + 0x8cu, g_hwnd); }
             if (type == 1) g_keys[1] = 1;
             else if (type == 2) g_keys[1] = 0;
             else if (type == 3) g_keys[key & 0xff] = 1;

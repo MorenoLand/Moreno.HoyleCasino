@@ -10,6 +10,7 @@
 #include <fcntl.h>
 #endif
 #include <setjmp.h>
+extern int rt_trace;
 
 /* ---- operating-system services (sys.h) ---- */
 #if defined(_WIN32)
@@ -39,7 +40,7 @@ int rt_readable(u32 addr, u32 n)
 {
     return !IsBadReadPtr((void *)(uintptr_t)addr, n);
 }
-#else
+#elif !defined(__EMSCRIPTEN__)
 int rt_sys_map_fixed(u32 addr, u32 size)
 {
 #ifdef MAP_FIXED_NOREPLACE
@@ -177,10 +178,10 @@ void call_ind(u32 target)
         }
         *slot = e;
     }
+    if (rt_trace) fprintf(stderr, "[call] %08x\n", target);
     e->fn();
 }
-
-/* map the sections of the original image at their own addresses and copy the raw bytes */
+#if !defined(__EMSCRIPTEN__)
 extern const unsigned char rt_image_blob[] __attribute__((weak));     /* the original exe, embedded by scripts/build.sh */
 extern const unsigned int rt_image_size __attribute__((weak));
 int rt_load_image(const char *path)
@@ -243,6 +244,7 @@ int rt_load_image(const char *path)
     free(d);
     return 1;
 }
+#endif
 
 double fx_rint_mx(double v)
 {
@@ -254,6 +256,16 @@ double fx_rint_mx(double v)
     }
 }
 
+#if defined(__EMSCRIPTEN__)
+u32 rt_eflags_extra;
+int rt_df;
+void rt_cpuid(u32 leaf, u32 sub, u32 *a, u32 *b, u32 *c, u32 *d)
+{
+    (void)leaf; (void)sub;
+    *a = *b = *c = *d = 0;
+}
+u64 rt_rdtsc(void) { return 0; }
+#else
 #include <cpuid.h>
 u32 rt_eflags_extra;
 int rt_df;
@@ -262,6 +274,7 @@ void rt_cpuid(u32 leaf, u32 sub, u32 *a, u32 *b, u32 *c, u32 *d)
     __cpuid_count(leaf, sub, *a, *b, *c, *d);
 }
 u64 rt_rdtsc(void) { return __builtin_ia32_rdtsc(); }
+#endif
 
 u32 rt_watch_lo, rt_watch_hi;
 void rt_watch_hit(u32 addr, u32 value, const char *fn)

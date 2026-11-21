@@ -153,6 +153,7 @@ static const char *path_fallback(const char *p, char *buf, size_t n)
     if (!path_is_rel(p)) return NULL;
     snprintf(buf, n, "/data/%s", p);
     for (char *q = buf; *q; ++q) if (*q == '\\') *q = '/';
+    for (char *q = buf; *q; ++q) if (!strncasecmp(q, "streams", 7)) memcpy(q, "Streams", 7);
     return buf;
 }
 
@@ -164,6 +165,18 @@ static const char *wasm_path(const char *p)
     if (!strncmp(p, "C:/game", 7) || !strncmp(p, "c:/game", 7) ||
         !strncmp(p, "C:\\game", 7) || !strncmp(p, "c:\\game", 7)) { p += 7; rooted = 1; }
     if (rooted) while (*p == '/' || *p == '\\') ++p;
+    {
+        static char sfix[1024];
+        for (const char *s = p; *s; ++s) {
+            if (!strncasecmp(s, "streams", 7)) {
+                size_t off = (size_t)(s - p);
+                snprintf(sfix, sizeof sfix, "%s", p);
+                if (off + 7 < sizeof sfix) memcpy(sfix + off, "Streams", 7);
+                p = sfix;
+                break;
+            }
+        }
+    }
     if (!strncmp(p, "..\\Hoyle FaceCreator", 20) || !strncmp(p, "../Hoyle FaceCreator", 20)) {
         static char fcmap[1024];
         const char *rest = p + 20;

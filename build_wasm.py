@@ -46,7 +46,7 @@ def compile_one(src):
     obj.parent.mkdir(parents=True, exist_ok=True)
     if not needs_compile(src):
         return src, obj, 0, ""
-    cmd = [str(EMCC), "-c", "-O1", "-g", "-DRT_PROFILE", "-w",
+    cmd = [str(EMCC), "-c", "-O1", "-g", "-w",
            "-I" + str(ROOT / "recomp" / "rt"),
            "-I" + str(ROOT / "recomp" / "rt" / "wasm"),
            "-I" + str(ROOT / "recomp" / "data"),

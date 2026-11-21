@@ -619,8 +619,7 @@ static u64 msvcr80(u32 *a)
     if (S("vsprintf")) { wasm_vformat((char *)(uintptr_t)a[0], (const char *)(uintptr_t)a[1], (const u32 *)(uintptr_t)a[2], 16); return (u32)strlen((char *)(uintptr_t)a[0]); }
     if (S("fopen")) { const char *path = wasm_path((const char *)(uintptr_t)a[0]); FILE *f = fopen(path, (const char *)(uintptr_t)a[1]); return (u32)(uintptr_t)f; }
     if (S("fclose")) return (u32)fclose((FILE *)(uintptr_t)a[0]);
-    if (S("fread")) return (u32)fread((void *)(uintptr_t)a[0], a[1], a[2], (FILE *)(uintptr_t)a[3]);
-    if (S("fwrite")) return (u32)fwrite((const void *)(uintptr_t)a[0], a[1], a[2], (FILE *)(uintptr_t)a[3]);
+    if (S("fread")) return (u32)fread((void *)(uintptr_t)a[0], a[1], a[2], (FILE *)(uintptr_t)a[3]);    if (S("fwrite")) return (u32)fwrite((const void *)(uintptr_t)a[0], a[1], a[2], (FILE *)(uintptr_t)a[3]);
     if (S("fseek")) return (u32)fseek((FILE *)(uintptr_t)a[0], (long)(int)a[1], (int)a[2]);
     if (S("fgetpos")) {
         long p = ftell((FILE *)(uintptr_t)a[0]);
@@ -709,7 +708,7 @@ static u64 msvcr80(u32 *a)
     if (S("_amsg_exit")) { fprintf(stderr, "wasm: _amsg_exit(%d)\n", (int)a[0]); abort(); }
     if (S("_ismbblead")) return 0;
     if (S("_mbsinc")) return a[0] + 1;
-    if (S("_mbsdec")) return a[0] - 1;
+    if (S("_mbsdec")) return a[1] > a[0] ? a[1] - 1 : a[0];
     if (S("_mbsnextc")) return (u32)(u8)R8(a[0]);
     if (S("_splitpath")) {
         const char *path = (const char *)(uintptr_t)a[0];

@@ -64,6 +64,7 @@ static int g_painted;
 static int g_cursor_x = 320, g_cursor_y = 240;
 static u32 g_dd_w = 640, g_dd_h = 480, g_dd_bpp = 32;
 static u32 g_wl[32];
+static unsigned char g_keys[256];
 
 static void write_u32(u32 p, u32 v) { if (p) W32(p, v); }
 static void write_rect(u32 p, int l, int t, int r, int b)
@@ -250,12 +251,38 @@ static u64 kernel32(u32 *a)
 }
 
 /* ---------- USER32 ---------- */
+typedef struct { u32 hwnd, proc, wl[32]; } WasmWnd;
+static WasmWnd g_wnds[16];
+static int g_wndn;
+static struct { char name[64]; u32 proc; } g_classes[16];
+static int g_classn;
+static u32 g_hwnd_next = 0x1000;
+static int g_have_main;
+
+static WasmWnd *wnd_find(u32 h) { for (int i = 0; i < g_wndn; ++i) if (g_wnds[i].hwnd == h) return &g_wnds[i]; return NULL; }
+static u32 class_proc(const char *name) { for (int i = 0; i < g_classn; ++i) if (!strcmp(g_classes[i].name, name)) return g_classes[i].proc; return 0; }
+
 static u64 user32(u32 *a)
 {
     const char *n = wasm_current->name;
-    if (!strcmp(n, "RegisterClassA")) { g_wndproc = a[0] ? R32(a[0] + 4) : 0; return 1; }
-    if (!strcmp(n, "CreateWindowExA")) { return g_hwnd; }
-    if (!strcmp(n, "DestroyWindow")) return 1;
+    if (!strcmp(n, "RegisterClassA")) {
+        if (a[0]) {
+            u32 proc = R32(a[0] + 4);
+            const char *cn = (const char *)(uintptr_t)R32(a[0] + 36);
+            if (cn && g_classn < 16) { snprintf(g_classes[g_classn].name, 64, "%s", cn); g_classes[g_classn].proc = proc; ++g_classn; }
+            if (!g_wndproc) g_wndproc = proc;
+        }
+        return 1;
+    }
+    if (!strcmp(n, "CreateWindowExA")) {
+        const char *cn = (const char *)(uintptr_t)a[1];
+        u32 proc = cn ? class_proc(cn) : 0;
+        u32 hwnd = g_hwnd_next++;
+        if (g_wndn < 16) { WasmWnd *w = &g_wnds[g_wndn++]; w->hwnd = hwnd; w->proc = proc; memset(w->wl, 0, sizeof w->wl); }
+        if (!g_have_main) { g_have_main = 1; g_hwnd = hwnd; }
+        return hwnd;
+    }
+    if (!strcmp(n, "DestroyWindow")) { WasmWnd *w = wnd_find(a[0]); if (w) w->hwnd = 0; return 1; }
     if (!strcmp(n, "ShowWindow")) return 1;
     if (!strcmp(n, "GetClientRect") || !strcmp(n, "GetWindowRect")) { write_rect(a[1] ? a[1] : a[0], 0, 0, (int)g_dd_w, (int)g_dd_h); return 1; }
     if (!strcmp(n, "MoveWindow") || !strcmp(n, "SetWindowTextA") || !strcmp(n, "InvalidateRect")) return 1;
@@ -268,9 +295,9 @@ static u64 user32(u32 *a)
     if (!strcmp(n, "SetForegroundWindow") || !strcmp(n, "SetCapture") || !strcmp(n, "ReleaseCapture")) return 1;
     if (!strcmp(n, "GetSystemMetrics")) { if (a[0] == 0) return g_dd_w; if (a[0] == 1) return g_dd_h; return 0; }
     if (!strcmp(n, "LoadIconA") || !strcmp(n, "LoadCursorA")) return 0x3000;
-    if (!strcmp(n, "SetWindowLongA")) { int idx = (int)a[1] / 4; if (idx >= 0 && idx < 32) { u32 old = g_wl[idx]; g_wl[idx] = a[2]; return old; } return 0; }
-    if (!strcmp(n, "GetWindowLongA")) { int idx = (int)a[1] / 4; return (idx >= 0 && idx < 32) ? g_wl[idx] : 0; }
-    if (!strcmp(n, "GetAsyncKeyState")) return 0;
+    if (!strcmp(n, "SetWindowLongA")) { WasmWnd *w = wnd_find(a[0]); u32 *wl = w ? w->wl : g_wl; int idx = (int)a[1] / 4; if (idx >= 0 && idx < 32) { u32 old = wl[idx]; wl[idx] = a[2]; return old; } return 0; }
+    if (!strcmp(n, "GetWindowLongA")) { WasmWnd *w = wnd_find(a[0]); u32 *wl = w ? w->wl : g_wl; int idx = (int)a[1] / 4; return (idx >= 0 && idx < 32) ? wl[idx] : 0; }
+    if (!strcmp(n, "GetAsyncKeyState")) return g_keys[a[0] & 0xff] ? 0x8001u : 0;
     if (!strcmp(n, "GetCursorPos")) { if (a[0]) { W32(a[0], (u32)g_cursor_x); W32(a[0] + 4, (u32)g_cursor_y); } return 1; }
     if (!strcmp(n, "SetCursorPos")) { g_cursor_x = (int)a[0]; g_cursor_y = (int)a[1]; return 1; }
     if (!strcmp(n, "ScreenToClient") || !strcmp(n, "ClientToScreen")) return 1;
@@ -291,6 +318,10 @@ static u64 user32(u32 *a)
         int type, x, y, key;
         if (wasm_peek_event(&type, &x, &y, &key)) {
             g_cursor_x = x; g_cursor_y = y;
+            if (type == 1) g_keys[1] = 1;
+            else if (type == 2) g_keys[1] = 0;
+            else if (type == 3) g_keys[key & 0xff] = 1;
+            else if (type == 4) g_keys[key & 0xff] = 0;
             if (msg) {
                 u32 m = 0x0200, wp = 0;
                 if (type == 1) { m = 0x0201; wp = 1; }
@@ -317,11 +348,15 @@ static u64 user32(u32 *a)
         u32 msg = a[0];
         if (!strcmp(n, "SendMessageA")) {
             u32 cargs[4] = { a[0], a[1], a[2], a[3] };
-            return g_wndproc ? rt_guest_callback(g_wndproc, 4, cargs) : 0;
+            WasmWnd *w = wnd_find(a[0]);
+            u32 proc = w ? w->proc : g_wndproc;
+            return proc ? rt_guest_callback(proc, 4, cargs) : 0;
         }
         if (!msg) return 0;
         u32 cargs[4] = { R32(msg), R32(msg + 4), R32(msg + 8), R32(msg + 12) };
-        return g_wndproc ? rt_guest_callback(g_wndproc, 4, cargs) : 0;
+        WasmWnd *w = wnd_find(cargs[0]);
+        u32 proc = w ? w->proc : g_wndproc;
+        return proc ? rt_guest_callback(proc, 4, cargs) : 0;
     }
     if (!strcmp(n, "DefWindowProcA")) return 0;
     if (!strcmp(n, "OffsetRect")) { if (a[0]) { W32(a[0], R32(a[0]) + a[1]); W32(a[0] + 4, R32(a[0] + 4) + a[2]); W32(a[0] + 8, R32(a[0] + 8) + a[1]); W32(a[0] + 12, R32(a[0] + 12) + a[2]); } return 0; }

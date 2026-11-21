@@ -1,0 +1,13 @@
+; FUN_005df150  005df150
+005df150  PUSH EBP
+005df151  MOV EBP,ESP
+005df153  PUSH ECX
+005df154  MOV dword ptr [EBP + -0x4],ECX
+005df157  MOV EAX,dword ptr [EBP + -0x4]
+005df15a  MOV EDX,dword ptr [EAX]
+005df15c  MOV ECX,dword ptr [EBP + -0x4]
+005df15f  MOV EAX,dword ptr [EDX + 0x124]
+005df165  CALL EAX
+005df167  MOV ESP,EBP
+005df169  POP EBP
+005df16a  RET

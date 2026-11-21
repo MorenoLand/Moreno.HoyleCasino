@@ -1,0 +1,16 @@
+; FUN_004da450  004da450
+004da450  PUSH EBP
+004da451  MOV EBP,ESP
+004da453  PUSH ECX
+004da454  MOV dword ptr [EBP + -0x4],ECX
+004da457  MOV EAX,dword ptr [EBP + -0x4]
+004da45a  MOV ECX,dword ptr [EAX + 0x34]
+004da45d  MOV EDX,dword ptr [EBP + -0x4]
+004da460  MOV EAX,dword ptr [EDX + 0x34]
+004da463  MOV EDX,dword ptr [ECX]
+004da465  MOV ECX,EAX
+004da467  MOV EAX,dword ptr [EDX + 0x70]
+004da46a  CALL EAX
+004da46c  MOV ESP,EBP
+004da46e  POP EBP
+004da46f  RET

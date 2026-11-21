@@ -1,0 +1,13 @@
+; FUN_005b60a0  005b60a0
+005b60a0  PUSH EBP
+005b60a1  MOV EBP,ESP
+005b60a3  PUSH ECX
+005b60a4  MOV dword ptr [EBP + -0x4],ECX
+005b60a7  MOV EAX,dword ptr [EBP + 0x8]
+005b60aa  IMUL EAX,EAX,0x118
+005b60b0  ADD EAX,dword ptr [EBP + 0xc]
+005b60b3  MOV ECX,dword ptr [EBP + -0x4]
+005b60b6  MOV AL,byte ptr [ECX + EAX*0x1 + 0x5c]
+005b60ba  MOV ESP,EBP
+005b60bc  POP EBP
+005b60bd  RET 0x8

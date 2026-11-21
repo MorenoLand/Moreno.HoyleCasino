@@ -1,0 +1,16 @@
+; CVSToolsListBox  006058b0
+006058b0  PUSH EBP
+006058b1  MOV EBP,ESP
+006058b3  PUSH ECX
+006058b4  MOV dword ptr [EBP + -0x4],ECX
+006058b7  MOV ECX,dword ptr [EBP + -0x4]
+006058ba  CALL 0x005eaaf0
+006058bf  MOV EAX,dword ptr [EBP + -0x4]
+006058c2  MOV dword ptr [EAX],0x6d7a2c
+006058c8  MOV ECX,dword ptr [EBP + -0x4]
+006058cb  MOV EDX,dword ptr [EBP + 0x8]
+006058ce  MOV dword ptr [ECX + 0x178],EDX
+006058d4  MOV EAX,dword ptr [EBP + -0x4]
+006058d7  MOV ESP,EBP
+006058d9  POP EBP
+006058da  RET 0x4

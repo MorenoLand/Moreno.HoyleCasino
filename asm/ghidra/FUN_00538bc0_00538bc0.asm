@@ -1,0 +1,12 @@
+; FUN_00538bc0  00538bc0
+00538bc0  PUSH EBP
+00538bc1  MOV EBP,ESP
+00538bc3  PUSH ECX
+00538bc4  MOV dword ptr [EBP + -0x4],ECX
+00538bc7  MOV EAX,dword ptr [EBP + 0x8]
+00538bca  SHL EAX,0x8
+00538bcd  MOV ECX,dword ptr [EBP + 0xc]
+00538bd0  MOV EAX,dword ptr [EAX + ECX*0x4 + 0x72df18]
+00538bd7  MOV ESP,EBP
+00538bd9  POP EBP
+00538bda  RET 0x8

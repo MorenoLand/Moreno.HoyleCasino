@@ -1,0 +1,80 @@
+; FUN_006208b0  006208b0
+006208b0  PUSH EBP
+006208b1  MOV EBP,ESP
+006208b3  SUB ESP,0x38
+006208b6  MOV dword ptr [EBP + -0x14],ECX
+006208b9  MOV dword ptr [EBP + -0x4],0x0
+006208c0  MOV dword ptr [EBP + -0x10],0x0
+006208c7  JMP 0x006208d2
+006208c9  MOV EAX,dword ptr [EBP + -0x10]
+006208cc  ADD EAX,0x1
+006208cf  MOV dword ptr [EBP + -0x10],EAX
+006208d2  CMP dword ptr [EBP + -0x10],0x8
+006208d6  JGE 0x006209bf
+006208dc  MOV dword ptr [EBP + -0xc],0x0
+006208e3  JMP 0x006208ee
+006208e5  MOV ECX,dword ptr [EBP + -0xc]
+006208e8  ADD ECX,0x1
+006208eb  MOV dword ptr [EBP + -0xc],ECX
+006208ee  CMP dword ptr [EBP + -0xc],0x8
+006208f2  JGE 0x006209ba
+006208f8  MOV dword ptr [EBP + -0x8],0x0
+006208ff  JMP 0x0062090a
+00620901  MOV EDX,dword ptr [EBP + -0x8]
+00620904  ADD EDX,0x1
+00620907  MOV dword ptr [EBP + -0x8],EDX
+0062090a  CMP dword ptr [EBP + -0x8],0x4
+0062090e  JGE 0x006209b5
+00620914  FILD dword ptr [EBP + -0x10]
+00620917  FMUL double ptr [0x006d8e30]
+0062091d  FNSTCW word ptr [EBP + -0x16]
+00620920  MOVZX EAX,word ptr [EBP + -0x16]
+00620924  OR EAX,0xc00
+00620929  MOV dword ptr [EBP + -0x1c],EAX
+0062092c  FLDCW word ptr [EBP + -0x1c]
+0062092f  FISTP dword ptr [EBP + -0x20]
+00620932  FLDCW word ptr [EBP + -0x16]
+00620935  MOV AL,byte ptr [EBP + -0x20]
+00620938  MOV ECX,dword ptr [EBP + -0x4]
+0062093b  IMUL ECX,ECX,0x3
+0062093e  MOV EDX,dword ptr [EBP + -0x14]
+00620941  MOV byte ptr [EDX + ECX*0x1 + 0x8],AL
+00620945  FILD dword ptr [EBP + -0xc]
+00620948  FMUL double ptr [0x006d8e30]
+0062094e  FNSTCW word ptr [EBP + -0x22]
+00620951  MOVZX EAX,word ptr [EBP + -0x22]
+00620955  OR EAX,0xc00
+0062095a  MOV dword ptr [EBP + -0x28],EAX
+0062095d  FLDCW word ptr [EBP + -0x28]
+00620960  FISTP dword ptr [EBP + -0x2c]
+00620963  FLDCW word ptr [EBP + -0x22]
+00620966  MOV AL,byte ptr [EBP + -0x2c]
+00620969  MOV ECX,dword ptr [EBP + -0x4]
+0062096c  IMUL ECX,ECX,0x3
+0062096f  MOV EDX,dword ptr [EBP + -0x14]
+00620972  MOV byte ptr [EDX + ECX*0x1 + 0x9],AL
+00620976  FILD dword ptr [EBP + -0x8]
+00620979  FMUL double ptr [0x006d8e28]
+0062097f  FNSTCW word ptr [EBP + -0x2e]
+00620982  MOVZX EAX,word ptr [EBP + -0x2e]
+00620986  OR EAX,0xc00
+0062098b  MOV dword ptr [EBP + -0x34],EAX
+0062098e  FLDCW word ptr [EBP + -0x34]
+00620991  FISTP dword ptr [EBP + -0x38]
+00620994  FLDCW word ptr [EBP + -0x2e]
+00620997  MOV AL,byte ptr [EBP + -0x38]
+0062099a  MOV ECX,dword ptr [EBP + -0x4]
+0062099d  IMUL ECX,ECX,0x3
+006209a0  MOV EDX,dword ptr [EBP + -0x14]
+006209a3  MOV byte ptr [EDX + ECX*0x1 + 0xa],AL
+006209a7  MOV EAX,dword ptr [EBP + -0x4]
+006209aa  ADD EAX,0x1
+006209ad  MOV dword ptr [EBP + -0x4],EAX
+006209b0  JMP 0x00620901
+006209b5  JMP 0x006208e5
+006209ba  JMP 0x006208c9
+006209bf  MOV ECX,dword ptr [EBP + -0x14]
+006209c2  MOV word ptr [ECX + 0x308],0x100
+006209cb  MOV ESP,EBP
+006209cd  POP EBP
+006209ce  RET

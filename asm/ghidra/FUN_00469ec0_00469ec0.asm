@@ -1,0 +1,29 @@
+; FUN_00469ec0  00469ec0
+00469ec0  PUSH EBP
+00469ec1  MOV EBP,ESP
+00469ec3  SUB ESP,0x8
+00469ec6  MOV dword ptr [EBP + -0x8],ECX
+00469ec9  MOV dword ptr [EBP + -0x4],0x3
+00469ed0  MOV ECX,dword ptr [0x00793578]
+00469ed6  CALL 0x0057ae30
+00469edb  PUSH 0x0
+00469edd  PUSH 0x0
+00469edf  MOV ECX,dword ptr [0x00791364]
+00469ee5  CALL 0x0047aab0
+00469eea  PUSH 0x0
+00469eec  MOV EAX,dword ptr [EBP + -0x8]
+00469eef  MOV EDX,dword ptr [EAX]
+00469ef1  MOV ECX,dword ptr [EBP + -0x8]
+00469ef4  MOV EAX,dword ptr [EDX + 0xd8]
+00469efa  CALL EAX
+00469efc  MOV ECX,dword ptr [EBP + -0x8]
+00469eff  MOV ECX,dword ptr [ECX + 0x1dc]
+00469f05  CALL 0x005f87d0
+00469f0a  MOV EDX,dword ptr [EBP + -0x4]
+00469f0d  PUSH EDX
+00469f0e  MOV EAX,dword ptr [EBP + -0x8]
+00469f11  MOV ECX,dword ptr [EAX + 0x1dc]
+00469f17  CALL 0x00519a40
+00469f1c  MOV ESP,EBP
+00469f1e  POP EBP
+00469f1f  RET

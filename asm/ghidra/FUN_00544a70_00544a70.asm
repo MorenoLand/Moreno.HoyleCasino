@@ -1,0 +1,24 @@
+; FUN_00544a70  00544a70
+00544a70  PUSH EBP
+00544a71  MOV EBP,ESP
+00544a73  SUB ESP,0xc
+00544a76  MOV dword ptr [EBP + -0x8],ECX
+00544a79  MOV dword ptr [EBP + -0x4],0xffffffff
+00544a80  MOV EAX,dword ptr [EBP + 0x8]
+00544a83  MOV dword ptr [EBP + -0xc],EAX
+00544a86  CMP dword ptr [EBP + -0xc],0x0
+00544a8a  JZ 0x00544a9a
+00544a8c  CMP dword ptr [EBP + -0xc],0x1
+00544a90  JZ 0x00544aa3
+00544a92  CMP dword ptr [EBP + -0xc],0x2
+00544a96  JZ 0x00544aac
+00544a98  JMP 0x00544ab3
+00544a9a  MOV dword ptr [EBP + -0x4],0x31166a
+00544aa1  JMP 0x00544ab3
+00544aa3  MOV dword ptr [EBP + -0x4],0x31166b
+00544aaa  JMP 0x00544ab3
+00544aac  MOV dword ptr [EBP + -0x4],0x31166c
+00544ab3  MOV EAX,dword ptr [EBP + -0x4]
+00544ab6  MOV ESP,EBP
+00544ab8  POP EBP
+00544ab9  RET 0x4

@@ -1,0 +1,21 @@
+; FUN_00445e40  00445e40
+00445e40  PUSH EBP
+00445e41  MOV EBP,ESP
+00445e43  SUB ESP,0xc
+00445e46  MOV dword ptr [EBP + -0xc],ECX
+00445e49  MOV EAX,dword ptr [EBP + 0x8]
+00445e4c  IMUL EAX,EAX,0x78
+00445e4f  MOV ECX,dword ptr [EBP + -0xc]
+00445e52  MOV EDX,dword ptr [ECX + EAX*0x1 + 0x44]
+00445e56  MOV dword ptr [EBP + -0x4],EDX
+00445e59  MOV EAX,dword ptr [EBP + 0x8]
+00445e5c  IMUL EAX,EAX,0x78
+00445e5f  MOV ECX,dword ptr [EBP + -0xc]
+00445e62  LEA EDX,[ECX + EAX*0x1 + 0x4]
+00445e66  MOV EAX,dword ptr [EBP + -0x4]
+00445e69  MOV ECX,dword ptr [EDX + EAX*0x8 + 0x4c]
+00445e6d  MOV dword ptr [EBP + -0x8],ECX
+00445e70  MOV EAX,dword ptr [EBP + -0x8]
+00445e73  MOV ESP,EBP
+00445e75  POP EBP
+00445e76  RET 0x4

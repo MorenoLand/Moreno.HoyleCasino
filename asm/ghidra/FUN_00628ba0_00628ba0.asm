@@ -1,0 +1,65 @@
+; FUN_00628ba0  00628ba0
+00628ba0  PUSH EBP
+00628ba1  MOV EBP,ESP
+00628ba3  PUSH ECX
+00628ba4  MOV dword ptr [EBP + -0x4],ECX
+00628ba7  MOV EAX,dword ptr [EBP + -0x4]
+00628baa  MOV EDX,dword ptr [EAX]
+00628bac  MOV ECX,dword ptr [EBP + -0x4]
+00628baf  MOV EAX,dword ptr [EDX + 0xb8]
+00628bb5  CALL EAX
+00628bb7  TEST EAX,EAX
+00628bb9  JZ 0x00628bc9
+00628bbb  PUSH 0x0
+00628bbd  PUSH 0x0
+00628bbf  MOV ECX,dword ptr [EBP + -0x4]
+00628bc2  CALL 0x00628ab0
+00628bc7  JMP 0x00628ba7
+00628bc9  PUSH 0x1
+00628bcb  PUSH -0x1
+00628bcd  MOV ECX,dword ptr [EBP + -0x4]
+00628bd0  MOV EDX,dword ptr [ECX]
+00628bd2  MOV ECX,dword ptr [EBP + -0x4]
+00628bd5  MOV EAX,dword ptr [EDX + 0xc0]
+00628bdb  CALL EAX
+00628bdd  MOV ECX,dword ptr [EBP + -0x4]
+00628be0  MOV dword ptr [ECX + 0x6c],0x0
+00628be7  MOV EDX,dword ptr [EBP + -0x4]
+00628bea  MOV EAX,dword ptr [EDX + 0x58]
+00628bed  MOV ECX,dword ptr [EBP + -0x4]
+00628bf0  MOV ECX,dword ptr [ECX + 0x58]
+00628bf3  MOV EDX,dword ptr [EAX]
+00628bf5  MOV EAX,dword ptr [EDX + 0x70]
+00628bf8  CALL EAX
+00628bfa  MOV ECX,dword ptr [EBP + -0x4]
+00628bfd  CALL 0x00615160
+00628c02  MOVZX ECX,AL
+00628c05  TEST ECX,ECX
+00628c07  JZ 0x00628c2c
+00628c09  MOV EDX,dword ptr [EBP + -0x4]
+00628c0c  MOV ECX,dword ptr [EDX + 0x58]
+00628c0f  CALL 0x00615eb0
+00628c14  PUSH EAX
+00628c15  MOV EAX,dword ptr [EBP + -0x4]
+00628c18  MOV ECX,dword ptr [EAX + 0x58]
+00628c1b  MOV EDX,dword ptr [EBP + -0x4]
+00628c1e  MOV EAX,dword ptr [EDX + 0x58]
+00628c21  MOV EDX,dword ptr [ECX]
+00628c23  MOV ECX,EAX
+00628c25  MOV EAX,dword ptr [EDX + 0x48]
+00628c28  CALL EAX
+00628c2a  JMP 0x00628c4b
+00628c2c  MOV ECX,dword ptr [EBP + -0x4]
+00628c2f  MOV ECX,dword ptr [ECX + 0x58]
+00628c32  CALL 0x00615eb0
+00628c37  PUSH EAX
+00628c38  MOV EDX,dword ptr [EBP + -0x4]
+00628c3b  MOV EAX,dword ptr [EDX + 0x58]
+00628c3e  MOV ECX,dword ptr [EBP + -0x4]
+00628c41  MOV ECX,dword ptr [ECX + 0x58]
+00628c44  MOV EDX,dword ptr [EAX]
+00628c46  MOV EAX,dword ptr [EDX + 0x50]
+00628c49  CALL EAX
+00628c4b  MOV ESP,EBP
+00628c4d  POP EBP
+00628c4e  RET

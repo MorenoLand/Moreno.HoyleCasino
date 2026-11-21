@@ -1,0 +1,21 @@
+; FUN_004f6210  004f6210
+004f6210  PUSH EBP
+004f6211  MOV EBP,ESP
+004f6213  SUB ESP,0xc
+004f6216  MOV dword ptr [EBP + -0xc],ECX
+004f6219  MOV EAX,dword ptr [EBP + -0xc]
+004f621c  MOV CX,word ptr [EAX + 0x8]
+004f6220  MOV word ptr [EBP + -0x4],CX
+004f6224  MOV EDX,dword ptr [EBP + 0x8]
+004f6227  PUSH EDX
+004f6228  MOV ECX,dword ptr [EBP + -0xc]
+004f622b  CALL 0x004f6020
+004f6230  MOV word ptr [EBP + -0x8],AX
+004f6234  MOVSX EAX,word ptr [EBP + -0x4]
+004f6238  MOV ECX,dword ptr [EBP + -0xc]
+004f623b  MOV EDX,dword ptr [ECX + 0x34]
+004f623e  MOV byte ptr [EAX + EDX*0x1],0x1
+004f6242  MOV AX,word ptr [EBP + -0x8]
+004f6246  MOV ESP,EBP
+004f6248  POP EBP
+004f6249  RET 0x4

@@ -1,0 +1,10 @@
+; FUN_0060dcf0  0060dcf0
+0060dcf0  PUSH EBP
+0060dcf1  MOV EBP,ESP
+0060dcf3  PUSH ECX
+0060dcf4  MOV dword ptr [EBP + -0x4],ECX
+0060dcf7  MOV EAX,dword ptr [EBP + -0x4]
+0060dcfa  MOV AL,byte ptr [EAX + 0x95]
+0060dd00  MOV ESP,EBP
+0060dd02  POP EBP
+0060dd03  RET

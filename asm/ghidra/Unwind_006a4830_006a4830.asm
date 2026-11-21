@@ -1,0 +1,3 @@
+; Unwind@006a4830  006a4830
+006a4830  MOV ECX,dword ptr [EBP + -0x10]
+006a4833  JMP 0x005d7bd0

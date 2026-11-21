@@ -1,0 +1,21 @@
+; FUN_0068fe80  0068fe80
+0068fe80  PUSH EBP
+0068fe81  MOV EBP,ESP
+0068fe83  SUB ESP,0x8
+0068fe86  MOV dword ptr [EBP + -0x8],ECX
+0068fe89  MOV EAX,dword ptr [EBP + -0x8]
+0068fe8c  MOV ECX,dword ptr [EAX + 0x18]
+0068fe8f  PUSH ECX
+0068fe90  CALL dword ptr [0x006b2028]
+0068fe96  MOV dword ptr [EBP + -0x4],EAX
+0068fe99  CMP dword ptr [EBP + -0x4],0x0
+0068fe9d  JG 0x0068feb0
+0068fe9f  PUSH 0x6e5708
+0068fea4  CALL 0x0068fb10
+0068fea9  ADD ESP,0x4
+0068feac  XOR AL,AL
+0068feae  JMP 0x0068feb2
+0068feb0  MOV AL,0x1
+0068feb2  MOV ESP,EBP
+0068feb4  POP EBP
+0068feb5  RET

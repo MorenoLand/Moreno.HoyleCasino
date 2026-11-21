@@ -1,0 +1,13 @@
+; FUN_004f2a10  004f2a10
+004f2a10  PUSH EBP
+004f2a11  MOV EBP,ESP
+004f2a13  SUB ESP,0x8
+004f2a16  MOV dword ptr [EBP + -0x4],ECX
+004f2a19  MOV EAX,dword ptr [EBP + -0x4]
+004f2a1c  MOVSX ECX,word ptr [EAX + 0x3d2]
+004f2a23  MOV dword ptr [EBP + -0x8],ECX
+004f2a26  FILD dword ptr [EBP + -0x8]
+004f2a29  FDIV double ptr [0x006b4b00]
+004f2a2f  MOV ESP,EBP
+004f2a31  POP EBP
+004f2a32  RET

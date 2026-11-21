@@ -1,0 +1,15 @@
+; FUN_005f2d10  005f2d10
+005f2d10  PUSH EBP
+005f2d11  MOV EBP,ESP
+005f2d13  CMP dword ptr [0x015e55e4],0x0
+005f2d1a  JZ 0x005f2d35
+005f2d1c  PUSH -0x1
+005f2d1e  MOV EAX,dword ptr [EBP + 0x8]
+005f2d21  PUSH EAX
+005f2d22  MOV ECX,dword ptr [0x015e55e4]
+005f2d28  MOV EDX,dword ptr [ECX]
+005f2d2a  MOV ECX,dword ptr [0x015e55e4]
+005f2d30  MOV EAX,dword ptr [EDX + 0x4c]
+005f2d33  CALL EAX
+005f2d35  POP EBP
+005f2d36  RET

@@ -1,0 +1,74 @@
+; FUN_0057c140  0057c140
+0057c140  PUSH EBP
+0057c141  MOV EBP,ESP
+0057c143  PUSH ECX
+0057c144  PUSH ESI
+0057c145  MOV dword ptr [EBP + -0x4],ECX
+0057c148  PUSH -0x1
+0057c14a  MOV ECX,dword ptr [0x007947e0]
+0057c150  CALL 0x005df700
+0057c155  MOVZX EAX,AL
+0057c158  TEST EAX,EAX
+0057c15a  JZ 0x0057c23b
+0057c160  MOV ECX,dword ptr [EBP + -0x4]
+0057c163  CMP dword ptr [ECX + 0x19d8],0x0
+0057c16a  JNZ 0x0057c171
+0057c16c  JMP 0x0057c23b
+0057c171  MOV ECX,dword ptr [0x007947e4]
+0057c177  CALL 0x005db240
+0057c17c  MOV EDX,dword ptr [EBP + -0x4]
+0057c17f  MOV byte ptr [EDX + 0x1bc],0x1
+0057c186  MOV EAX,dword ptr [EBP + -0x4]
+0057c189  MOV byte ptr [EAX + 0x1bd],0x1
+0057c190  MOV ECX,dword ptr [EBP + -0x4]
+0057c193  CALL 0x005f85d0
+0057c198  MOV ECX,dword ptr [EBP + -0x4]
+0057c19b  MOV ECX,dword ptr [ECX + 0x19e0]
+0057c1a1  CALL 0x0057d3a0
+0057c1a6  MOV ECX,dword ptr [EBP + -0x4]
+0057c1a9  CALL 0x005f84f0
+0057c1ae  MOV ESI,EAX
+0057c1b0  MOV EDX,dword ptr [EBP + -0x4]
+0057c1b3  MOV EAX,dword ptr [EDX + 0x19d8]
+0057c1b9  MOV ECX,dword ptr [EAX + 0x4]
+0057c1bc  MOV EDX,dword ptr [EBP + -0x4]
+0057c1bf  MOV EAX,dword ptr [EDX + 0x19d8]
+0057c1c5  MOV EDX,dword ptr [EAX + 0x4]
+0057c1c8  MOV EAX,dword ptr [ECX]
+0057c1ca  MOV ECX,EDX
+0057c1cc  MOV EDX,dword ptr [EAX + 0x54]
+0057c1cf  CALL EDX
+0057c1d1  LEA EAX,[ESI + EAX*0x1 + -0x4]
+0057c1d5  PUSH EAX
+0057c1d6  MOV ECX,dword ptr [EBP + -0x4]
+0057c1d9  CALL 0x005f84d0
+0057c1de  MOV ESI,EAX
+0057c1e0  MOV ECX,dword ptr [EBP + -0x4]
+0057c1e3  MOV EDX,dword ptr [ECX + 0x19d8]
+0057c1e9  MOV EAX,dword ptr [EDX + 0x4]
+0057c1ec  MOV ECX,dword ptr [EBP + -0x4]
+0057c1ef  MOV EDX,dword ptr [ECX + 0x19d8]
+0057c1f5  MOV ECX,dword ptr [EDX + 0x4]
+0057c1f8  MOV EAX,dword ptr [EAX]
+0057c1fa  MOV EDX,dword ptr [EAX + 0x4c]
+0057c1fd  CALL EDX
+0057c1ff  ADD ESI,EAX
+0057c201  MOV EAX,dword ptr [EBP + -0x4]
+0057c204  MOV ECX,dword ptr [EAX + 0x19d8]
+0057c20a  MOV ECX,dword ptr [ECX + 0x4]
+0057c20d  CALL 0x005f5550
+0057c212  ADD ESI,EAX
+0057c214  PUSH ESI
+0057c215  MOV EDX,dword ptr [EBP + -0x4]
+0057c218  MOV ECX,dword ptr [EDX + 0x19e0]
+0057c21e  CALL 0x005f8420
+0057c223  PUSH 0x1
+0057c225  MOV EAX,dword ptr [EBP + -0x4]
+0057c228  MOV ECX,dword ptr [EAX + 0x19e0]
+0057c22e  CALL 0x0057cb70
+0057c233  MOV ECX,dword ptr [EBP + -0x4]
+0057c236  CALL 0x0057b1b0
+0057c23b  POP ESI
+0057c23c  MOV ESP,EBP
+0057c23e  POP EBP
+0057c23f  RET

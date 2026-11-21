@@ -1,0 +1,15 @@
+; FUN_0044cd40  0044cd40
+0044cd40  PUSH EBP
+0044cd41  MOV EBP,ESP
+0044cd43  PUSH ECX
+0044cd44  MOV dword ptr [EBP + -0x4],ECX
+0044cd47  MOV EAX,dword ptr [EBP + 0x8]
+0044cd4a  IMUL EAX,EAX,0xa
+0044cd4d  MOV ECX,dword ptr [EBP + -0x4]
+0044cd50  LEA EDX,[ECX + EAX*0x1 + 0x98]
+0044cd57  MOV EAX,dword ptr [EBP + 0xc]
+0044cd5a  MOV CX,word ptr [EBP + 0x10]
+0044cd5e  MOV word ptr [EDX + EAX*0x2],CX
+0044cd62  MOV ESP,EBP
+0044cd64  POP EBP
+0044cd65  RET 0xc

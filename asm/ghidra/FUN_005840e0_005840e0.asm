@@ -1,0 +1,19 @@
+; FUN_005840e0  005840e0
+005840e0  PUSH EBP
+005840e1  MOV EBP,ESP
+005840e3  PUSH ECX
+005840e4  MOV dword ptr [EBP + -0x4],ECX
+005840e7  MOV ECX,dword ptr [EBP + -0x4]
+005840ea  CALL 0x00601a80
+005840ef  MOV EAX,dword ptr [EBP + -0x4]
+005840f2  MOV dword ptr [EAX],0x6cc99c
+005840f8  MOV ECX,dword ptr [EBP + -0x4]
+005840fb  MOV EDX,dword ptr [EBP + 0x8]
+005840fe  MOV dword ptr [ECX + 0x1dc],EDX
+00584104  MOV EAX,dword ptr [EBP + -0x4]
+00584107  MOV ECX,dword ptr [EBP + 0xc]
+0058410a  MOV dword ptr [EAX + 0x1e0],ECX
+00584110  MOV EAX,dword ptr [EBP + -0x4]
+00584113  MOV ESP,EBP
+00584115  POP EBP
+00584116  RET 0x8

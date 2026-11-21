@@ -1,0 +1,12 @@
+; FUN_00555da0  00555da0
+00555da0  PUSH EBP
+00555da1  MOV EBP,ESP
+00555da3  PUSH ECX
+00555da4  MOV dword ptr [EBP + -0x4],ECX
+00555da7  MOV EAX,dword ptr [EBP + 0x8]
+00555daa  MOV dword ptr [EAX],0x1
+00555db0  MOV ECX,dword ptr [EBP + 0xc]
+00555db3  MOV dword ptr [ECX],0x3b9aca00
+00555db9  MOV ESP,EBP
+00555dbb  POP EBP
+00555dbc  RET 0x8

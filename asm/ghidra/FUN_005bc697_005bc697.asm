@@ -1,0 +1,17 @@
+; FUN_005bc697  005bc697
+005bc697  MOV ECX,dword ptr [EBP + -0x14]
+005bc69a  CMP ECX,dword ptr [EBP + 0x10]
+005bc69d  JZ 0x005bc6bc
+005bc69f  MOV ECX,dword ptr [EBP + -0x14]
+005bc6a2  CALL 0x005be450
+005bc6a7  XOR EDX,EDX
+005bc6a9  AND EDX,0x1
+005bc6ac  JZ 0x005bc6ba
+005bc6ae  MOV EAX,dword ptr [EBP + -0x14]
+005bc6b1  PUSH EAX
+005bc6b2  CALL 0x00686cae
+005bc6b7  ADD ESP,0x4
+005bc6ba  JMP 0x005bc68e
+005bc6bc  PUSH 0x0
+005bc6be  PUSH 0x0
+005bc6c0  CALL 0x00686fc0

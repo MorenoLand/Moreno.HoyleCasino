@@ -1,0 +1,67 @@
+; FUN_0056b800  0056b800
+0056b800  PUSH EBP
+0056b801  MOV EBP,ESP
+0056b803  SUB ESP,0x118
+0056b809  MOV EAX,[0x00781870]
+0056b80e  XOR EAX,EBP
+0056b810  MOV dword ptr [EBP + -0x8],EAX
+0056b813  MOV dword ptr [EBP + 0xfffffee8],ECX
+0056b819  MOV dword ptr [EBP + 0xfffffeec],0x0
+0056b823  MOV dword ptr [EBP + 0xfffffef4],0x0
+0056b82d  PUSH 0x6ca2a0
+0056b832  CALL 0x0062fde0
+0056b837  ADD ESP,0x4
+0056b83a  MOV dword ptr [EBP + -0x4],0x0
+0056b841  JMP 0x0056b84c
+0056b843  MOV EAX,dword ptr [EBP + -0x4]
+0056b846  ADD EAX,0x1
+0056b849  MOV dword ptr [EBP + -0x4],EAX
+0056b84c  CMP dword ptr [EBP + -0x4],0x31
+0056b850  JGE 0x0056b8ef
+0056b856  PUSH 0x0
+0056b858  MOV ECX,dword ptr [EBP + -0x4]
+0056b85b  PUSH ECX
+0056b85c  MOV ECX,dword ptr [EBP + 0xfffffee8]
+0056b862  CALL 0x0056b950
+0056b867  MOVZX EDX,AL
+0056b86a  TEST EDX,EDX
+0056b86c  JNZ 0x0056b870
+0056b86e  JMP 0x0056b843
+0056b870  LEA EAX,[EBP + 0xfffffef0]
+0056b876  PUSH EAX
+0056b877  MOV ECX,dword ptr [EBP + -0x4]
+0056b87a  PUSH ECX
+0056b87b  MOV ECX,dword ptr [EBP + 0xfffffee8]
+0056b881  CALL 0x0056b710
+0056b886  MOV dword ptr [EBP + 0xfffffef4],EAX
+0056b88c  CMP dword ptr [EBP + 0xfffffef4],0x0
+0056b893  JZ 0x0056b8ea
+0056b895  MOV EDX,dword ptr [EBP + 0xfffffeec]
+0056b89b  ADD EDX,dword ptr [EBP + 0xfffffef4]
+0056b8a1  MOV dword ptr [EBP + 0xfffffeec],EDX
+0056b8a7  PUSH 0x0
+0056b8a9  MOV EAX,dword ptr [EBP + -0x4]
+0056b8ac  PUSH EAX
+0056b8ad  MOV ECX,dword ptr [EBP + 0xfffffee8]
+0056b8b3  CALL 0x0056b2b0
+0056b8b8  MOV ECX,dword ptr [EBP + 0xfffffef0]
+0056b8be  PUSH ECX
+0056b8bf  MOV EDX,dword ptr [EBP + 0xfffffef4]
+0056b8c5  PUSH EDX
+0056b8c6  PUSH 0x6ca278
+0056b8cb  LEA EAX,[EBP + 0xfffffef8]
+0056b8d1  PUSH EAX
+0056b8d2  CALL dword ptr [0x006b2220]
+0056b8d8  ADD ESP,0x10
+0056b8db  LEA ECX,[EBP + 0xfffffef8]
+0056b8e1  PUSH ECX
+0056b8e2  CALL 0x0062fde0
+0056b8e7  ADD ESP,0x4
+0056b8ea  JMP 0x0056b843
+0056b8ef  MOV EAX,dword ptr [EBP + 0xfffffeec]
+0056b8f5  MOV ECX,dword ptr [EBP + -0x8]
+0056b8f8  XOR ECX,EBP
+0056b8fa  CALL 0x00686d72
+0056b8ff  MOV ESP,EBP
+0056b901  POP EBP
+0056b902  RET

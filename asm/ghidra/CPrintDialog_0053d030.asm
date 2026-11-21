@@ -1,0 +1,17 @@
+; CPrintDialog  0053d030
+0053d030  PUSH EBP
+0053d031  MOV EBP,ESP
+0053d033  PUSH ECX
+0053d034  MOV dword ptr [EBP + -0x4],ECX
+0053d037  PUSH 0x0
+0053d039  MOV ECX,dword ptr [EBP + -0x4]
+0053d03c  CALL 0x005fc0d0
+0053d041  MOV EAX,dword ptr [EBP + -0x4]
+0053d044  MOV dword ptr [EAX],0x6c5d80
+0053d04a  MOV ECX,dword ptr [EBP + -0x4]
+0053d04d  MOV EDX,dword ptr [EBP + 0x8]
+0053d050  MOV dword ptr [ECX + 0x20],EDX
+0053d053  MOV EAX,dword ptr [EBP + -0x4]
+0053d056  MOV ESP,EBP
+0053d058  POP EBP
+0053d059  RET 0x4

@@ -1,0 +1,15 @@
+; FUN_0053b930  0053b930
+0053b930  PUSH EBP
+0053b931  MOV EBP,ESP
+0053b933  SUB ESP,0x18
+0053b936  MOV dword ptr [EBP + -0x18],ECX
+0053b939  MOV dword ptr [EBP + -0x14],0xed
+0053b940  MOV dword ptr [EBP + -0x10],0xee
+0053b947  MOV dword ptr [EBP + -0xc],0x8a
+0053b94e  MOV dword ptr [EBP + -0x8],0x8a
+0053b955  MOV dword ptr [EBP + -0x4],0x52
+0053b95c  MOV EAX,dword ptr [EBP + 0x8]
+0053b95f  MOV EAX,dword ptr [EBP + EAX*0x4 + -0x14]
+0053b963  MOV ESP,EBP
+0053b965  POP EBP
+0053b966  RET 0x8

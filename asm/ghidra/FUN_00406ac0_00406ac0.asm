@@ -1,0 +1,19 @@
+; FUN_00406ac0  00406ac0
+00406ac0  PUSH EBP
+00406ac1  MOV EBP,ESP
+00406ac3  SUB ESP,0x8
+00406ac6  MOV dword ptr [EBP + -0x8],ECX
+00406ac9  CMP dword ptr [EBP + 0x8],0x0
+00406acd  JNZ 0x00406ad3
+00406acf  XOR AL,AL
+00406ad1  JMP 0x00406ae8
+00406ad3  MOV EAX,dword ptr [EBP + 0x8]
+00406ad6  MOV dword ptr [EBP + -0x4],EAX
+00406ad9  MOV ECX,dword ptr [EBP + -0x4]
+00406adc  MOV byte ptr [ECX],0x1
+00406adf  MOV EDX,dword ptr [EBP + -0x4]
+00406ae2  MOV byte ptr [EDX + 0x1],0x1
+00406ae6  MOV AL,0x1
+00406ae8  MOV ESP,EBP
+00406aea  POP EBP
+00406aeb  RET 0x4

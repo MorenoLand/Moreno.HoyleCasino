@@ -1,0 +1,29 @@
+; FUN_0068bb40  0068bb40
+0068bb40  PUSH EBP
+0068bb41  MOV EBP,ESP
+0068bb43  PUSH -0x1
+0068bb45  PUSH 0x6ae069
+0068bb4a  MOV EAX,FS:[0x0]
+0068bb50  PUSH EAX
+0068bb51  SUB ESP,0x68
+0068bb54  MOV EAX,[0x00781870]
+0068bb59  XOR EAX,EBP
+0068bb5b  PUSH EAX
+0068bb5c  LEA EAX,[EBP + -0xc]
+0068bb5f  MOV FS:[0x0],EAX
+0068bb65  MOV dword ptr [EBP + -0x74],ECX
+0068bb68  MOV dword ptr [EBP + -0x4],0x0
+0068bb6f  MOV EAX,dword ptr [EBP + -0x74]
+0068bb72  ADD EAX,0x1c
+0068bb75  MOV dword ptr [EBP + -0x70],EAX
+0068bb78  MOV ECX,dword ptr [EBP + -0x70]
+0068bb7b  CALL 0x0068dc60
+0068bb80  MOV dword ptr [EBP + -0x4],0xffffffff
+0068bb87  MOV ECX,dword ptr [EBP + -0x74]
+0068bb8a  CALL dword ptr [0x006b20f4]
+0068bb90  MOV ECX,dword ptr [EBP + -0xc]
+0068bb93  MOV dword ptr FS:[0x0],ECX
+0068bb9a  POP ECX
+0068bb9b  MOV ESP,EBP
+0068bb9d  POP EBP
+0068bb9e  RET

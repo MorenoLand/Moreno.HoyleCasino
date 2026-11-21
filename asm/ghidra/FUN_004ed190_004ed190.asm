@@ -1,0 +1,10 @@
+; FUN_004ed190  004ed190
+004ed190  PUSH EBP
+004ed191  MOV EBP,ESP
+004ed193  PUSH ECX
+004ed194  MOV dword ptr [EBP + -0x4],ECX
+004ed197  MOV EAX,dword ptr [EBP + -0x4]
+004ed19a  MOV AX,word ptr [EAX + 0x35a]
+004ed1a1  MOV ESP,EBP
+004ed1a3  POP EBP
+004ed1a4  RET

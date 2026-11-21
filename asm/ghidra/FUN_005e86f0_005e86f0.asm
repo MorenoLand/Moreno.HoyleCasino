@@ -1,0 +1,65 @@
+; FUN_005e86f0  005e86f0
+005e86f0  PUSH EBP
+005e86f1  MOV EBP,ESP
+005e86f3  PUSH -0x1
+005e86f5  PUSH 0x6a9a57
+005e86fa  MOV EAX,FS:[0x0]
+005e8700  PUSH EAX
+005e8701  SUB ESP,0x14
+005e8704  MOV EAX,[0x00781870]
+005e8709  XOR EAX,EBP
+005e870b  PUSH EAX
+005e870c  LEA EAX,[EBP + -0xc]
+005e870f  MOV FS:[0x0],EAX
+005e8715  MOV dword ptr [EBP + -0x18],ECX
+005e8718  MOV EAX,dword ptr [EBP + 0x8]
+005e871b  MOV dword ptr [EBP + -0x1c],EAX
+005e871e  CMP dword ptr [EBP + -0x1c],0x0
+005e8722  JZ 0x005e8733
+005e8724  CMP dword ptr [EBP + -0x1c],0x1
+005e8728  JZ 0x005e87ae
+005e872e  JMP 0x005e87b9
+005e8733  PUSH 0x1
+005e8735  MOV ECX,dword ptr [EBP + -0x18]
+005e8738  MOV EDX,dword ptr [ECX + 0x17c]
+005e873e  MOV EAX,dword ptr [EBP + -0x18]
+005e8741  MOV ECX,dword ptr [EAX + 0x17c]
+005e8747  MOV EDX,dword ptr [EDX]
+005e8749  MOV EAX,dword ptr [EDX + 0x4]
+005e874c  CALL EAX
+005e874e  MOV ECX,dword ptr [EBP + -0x18]
+005e8751  MOV EDX,dword ptr [ECX]
+005e8753  MOV ECX,dword ptr [EBP + -0x18]
+005e8756  MOV EAX,dword ptr [EDX + 0x74]
+005e8759  CALL EAX
+005e875b  PUSH 0x20
+005e875d  CALL 0x00686d82
+005e8762  ADD ESP,0x4
+005e8765  MOV dword ptr [EBP + -0x14],EAX
+005e8768  MOV dword ptr [EBP + -0x4],0x0
+005e876f  CMP dword ptr [EBP + -0x14],0x0
+005e8773  JZ 0x005e878c
+005e8775  MOV ECX,dword ptr [EBP + -0x18]
+005e8778  MOV EDX,dword ptr [ECX + 0x17c]
+005e877e  PUSH EDX
+005e877f  MOV ECX,dword ptr [EBP + -0x14]
+005e8782  CALL 0x006010a0
+005e8787  MOV dword ptr [EBP + -0x20],EAX
+005e878a  JMP 0x005e8793
+005e878c  MOV dword ptr [EBP + -0x20],0x0
+005e8793  MOV EAX,dword ptr [EBP + -0x20]
+005e8796  MOV dword ptr [EBP + -0x10],EAX
+005e8799  MOV dword ptr [EBP + -0x4],0xffffffff
+005e87a0  MOV ECX,dword ptr [EBP + -0x10]
+005e87a3  PUSH ECX
+005e87a4  MOV ECX,dword ptr [EBP + -0x18]
+005e87a7  CALL 0x005f5d50
+005e87ac  JMP 0x005e87b9
+005e87ae  MOV ECX,dword ptr [0x007947e4]
+005e87b4  CALL 0x005dc9d0
+005e87b9  MOV ECX,dword ptr [EBP + -0xc]
+005e87bc  MOV dword ptr FS:[0x0],ECX
+005e87c3  POP ECX
+005e87c4  MOV ESP,EBP
+005e87c6  POP EBP
+005e87c7  RET 0x4

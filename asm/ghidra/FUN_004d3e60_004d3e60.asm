@@ -1,0 +1,67 @@
+; FUN_004d3e60  004d3e60
+004d3e60  PUSH EBP
+004d3e61  MOV EBP,ESP
+004d3e63  SUB ESP,0x8
+004d3e66  PUSH ESI
+004d3e67  MOV dword ptr [EBP + -0x8],ECX
+004d3e6a  MOVSX EAX,word ptr [EBP + 0x8]
+004d3e6e  TEST EAX,EAX
+004d3e70  JGE 0x004d3e89
+004d3e72  PUSH 0x1243
+004d3e77  PUSH 0x6bf384
+004d3e7c  PUSH 0x6bf888
+004d3e81  CALL 0x005e9f20
+004d3e86  ADD ESP,0xc
+004d3e89  MOVSX ESI,word ptr [EBP + 0x8]
+004d3e8d  MOV ECX,dword ptr [0x00791364]
+004d3e93  CALL 0x0047f950
+004d3e98  CMP ESI,EAX
+004d3e9a  JL 0x004d3eb3
+004d3e9c  PUSH 0x1244
+004d3ea1  PUSH 0x6bf384
+004d3ea6  PUSH 0x6bf858
+004d3eab  CALL 0x005e9f20
+004d3eb0  ADD ESP,0xc
+004d3eb3  MOV word ptr [EBP + -0x4],0x2
+004d3eb9  JMP 0x004d3ec7
+004d3ebb  MOV AX,word ptr [EBP + -0x4]
+004d3ebf  ADD AX,0x1
+004d3ec3  MOV word ptr [EBP + -0x4],AX
+004d3ec7  MOVSX ESI,word ptr [EBP + -0x4]
+004d3ecb  MOV ECX,dword ptr [0x00791364]
+004d3ed1  CALL 0x0047f950
+004d3ed6  CMP ESI,EAX
+004d3ed8  JG 0x004d3f69
+004d3ede  MOV ECX,dword ptr [EBP + -0x8]
+004d3ee1  MOV EDX,dword ptr [ECX + 0x428]
+004d3ee7  MOVSX EAX,word ptr [EBP + 0x8]
+004d3eeb  IMUL EAX,EAX,0xe
+004d3eee  LEA ECX,[EDX + EAX*0x1 + 0x460]
+004d3ef5  MOVSX EDX,word ptr [EBP + -0x4]
+004d3ef9  MOV word ptr [ECX + EDX*0x2 + -0x4],0x0
+004d3f00  MOV EAX,dword ptr [EBP + -0x8]
+004d3f03  MOV ECX,dword ptr [EAX + 0x428]
+004d3f09  MOVSX EDX,word ptr [EBP + 0x8]
+004d3f0d  IMUL EDX,EDX,0xe
+004d3f10  LEA EAX,[ECX + EDX*0x1 + 0x4d0]
+004d3f17  MOVSX ECX,word ptr [EBP + -0x4]
+004d3f1b  MOV word ptr [EAX + ECX*0x2 + -0x4],0x0
+004d3f22  MOV EDX,dword ptr [EBP + -0x8]
+004d3f25  MOV EAX,dword ptr [EDX + 0x428]
+004d3f2b  MOVSX ECX,word ptr [EBP + 0x8]
+004d3f2f  IMUL ECX,ECX,0xe
+004d3f32  LEA EDX,[EAX + ECX*0x1 + 0x540]
+004d3f39  MOVSX EAX,word ptr [EBP + -0x4]
+004d3f3d  MOV word ptr [EDX + EAX*0x2 + -0x4],0x0
+004d3f44  MOV ECX,dword ptr [EBP + -0x8]
+004d3f47  MOV EDX,dword ptr [ECX + 0x428]
+004d3f4d  MOVSX EAX,word ptr [EBP + 0x8]
+004d3f51  IMUL EAX,EAX,0x7
+004d3f54  LEA ECX,[EDX + EAX*0x1 + 0x5b0]
+004d3f5b  MOVSX EDX,word ptr [EBP + -0x4]
+004d3f5f  MOV byte ptr [ECX + EDX*0x1 + -0x2],0x0
+004d3f64  JMP 0x004d3ebb
+004d3f69  POP ESI
+004d3f6a  MOV ESP,EBP
+004d3f6c  POP EBP
+004d3f6d  RET 0x4

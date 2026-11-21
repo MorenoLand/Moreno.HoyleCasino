@@ -1,0 +1,25 @@
+; FUN_0045b960  0045b960
+0045b960  PUSH EBP
+0045b961  MOV EBP,ESP
+0045b963  SUB ESP,0x8
+0045b966  MOV dword ptr [EBP + -0x8],ECX
+0045b969  MOV EAX,dword ptr [EBP + -0x8]
+0045b96c  MOV byte ptr [EAX + 0x6],0x1
+0045b970  MOV ECX,dword ptr [0x00790738]
+0045b976  MOV dword ptr [EBP + -0x4],ECX
+0045b979  MOV EDX,dword ptr [EBP + -0x4]
+0045b97c  MOV dword ptr [EDX + 0x124],0x3
+0045b986  MOV EAX,dword ptr [EBP + -0x4]
+0045b989  MOV dword ptr [EAX + 0x128],0x4
+0045b993  PUSH 0x0
+0045b995  PUSH 0x1
+0045b997  MOV ECX,dword ptr [0x00790734]
+0045b99d  MOV EDX,dword ptr [ECX + 0x4]
+0045b9a0  MOV EAX,[0x00790734]
+0045b9a5  MOV ECX,dword ptr [EAX + 0x4]
+0045b9a8  MOV EDX,dword ptr [EDX]
+0045b9aa  MOV EAX,dword ptr [EDX + 0x8]
+0045b9ad  CALL EAX
+0045b9af  MOV ESP,EBP
+0045b9b1  POP EBP
+0045b9b2  RET

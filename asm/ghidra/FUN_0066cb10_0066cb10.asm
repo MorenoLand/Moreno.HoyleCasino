@@ -1,0 +1,19 @@
+; FUN_0066cb10  0066cb10
+0066cb10  PUSH EBP
+0066cb11  MOV EBP,ESP
+0066cb13  PUSH ECX
+0066cb14  MOV dword ptr [EBP + -0x4],ECX
+0066cb17  MOV EAX,dword ptr [EBP + 0x10]
+0066cb1a  PUSH EAX
+0066cb1b  MOV ECX,dword ptr [EBP + 0xc]
+0066cb1e  PUSH ECX
+0066cb1f  MOV EDX,dword ptr [EBP + 0x8]
+0066cb22  PUSH EDX
+0066cb23  MOV ECX,dword ptr [EBP + -0x4]
+0066cb26  CALL 0x00603120
+0066cb2b  MOV EAX,dword ptr [EBP + -0x4]
+0066cb2e  MOV dword ptr [EAX],0x6e0a34
+0066cb34  MOV EAX,dword ptr [EBP + -0x4]
+0066cb37  MOV ESP,EBP
+0066cb39  POP EBP
+0066cb3a  RET 0xc

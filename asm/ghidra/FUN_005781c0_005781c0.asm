@@ -1,0 +1,23 @@
+; FUN_005781c0  005781c0
+005781c0  PUSH EBP
+005781c1  MOV EBP,ESP
+005781c3  PUSH ECX
+005781c4  MOV dword ptr [EBP + -0x4],ECX
+005781c7  MOV EAX,dword ptr [EBP + -0x4]
+005781ca  CMP dword ptr [EAX + 0xc],0x1
+005781ce  JNZ 0x005781dc
+005781d0  MOV ECX,dword ptr [EBP + -0x4]
+005781d3  MOV dword ptr [ECX + 0xc],0xffffffff
+005781da  JMP 0x005781fd
+005781dc  MOV ECX,dword ptr [EBP + -0x4]
+005781df  CALL 0x006005d0
+005781e4  MOV EDX,dword ptr [0x0079345c]
+005781ea  MOV EAX,dword ptr [EDX + 0x34]
+005781ed  MOV ECX,dword ptr [0x0079345c]
+005781f3  MOV ECX,dword ptr [ECX + 0x34]
+005781f6  MOV EDX,dword ptr [EAX]
+005781f8  MOV EAX,dword ptr [EDX + 0x70]
+005781fb  CALL EAX
+005781fd  MOV ESP,EBP
+005781ff  POP EBP
+00578200  RET

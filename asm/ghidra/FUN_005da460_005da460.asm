@@ -1,0 +1,14 @@
+; FUN_005da460  005da460
+005da460  PUSH EBP
+005da461  MOV EBP,ESP
+005da463  PUSH ECX
+005da464  MOV dword ptr [EBP + -0x4],ECX
+005da467  MOV EAX,dword ptr [EBP + -0x4]
+005da46a  CMP dword ptr [EAX + 0x68],0x0
+005da46e  JZ 0x005da47b
+005da470  MOV ECX,dword ptr [EBP + -0x4]
+005da473  MOV ECX,dword ptr [ECX + 0x68]
+005da476  CALL 0x005ca200
+005da47b  MOV ESP,EBP
+005da47d  POP EBP
+005da47e  RET

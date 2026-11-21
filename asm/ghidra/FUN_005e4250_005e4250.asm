@@ -1,0 +1,16 @@
+; FUN_005e4250  005e4250
+005e4250  PUSH EBP
+005e4251  MOV EBP,ESP
+005e4253  SUB ESP,0xc
+005e4256  MOV dword ptr [EBP + -0xc],ECX
+005e4259  MOV dword ptr [EBP + -0x8],0x0
+005e4260  MOV dword ptr [EBP + -0x4],0x0
+005e4267  MOV EAX,dword ptr [EBP + 0x8]
+005e426a  MOV ECX,dword ptr [EBP + -0x8]
+005e426d  MOV dword ptr [EAX],ECX
+005e426f  MOV EDX,dword ptr [EBP + -0x4]
+005e4272  MOV dword ptr [EAX + 0x4],EDX
+005e4275  MOV EAX,dword ptr [EBP + 0x8]
+005e4278  MOV ESP,EBP
+005e427a  POP EBP
+005e427b  RET 0x4

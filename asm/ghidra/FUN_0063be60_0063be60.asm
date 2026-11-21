@@ -1,0 +1,28 @@
+; FUN_0063be60  0063be60
+0063be60  PUSH EBP
+0063be61  MOV EBP,ESP
+0063be63  SUB ESP,0x20
+0063be66  PUSH ESI
+0063be67  MOV dword ptr [EBP + -0xc],ECX
+0063be6a  MOV byte ptr [EBP + -0x1],0x0
+0063be6e  MOV EAX,dword ptr [EBP + 0x8]
+0063be71  MOV dword ptr [EBP + -0x10],EAX
+0063be74  CMP dword ptr [EBP + -0x10],0x2e
+0063be78  JA 0x0063c13f
+0063be7e  MOV ECX,dword ptr [EBP + -0x10]
+0063be81  MOVZX EDX,byte ptr [ECX + 0x63c194]
+0063be88  JMP dword ptr [EDX*0x4 + 0x63c168]
+0063c13f  MOV ECX,dword ptr [EBP + 0x8]
+0063c142  PUSH ECX
+0063c143  PUSH 0x32
+0063c145  MOV EDX,dword ptr [EBP + -0xc]
+0063c148  PUSH EDX
+0063c149  MOV EAX,[0x0162ee80]
+0063c14e  MOV EDX,dword ptr [EAX]
+0063c150  MOV ECX,dword ptr [0x0162ee80]
+0063c156  MOV EAX,dword ptr [EDX + 0xcc]
+0063c15c  CALL EAX
+0063c15e  POP ESI
+0063c15f  MOV ESP,EBP
+0063c161  POP EBP
+0063c162  RET 0x4

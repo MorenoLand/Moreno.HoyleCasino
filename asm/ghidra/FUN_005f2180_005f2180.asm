@@ -1,0 +1,132 @@
+; FUN_005f2180  005f2180
+005f2180  PUSH EBP
+005f2181  MOV EBP,ESP
+005f2183  SUB ESP,0x20
+005f2186  PUSH ESI
+005f2187  MOV dword ptr [EBP + -0x18],ECX
+005f218a  MOV dword ptr [EBP + -0xc],0x0
+005f2191  MOV dword ptr [EBP + -0x4],0x0
+005f2198  MOV dword ptr [EBP + -0x8],0x0
+005f219f  JMP 0x005f21aa
+005f21a1  MOV EAX,dword ptr [EBP + -0x8]
+005f21a4  ADD EAX,0x1
+005f21a7  MOV dword ptr [EBP + -0x8],EAX
+005f21aa  MOV ECX,dword ptr [EBP + -0x18]
+005f21ad  ADD ECX,0x18
+005f21b0  CALL 0x0060c9a0
+005f21b5  CMP dword ptr [EBP + -0x8],EAX
+005f21b8  JGE 0x005f22f3
+005f21be  MOV ECX,dword ptr [EBP + -0x8]
+005f21c1  PUSH ECX
+005f21c2  MOV ECX,dword ptr [EBP + -0x18]
+005f21c5  ADD ECX,0x18
+005f21c8  CALL 0x0060ca40
+005f21cd  MOV ECX,EAX
+005f21cf  CALL 0x005f5400
+005f21d4  CMP EAX,dword ptr [EBP + 0x8]
+005f21d7  JNZ 0x005f22ee
+005f21dd  MOV EDX,dword ptr [EBP + -0x8]
+005f21e0  PUSH EDX
+005f21e1  MOV ECX,dword ptr [EBP + -0x18]
+005f21e4  ADD ECX,0x18
+005f21e7  CALL 0x0060ca40
+005f21ec  MOV dword ptr [EBP + -0x10],EAX
+005f21ef  MOV ECX,dword ptr [EBP + -0x18]
+005f21f2  ADD ECX,0x18
+005f21f5  CALL 0x0060c9a0
+005f21fa  SUB EAX,0x1
+005f21fd  CMP dword ptr [EBP + -0x8],EAX
+005f2200  JGE 0x005f226e
+005f2202  MOV EAX,dword ptr [EBP + -0x8]
+005f2205  ADD EAX,0x1
+005f2208  PUSH EAX
+005f2209  MOV ECX,dword ptr [EBP + -0x18]
+005f220c  ADD ECX,0x18
+005f220f  CALL 0x0060ca40
+005f2214  MOV dword ptr [EBP + -0x1c],EAX
+005f2217  MOV ECX,dword ptr [EBP + -0x1c]
+005f221a  MOV EDX,dword ptr [ECX]
+005f221c  MOV ECX,dword ptr [EBP + -0x1c]
+005f221f  MOV EAX,dword ptr [EDX + 0x4c]
+005f2222  CALL EAX
+005f2224  MOV ESI,EAX
+005f2226  MOV ECX,dword ptr [EBP + -0x10]
+005f2229  MOV EDX,dword ptr [ECX]
+005f222b  MOV ECX,dword ptr [EBP + -0x10]
+005f222e  MOV EAX,dword ptr [EDX + 0x4c]
+005f2231  CALL EAX
+005f2233  SUB ESI,EAX
+005f2235  MOV dword ptr [EBP + -0xc],ESI
+005f2238  MOV ECX,dword ptr [EBP + -0x8]
+005f223b  ADD ECX,0x1
+005f223e  PUSH ECX
+005f223f  MOV ECX,dword ptr [EBP + -0x18]
+005f2242  ADD ECX,0x18
+005f2245  CALL 0x0060ca40
+005f224a  MOV dword ptr [EBP + -0x20],EAX
+005f224d  MOV EDX,dword ptr [EBP + -0x20]
+005f2250  MOV EAX,dword ptr [EDX]
+005f2252  MOV ECX,dword ptr [EBP + -0x20]
+005f2255  MOV EDX,dword ptr [EAX + 0x54]
+005f2258  CALL EDX
+005f225a  MOV ESI,EAX
+005f225c  MOV EAX,dword ptr [EBP + -0x10]
+005f225f  MOV EDX,dword ptr [EAX]
+005f2261  MOV ECX,dword ptr [EBP + -0x10]
+005f2264  MOV EAX,dword ptr [EDX + 0x54]
+005f2267  CALL EAX
+005f2269  SUB ESI,EAX
+005f226b  MOV dword ptr [EBP + -0x4],ESI
+005f226e  MOV ECX,dword ptr [EBP + -0x10]
+005f2271  PUSH ECX
+005f2272  MOV ECX,dword ptr [EBP + -0x18]
+005f2275  ADD ECX,0x18
+005f2278  CALL 0x0060c890
+005f227d  PUSH -0x1
+005f227f  MOV EDX,dword ptr [EBP + -0x10]
+005f2282  PUSH EDX
+005f2283  MOV EAX,dword ptr [EBP + -0x10]
+005f2286  MOV ECX,dword ptr [EAX + 0x4]
+005f2289  CALL 0x005fbcb0
+005f228e  MOV ECX,dword ptr [EBP + -0x18]
+005f2291  ADD ECX,0x18
+005f2294  CALL 0x0060c9a0
+005f2299  CMP dword ptr [EBP + -0x8],EAX
+005f229c  JGE 0x005f22ea
+005f229e  MOV ECX,dword ptr [EBP + -0x8]
+005f22a1  PUSH ECX
+005f22a2  MOV ECX,dword ptr [EBP + -0x18]
+005f22a5  ADD ECX,0x18
+005f22a8  CALL 0x0060ca40
+005f22ad  MOV dword ptr [EBP + -0x14],EAX
+005f22b0  MOV EDX,dword ptr [EBP + -0x14]
+005f22b3  MOV EAX,dword ptr [EDX]
+005f22b5  MOV ECX,dword ptr [EBP + -0x14]
+005f22b8  MOV EDX,dword ptr [EAX + 0x54]
+005f22bb  CALL EDX
+005f22bd  SUB EAX,dword ptr [EBP + -0x4]
+005f22c0  PUSH EAX
+005f22c1  MOV EAX,dword ptr [EBP + -0x14]
+005f22c4  MOV EDX,dword ptr [EAX]
+005f22c6  MOV ECX,dword ptr [EBP + -0x14]
+005f22c9  MOV EAX,dword ptr [EDX + 0x4c]
+005f22cc  CALL EAX
+005f22ce  SUB EAX,dword ptr [EBP + -0xc]
+005f22d1  PUSH EAX
+005f22d2  MOV ECX,dword ptr [EBP + -0x14]
+005f22d5  MOV EDX,dword ptr [ECX]
+005f22d7  MOV ECX,dword ptr [EBP + -0x14]
+005f22da  MOV EAX,dword ptr [EDX + 0x44]
+005f22dd  CALL EAX
+005f22df  MOV ECX,dword ptr [EBP + -0x8]
+005f22e2  ADD ECX,0x1
+005f22e5  MOV dword ptr [EBP + -0x8],ECX
+005f22e8  JMP 0x005f228e
+005f22ea  MOV AL,0x1
+005f22ec  JMP 0x005f22f5
+005f22ee  JMP 0x005f21a1
+005f22f3  XOR AL,AL
+005f22f5  POP ESI
+005f22f6  MOV ESP,EBP
+005f22f8  POP EBP
+005f22f9  RET 0x4

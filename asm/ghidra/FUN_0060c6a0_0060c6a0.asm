@@ -1,0 +1,38 @@
+; FUN_0060c6a0  0060c6a0
+0060c6a0  PUSH EBP
+0060c6a1  MOV EBP,ESP
+0060c6a3  PUSH -0x1
+0060c6a5  PUSH 0x6aadab
+0060c6aa  MOV EAX,FS:[0x0]
+0060c6b0  PUSH EAX
+0060c6b1  SUB ESP,0x8
+0060c6b4  MOV EAX,[0x00781870]
+0060c6b9  XOR EAX,EBP
+0060c6bb  PUSH EAX
+0060c6bc  LEA EAX,[EBP + -0xc]
+0060c6bf  MOV FS:[0x0],EAX
+0060c6c5  MOV dword ptr [EBP + -0x14],ECX
+0060c6c8  MOV EAX,dword ptr [EBP + -0x14]
+0060c6cb  MOV dword ptr [EAX],0x6d827c
+0060c6d1  MOV dword ptr [EBP + -0x4],0x0
+0060c6d8  MOV ECX,dword ptr [EBP + -0x14]
+0060c6db  CALL 0x0060ca10
+0060c6e0  MOV ECX,dword ptr [EBP + -0x14]
+0060c6e3  CMP dword ptr [ECX + 0x8],0x0
+0060c6e7  JZ 0x0060c6fe
+0060c6e9  MOV EDX,dword ptr [EBP + -0x14]
+0060c6ec  MOV EAX,dword ptr [EDX + 0xc]
+0060c6ef  MOV dword ptr [EBP + -0x10],EAX
+0060c6f2  MOV ECX,dword ptr [EBP + -0x10]
+0060c6f5  PUSH ECX
+0060c6f6  CALL 0x00686cae
+0060c6fb  ADD ESP,0x4
+0060c6fe  MOV dword ptr [EBP + -0x4],0xffffffff
+0060c705  MOV ECX,dword ptr [EBP + -0x14]
+0060c708  CALL 0x005e9e40
+0060c70d  MOV ECX,dword ptr [EBP + -0xc]
+0060c710  MOV dword ptr FS:[0x0],ECX
+0060c717  POP ECX
+0060c718  MOV ESP,EBP
+0060c71a  POP EBP
+0060c71b  RET

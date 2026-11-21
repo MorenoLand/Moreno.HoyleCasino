@@ -1,0 +1,32 @@
+; FUN_0047ce00  0047ce00
+0047ce00  PUSH EBP
+0047ce01  MOV EBP,ESP
+0047ce03  PUSH ECX
+0047ce04  MOV dword ptr [EBP + -0x4],ECX
+0047ce07  MOV ECX,dword ptr [0x00791eb8]
+0047ce0d  CALL 0x005da7b0
+0047ce12  MOVZX EAX,AL
+0047ce15  TEST EAX,EAX
+0047ce17  JZ 0x0047ce34
+0047ce19  MOV ECX,dword ptr [EBP + -0x4]
+0047ce1c  CALL 0x00480d20
+0047ce21  MOV ECX,dword ptr [EBP + 0x8]
+0047ce24  MOV dword ptr [ECX],EAX
+0047ce26  MOV EDX,dword ptr [EBP + 0x8]
+0047ce29  MOV EAX,dword ptr [EDX]
+0047ce2b  SHL EAX,0x1
+0047ce2d  MOV ECX,dword ptr [EBP + 0xc]
+0047ce30  MOV dword ptr [ECX],EAX
+0047ce32  JMP 0x0047ce52
+0047ce34  MOV EDX,dword ptr [EBP + 0xc]
+0047ce37  PUSH EDX
+0047ce38  MOV EAX,dword ptr [EBP + 0x8]
+0047ce3b  PUSH EAX
+0047ce3c  MOV ECX,dword ptr [0x007947e4]
+0047ce42  MOV EDX,dword ptr [ECX]
+0047ce44  MOV ECX,dword ptr [0x007947e4]
+0047ce4a  MOV EAX,dword ptr [EDX + 0x26c]
+0047ce50  CALL EAX
+0047ce52  MOV ESP,EBP
+0047ce54  POP EBP
+0047ce55  RET 0x8

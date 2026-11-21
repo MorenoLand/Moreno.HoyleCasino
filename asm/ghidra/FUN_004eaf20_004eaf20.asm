@@ -1,0 +1,27 @@
+; FUN_004eaf20  004eaf20
+004eaf20  PUSH EBP
+004eaf21  MOV EBP,ESP
+004eaf23  PUSH ECX
+004eaf24  MOV dword ptr [EBP + -0x4],ECX
+004eaf27  MOVSX EAX,word ptr [EBP + 0x8]
+004eaf2b  TEST EAX,EAX
+004eaf2d  JGE 0x004eaf46
+004eaf2f  PUSH 0x278f
+004eaf34  PUSH 0x6bf384
+004eaf39  PUSH 0x6be004
+004eaf3e  CALL 0x005e9f20
+004eaf43  ADD ESP,0xc
+004eaf46  MOVSX EDX,word ptr [EBP + 0x8]
+004eaf4a  CMP EDX,0x45
+004eaf4d  JL 0x004eaf66
+004eaf4f  PUSH 0x2790
+004eaf54  PUSH 0x6bf384
+004eaf59  PUSH 0x6bfc40
+004eaf5e  CALL 0x005e9f20
+004eaf63  ADD ESP,0xc
+004eaf66  MOVSX ECX,word ptr [EBP + 0x8]
+004eaf6a  MOV EDX,dword ptr [EBP + -0x4]
+004eaf6d  MOV AX,word ptr [EDX + ECX*0x2 + 0x2ba]
+004eaf75  MOV ESP,EBP
+004eaf77  POP EBP
+004eaf78  RET 0x4

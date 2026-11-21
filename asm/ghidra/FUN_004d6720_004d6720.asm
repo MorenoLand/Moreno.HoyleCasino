@@ -1,0 +1,56 @@
+; FUN_004d6720  004d6720
+004d6720  PUSH EBP
+004d6721  MOV EBP,ESP
+004d6723  SUB ESP,0x14
+004d6726  MOV dword ptr [EBP + -0x4],ECX
+004d6729  MOV EAX,dword ptr [EBP + -0x4]
+004d672c  MOVSX ECX,word ptr [EAX + 0x64]
+004d6730  TEST ECX,ECX
+004d6732  JNZ 0x004d6754
+004d6734  MOV EDX,dword ptr [EBP + -0x4]
+004d6737  MOVSX EAX,word ptr [EDX + 0x1be]
+004d673e  MOV dword ptr [EBP + -0x8],EAX
+004d6741  FILD dword ptr [EBP + -0x8]
+004d6744  FDIV double ptr [0x006b4b00]
+004d674a  JMP 0x004d67e3
+004d6754  MOV ECX,dword ptr [EBP + -0x4]
+004d6757  MOVSX EDX,word ptr [ECX + 0x64]
+004d675b  CMP EDX,0x1
+004d675e  JNZ 0x004d677a
+004d6760  MOV EAX,dword ptr [EBP + -0x4]
+004d6763  MOVSX ECX,word ptr [EAX + 0x1be]
+004d676a  MOV dword ptr [EBP + -0xc],ECX
+004d676d  FILD dword ptr [EBP + -0xc]
+004d6770  FDIV double ptr [0x006bf718]
+004d6776  JMP 0x004d67e3
+004d677a  MOV EDX,dword ptr [EBP + -0x4]
+004d677d  MOVSX EAX,word ptr [EDX + 0x64]
+004d6781  CMP EAX,0x2
+004d6784  JNZ 0x004d67a0
+004d6786  MOV ECX,dword ptr [EBP + -0x4]
+004d6789  MOVSX EDX,word ptr [ECX + 0x1be]
+004d6790  MOV dword ptr [EBP + -0x10],EDX
+004d6793  FILD dword ptr [EBP + -0x10]
+004d6796  FDIV double ptr [0x006bf710]
+004d679c  JMP 0x004d67e3
+004d67a0  MOV EAX,dword ptr [EBP + -0x4]
+004d67a3  MOVSX ECX,word ptr [EAX + 0x64]
+004d67a7  CMP ECX,0x3
+004d67aa  JNZ 0x004d67c6
+004d67ac  MOV EDX,dword ptr [EBP + -0x4]
+004d67af  MOVSX EAX,word ptr [EDX + 0x1be]
+004d67b6  MOV dword ptr [EBP + -0x14],EAX
+004d67b9  FILD dword ptr [EBP + -0x14]
+004d67bc  FDIV double ptr [0x006bf708]
+004d67c2  JMP 0x004d67e3
+004d67c6  XOR ECX,ECX
+004d67c8  JNZ 0x004d67e1
+004d67ca  PUSH 0x153a
+004d67cf  PUSH 0x6bf384
+004d67d4  PUSH 0x6b2b64
+004d67d9  CALL 0x005e9f20
+004d67de  ADD ESP,0xc
+004d67e1  FLDZ
+004d67e3  MOV ESP,EBP
+004d67e5  POP EBP
+004d67e6  RET

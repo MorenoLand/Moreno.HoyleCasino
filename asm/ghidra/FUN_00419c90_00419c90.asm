@@ -1,0 +1,49 @@
+; FUN_00419c90  00419c90
+00419c90  PUSH EBP
+00419c91  MOV EBP,ESP
+00419c93  SUB ESP,0x18
+00419c96  MOV dword ptr [EBP + -0x14],ECX
+00419c99  MOV ECX,dword ptr [EBP + -0x14]
+00419c9c  CALL 0x00418700
+00419ca1  IMUL EAX,EAX,0x34
+00419ca4  MOV ECX,dword ptr [EBP + -0x14]
+00419ca7  CMP dword ptr [ECX + 0x4dc],EAX
+00419cad  JL 0x00419cb3
+00419caf  XOR EAX,EAX
+00419cb1  JMP 0x00419d2b
+00419cb3  MOV ECX,dword ptr [EBP + -0x14]
+00419cb6  CALL 0x00418700
+00419cbb  MOV dword ptr [EBP + -0x18],EAX
+00419cbe  FILD dword ptr [EBP + -0x18]
+00419cc1  FADD ST0,ST0
+00419cc3  MOV EDX,dword ptr [EBP + -0x14]
+00419cc6  FILD dword ptr [EDX + 0x4dc]
+00419ccc  FDIV double ptr [0x006b4b18]
+00419cd2  FSUBP
+00419cd4  FSTP double ptr [EBP + -0x8]
+00419cd7  FLD double ptr [0x006b3e40]
+00419cdd  FCOMP double ptr [EBP + -0x8]
+00419ce0  FNSTSW AX
+00419ce2  TEST AH,0x41
+00419ce5  JNZ 0x00419cf0
+00419ce7  FLD double ptr [0x006b3e40]
+00419ced  FSTP double ptr [EBP + -0x8]
+00419cf0  MOV EAX,dword ptr [EBP + -0x14]
+00419cf3  FILD dword ptr [EAX + 0x4e4]
+00419cf9  FDIV double ptr [EBP + -0x8]
+00419cfc  FSTP double ptr [EBP + -0x10]
+00419cff  FLDZ
+00419d01  FCOMP double ptr [EBP + -0x10]
+00419d04  FNSTSW AX
+00419d06  TEST AH,0x41
+00419d09  JNZ 0x00419d1d
+00419d0b  FLD double ptr [EBP + -0x10]
+00419d0e  FSUB double ptr [0x006b2c38]
+00419d14  CALL 0x00686cc0
+00419d19  JMP 0x00419d2b
+00419d1d  FLD double ptr [EBP + -0x10]
+00419d20  FADD double ptr [0x006b2c38]
+00419d26  CALL 0x00686cc0
+00419d2b  MOV ESP,EBP
+00419d2d  POP EBP
+00419d2e  RET

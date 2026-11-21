@@ -1,0 +1,34 @@
+; FUN_00605770  00605770
+00605770  PUSH EBP
+00605771  MOV EBP,ESP
+00605773  PUSH ECX
+00605774  MOV dword ptr [EBP + -0x4],ECX
+00605777  MOV EAX,dword ptr [EBP + 0x8]
+0060577a  PUSH EAX
+0060577b  MOV ECX,dword ptr [EBP + -0x4]
+0060577e  CALL 0x005f4ed0
+00605783  MOV ECX,dword ptr [EBP + 0x8]
+00605786  MOV byte ptr [ECX + 0x4],0x1
+0060578a  MOV EDX,dword ptr [EBP + -0x4]
+0060578d  MOV EAX,dword ptr [EDX]
+0060578f  MOV ECX,dword ptr [EBP + -0x4]
+00605792  MOV EDX,dword ptr [EAX + 0x4c]
+00605795  CALL EDX
+00605797  MOV ECX,dword ptr [EBP + 0x8]
+0060579a  MOV EDX,dword ptr [ECX + 0x8]
+0060579d  SUB EDX,EAX
+0060579f  MOV EAX,dword ptr [EBP + -0x4]
+006057a2  MOV dword ptr [EAX + 0x2c],EDX
+006057a5  MOV ECX,dword ptr [EBP + -0x4]
+006057a8  MOV EDX,dword ptr [ECX]
+006057aa  MOV ECX,dword ptr [EBP + -0x4]
+006057ad  MOV EAX,dword ptr [EDX + 0x54]
+006057b0  CALL EAX
+006057b2  MOV ECX,dword ptr [EBP + 0x8]
+006057b5  MOV EDX,dword ptr [ECX + 0xc]
+006057b8  SUB EDX,EAX
+006057ba  MOV EAX,dword ptr [EBP + -0x4]
+006057bd  MOV dword ptr [EAX + 0x30],EDX
+006057c0  MOV ESP,EBP
+006057c2  POP EBP
+006057c3  RET 0x4

@@ -1,0 +1,29 @@
+; FUN_0062fc30  0062fc30
+0062fc30  PUSH EBP
+0062fc31  MOV EBP,ESP
+0062fc33  PUSH ECX
+0062fc34  MOV EAX,dword ptr [EBP + 0x8]
+0062fc37  CMP EAX,dword ptr [EBP + 0xc]
+0062fc3a  JLE 0x0062fc5b
+0062fc3c  MOV ECX,dword ptr [EBP + 0x8]
+0062fc3f  SUB ECX,dword ptr [EBP + 0xc]
+0062fc42  MOV dword ptr [EBP + -0x4],ECX
+0062fc45  MOV EDX,dword ptr [EBP + -0x4]
+0062fc48  ADD EDX,0x1
+0062fc4b  PUSH EDX
+0062fc4c  CALL 0x0062fba0
+0062fc51  ADD ESP,0x4
+0062fc54  ADD EAX,dword ptr [EBP + 0xc]
+0062fc57  JMP 0x0062fc76
+0062fc5b  MOV EAX,dword ptr [EBP + 0xc]
+0062fc5e  SUB EAX,dword ptr [EBP + 0x8]
+0062fc61  MOV dword ptr [EBP + -0x4],EAX
+0062fc64  MOV ECX,dword ptr [EBP + -0x4]
+0062fc67  ADD ECX,0x1
+0062fc6a  PUSH ECX
+0062fc6b  CALL 0x0062fba0
+0062fc70  ADD ESP,0x4
+0062fc73  ADD EAX,dword ptr [EBP + 0x8]
+0062fc76  MOV ESP,EBP
+0062fc78  POP EBP
+0062fc79  RET

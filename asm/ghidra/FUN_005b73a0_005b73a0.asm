@@ -1,0 +1,12 @@
+; FUN_005b73a0  005b73a0
+005b73a0  PUSH EBP
+005b73a1  MOV EBP,ESP
+005b73a3  PUSH ECX
+005b73a4  MOV dword ptr [EBP + -0x4],ECX
+005b73a7  MOV EAX,dword ptr [EBP + 0x8]
+005b73aa  MOV ECX,dword ptr [EBP + -0x4]
+005b73ad  MOV EDX,dword ptr [EBP + 0xc]
+005b73b0  MOV dword ptr [ECX + EAX*0x4 + 0x5dc],EDX
+005b73b7  MOV ESP,EBP
+005b73b9  POP EBP
+005b73ba  RET 0x8

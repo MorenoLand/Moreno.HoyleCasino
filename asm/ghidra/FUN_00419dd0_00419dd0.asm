@@ -1,0 +1,64 @@
+; FUN_00419dd0  00419dd0
+00419dd0  PUSH EBP
+00419dd1  MOV EBP,ESP
+00419dd3  SUB ESP,0x30
+00419dd6  MOV dword ptr [EBP + -0x30],ECX
+00419dd9  MOV dword ptr [EBP + -0x14],0x2
+00419de0  MOV dword ptr [EBP + -0x10],0x0
+00419de7  MOV dword ptr [EBP + -0xc],0x1
+00419dee  MOV dword ptr [EBP + -0x8],0x3
+00419df5  MOV dword ptr [EBP + -0x4],0x0
+00419dfc  JMP 0x00419e07
+00419dfe  MOV EAX,dword ptr [EBP + -0x4]
+00419e01  ADD EAX,0x1
+00419e04  MOV dword ptr [EBP + -0x4],EAX
+00419e07  CMP dword ptr [EBP + -0x4],0x4
+00419e0b  JGE 0x00419e9d
+00419e11  MOV ECX,dword ptr [EBP + -0x4]
+00419e14  MOV EDX,dword ptr [EBP + ECX*0x4 + -0x14]
+00419e18  PUSH EDX
+00419e19  CALL 0x005dcb00
+00419e1e  ADD ESP,0x4
+00419e21  MOV dword ptr [EBP + -0x1c],EAX
+00419e24  MOV ECX,dword ptr [EBP + -0x1c]
+00419e27  CALL 0x0063aac0
+00419e2c  MOV EAX,dword ptr [EAX]
+00419e2e  MOV dword ptr [EBP + -0x18],EAX
+00419e31  XOR ECX,ECX
+00419e33  CMP dword ptr [EBP + -0x18],0x0
+00419e37  SETZ CL
+00419e3a  MOVZX EDX,CL
+00419e3d  TEST EDX,EDX
+00419e3f  JNZ 0x00419e98
+00419e41  MOV EAX,dword ptr [EBP + -0x4]
+00419e44  MOV ECX,dword ptr [EBP + EAX*0x4 + -0x14]
+00419e48  PUSH ECX
+00419e49  CALL 0x005dcb00
+00419e4e  ADD ESP,0x4
+00419e51  MOV dword ptr [EBP + -0x20],EAX
+00419e54  MOV EDX,dword ptr [EBP + -0x20]
+00419e57  MOV AL,byte ptr [EDX + 0x4a0]
+00419e5d  MOV byte ptr [EBP + -0x21],AL
+00419e60  MOVZX ECX,byte ptr [EBP + -0x21]
+00419e64  TEST ECX,ECX
+00419e66  JNZ 0x00419e98
+00419e68  MOV EDX,dword ptr [EBP + -0x4]
+00419e6b  MOV EAX,dword ptr [EBP + EDX*0x4 + -0x14]
+00419e6f  PUSH EAX
+00419e70  CALL 0x005dcb00
+00419e75  ADD ESP,0x4
+00419e78  MOV dword ptr [EBP + -0x28],EAX
+00419e7b  MOV ECX,dword ptr [EBP + -0x28]
+00419e7e  MOV DL,byte ptr [ECX + 0x4a1]
+00419e84  MOV byte ptr [EBP + -0x29],DL
+00419e87  MOVZX EAX,byte ptr [EBP + -0x29]
+00419e8b  TEST EAX,EAX
+00419e8d  JNZ 0x00419e98
+00419e8f  MOV ECX,dword ptr [EBP + -0x4]
+00419e92  MOV EAX,dword ptr [EBP + ECX*0x4 + -0x14]
+00419e96  JMP 0x00419ea0
+00419e98  JMP 0x00419dfe
+00419e9d  OR EAX,0xffffffff
+00419ea0  MOV ESP,EBP
+00419ea2  POP EBP
+00419ea3  RET

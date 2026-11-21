@@ -1,0 +1,31 @@
+; FUN_00466e90  00466e90
+00466e90  PUSH EBP
+00466e91  MOV EBP,ESP
+00466e93  SUB ESP,0x8
+00466e96  MOV dword ptr [EBP + -0x8],ECX
+00466e99  MOV ECX,dword ptr [0x00791eb8]
+00466e9f  CALL 0x005da7b0
+00466ea4  MOVZX EAX,AL
+00466ea7  TEST EAX,EAX
+00466ea9  JZ 0x00466eb5
+00466eab  MOV ECX,dword ptr [EBP + -0x8]
+00466eae  CALL 0x00466820
+00466eb3  JMP 0x00466ebd
+00466eb5  MOV ECX,dword ptr [EBP + -0x8]
+00466eb8  CALL 0x00465d90
+00466ebd  MOV ECX,dword ptr [0x0162ee84]
+00466ec3  MOV DL,byte ptr [ECX + 0x25]
+00466ec6  MOV byte ptr [EBP + -0x1],DL
+00466ec9  MOVZX EAX,byte ptr [EBP + -0x1]
+00466ecd  TEST EAX,EAX
+00466ecf  JZ 0x00466eed
+00466ed1  MOV ECX,dword ptr [EBP + -0x8]
+00466ed4  MOV EDX,dword ptr [ECX + 0x1e0]
+00466eda  MOV EAX,dword ptr [EBP + -0x8]
+00466edd  MOV ECX,dword ptr [EAX + 0x1e0]
+00466ee3  MOV EDX,dword ptr [EDX]
+00466ee5  MOV EAX,dword ptr [EDX + 0xc0]
+00466eeb  CALL EAX
+00466eed  MOV ESP,EBP
+00466eef  POP EBP
+00466ef0  RET

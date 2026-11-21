@@ -1,0 +1,33 @@
+; FUN_00552f00  00552f00
+00552f00  PUSH EBP
+00552f01  MOV EBP,ESP
+00552f03  SUB ESP,0xc
+00552f06  MOV dword ptr [EBP + -0xc],ECX
+00552f09  MOV dword ptr [EBP + -0x8],0xffffffff
+00552f10  MOV EAX,dword ptr [EBP + 0x8]
+00552f13  PUSH EAX
+00552f14  MOV ECX,dword ptr [0x0162ee84]
+00552f1a  MOV ECX,dword ptr [ECX + 0x14]
+00552f1d  CALL 0x005fb300
+00552f22  MOV dword ptr [EBP + -0x4],EAX
+00552f25  CMP dword ptr [EBP + -0x4],0x0
+00552f29  JZ 0x00552f3b
+00552f2b  MOV EDX,dword ptr [EBP + -0x4]
+00552f2e  MOV EAX,dword ptr [EDX]
+00552f30  MOV ECX,dword ptr [EBP + -0x4]
+00552f33  MOV EDX,dword ptr [EAX + 0xd0]
+00552f39  CALL EDX
+00552f3b  MOV EAX,dword ptr [EBP + 0x8]
+00552f3e  PUSH EAX
+00552f3f  MOV ECX,dword ptr [EBP + -0xc]
+00552f42  CALL 0x00552e20
+00552f47  MOV dword ptr [EBP + -0x8],EAX
+00552f4a  CMP dword ptr [EBP + -0x8],-0x1
+00552f4e  JZ 0x00552f5f
+00552f50  MOV ECX,dword ptr [EBP + -0x8]
+00552f53  PUSH ECX
+00552f54  MOV ECX,dword ptr [0x0162ee80]
+00552f5a  CALL 0x005f2ba0
+00552f5f  MOV ESP,EBP
+00552f61  POP EBP
+00552f62  RET 0x4

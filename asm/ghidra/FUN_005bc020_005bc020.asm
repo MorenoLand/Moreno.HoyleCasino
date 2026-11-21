@@ -1,0 +1,11 @@
+; FUN_005bc020  005bc020
+005bc020  MOV dword ptr [EBP + -0x4],0xffffffff
+005bc027  MOV ECX,dword ptr [EBP + -0xc]
+005bc02a  MOV dword ptr FS:[0x0],ECX
+005bc031  POP ECX
+005bc032  POP EDI
+005bc033  POP ESI
+005bc034  POP EBX
+005bc035  MOV ESP,EBP
+005bc037  POP EBP
+005bc038  RET

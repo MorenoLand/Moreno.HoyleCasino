@@ -1,0 +1,25 @@
+; FUN_00604fe0  00604fe0
+00604fe0  PUSH EBP
+00604fe1  MOV EBP,ESP
+00604fe3  PUSH ECX
+00604fe4  MOV dword ptr [EBP + -0x4],ECX
+00604fe7  MOV ECX,dword ptr [EBP + -0x4]
+00604fea  CALL 0x005f5440
+00604fef  MOV EAX,dword ptr [EBP + -0x4]
+00604ff2  MOV ECX,dword ptr [EAX + 0x4c]
+00604ff5  MOV EDX,dword ptr [EBP + -0x4]
+00604ff8  MOV EAX,dword ptr [EDX + 0x4c]
+00604ffb  MOV EDX,dword ptr [ECX]
+00604ffd  MOV ECX,EAX
+00604fff  MOV EAX,dword ptr [EDX + 0x74]
+00605002  CALL EAX
+00605004  MOV ECX,dword ptr [EBP + -0x4]
+00605007  MOV EDX,dword ptr [ECX + 0x48]
+0060500a  MOV EAX,dword ptr [EBP + -0x4]
+0060500d  MOV ECX,dword ptr [EAX + 0x48]
+00605010  MOV EDX,dword ptr [EDX]
+00605012  MOV EAX,dword ptr [EDX + 0x74]
+00605015  CALL EAX
+00605017  MOV ESP,EBP
+00605019  POP EBP
+0060501a  RET

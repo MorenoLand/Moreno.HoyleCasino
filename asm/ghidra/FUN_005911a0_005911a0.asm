@@ -1,0 +1,15 @@
+; FUN_005911a0  005911a0
+005911a0  PUSH EBP
+005911a1  MOV EBP,ESP
+005911a3  SUB ESP,0x18
+005911a6  MOV dword ptr [EBP + -0x18],ECX
+005911a9  MOV dword ptr [EBP + -0x14],0xb6
+005911b0  MOV dword ptr [EBP + -0x10],0xb7
+005911b7  MOV dword ptr [EBP + -0xc],0x8a
+005911be  MOV dword ptr [EBP + -0x8],0x8a
+005911c5  MOV dword ptr [EBP + -0x4],0x52
+005911cc  MOV EAX,dword ptr [EBP + 0x8]
+005911cf  MOV EAX,dword ptr [EBP + EAX*0x4 + -0x14]
+005911d3  MOV ESP,EBP
+005911d5  POP EBP
+005911d6  RET 0x8

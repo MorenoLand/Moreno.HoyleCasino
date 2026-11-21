@@ -1,0 +1,32 @@
+; FUN_005b36b0  005b36b0
+005b36b0  PUSH EBP
+005b36b1  MOV EBP,ESP
+005b36b3  SUB ESP,0x10
+005b36b6  MOV dword ptr [EBP + -0x10],ECX
+005b36b9  MOV EAX,dword ptr [EBP + 0x8]
+005b36bc  MOV ECX,dword ptr [EBP + -0x10]
+005b36bf  MOV EDX,dword ptr [ECX + EAX*0x4 + 0x580]
+005b36c6  MOV dword ptr [EBP + -0xc],EDX
+005b36c9  MOV EAX,dword ptr [EBP + 0x8]
+005b36cc  SHL EAX,0x5
+005b36cf  MOV ECX,dword ptr [EBP + -0xc]
+005b36d2  LEA EDX,[ECX + EAX*0x1 + 0x48]
+005b36d6  XOR EAX,EAX
+005b36d8  SHL EAX,0x3
+005b36db  MOV ECX,dword ptr [EDX + EAX*0x1]
+005b36de  MOV EDX,dword ptr [EDX + EAX*0x1 + 0x4]
+005b36e2  MOV dword ptr [EBP + -0x8],ECX
+005b36e5  MOV dword ptr [EBP + -0x4],EDX
+005b36e8  MOV EAX,dword ptr [EBP + 0x8]
+005b36eb  PUSH EAX
+005b36ec  CALL 0x005dcb00
+005b36f1  ADD ESP,0x4
+005b36f4  MOV ECX,EAX
+005b36f6  CALL 0x005d5a50
+005b36fb  XOR ECX,ECX
+005b36fd  CMP EAX,dword ptr [EBP + -0x8]
+005b3700  SETGE CL
+005b3703  MOV AL,CL
+005b3705  MOV ESP,EBP
+005b3707  POP EBP
+005b3708  RET 0x4

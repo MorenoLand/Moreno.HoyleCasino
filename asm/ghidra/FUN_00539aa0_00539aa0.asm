@@ -1,0 +1,22 @@
+; FUN_00539aa0  00539aa0
+00539aa0  PUSH EBP
+00539aa1  MOV EBP,ESP
+00539aa3  PUSH ECX
+00539aa4  MOV dword ptr [EBP + -0x4],ECX
+00539aa7  MOV EAX,dword ptr [EBP + 0xc]
+00539aaa  PUSH EAX
+00539aab  MOV ECX,dword ptr [EBP + 0x8]
+00539aae  PUSH ECX
+00539aaf  MOV ECX,dword ptr [EBP + -0x4]
+00539ab2  CALL 0x00539ae0
+00539ab7  MOV EDX,dword ptr [EBP + 0xc]
+00539aba  PUSH EDX
+00539abb  MOV EAX,dword ptr [EBP + 0x10]
+00539abe  PUSH EAX
+00539abf  MOV ECX,dword ptr [EBP + 0x8]
+00539ac2  PUSH ECX
+00539ac3  MOV ECX,dword ptr [EBP + -0x4]
+00539ac6  CALL 0x00539ca0
+00539acb  MOV ESP,EBP
+00539acd  POP EBP
+00539ace  RET 0xc

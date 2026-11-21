@@ -1,0 +1,18 @@
+; FUN_0065daa0  0065daa0
+0065daa0  PUSH EBP
+0065daa1  MOV EBP,ESP
+0065daa3  PUSH ECX
+0065daa4  MOV dword ptr [EBP + -0x4],ECX
+0065daa7  MOV ECX,dword ptr [EBP + -0x4]
+0065daaa  CALL 0x006060e0
+0065daaf  MOV EAX,dword ptr [EBP + 0x8]
+0065dab2  AND EAX,0x1
+0065dab5  JZ 0x0065dac3
+0065dab7  MOV ECX,dword ptr [EBP + -0x4]
+0065daba  PUSH ECX
+0065dabb  CALL 0x00686cae
+0065dac0  ADD ESP,0x4
+0065dac3  MOV EAX,dword ptr [EBP + -0x4]
+0065dac6  MOV ESP,EBP
+0065dac8  POP EBP
+0065dac9  RET 0x4

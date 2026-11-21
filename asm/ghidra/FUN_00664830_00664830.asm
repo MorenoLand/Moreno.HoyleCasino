@@ -1,0 +1,22 @@
+; FUN_00664830  00664830
+00664830  PUSH EBP
+00664831  MOV EBP,ESP
+00664833  SUB ESP,0x34
+00664836  MOV dword ptr [EBP + -0x34],ECX
+00664839  MOV dword ptr [EBP + -0x30],0x0
+00664840  MOV dword ptr [EBP + -0x2c],0x2
+00664847  MOV dword ptr [EBP + -0x28],0x3
+0066484e  MOV dword ptr [EBP + -0x24],0x5
+00664855  MOV dword ptr [EBP + -0x20],0x8
+0066485c  MOV dword ptr [EBP + -0x1c],0xb
+00664863  MOV dword ptr [EBP + -0x18],0xd
+0066486a  MOV dword ptr [EBP + -0x14],0x10
+00664871  MOV dword ptr [EBP + -0x10],0x13
+00664878  MOV dword ptr [EBP + -0xc],0x16
+0066487f  MOV dword ptr [EBP + -0x8],0x19
+00664886  MOV dword ptr [EBP + -0x4],0x1a
+0066488d  MOV EAX,dword ptr [EBP + 0x8]
+00664890  MOV EAX,dword ptr [EBP + EAX*0x4 + -0x30]
+00664894  MOV ESP,EBP
+00664896  POP EBP
+00664897  RET 0x4

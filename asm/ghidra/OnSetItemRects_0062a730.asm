@@ -1,0 +1,19 @@
+; OnSetItemRects  0062a730
+0062a730  PUSH EBP
+0062a731  MOV EBP,ESP
+0062a733  PUSH ECX
+0062a734  MOV dword ptr [EBP + -0x4],ECX
+0062a737  MOV EAX,dword ptr [EBP + 0xc]
+0062a73a  PUSH EAX
+0062a73b  MOV ECX,dword ptr [EBP + 0x8]
+0062a73e  PUSH ECX
+0062a73f  MOV EDX,dword ptr [EBP + -0x4]
+0062a742  MOV EAX,dword ptr [EDX + 0x48]
+0062a745  MOV ECX,dword ptr [EBP + -0x4]
+0062a748  MOV ECX,dword ptr [ECX + 0x48]
+0062a74b  MOV EDX,dword ptr [EAX]
+0062a74d  MOV EAX,dword ptr [EDX + 0x80]
+0062a753  CALL EAX
+0062a755  MOV ESP,EBP
+0062a757  POP EBP
+0062a758  RET 0x8

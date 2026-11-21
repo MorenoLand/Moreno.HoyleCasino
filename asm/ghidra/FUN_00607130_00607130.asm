@@ -1,0 +1,127 @@
+; FUN_00607130  00607130
+00607130  PUSH EBP
+00607131  MOV EBP,ESP
+00607133  SUB ESP,0x20
+00607136  MOV dword ptr [EBP + -0x10],ECX
+00607139  MOV EAX,dword ptr [EBP + -0x10]
+0060713c  MOVZX ECX,byte ptr [EAX + 0xc]
+00607140  TEST ECX,ECX
+00607142  JNZ 0x00607149
+00607144  JMP 0x006072b0
+00607149  MOV ECX,dword ptr [0x015e55e8]
+0060714f  CALL 0x005f3e50
+00607154  MOV EDX,dword ptr [EBP + -0x10]
+00607157  SUB EAX,dword ptr [EDX + 0x28]
+0060715a  PUSH EAX
+0060715b  CALL 0x00686eba
+00607160  ADD ESP,0x4
+00607163  MOV ECX,dword ptr [EBP + -0x10]
+00607166  MOV EDX,dword ptr [ECX + 0x4]
+00607169  CMP EAX,dword ptr [EDX + 0x184]
+0060716f  JGE 0x00607176
+00607171  JMP 0x006072b0
+00607176  MOV ECX,dword ptr [0x015e55e8]
+0060717c  CALL 0x005f3e50
+00607181  MOV ECX,dword ptr [EBP + -0x10]
+00607184  MOV dword ptr [ECX + 0x28],EAX
+00607187  MOV EDX,dword ptr [EBP + -0x10]
+0060718a  MOV EAX,dword ptr [EDX + 0x4]
+0060718d  CMP dword ptr [EAX + 0x184],0x0
+00607194  JNZ 0x006071a6
+00607196  MOV ECX,dword ptr [EBP + -0x10]
+00607199  FLD float ptr [ECX + 0x3c]
+0060719c  FLD1
+0060719e  FSUBRP
+006071a0  MOV EDX,dword ptr [EBP + -0x10]
+006071a3  FSTP float ptr [EDX + 0x30]
+006071a6  MOV EAX,dword ptr [EBP + -0x10]
+006071a9  FLD float ptr [EAX + 0x30]
+006071ac  MOV ECX,dword ptr [EBP + -0x10]
+006071af  FADD float ptr [ECX + 0x3c]
+006071b2  MOV EDX,dword ptr [EBP + -0x10]
+006071b5  FSTP float ptr [EDX + 0x30]
+006071b8  MOV EAX,dword ptr [EBP + -0x10]
+006071bb  MOV EDX,dword ptr [EAX]
+006071bd  MOV ECX,dword ptr [EBP + -0x10]
+006071c0  MOV EAX,dword ptr [EDX + 0x14]
+006071c3  CALL EAX
+006071c5  FSTP float ptr [EBP + -0xc]
+006071c8  MOV ECX,dword ptr [EBP + -0x10]
+006071cb  FLD float ptr [ECX + 0x40]
+006071ce  FMUL float ptr [EBP + -0xc]
+006071d1  MOV EDX,dword ptr [EBP + -0x10]
+006071d4  FLD float ptr [EDX + 0x34]
+006071d7  FMUL double ptr [0x006d7e30]
+006071dd  MOV EAX,dword ptr [EBP + -0x10]
+006071e0  FMUL float ptr [EAX + 0x30]
+006071e3  SUB ESP,0x8
+006071e6  FSTP double ptr [ESP]
+006071e9  FSTP double ptr [EBP + -0x18]
+006071ec  CALL 0x00687312
+006071f1  ADD ESP,0x8
+006071f4  FSTP float ptr [EBP + -0x1c]
+006071f7  FLD float ptr [EBP + -0x1c]
+006071fa  FMUL double ptr [EBP + -0x18]
+006071fd  MOV ECX,dword ptr [EBP + -0x10]
+00607200  FIADD dword ptr [ECX + 0x10]
+00607203  MOV EDX,dword ptr [EBP + -0x10]
+00607206  FSTP float ptr [EDX + 0x18]
+00607209  MOV EAX,dword ptr [EBP + -0x10]
+0060720c  FLD float ptr [EAX + 0x34]
+0060720f  FMUL double ptr [0x006d7e30]
+00607215  MOV ECX,dword ptr [EBP + -0x10]
+00607218  FMUL float ptr [ECX + 0x30]
+0060721b  SUB ESP,0x8
+0060721e  FSTP double ptr [ESP]
+00607221  CALL 0x0068730c
+00607226  ADD ESP,0x8
+00607229  FSTP float ptr [EBP + -0x20]
+0060722c  FLD float ptr [EBP + -0x20]
+0060722f  FMUL float ptr [EBP + -0xc]
+00607232  MOV EDX,dword ptr [EBP + -0x10]
+00607235  FIADD dword ptr [EDX + 0x14]
+00607238  MOV EAX,dword ptr [EBP + -0x10]
+0060723b  FSTP float ptr [EAX + 0x1c]
+0060723e  MOV ECX,dword ptr [EBP + -0x10]
+00607241  FLD float ptr [ECX + 0x18]
+00607244  CALL 0x00686cc0
+00607249  MOV dword ptr [EBP + -0x8],EAX
+0060724c  MOV EDX,dword ptr [EBP + -0x10]
+0060724f  FLD float ptr [EDX + 0x1c]
+00607252  CALL 0x00686cc0
+00607257  MOV dword ptr [EBP + -0x4],EAX
+0060725a  MOV EAX,dword ptr [EBP + -0x4]
+0060725d  PUSH EAX
+0060725e  MOV ECX,dword ptr [EBP + -0x8]
+00607261  PUSH ECX
+00607262  MOV EDX,dword ptr [EBP + -0x10]
+00607265  MOV EAX,dword ptr [EDX + 0x4]
+00607268  MOV ECX,dword ptr [EBP + -0x10]
+0060726b  MOV ECX,dword ptr [ECX + 0x4]
+0060726e  MOV EDX,dword ptr [EAX]
+00607270  MOV EAX,dword ptr [EDX + 0x44]
+00607273  CALL EAX
+00607275  MOV ECX,dword ptr [EBP + -0x10]
+00607278  MOV EDX,dword ptr [EBP + -0x8]
+0060727b  SUB EDX,dword ptr [ECX + 0x10]
+0060727e  PUSH EDX
+0060727f  CALL 0x00686eba
+00607284  ADD ESP,0x4
+00607287  CMP EAX,0x5
+0060728a  JGE 0x006072b0
+0060728c  MOV EAX,dword ptr [EBP + -0x10]
+0060728f  MOV ECX,dword ptr [EBP + -0x4]
+00607292  SUB ECX,dword ptr [EAX + 0x14]
+00607295  PUSH ECX
+00607296  CALL 0x00686eba
+0060729b  ADD ESP,0x4
+0060729e  CMP EAX,0x5
+006072a1  JGE 0x006072b0
+006072a3  MOV EDX,dword ptr [EBP + -0x10]
+006072a6  MOV EAX,dword ptr [EDX]
+006072a8  MOV ECX,dword ptr [EBP + -0x10]
+006072ab  MOV EDX,dword ptr [EAX + 0x10]
+006072ae  CALL EDX
+006072b0  MOV ESP,EBP
+006072b2  POP EBP
+006072b3  RET

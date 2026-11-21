@@ -1,0 +1,23 @@
+; FUN_00577b80  00577b80
+00577b80  PUSH EBP
+00577b81  MOV EBP,ESP
+00577b83  PUSH ECX
+00577b84  MOV dword ptr [EBP + -0x4],ECX
+00577b87  MOV EAX,dword ptr [EBP + 0xc]
+00577b8a  PUSH EAX
+00577b8b  MOV ECX,dword ptr [EBP + -0x4]
+00577b8e  CALL 0x00600420
+00577b93  MOV ECX,dword ptr [EBP + -0x4]
+00577b96  MOV dword ptr [ECX],0x6cb134
+00577b9c  MOVZX EDX,byte ptr [EBP + 0x8]
+00577ba0  TEST EDX,EDX
+00577ba2  JZ 0x00577bb0
+00577ba4  MOV EAX,dword ptr [EBP + -0x4]
+00577ba7  MOV dword ptr [EAX + 0xc],0x1
+00577bae  JMP 0x00577bba
+00577bb0  MOV ECX,dword ptr [EBP + -0x4]
+00577bb3  MOV dword ptr [ECX + 0xc],0xffffffff
+00577bba  MOV EAX,dword ptr [EBP + -0x4]
+00577bbd  MOV ESP,EBP
+00577bbf  POP EBP
+00577bc0  RET 0x8

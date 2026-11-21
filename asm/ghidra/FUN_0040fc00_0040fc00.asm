@@ -1,0 +1,12 @@
+; FUN_0040fc00  0040fc00
+0040fc00  PUSH EBP
+0040fc01  MOV EBP,ESP
+0040fc03  PUSH ECX
+0040fc04  MOV dword ptr [EBP + -0x4],ECX
+0040fc07  MOV EAX,dword ptr [EBP + -0x4]
+0040fc0a  MOV dword ptr [EAX],0x6b39f4
+0040fc10  MOV ECX,dword ptr [EBP + -0x4]
+0040fc13  CALL 0x005f4ad0
+0040fc18  MOV ESP,EBP
+0040fc1a  POP EBP
+0040fc1b  RET

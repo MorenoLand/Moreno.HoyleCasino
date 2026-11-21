@@ -1,0 +1,6 @@
+; FUN_005e9fc0  005e9fc0
+005e9fc0  PUSH EBP
+005e9fc1  MOV EBP,ESP
+005e9fc3  CALL dword ptr [0x006b2444]
+005e9fc9  POP EBP
+005e9fca  RET

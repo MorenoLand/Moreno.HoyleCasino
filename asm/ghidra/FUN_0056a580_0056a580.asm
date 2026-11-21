@@ -1,0 +1,28 @@
+; FUN_0056a580  0056a580
+0056a580  PUSH EBP
+0056a581  MOV EBP,ESP
+0056a583  SUB ESP,0x10
+0056a586  MOV dword ptr [EBP + -0x10],ECX
+0056a589  MOV EAX,dword ptr [EBP + -0x10]
+0056a58c  MOV ECX,dword ptr [EAX + 0x34]
+0056a58f  CALL 0x0056b910
+0056a594  ADD EAX,0x1
+0056a597  MOV dword ptr [EBP + -0x4],EAX
+0056a59a  PUSH 0x1
+0056a59c  LEA ECX,[EBP + -0xc]
+0056a59f  PUSH ECX
+0056a5a0  MOV ECX,dword ptr [EBP + -0x10]
+0056a5a3  CALL 0x005d0c30
+0056a5a8  MOV EDX,dword ptr [EAX]
+0056a5aa  MOV EAX,dword ptr [EAX + 0x4]
+0056a5ad  MOV ECX,dword ptr [EBP + 0x8]
+0056a5b0  MOV dword ptr [ECX],EDX
+0056a5b2  MOV dword ptr [ECX + 0x4],EAX
+0056a5b5  FILD dword ptr [EBP + -0x4]
+0056a5b8  SUB ESP,0x8
+0056a5bb  FSTP double ptr [ESP]
+0056a5be  MOV ECX,dword ptr [EBP + 0x8]
+0056a5c1  CALL 0x0064c560
+0056a5c6  MOV ESP,EBP
+0056a5c8  POP EBP
+0056a5c9  RET 0x4

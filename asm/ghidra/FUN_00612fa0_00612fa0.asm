@@ -1,0 +1,24 @@
+; FUN_00612fa0  00612fa0
+00612fa0  PUSH EBP
+00612fa1  MOV EBP,ESP
+00612fa3  PUSH ECX
+00612fa4  CMP dword ptr [EBP + 0x8],0x0
+00612fa8  JNZ 0x00612fac
+00612faa  JMP 0x00612fda
+00612fac  CMP dword ptr [EBP + 0xc],0x1c
+00612fb0  JZ 0x00612fc0
+00612fb2  MOV EAX,dword ptr [EBP + 0x8]
+00612fb5  PUSH EAX
+00612fb6  CALL 0x00686cae
+00612fbb  ADD ESP,0x4
+00612fbe  JMP 0x00612fda
+00612fc0  MOV ECX,dword ptr [EBP + 0x8]
+00612fc3  MOV dword ptr [EBP + -0x4],ECX
+00612fc6  MOV EDX,dword ptr [EBP + -0x4]
+00612fc9  MOV EAX,[0x015e5600]
+00612fce  MOV dword ptr [EDX + 0x18],EAX
+00612fd1  MOV ECX,dword ptr [EBP + -0x4]
+00612fd4  MOV dword ptr [0x015e5600],ECX
+00612fda  MOV ESP,EBP
+00612fdc  POP EBP
+00612fdd  RET

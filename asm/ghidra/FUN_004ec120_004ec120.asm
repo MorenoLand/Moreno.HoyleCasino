@@ -1,0 +1,18 @@
+; FUN_004ec120  004ec120
+004ec120  PUSH EBP
+004ec121  MOV EBP,ESP
+004ec123  PUSH ECX
+004ec124  MOV dword ptr [EBP + -0x4],ECX
+004ec127  MOV EAX,dword ptr [EBP + -0x4]
+004ec12a  MOVSX ECX,word ptr [EAX + 0x64]
+004ec12e  CMP ECX,0x1
+004ec131  JNZ 0x004ec143
+004ec133  MOV EDX,dword ptr [EBP + -0x4]
+004ec136  MOVSX EAX,word ptr [EDX + 0x36a]
+004ec13d  SHL EAX,0x1
+004ec13f  JMP 0x004ec14d
+004ec143  MOV EAX,dword ptr [EBP + -0x4]
+004ec146  MOV AX,word ptr [EAX + 0x36a]
+004ec14d  MOV ESP,EBP
+004ec14f  POP EBP
+004ec150  RET

@@ -1,0 +1,8 @@
+; Unwind@006a3859  006a3859
+006a3859  MOV EAX,dword ptr [EBP + 0xfffffb54]
+006a385f  AND EAX,0x4000000
+006a3864  JZ 0x006a387f
+006a386a  AND dword ptr [EBP + 0xfffffb54],0xfbffffff
+006a3874  LEA ECX,[EBP + 0xfffffc20]
+006a387a  JMP 0x00484470
+006a387f  RET

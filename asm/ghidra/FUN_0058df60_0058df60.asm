@@ -1,0 +1,14 @@
+; FUN_0058df60  0058df60
+0058df60  PUSH EBP
+0058df61  MOV EBP,ESP
+0058df63  PUSH ECX
+0058df64  MOV dword ptr [EBP + -0x4],ECX
+0058df67  PUSH 0x0
+0058df69  MOV ECX,dword ptr [EBP + -0x4]
+0058df6c  CALL 0x005845c0
+0058df71  MOV EAX,dword ptr [EBP + -0x4]
+0058df74  MOV dword ptr [EAX],0x6cd9fc
+0058df7a  MOV EAX,dword ptr [EBP + -0x4]
+0058df7d  MOV ESP,EBP
+0058df7f  POP EBP
+0058df80  RET

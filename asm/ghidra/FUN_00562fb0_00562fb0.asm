@@ -1,0 +1,26 @@
+; FUN_00562fb0  00562fb0
+00562fb0  PUSH EBP
+00562fb1  MOV EBP,ESP
+00562fb3  PUSH ECX
+00562fb4  MOV dword ptr [EBP + -0x4],ECX
+00562fb7  MOV EAX,dword ptr [EBP + -0x4]
+00562fba  MOVZX ECX,byte ptr [EAX + 0x18]
+00562fbe  TEST ECX,ECX
+00562fc0  JNZ 0x00562fc4
+00562fc2  JMP 0x00562feb
+00562fc4  MOV EDX,dword ptr [EBP + -0x4]
+00562fc7  MOV EAX,dword ptr [EDX]
+00562fc9  MOV ECX,dword ptr [EBP + -0x4]
+00562fcc  MOV ECX,dword ptr [ECX]
+00562fce  MOV EDX,dword ptr [EAX]
+00562fd0  MOV EAX,dword ptr [EDX + 0x74]
+00562fd3  CALL EAX
+00562fd5  MOV ECX,dword ptr [EBP + -0x4]
+00562fd8  MOV ECX,dword ptr [ECX + 0x4]
+00562fdb  CALL 0x00566210
+00562fe0  MOV EDX,dword ptr [EBP + -0x4]
+00562fe3  MOV ECX,dword ptr [EDX + 0x8]
+00562fe6  CALL 0x00566210
+00562feb  MOV ESP,EBP
+00562fed  POP EBP
+00562fee  RET

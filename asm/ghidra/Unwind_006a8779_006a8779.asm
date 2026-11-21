@@ -1,0 +1,3 @@
+; Unwind@006a8779  006a8779
+006a8779  LEA ECX,[EBP + -0x34]
+006a877c  JMP dword ptr [0x006b2278]

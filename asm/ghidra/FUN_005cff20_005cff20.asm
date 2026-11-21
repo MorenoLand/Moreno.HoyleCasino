@@ -1,0 +1,150 @@
+; FUN_005cff20  005cff20
+005cff20  PUSH EBP
+005cff21  MOV EBP,ESP
+005cff23  PUSH -0x1
+005cff25  PUSH 0x6a8d4c
+005cff2a  MOV EAX,FS:[0x0]
+005cff30  PUSH EAX
+005cff31  SUB ESP,0x1c
+005cff34  MOV EAX,[0x00781870]
+005cff39  XOR EAX,EBP
+005cff3b  PUSH EAX
+005cff3c  LEA EAX,[EBP + -0xc]
+005cff3f  MOV FS:[0x0],EAX
+005cff45  MOV dword ptr [EBP + -0x24],ECX
+005cff48  MOV EAX,dword ptr [EBP + -0x24]
+005cff4b  MOV ECX,dword ptr [EBP + 0x8]
+005cff4e  MOV dword ptr [EAX + 0x1c4],ECX
+005cff54  PUSH 0x3
+005cff56  PUSH 0x0
+005cff58  PUSH 0x49
+005cff5a  PUSH 0x6d33a4
+005cff5f  CALL 0x00630f40
+005cff64  ADD ESP,0x4
+005cff67  PUSH EAX
+005cff68  MOV ECX,dword ptr [EBP + -0x24]
+005cff6b  CALL 0x005f73e0
+005cff70  PUSH 0x0
+005cff72  PUSH 0x0
+005cff74  PUSH 0x0
+005cff76  PUSH 0xa1
+005cff7b  PUSH 0x7c
+005cff7d  PUSH 0x78
+005cff7f  PUSH 0x1
+005cff81  PUSH 0x98
+005cff86  PUSH 0x2
+005cff88  PUSH 0x1
+005cff8a  PUSH 0xcc
+005cff8f  PUSH 0x0
+005cff91  PUSH 0x0
+005cff93  MOV ECX,dword ptr [EBP + -0x24]
+005cff96  CALL 0x005fa880
+005cff9b  PUSH 0x0
+005cff9d  PUSH 0x0
+005cff9f  PUSH 0x0
+005cffa1  PUSH 0xff
+005cffa6  PUSH 0xff
+005cffab  PUSH 0xff
+005cffb0  PUSH 0x1
+005cffb2  PUSH 0x99
+005cffb7  PUSH 0x2
+005cffb9  PUSH 0x1
+005cffbb  PUSH 0xcc
+005cffc0  PUSH 0x1
+005cffc2  PUSH 0x0
+005cffc4  MOV ECX,dword ptr [EBP + -0x24]
+005cffc7  CALL 0x005fa880
+005cffcc  PUSH 0xd
+005cffce  PUSH -0x1
+005cffd0  PUSH 0x4a
+005cffd2  PUSH 0x4b
+005cffd4  PUSH 0x48
+005cffd6  PUSH 0x6c1428
+005cffdb  CALL 0x00630f40
+005cffe0  ADD ESP,0x4
+005cffe3  PUSH EAX
+005cffe4  PUSH 0x1
+005cffe6  PUSH 0xa3
+005cffeb  PUSH 0x3f
+005cffed  PUSH 0x30d4e5
+005cfff2  PUSH 0x0
+005cfff4  PUSH 0x0
+005cfff6  MOV ECX,dword ptr [EBP + -0x24]
+005cfff9  CALL 0x005f9de0
+005cfffe  MOV EDX,dword ptr [EBP + -0x24]
+005d0001  MOV EAX,dword ptr [EDX + 0x1c4]
+005d0007  MOV dword ptr [EBP + -0x18],EAX
+005d000a  PUSH -0x1
+005d000c  PUSH 0x5
+005d000e  PUSH 0x3
+005d0010  PUSH 0x5d
+005d0012  PUSH 0x16
+005d0014  PUSH 0xf
+005d0016  PUSH 0xd2
+005d001b  PUSH 0x28
+005d001d  MOV ECX,dword ptr [EBP + -0x18]
+005d0020  CALL 0x005d52e0
+005d0025  ADD EAX,0x10
+005d0028  PUSH EAX
+005d0029  PUSH 0x0
+005d002b  PUSH 0x0
+005d002d  MOV ECX,dword ptr [EBP + -0x24]
+005d0030  CALL 0x005fa5b0
+005d0035  PUSH -0x1
+005d0037  PUSH 0x5
+005d0039  PUSH 0x3
+005d003b  PUSH 0x73
+005d003d  PUSH 0x16
+005d003f  PUSH 0xf
+005d0041  PUSH 0x6b
+005d0043  PUSH 0x28
+005d0045  PUSH 0x6b27f8
+005d004a  PUSH 0x1
+005d004c  PUSH 0x0
+005d004e  MOV ECX,dword ptr [EBP + -0x24]
+005d0051  CALL 0x005fa5b0
+005d0056  MOV ECX,dword ptr [EBP + -0x24]
+005d0059  MOV dword ptr [ECX + 0x1c0],EAX
+005d005f  PUSH 0x184
+005d0064  CALL 0x00686d82
+005d0069  ADD ESP,0x4
+005d006c  MOV dword ptr [EBP + -0x14],EAX
+005d006f  MOV dword ptr [EBP + -0x4],0x0
+005d0076  CMP dword ptr [EBP + -0x14],0x0
+005d007a  JZ 0x005d0089
+005d007c  MOV ECX,dword ptr [EBP + -0x14]
+005d007f  CALL 0x005f5bf0
+005d0084  MOV dword ptr [EBP + -0x28],EAX
+005d0087  JMP 0x005d0090
+005d0089  MOV dword ptr [EBP + -0x28],0x0
+005d0090  MOV EDX,dword ptr [EBP + -0x28]
+005d0093  MOV dword ptr [EBP + -0x10],EDX
+005d0096  MOV dword ptr [EBP + -0x4],0xffffffff
+005d009d  MOV EAX,dword ptr [EBP + -0x24]
+005d00a0  MOV ECX,dword ptr [EAX + 0x1c4]
+005d00a6  MOV dword ptr [EBP + -0x1c],ECX
+005d00a9  MOV ECX,dword ptr [EBP + -0x1c]
+005d00ac  CALL 0x005d52e0
+005d00b1  MOV DL,byte ptr [EAX + 0x2a]
+005d00b4  MOV byte ptr [EBP + -0x1d],DL
+005d00b7  PUSH 0x0
+005d00b9  PUSH 0xff
+005d00be  MOVSX EAX,byte ptr [EBP + -0x1d]
+005d00c2  PUSH EAX
+005d00c3  PUSH 0x1
+005d00c5  PUSH 0x0
+005d00c7  PUSH 0x0
+005d00c9  PUSH 0x441
+005d00ce  PUSH 0x0
+005d00d0  MOV ECX,dword ptr [EBP + -0x10]
+005d00d3  PUSH ECX
+005d00d4  MOV ECX,dword ptr [EBP + -0x24]
+005d00d7  CALL 0x005f9ce0
+005d00dc  MOV EDX,dword ptr [EBP + -0x24]
+005d00df  MOV dword ptr [EDX + 0x1bc],EAX
+005d00e5  MOV ECX,dword ptr [EBP + -0xc]
+005d00e8  MOV dword ptr FS:[0x0],ECX
+005d00ef  POP ECX
+005d00f0  MOV ESP,EBP
+005d00f2  POP EBP
+005d00f3  RET 0x4

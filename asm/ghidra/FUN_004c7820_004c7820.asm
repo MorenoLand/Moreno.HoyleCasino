@@ -1,0 +1,67 @@
+; FUN_004c7820  004c7820
+004c7820  PUSH EBP
+004c7821  MOV EBP,ESP
+004c7823  SUB ESP,0x14
+004c7826  MOV dword ptr [EBP + -0x10],ECX
+004c7829  MOV ECX,dword ptr [EBP + -0x10]
+004c782c  CALL 0x004c70d0
+004c7831  MOV dword ptr [EBP + -0x4],EAX
+004c7834  MOV dword ptr [EBP + -0x8],0x0
+004c783b  MOV EAX,dword ptr [EBP + -0x10]
+004c783e  MOV ECX,dword ptr [EAX + 0x8]
+004c7841  CALL 0x0060c9a0
+004c7846  SUB EAX,0x1
+004c7849  MOV dword ptr [EBP + -0xc],EAX
+004c784c  JMP 0x004c7857
+004c784e  MOV ECX,dword ptr [EBP + -0xc]
+004c7851  SUB ECX,0x1
+004c7854  MOV dword ptr [EBP + -0xc],ECX
+004c7857  CMP dword ptr [EBP + -0xc],-0x1
+004c785b  JLE 0x004c7953
+004c7861  MOV EDX,dword ptr [EBP + -0xc]
+004c7864  PUSH EDX
+004c7865  MOV EAX,dword ptr [EBP + -0x10]
+004c7868  MOV ECX,dword ptr [EAX + 0x8]
+004c786b  PUSH ECX
+004c786c  CALL 0x004c72f0
+004c7871  ADD ESP,0x8
+004c7874  MOV dword ptr [EBP + -0x8],EAX
+004c7877  MOV EDX,dword ptr [EBP + -0x4]
+004c787a  MOV dword ptr [EBP + -0x14],EDX
+004c787d  MOV EAX,dword ptr [EBP + -0x14]
+004c7880  ADD EAX,0x1
+004c7883  MOV dword ptr [EBP + -0x14],EAX
+004c7886  CMP dword ptr [EBP + -0x14],0x8
+004c788a  JA 0x004c790b
+004c788c  MOV ECX,dword ptr [EBP + -0x14]
+004c788f  MOVZX EDX,byte ptr [ECX + 0x4c7964]
+004c7896  JMP dword ptr [EDX*0x4 + 0x4c795c]
+004c790b  MOVZX ECX,byte ptr [EBP + 0x8]
+004c790f  TEST ECX,ECX
+004c7911  JZ 0x004c792b
+004c7913  MOV EDX,0x68
+004c7918  SUB EDX,dword ptr [EBP + -0xc]
+004c791b  PUSH EDX
+004c791c  MOV EAX,dword ptr [EBP + -0x8]
+004c791f  MOV EDX,dword ptr [EAX]
+004c7921  MOV ECX,dword ptr [EBP + -0x8]
+004c7924  MOV EAX,dword ptr [EDX + 0x6c]
+004c7927  CALL EAX
+004c7929  JMP 0x004c7941
+004c792b  MOV ECX,0xd
+004c7930  SUB ECX,dword ptr [EBP + -0xc]
+004c7933  PUSH ECX
+004c7934  MOV EDX,dword ptr [EBP + -0x8]
+004c7937  MOV EAX,dword ptr [EDX]
+004c7939  MOV ECX,dword ptr [EBP + -0x8]
+004c793c  MOV EDX,dword ptr [EAX + 0x6c]
+004c793f  CALL EDX
+004c7941  MOV EAX,dword ptr [EBP + -0x8]
+004c7944  MOV EDX,dword ptr [EAX]
+004c7946  MOV ECX,dword ptr [EBP + -0x8]
+004c7949  MOV EAX,dword ptr [EDX + 0x74]
+004c794c  CALL EAX
+004c794e  JMP 0x004c784e
+004c7953  MOV ESP,EBP
+004c7955  POP EBP
+004c7956  RET 0x4

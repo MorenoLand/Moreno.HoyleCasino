@@ -1,0 +1,16 @@
+; FUN_005dea20  005dea20
+005dea20  PUSH EBP
+005dea21  MOV EBP,ESP
+005dea23  PUSH ECX
+005dea24  MOV dword ptr [EBP + -0x4],ECX
+005dea27  CMP dword ptr [EBP + 0x8],0x17
+005dea2b  JNZ 0x005dea31
+005dea2d  XOR AL,AL
+005dea2f  JMP 0x005dea3d
+005dea31  MOV EAX,dword ptr [EBP + 0x8]
+005dea34  PUSH EAX
+005dea35  MOV ECX,dword ptr [EBP + -0x4]
+005dea38  CALL 0x00635c40
+005dea3d  MOV ESP,EBP
+005dea3f  POP EBP
+005dea40  RET 0x4

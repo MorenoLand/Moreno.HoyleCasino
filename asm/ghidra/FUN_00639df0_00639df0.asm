@@ -1,0 +1,13 @@
+; FUN_00639df0  00639df0
+00639df0  PUSH EBP
+00639df1  MOV EBP,ESP
+00639df3  PUSH ECX
+00639df4  MOV dword ptr [EBP + -0x4],ECX
+00639df7  MOV EAX,dword ptr [EBP + -0x4]
+00639dfa  MOV EDX,dword ptr [EAX]
+00639dfc  MOV ECX,dword ptr [EBP + -0x4]
+00639dff  MOV EAX,dword ptr [EDX + 0xc8]
+00639e05  CALL EAX
+00639e07  MOV ESP,EBP
+00639e09  POP EBP
+00639e0a  RET

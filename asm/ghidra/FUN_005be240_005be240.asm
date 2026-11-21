@@ -1,0 +1,31 @@
+; FUN_005be240  005be240
+005be240  PUSH EBP
+005be241  MOV EBP,ESP
+005be243  SUB ESP,0x8
+005be246  MOV dword ptr [EBP + -0x4],ECX
+005be249  MOV EAX,dword ptr [EBP + -0x4]
+005be24c  MOV EDX,dword ptr [EAX]
+005be24e  MOV ECX,dword ptr [EBP + -0x4]
+005be251  MOV EAX,dword ptr [EDX + 0x24]
+005be254  CALL EAX
+005be256  MOVZX ECX,AL
+005be259  TEST ECX,ECX
+005be25b  JZ 0x005be261
+005be25d  MOV AL,0x1
+005be25f  JMP 0x005be284
+005be261  MOV EDX,dword ptr [EBP + -0x4]
+005be264  MOV EAX,dword ptr [EDX + 0x54]
+005be267  MOV dword ptr [EBP + -0x8],EAX
+005be26a  CMP dword ptr [EBP + -0x8],0x0
+005be26e  JZ 0x005be27e
+005be270  CMP dword ptr [EBP + -0x8],0x3
+005be274  JLE 0x005be282
+005be276  CMP dword ptr [EBP + -0x8],0x5
+005be27a  JLE 0x005be27e
+005be27c  JMP 0x005be282
+005be27e  MOV AL,0x1
+005be280  JMP 0x005be284
+005be282  XOR AL,AL
+005be284  MOV ESP,EBP
+005be286  POP EBP
+005be287  RET

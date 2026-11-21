@@ -1,0 +1,28 @@
+; FUN_004c6250  004c6250
+004c6250  PUSH EBP
+004c6251  MOV EBP,ESP
+004c6253  SUB ESP,0x24
+004c6256  MOV dword ptr [EBP + -0x24],ECX
+004c6259  MOV EAX,dword ptr [EBP + -0x24]
+004c625c  MOV ECX,dword ptr [EAX + 0x4]
+004c625f  MOV dword ptr [EBP + -0x20],ECX
+004c6262  MOV EDX,dword ptr [EBP + 0x8]
+004c6265  MOV dword ptr [EBP + -0x1c],EDX
+004c6268  MOV EAX,dword ptr [EBP + 0xc]
+004c626b  MOV dword ptr [EBP + -0x18],EAX
+004c626e  FLD double ptr [EBP + 0x10]
+004c6271  FSTP double ptr [EBP + -0x10]
+004c6274  FLD double ptr [EBP + 0x18]
+004c6277  FSTP double ptr [EBP + -0x8]
+004c627a  PUSH 0x1
+004c627c  MOV ECX,dword ptr [EBP + 0x24]
+004c627f  PUSH ECX
+004c6280  MOV EDX,dword ptr [EBP + 0x20]
+004c6283  PUSH EDX
+004c6284  LEA EAX,[EBP + -0x20]
+004c6287  PUSH EAX
+004c6288  MOV ECX,dword ptr [0x0162ee84]
+004c628e  CALL 0x00639390
+004c6293  MOV ESP,EBP
+004c6295  POP EBP
+004c6296  RET 0x20

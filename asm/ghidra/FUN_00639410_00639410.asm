@@ -1,0 +1,23 @@
+; FUN_00639410  00639410
+00639410  PUSH EBP
+00639411  MOV EBP,ESP
+00639413  PUSH ECX
+00639414  MOV dword ptr [EBP + -0x4],ECX
+00639417  MOV EAX,dword ptr [EBP + 0x8]
+0063941a  MOV ECX,dword ptr [EBP + 0xc]
+0063941d  MOV dword ptr [EAX],ECX
+0063941f  MOV EDX,dword ptr [EBP + 0x8]
+00639422  MOV EAX,dword ptr [EBP + 0x10]
+00639425  MOV dword ptr [EDX + 0x4],EAX
+00639428  MOV ECX,dword ptr [EBP + 0x8]
+0063942b  MOV EDX,dword ptr [EBP + 0x14]
+0063942e  MOV dword ptr [ECX + 0x8],EDX
+00639431  MOV EAX,dword ptr [EBP + 0x8]
+00639434  FLD double ptr [EBP + 0x18]
+00639437  FSTP double ptr [EAX + 0x10]
+0063943a  MOV ECX,dword ptr [EBP + 0x8]
+0063943d  FLD double ptr [EBP + 0x20]
+00639440  FSTP double ptr [ECX + 0x18]
+00639443  MOV ESP,EBP
+00639445  POP EBP
+00639446  RET 0x20

@@ -1,0 +1,26 @@
+; FUN_0045b0a0  0045b0a0
+0045b0a0  PUSH EBP
+0045b0a1  MOV EBP,ESP
+0045b0a3  SUB ESP,0x8
+0045b0a6  MOV dword ptr [EBP + -0x8],ECX
+0045b0a9  PUSH 0x1
+0045b0ab  MOV ECX,dword ptr [EBP + -0x8]
+0045b0ae  CALL 0x005fb350
+0045b0b3  MOV dword ptr [EBP + -0x4],EAX
+0045b0b6  MOVZX EAX,byte ptr [EBP + 0x8]
+0045b0ba  TEST EAX,EAX
+0045b0bc  JZ 0x0045b0d0
+0045b0be  MOV ECX,dword ptr [EBP + -0x4]
+0045b0c1  MOV EDX,dword ptr [ECX]
+0045b0c3  MOV ECX,dword ptr [EBP + -0x4]
+0045b0c6  MOV EAX,dword ptr [EDX + 0xf4]
+0045b0cc  CALL EAX
+0045b0ce  JMP 0x0045b0e0
+0045b0d0  MOV ECX,dword ptr [EBP + -0x4]
+0045b0d3  MOV EDX,dword ptr [ECX]
+0045b0d5  MOV ECX,dword ptr [EBP + -0x4]
+0045b0d8  MOV EAX,dword ptr [EDX + 0xf8]
+0045b0de  CALL EAX
+0045b0e0  MOV ESP,EBP
+0045b0e2  POP EBP
+0045b0e3  RET 0x4

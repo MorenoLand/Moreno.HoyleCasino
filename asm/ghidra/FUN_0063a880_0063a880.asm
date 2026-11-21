@@ -1,0 +1,25 @@
+; FUN_0063a880  0063a880
+0063a880  PUSH EBP
+0063a881  MOV EBP,ESP
+0063a883  PUSH ECX
+0063a884  MOV dword ptr [EBP + -0x4],ECX
+0063a887  CMP dword ptr [EBP + 0x8],-0x1
+0063a88b  JNZ 0x0063a89b
+0063a88d  MOV ECX,dword ptr [0x0162ee84]
+0063a893  CALL 0x005f3bf0
+0063a898  MOV dword ptr [EBP + 0x8],EAX
+0063a89b  MOV EAX,dword ptr [EBP + -0x4]
+0063a89e  MOV ECX,dword ptr [EAX + 0x3a8]
+0063a8a4  MOV EDX,dword ptr [EBP + 0x8]
+0063a8a7  MOV EAX,dword ptr [ECX + EDX*0x4]
+0063a8aa  PUSH EAX
+0063a8ab  MOV ECX,dword ptr [EBP + 0x8]
+0063a8ae  PUSH ECX
+0063a8af  MOV EDX,dword ptr [0x0162ee84]
+0063a8b5  MOV EAX,dword ptr [EDX]
+0063a8b7  MOV ECX,dword ptr [0x0162ee84]
+0063a8bd  MOV EDX,dword ptr [EAX + 0x32c]
+0063a8c3  CALL EDX
+0063a8c5  MOV ESP,EBP
+0063a8c7  POP EBP
+0063a8c8  RET 0x4

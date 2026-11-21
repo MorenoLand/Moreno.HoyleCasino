@@ -1,0 +1,63 @@
+; FUN_005a84c0  005a84c0
+005a84c0  PUSH EBP
+005a84c1  MOV EBP,ESP
+005a84c3  PUSH -0x1
+005a84c5  PUSH 0x6a79bb
+005a84ca  MOV EAX,FS:[0x0]
+005a84d0  PUSH EAX
+005a84d1  SUB ESP,0x10
+005a84d4  MOV EAX,[0x00781870]
+005a84d9  XOR EAX,EBP
+005a84db  PUSH EAX
+005a84dc  LEA EAX,[EBP + -0xc]
+005a84df  MOV FS:[0x0],EAX
+005a84e5  MOV dword ptr [EBP + -0x18],ECX
+005a84e8  MOV EAX,dword ptr [EBP + -0x18]
+005a84eb  CMP dword ptr [EAX + 0x38],0x0
+005a84ef  JNZ 0x005a855d
+005a84f1  PUSH 0x1bc
+005a84f6  CALL 0x00686d82
+005a84fb  ADD ESP,0x4
+005a84fe  MOV dword ptr [EBP + -0x14],EAX
+005a8501  MOV dword ptr [EBP + -0x4],0x0
+005a8508  CMP dword ptr [EBP + -0x14],0x0
+005a850c  JZ 0x005a851b
+005a850e  MOV ECX,dword ptr [EBP + -0x14]
+005a8511  CALL 0x005a9ec0
+005a8516  MOV dword ptr [EBP + -0x1c],EAX
+005a8519  JMP 0x005a8522
+005a851b  MOV dword ptr [EBP + -0x1c],0x0
+005a8522  MOV ECX,dword ptr [EBP + -0x1c]
+005a8525  MOV dword ptr [EBP + -0x10],ECX
+005a8528  MOV dword ptr [EBP + -0x4],0xffffffff
+005a852f  MOV EDX,dword ptr [EBP + -0x18]
+005a8532  MOV EAX,dword ptr [EBP + -0x10]
+005a8535  MOV dword ptr [EDX + 0x38],EAX
+005a8538  MOV ECX,dword ptr [EBP + -0x18]
+005a853b  MOV EDX,dword ptr [ECX + 0x38]
+005a853e  MOV EAX,dword ptr [EBP + -0x18]
+005a8541  MOV ECX,dword ptr [EAX + 0x38]
+005a8544  MOV EDX,dword ptr [EDX]
+005a8546  MOV EAX,dword ptr [EDX + 0x3c]
+005a8549  CALL EAX
+005a854b  PUSH 0x5
+005a854d  PUSH 0x17c
+005a8552  MOV ECX,dword ptr [EBP + -0x18]
+005a8555  MOV ECX,dword ptr [ECX + 0x38]
+005a8558  CALL 0x005f7320
+005a855d  MOV EDX,dword ptr [EBP + -0x18]
+005a8560  MOV ECX,dword ptr [EDX + 0x38]
+005a8563  CALL 0x005aa000
+005a8568  MOV EAX,[0x007935fc]
+005a856d  MOVZX ECX,byte ptr [EAX + 0x7]
+005a8571  TEST ECX,ECX
+005a8573  JZ 0x005a8580
+005a8575  MOV EDX,dword ptr [EBP + -0x18]
+005a8578  MOV ECX,dword ptr [EDX + 0x38]
+005a857b  CALL 0x005f85d0
+005a8580  MOV ECX,dword ptr [EBP + -0xc]
+005a8583  MOV dword ptr FS:[0x0],ECX
+005a858a  POP ECX
+005a858b  MOV ESP,EBP
+005a858d  POP EBP
+005a858e  RET

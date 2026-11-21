@@ -1,0 +1,21 @@
+; FUN_005eb420  005eb420
+005eb420  PUSH EBP
+005eb421  MOV EBP,ESP
+005eb423  PUSH ECX
+005eb424  MOV dword ptr [EBP + -0x4],ECX
+005eb427  MOV EAX,dword ptr [EBP + 0x8]
+005eb42a  PUSH EAX
+005eb42b  MOV ECX,dword ptr [EBP + -0x4]
+005eb42e  MOV EDX,dword ptr [ECX]
+005eb430  MOV ECX,dword ptr [EBP + -0x4]
+005eb433  MOV EAX,dword ptr [EDX + 0x4c]
+005eb436  CALL EAX
+005eb438  PUSH EAX
+005eb439  MOV ECX,dword ptr [EBP + -0x4]
+005eb43c  MOV EDX,dword ptr [ECX]
+005eb43e  MOV ECX,dword ptr [EBP + -0x4]
+005eb441  MOV EAX,dword ptr [EDX + 0x44]
+005eb444  CALL EAX
+005eb446  MOV ESP,EBP
+005eb448  POP EBP
+005eb449  RET 0x4

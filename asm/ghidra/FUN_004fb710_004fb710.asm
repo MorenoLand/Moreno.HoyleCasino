@@ -1,0 +1,29 @@
+; FUN_004fb710  004fb710
+004fb710  PUSH EBP
+004fb711  MOV EBP,ESP
+004fb713  SUB ESP,0xc
+004fb716  MOV dword ptr [EBP + -0xc],ECX
+004fb719  PUSH 0xb
+004fb71b  MOV ECX,dword ptr [0x0162ee84]
+004fb721  CALL 0x006375d0
+004fb726  MOV dword ptr [EBP + -0x4],EAX
+004fb729  MOV EAX,dword ptr [EBP + -0x4]
+004fb72c  MOV ECX,dword ptr [EAX + 0x4]
+004fb72f  PUSH ECX
+004fb730  MOV EDX,dword ptr [0x0162ee84]
+004fb736  MOV EAX,dword ptr [EDX]
+004fb738  MOV ECX,dword ptr [0x0162ee84]
+004fb73e  MOV EDX,dword ptr [EAX + 0x170]
+004fb744  CALL EDX
+004fb746  ADD EAX,0x186f9
+004fb74b  MOV dword ptr [EBP + -0x8],EAX
+004fb74e  PUSH 0x139b
+004fb753  MOV ECX,dword ptr [EBP + -0xc]
+004fb756  CALL 0x005f2c40
+004fb75b  MOV EAX,dword ptr [EBP + -0x8]
+004fb75e  PUSH EAX
+004fb75f  MOV ECX,dword ptr [EBP + -0xc]
+004fb762  CALL 0x005f2cb0
+004fb767  MOV ESP,EBP
+004fb769  POP EBP
+004fb76a  RET

@@ -1,0 +1,61 @@
+; FUN_0057e3d0  0057e3d0
+0057e3d0  PUSH EBP
+0057e3d1  MOV EBP,ESP
+0057e3d3  SUB ESP,0x18
+0057e3d6  MOV EAX,[0x00781870]
+0057e3db  XOR EAX,EBP
+0057e3dd  MOV dword ptr [EBP + -0x4],EAX
+0057e3e0  MOV dword ptr [EBP + -0x18],ECX
+0057e3e3  MOV EAX,dword ptr [EBP + -0x18]
+0057e3e6  MOV dword ptr [EAX + 0x1e8],0x0
+0057e3f0  MOV ECX,dword ptr [EBP + -0x18]
+0057e3f3  MOV dword ptr [ECX + 0x1ec],0x0
+0057e3fd  MOV EDX,dword ptr [EBP + -0x18]
+0057e400  MOV dword ptr [EDX + 0x1f0],0x0
+0057e40a  MOV EAX,dword ptr [EBP + -0x18]
+0057e40d  MOV ECX,dword ptr [EAX + 0x1ec]
+0057e413  PUSH ECX
+0057e414  MOV EDX,dword ptr [EBP + -0x18]
+0057e417  MOV EAX,dword ptr [EDX + 0x1e8]
+0057e41d  PUSH EAX
+0057e41e  PUSH 0x6cbfec
+0057e423  LEA ECX,[EBP + -0x14]
+0057e426  PUSH ECX
+0057e427  CALL dword ptr [0x006b2220]
+0057e42d  ADD ESP,0x10
+0057e430  LEA EDX,[EBP + -0x14]
+0057e433  PUSH EDX
+0057e434  MOV EAX,dword ptr [EBP + -0x18]
+0057e437  MOV ECX,dword ptr [EAX + 0x1e4]
+0057e43d  MOV EDX,dword ptr [EBP + -0x18]
+0057e440  MOV EAX,dword ptr [EDX + 0x1e4]
+0057e446  MOV EDX,dword ptr [ECX]
+0057e448  MOV ECX,EAX
+0057e44a  MOV EAX,dword ptr [EDX + 0xb4]
+0057e450  CALL EAX
+0057e452  MOV ECX,dword ptr [EBP + -0x18]
+0057e455  MOV EDX,dword ptr [ECX + 0x1e4]
+0057e45b  MOV EAX,dword ptr [EBP + -0x18]
+0057e45e  MOV ECX,dword ptr [EAX + 0x1e4]
+0057e464  MOV EDX,dword ptr [EDX]
+0057e466  MOV EAX,dword ptr [EDX + 0x74]
+0057e469  CALL EAX
+0057e46b  MOV ECX,dword ptr [EBP + -0x18]
+0057e46e  MOV EDX,dword ptr [0x007947e0]
+0057e474  MOV EAX,dword ptr [EDX + 0x98]
+0057e47a  MOV dword ptr [ECX + 0x1f4],EAX
+0057e480  MOV ECX,dword ptr [EBP + -0x18]
+0057e483  MOV EDX,dword ptr [ECX + 0x1f4]
+0057e489  PUSH EDX
+0057e48a  MOV EAX,dword ptr [EBP + -0x18]
+0057e48d  MOV ECX,dword ptr [EAX + 0x200]
+0057e493  CALL 0x0057f6d0
+0057e498  MOV ECX,dword ptr [EBP + -0x18]
+0057e49b  MOV ECX,dword ptr [ECX + 0x200]
+0057e4a1  CALL 0x0057f5f0
+0057e4a6  MOV ECX,dword ptr [EBP + -0x4]
+0057e4a9  XOR ECX,EBP
+0057e4ab  CALL 0x00686d72
+0057e4b0  MOV ESP,EBP
+0057e4b2  POP EBP
+0057e4b3  RET

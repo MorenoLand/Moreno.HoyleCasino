@@ -1,0 +1,12 @@
+; FUN_0042be60  0042be60
+0042be60  PUSH EBP
+0042be61  MOV EBP,ESP
+0042be63  PUSH ECX
+0042be64  MOV dword ptr [EBP + -0x4],ECX
+0042be67  MOV EAX,dword ptr [EBP + -0x4]
+0042be6a  MOV dword ptr [EAX],0x6b6b6c
+0042be70  MOV ECX,dword ptr [EBP + -0x4]
+0042be73  CALL 0x005e9e40
+0042be78  MOV ESP,EBP
+0042be7a  POP EBP
+0042be7b  RET

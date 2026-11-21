@@ -1,0 +1,5 @@
+; Unwind@006a32ee  006a32ee
+006a32ee  MOV EAX,[0x00793150]
+006a32f3  AND EAX,0xfffffffd
+006a32f6  MOV [0x00793150],EAX
+006a32fb  RET

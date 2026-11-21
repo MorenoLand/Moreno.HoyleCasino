@@ -1,0 +1,21 @@
+; FUN_005c3110  005c3110
+005c3110  PUSH EBP
+005c3111  MOV EBP,ESP
+005c3113  PUSH ECX
+005c3114  MOV dword ptr [EBP + -0x4],ECX
+005c3117  MOV EAX,dword ptr [EBP + -0x4]
+005c311a  MOV EDX,dword ptr [EAX]
+005c311c  MOV ECX,dword ptr [EBP + -0x4]
+005c311f  MOV EAX,dword ptr [EDX + 0x10]
+005c3122  CALL EAX
+005c3124  MOV ECX,dword ptr [EBP + -0x4]
+005c3127  MOV EDX,dword ptr [EBP + 0x8]
+005c312a  MOV dword ptr [ECX + 0x54],EDX
+005c312d  MOV EAX,dword ptr [EBP + -0x4]
+005c3130  MOV EDX,dword ptr [EAX]
+005c3132  MOV ECX,dword ptr [EBP + -0x4]
+005c3135  MOV EAX,dword ptr [EDX + 0x10]
+005c3138  CALL EAX
+005c313a  MOV ESP,EBP
+005c313c  POP EBP
+005c313d  RET 0x4

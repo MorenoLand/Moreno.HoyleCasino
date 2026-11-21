@@ -1,0 +1,28 @@
+; FUN_0059dd90  0059dd90
+0059dd90  PUSH EBP
+0059dd91  MOV EBP,ESP
+0059dd93  SUB ESP,0x8
+0059dd96  MOV dword ptr [EBP + -0x4],ECX
+0059dd99  MOV ECX,dword ptr [0x0162ee84]
+0059dd9f  CALL 0x00637630
+0059dda4  MOVZX EAX,AL
+0059dda7  TEST EAX,EAX
+0059dda9  JZ 0x0059dddb
+0059ddab  MOVZX ECX,byte ptr [0x00795f94]
+0059ddb2  TEST ECX,ECX
+0059ddb4  JNZ 0x0059dddb
+0059ddb6  MOV EDX,dword ptr [EBP + -0x4]
+0059ddb9  MOVZX EAX,byte ptr [EDX + 0x24]
+0059ddbd  TEST EAX,EAX
+0059ddbf  JNZ 0x0059dddb
+0059ddc1  MOV ECX,dword ptr [0x007935d0]
+0059ddc7  MOVZX EDX,byte ptr [ECX + 0x103]
+0059ddce  TEST EDX,EDX
+0059ddd0  JNZ 0x0059dddb
+0059ddd2  MOV dword ptr [EBP + -0x8],0x1
+0059ddd9  JMP 0x0059dde2
+0059dddb  MOV dword ptr [EBP + -0x8],0x0
+0059dde2  MOV AL,byte ptr [EBP + -0x8]
+0059dde5  MOV ESP,EBP
+0059dde7  POP EBP
+0059dde8  RET

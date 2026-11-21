@@ -1,0 +1,79 @@
+; FUN_00620540  00620540
+00620540  PUSH EBP
+00620541  MOV EBP,ESP
+00620543  SUB ESP,0x14
+00620546  MOV dword ptr [EBP + -0x14],ECX
+00620549  MOV dword ptr [EBP + -0x4],0x0
+00620550  MOV EAX,dword ptr [EBP + -0x4]
+00620553  ADD EAX,0x4
+00620556  MOV dword ptr [EBP + -0x4],EAX
+00620559  MOV ECX,dword ptr [EBP + -0x4]
+0062055c  ADD ECX,0x4
+0062055f  MOV dword ptr [EBP + -0x4],ECX
+00620562  MOV EDX,dword ptr [EBP + -0x4]
+00620565  ADD EDX,0x300
+0062056b  MOV dword ptr [EBP + -0x4],EDX
+0062056e  MOV EAX,dword ptr [EBP + -0x4]
+00620571  ADD EAX,0x2
+00620574  MOV dword ptr [EBP + -0x4],EAX
+00620577  MOV dword ptr [EBP + -0x8],0x0
+0062057e  JMP 0x00620589
+00620580  MOV ECX,dword ptr [EBP + -0x8]
+00620583  ADD ECX,0x1
+00620586  MOV dword ptr [EBP + -0x8],ECX
+00620589  MOV EDX,dword ptr [EBP + -0x14]
+0062058c  MOV EAX,dword ptr [EBP + -0x8]
+0062058f  CMP EAX,dword ptr [EDX + 0x30c]
+00620595  JGE 0x0062063f
+0062059b  MOV ECX,dword ptr [EBP + -0x4]
+0062059e  ADD ECX,0x2
+006205a1  MOV dword ptr [EBP + -0x4],ECX
+006205a4  MOV dword ptr [EBP + -0x10],0x0
+006205ab  JMP 0x006205b6
+006205ad  MOV EDX,dword ptr [EBP + -0x10]
+006205b0  ADD EDX,0x1
+006205b3  MOV dword ptr [EBP + -0x10],EDX
+006205b6  MOV EAX,dword ptr [EBP + -0x14]
+006205b9  MOV ECX,dword ptr [EAX + 0x310]
+006205bf  MOV EDX,dword ptr [EBP + -0x8]
+006205c2  MOV EAX,dword ptr [EBP + -0x10]
+006205c5  CMP EAX,dword ptr [ECX + EDX*0x8]
+006205c8  JGE 0x0062063a
+006205ca  MOV ECX,dword ptr [EBP + -0x4]
+006205cd  ADD ECX,0xc
+006205d0  MOV dword ptr [EBP + -0x4],ECX
+006205d3  MOV dword ptr [EBP + -0xc],0x0
+006205da  JMP 0x006205e5
+006205dc  MOV EDX,dword ptr [EBP + -0xc]
+006205df  ADD EDX,0x1
+006205e2  MOV dword ptr [EBP + -0xc],EDX
+006205e5  MOV EAX,dword ptr [EBP + -0x14]
+006205e8  MOV ECX,dword ptr [EAX + 0x310]
+006205ee  MOV EDX,dword ptr [EBP + -0x10]
+006205f1  IMUL EDX,EDX,0x18
+006205f4  MOV EAX,dword ptr [EBP + -0x8]
+006205f7  MOV ECX,dword ptr [ECX + EAX*0x8 + 0x4]
+006205fb  MOV EAX,dword ptr [EBP + -0xc]
+006205fe  CMP EAX,dword ptr [ECX + EDX*0x1 + 0x4]
+00620602  JGE 0x00620635
+00620604  MOV ECX,dword ptr [EBP + -0x4]
+00620607  ADD ECX,0x2
+0062060a  MOV dword ptr [EBP + -0x4],ECX
+0062060d  MOV EDX,dword ptr [EBP + -0x14]
+00620610  MOV EAX,dword ptr [EDX + 0x310]
+00620616  MOV ECX,dword ptr [EBP + -0x10]
+00620619  IMUL ECX,ECX,0x18
+0062061c  MOV EDX,dword ptr [EBP + -0x8]
+0062061f  MOV EAX,dword ptr [EAX + EDX*0x8 + 0x4]
+00620623  MOV ECX,dword ptr [EAX + ECX*0x1 + 0x10]
+00620627  MOV EDX,dword ptr [EBP + -0xc]
+0062062a  MOV EAX,dword ptr [EBP + -0x4]
+0062062d  ADD EAX,dword ptr [ECX + EDX*0x4]
+00620630  MOV dword ptr [EBP + -0x4],EAX
+00620633  JMP 0x006205dc
+00620635  JMP 0x006205ad
+0062063a  JMP 0x00620580
+0062063f  MOV EAX,dword ptr [EBP + -0x4]
+00620642  MOV ESP,EBP
+00620644  POP EBP
+00620645  RET

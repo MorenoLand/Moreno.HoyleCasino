@@ -1,0 +1,30 @@
+; FUN_00418ed0  00418ed0
+00418ed0  PUSH EBP
+00418ed1  MOV EBP,ESP
+00418ed3  PUSH ECX
+00418ed4  MOV dword ptr [EBP + -0x4],ECX
+00418ed7  PUSH 0x0
+00418ed9  PUSH 0x1
+00418edb  MOV EAX,dword ptr [EBP + -0x4]
+00418ede  MOV ECX,dword ptr [EAX + 0x464]
+00418ee4  CALL 0x006437d0
+00418ee9  MOV ECX,dword ptr [EBP + -0x4]
+00418eec  MOV dword ptr [ECX + 0x4c8],0x0
+00418ef6  MOV EDX,dword ptr [EBP + -0x4]
+00418ef9  MOV dword ptr [EDX + 0x4dc],0x0
+00418f03  MOV EAX,dword ptr [EBP + -0x4]
+00418f06  MOV dword ptr [EAX + 0x4e4],0x0
+00418f10  MOV ECX,dword ptr [EBP + -0x4]
+00418f13  MOV dword ptr [ECX + 0x4e8],0x0
+00418f1d  MOV EDX,dword ptr [EBP + -0x4]
+00418f20  MOV dword ptr [EDX + 0x4e0],0x0
+00418f2a  PUSH 0x1
+00418f2c  PUSH 0x6b4b08
+00418f31  PUSH 0x2
+00418f33  PUSH 0x5
+00418f35  MOV EAX,dword ptr [EBP + -0x4]
+00418f38  MOV ECX,dword ptr [EAX + 0x464]
+00418f3e  CALL 0x00643930
+00418f43  MOV ESP,EBP
+00418f45  POP EBP
+00418f46  RET

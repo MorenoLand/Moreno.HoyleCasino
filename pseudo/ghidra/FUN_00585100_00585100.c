@@ -1,0 +1,9 @@
+// FUN_00585100  00585100
+
+void FUN_00585100(void)
+
+{
+  FUN_005f6510(CONCAT12(DAT_0075f49a,DAT_0075f498));
+  return;
+}
+

@@ -1,0 +1,16 @@
+; FUN_005cd800  005cd800
+005cd800  PUSH EBP
+005cd801  MOV EBP,ESP
+005cd803  PUSH ECX
+005cd804  MOV dword ptr [EBP + -0x4],ECX
+005cd807  MOV EAX,dword ptr [EBP + 0x10]
+005cd80a  PUSH EAX
+005cd80b  MOV ECX,dword ptr [EBP + 0xc]
+005cd80e  PUSH ECX
+005cd80f  MOV EDX,dword ptr [EBP + 0x8]
+005cd812  PUSH EDX
+005cd813  MOV ECX,dword ptr [EBP + -0x4]
+005cd816  CALL 0x005cd7c0
+005cd81b  MOV ESP,EBP
+005cd81d  POP EBP
+005cd81e  RET 0xc

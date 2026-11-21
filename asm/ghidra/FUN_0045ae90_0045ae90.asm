@@ -1,0 +1,15 @@
+; FUN_0045ae90  0045ae90
+0045ae90  PUSH EBP
+0045ae91  MOV EBP,ESP
+0045ae93  PUSH ECX
+0045ae94  MOV dword ptr [EBP + -0x4],ECX
+0045ae97  PUSH 0x0
+0045ae99  PUSH 0x0
+0045ae9b  MOV ECX,dword ptr [EBP + -0x4]
+0045ae9e  CALL 0x005f71f0
+0045aea3  MOV EAX,dword ptr [EBP + -0x4]
+0045aea6  MOV dword ptr [EAX],0x6b99f4
+0045aeac  MOV EAX,dword ptr [EBP + -0x4]
+0045aeaf  MOV ESP,EBP
+0045aeb1  POP EBP
+0045aeb2  RET

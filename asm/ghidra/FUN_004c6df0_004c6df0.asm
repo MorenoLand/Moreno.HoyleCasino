@@ -1,0 +1,10 @@
+; FUN_004c6df0  004c6df0
+004c6df0  PUSH EBP
+004c6df1  MOV EBP,ESP
+004c6df3  PUSH ECX
+004c6df4  MOV dword ptr [EBP + -0x4],ECX
+004c6df7  MOV EAX,dword ptr [EBP + -0x4]
+004c6dfa  MOV EAX,dword ptr [EAX + 0x408]
+004c6e00  MOV ESP,EBP
+004c6e02  POP EBP
+004c6e03  RET

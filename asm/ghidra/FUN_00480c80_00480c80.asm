@@ -1,0 +1,16 @@
+; FUN_00480c80  00480c80
+00480c80  PUSH EBP
+00480c81  MOV EBP,ESP
+00480c83  SUB ESP,0x8
+00480c86  MOV dword ptr [EBP + -0x8],ECX
+00480c89  MOV dword ptr [EBP + -0x4],0x0
+00480c90  MOV EAX,dword ptr [EBP + -0x8]
+00480c93  CMP dword ptr [EAX + 0x100],0xe
+00480c9a  JNZ 0x00480ca5
+00480c9c  MOV dword ptr [EBP + -0x4],0x2
+00480ca3  JMP 0x00480cac
+00480ca5  MOV dword ptr [EBP + -0x4],0x3
+00480cac  MOV EAX,dword ptr [EBP + -0x4]
+00480caf  MOV ESP,EBP
+00480cb1  POP EBP
+00480cb2  RET

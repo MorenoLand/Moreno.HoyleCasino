@@ -1,0 +1,56 @@
+; FUN_00480070  00480070
+00480070  PUSH EBP
+00480071  MOV EBP,ESP
+00480073  SUB ESP,0x14
+00480076  PUSH ESI
+00480077  MOV dword ptr [EBP + -0x14],ECX
+0048007a  MOV dword ptr [EBP + -0x4],0x0
+00480081  JMP 0x0048008c
+00480083  MOV EAX,dword ptr [EBP + -0x4]
+00480086  ADD EAX,0x1
+00480089  MOV dword ptr [EBP + -0x4],EAX
+0048008c  MOV ECX,dword ptr [EBP + -0x4]
+0048008f  CMP ECX,dword ptr [EBP + 0xc]
+00480092  JGE 0x0048010f
+00480094  MOV dword ptr [EBP + -0x10],0x0
+0048009b  JMP 0x004800a6
+0048009d  MOV EDX,dword ptr [EBP + -0x10]
+004800a0  ADD EDX,0x1
+004800a3  MOV dword ptr [EBP + -0x10],EDX
+004800a6  MOV EAX,dword ptr [EBP + 0xc]
+004800a9  SUB EAX,0x1
+004800ac  CMP dword ptr [EBP + -0x10],EAX
+004800af  JGE 0x0048010a
+004800b1  MOV ECX,dword ptr [EBP + -0x10]
+004800b4  MOV EDX,dword ptr [EBP + 0x8]
+004800b7  MOV EAX,dword ptr [EBP + -0x10]
+004800ba  MOV ESI,dword ptr [EBP + 0x8]
+004800bd  MOV ECX,dword ptr [EDX + ECX*0x8]
+004800c0  CMP ECX,dword ptr [ESI + EAX*0x8 + 0x8]
+004800c4  JGE 0x00480108
+004800c6  MOV EDX,dword ptr [EBP + -0x10]
+004800c9  MOV EAX,dword ptr [EBP + 0x8]
+004800cc  MOV ECX,dword ptr [EAX + EDX*0x8]
+004800cf  MOV EDX,dword ptr [EAX + EDX*0x8 + 0x4]
+004800d3  MOV dword ptr [EBP + -0xc],ECX
+004800d6  MOV dword ptr [EBP + -0x8],EDX
+004800d9  MOV EAX,dword ptr [EBP + -0x10]
+004800dc  MOV ECX,dword ptr [EBP + 0x8]
+004800df  MOV EDX,dword ptr [ECX + EAX*0x8 + 0x8]
+004800e3  MOV EAX,dword ptr [ECX + EAX*0x8 + 0xc]
+004800e7  MOV ECX,dword ptr [EBP + -0x10]
+004800ea  MOV ESI,dword ptr [EBP + 0x8]
+004800ed  MOV dword ptr [ESI + ECX*0x8],EDX
+004800f0  MOV dword ptr [ESI + ECX*0x8 + 0x4],EAX
+004800f4  MOV EDX,dword ptr [EBP + -0x10]
+004800f7  MOV EAX,dword ptr [EBP + 0x8]
+004800fa  MOV ECX,dword ptr [EBP + -0xc]
+004800fd  MOV dword ptr [EAX + EDX*0x8 + 0x8],ECX
+00480101  MOV ECX,dword ptr [EBP + -0x8]
+00480104  MOV dword ptr [EAX + EDX*0x8 + 0xc],ECX
+00480108  JMP 0x0048009d
+0048010a  JMP 0x00480083
+0048010f  POP ESI
+00480110  MOV ESP,EBP
+00480112  POP EBP
+00480113  RET 0x8

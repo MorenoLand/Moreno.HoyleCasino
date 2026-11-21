@@ -1,0 +1,64 @@
+; FUN_00426da0  00426da0
+00426da0  PUSH EBP
+00426da1  MOV EBP,ESP
+00426da3  SUB ESP,0x30
+00426da6  MOV dword ptr [EBP + -0x30],ECX
+00426da9  MOV dword ptr [EBP + -0x14],0x3
+00426db0  MOV dword ptr [EBP + -0x10],0x1
+00426db7  MOV dword ptr [EBP + -0xc],0x0
+00426dbe  MOV dword ptr [EBP + -0x8],0x2
+00426dc5  MOV dword ptr [EBP + -0x4],0x0
+00426dcc  JMP 0x00426dd7
+00426dce  MOV EAX,dword ptr [EBP + -0x4]
+00426dd1  ADD EAX,0x1
+00426dd4  MOV dword ptr [EBP + -0x4],EAX
+00426dd7  CMP dword ptr [EBP + -0x4],0x4
+00426ddb  JGE 0x00426e6d
+00426de1  MOV ECX,dword ptr [EBP + -0x4]
+00426de4  MOV EDX,dword ptr [EBP + ECX*0x4 + -0x14]
+00426de8  PUSH EDX
+00426de9  CALL 0x005dcb00
+00426dee  ADD ESP,0x4
+00426df1  MOV dword ptr [EBP + -0x1c],EAX
+00426df4  MOV ECX,dword ptr [EBP + -0x1c]
+00426df7  CALL 0x0063aac0
+00426dfc  MOV EAX,dword ptr [EAX]
+00426dfe  MOV dword ptr [EBP + -0x18],EAX
+00426e01  XOR ECX,ECX
+00426e03  CMP dword ptr [EBP + -0x18],0x0
+00426e07  SETZ CL
+00426e0a  MOVZX EDX,CL
+00426e0d  TEST EDX,EDX
+00426e0f  JNZ 0x00426e68
+00426e11  MOV EAX,dword ptr [EBP + -0x4]
+00426e14  MOV ECX,dword ptr [EBP + EAX*0x4 + -0x14]
+00426e18  PUSH ECX
+00426e19  CALL 0x005dcb00
+00426e1e  ADD ESP,0x4
+00426e21  MOV dword ptr [EBP + -0x20],EAX
+00426e24  MOV EDX,dword ptr [EBP + -0x20]
+00426e27  MOV AL,byte ptr [EDX + 0x4a1]
+00426e2d  MOV byte ptr [EBP + -0x21],AL
+00426e30  MOVZX ECX,byte ptr [EBP + -0x21]
+00426e34  TEST ECX,ECX
+00426e36  JNZ 0x00426e68
+00426e38  MOV EDX,dword ptr [EBP + -0x4]
+00426e3b  MOV EAX,dword ptr [EBP + EDX*0x4 + -0x14]
+00426e3f  PUSH EAX
+00426e40  CALL 0x005dcb00
+00426e45  ADD ESP,0x4
+00426e48  MOV dword ptr [EBP + -0x28],EAX
+00426e4b  MOV ECX,dword ptr [EBP + -0x28]
+00426e4e  MOV DL,byte ptr [ECX + 0x4a2]
+00426e54  MOV byte ptr [EBP + -0x29],DL
+00426e57  MOVZX EAX,byte ptr [EBP + -0x29]
+00426e5b  TEST EAX,EAX
+00426e5d  JNZ 0x00426e68
+00426e5f  MOV ECX,dword ptr [EBP + -0x4]
+00426e62  MOV EAX,dword ptr [EBP + ECX*0x4 + -0x14]
+00426e66  JMP 0x00426e70
+00426e68  JMP 0x00426dce
+00426e6d  OR EAX,0xffffffff
+00426e70  MOV ESP,EBP
+00426e72  POP EBP
+00426e73  RET

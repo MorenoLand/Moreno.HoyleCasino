@@ -1,0 +1,30 @@
+; FUN_0044ce00  0044ce00
+0044ce00  PUSH EBP
+0044ce01  MOV EBP,ESP
+0044ce03  SUB ESP,0xc
+0044ce06  MOV dword ptr [EBP + -0xc],ECX
+0044ce09  MOV dword ptr [EBP + -0x8],0x0
+0044ce10  MOV dword ptr [EBP + -0x4],0x0
+0044ce17  JMP 0x0044ce22
+0044ce19  MOV EAX,dword ptr [EBP + -0x4]
+0044ce1c  ADD EAX,0x1
+0044ce1f  MOV dword ptr [EBP + -0x4],EAX
+0044ce22  CMP dword ptr [EBP + -0x4],0x5
+0044ce26  JGE 0x0044ce4a
+0044ce28  MOV ECX,dword ptr [EBP + -0x4]
+0044ce2b  PUSH ECX
+0044ce2c  MOV EDX,dword ptr [EBP + 0x8]
+0044ce2f  PUSH EDX
+0044ce30  MOV ECX,dword ptr [EBP + -0xc]
+0044ce33  CALL 0x0044cd70
+0044ce38  MOVZX EAX,AX
+0044ce3b  TEST EAX,EAX
+0044ce3d  JZ 0x0044ce48
+0044ce3f  MOV ECX,dword ptr [EBP + -0x8]
+0044ce42  ADD ECX,0x1
+0044ce45  MOV dword ptr [EBP + -0x8],ECX
+0044ce48  JMP 0x0044ce19
+0044ce4a  MOV EAX,dword ptr [EBP + -0x8]
+0044ce4d  MOV ESP,EBP
+0044ce4f  POP EBP
+0044ce50  RET 0x4

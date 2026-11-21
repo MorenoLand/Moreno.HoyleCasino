@@ -1,0 +1,12 @@
+; FUN_0066fdf0  0066fdf0
+0066fdf0  PUSH EBP
+0066fdf1  MOV EBP,ESP
+0066fdf3  PUSH ECX
+0066fdf4  MOV dword ptr [EBP + -0x4],ECX
+0066fdf7  MOV ECX,dword ptr [EBP + -0x4]
+0066fdfa  CALL 0x0066fe10
+0066fdff  MOV ECX,dword ptr [EBP + -0x4]
+0066fe02  CALL 0x0066ff30
+0066fe07  MOV ESP,EBP
+0066fe09  POP EBP
+0066fe0a  RET

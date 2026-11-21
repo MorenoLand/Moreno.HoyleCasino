@@ -1,0 +1,23 @@
+; FUN_0044c060  0044c060
+0044c060  PUSH EBP
+0044c061  MOV EBP,ESP
+0044c063  SUB ESP,0x8
+0044c066  MOV dword ptr [EBP + -0x8],ECX
+0044c069  CMP dword ptr [EBP + 0x8],0x0
+0044c06d  JNZ 0x0044c073
+0044c06f  XOR AL,AL
+0044c071  JMP 0x0044c0a3
+0044c073  MOV EAX,dword ptr [EBP + 0x8]
+0044c076  MOV dword ptr [EBP + -0x4],EAX
+0044c079  MOV ECX,dword ptr [EBP + -0x4]
+0044c07c  MOV dword ptr [ECX + 0x4],0x0
+0044c083  MOV EDX,dword ptr [EBP + -0x4]
+0044c086  MOV dword ptr [EDX + 0x8],0x0
+0044c08d  MOV EAX,dword ptr [EBP + -0x4]
+0044c090  MOV dword ptr [EAX + 0xc],0x0
+0044c097  MOV ECX,dword ptr [EBP + -0x4]
+0044c09a  MOV dword ptr [ECX + 0x10],0x0
+0044c0a1  MOV AL,0x1
+0044c0a3  MOV ESP,EBP
+0044c0a5  POP EBP
+0044c0a6  RET 0x4

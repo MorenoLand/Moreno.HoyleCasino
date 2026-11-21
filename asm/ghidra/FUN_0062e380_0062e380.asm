@@ -1,0 +1,24 @@
+; FUN_0062e380  0062e380
+0062e380  PUSH EBP
+0062e381  MOV EBP,ESP
+0062e383  PUSH ECX
+0062e384  MOV dword ptr [EBP + -0x4],ECX
+0062e387  MOV EAX,dword ptr [EBP + 0x8]
+0062e38a  MOV ECX,dword ptr [EBP + 0xc]
+0062e38d  MOV EDX,dword ptr [ECX]
+0062e38f  MOV dword ptr [EAX],EDX
+0062e391  MOV EAX,dword ptr [EBP + 0x8]
+0062e394  ADD EAX,0x4
+0062e397  MOV dword ptr [EBP + 0x8],EAX
+0062e39a  MOV ECX,dword ptr [EBP + 0xc]
+0062e39d  ADD ECX,0x4
+0062e3a0  MOV dword ptr [EBP + 0xc],ECX
+0062e3a3  MOV DX,word ptr [EBP + 0x10]
+0062e3a7  SUB DX,0x1
+0062e3ab  MOV word ptr [EBP + 0x10],DX
+0062e3af  MOVZX EAX,word ptr [EBP + 0x10]
+0062e3b3  TEST EAX,EAX
+0062e3b5  JNZ 0x0062e387
+0062e3b7  MOV ESP,EBP
+0062e3b9  POP EBP
+0062e3ba  RET 0xc

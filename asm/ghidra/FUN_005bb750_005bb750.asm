@@ -1,0 +1,31 @@
+; FUN_005bb750  005bb750
+005bb750  PUSH EBP
+005bb751  MOV EBP,ESP
+005bb753  PUSH -0x1
+005bb755  PUSH 0x6a7fd2
+005bb75a  MOV EAX,FS:[0x0]
+005bb760  PUSH EAX
+005bb761  SUB ESP,0x44
+005bb764  MOV EAX,[0x00781870]
+005bb769  XOR EAX,EBP
+005bb76b  PUSH EAX
+005bb76c  LEA EAX,[EBP + -0xc]
+005bb76f  MOV FS:[0x0],EAX
+005bb775  PUSH 0x6d1bf4
+005bb77a  LEA ECX,[EBP + -0x50]
+005bb77d  CALL dword ptr [0x006b20fc]
+005bb783  MOV dword ptr [EBP + -0x4],0x0
+005bb78a  LEA ECX,[EBP + -0x34]
+005bb78d  CALL dword ptr [0x006b227c]
+005bb793  MOV byte ptr [EBP + -0x4],0x1
+005bb797  MOV dword ptr [EBP + -0x34],0x6d1bec
+005bb79e  LEA EAX,[EBP + -0x50]
+005bb7a1  PUSH EAX
+005bb7a2  LEA ECX,[EBP + -0x28]
+005bb7a5  CALL dword ptr [0x006b20f8]
+005bb7ab  MOV byte ptr [EBP + -0x4],0x0
+005bb7af  MOV dword ptr [EBP + -0x34],0x6d1be0
+005bb7b6  PUSH 0x6fc53c
+005bb7bb  LEA ECX,[EBP + -0x34]
+005bb7be  PUSH ECX
+005bb7bf  CALL 0x00686fc0

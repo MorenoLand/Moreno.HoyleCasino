@@ -1,0 +1,27 @@
+; FUN_006272e0  006272e0
+006272e0  PUSH EBP
+006272e1  MOV EBP,ESP
+006272e3  PUSH ECX
+006272e4  MOV dword ptr [EBP + -0x4],ECX
+006272e7  CMP dword ptr [EBP + 0xc],0x0
+006272eb  JZ 0x006272f8
+006272ed  MOV EAX,dword ptr [EBP + 0xc]
+006272f0  MOV ECX,dword ptr [EBP + -0x4]
+006272f3  MOV EDX,dword ptr [ECX + 0x50]
+006272f6  MOV dword ptr [EAX],EDX
+006272f8  CMP dword ptr [EBP + 0x10],0x0
+006272fc  JZ 0x00627309
+006272fe  MOV EAX,dword ptr [EBP + 0x10]
+00627301  MOV ECX,dword ptr [EBP + -0x4]
+00627304  MOV EDX,dword ptr [ECX + 0x54]
+00627307  MOV dword ptr [EAX],EDX
+00627309  MOV EAX,dword ptr [EBP + -0x4]
+0062730c  MOV ECX,dword ptr [EAX + 0x50]
+0062730f  MOV EDX,dword ptr [EAX + 0x54]
+00627312  MOV EAX,dword ptr [EBP + 0x8]
+00627315  MOV dword ptr [EAX],ECX
+00627317  MOV dword ptr [EAX + 0x4],EDX
+0062731a  MOV EAX,dword ptr [EBP + 0x8]
+0062731d  MOV ESP,EBP
+0062731f  POP EBP
+00627320  RET 0xc

@@ -1,0 +1,40 @@
+; FID_conflict:`vector_deleting_destructor'  004f9b20
+004f9b20  PUSH EBP
+004f9b21  MOV EBP,ESP
+004f9b23  PUSH ECX
+004f9b24  MOV dword ptr [EBP + -0x4],ECX
+004f9b27  MOV EAX,dword ptr [EBP + 0x8]
+004f9b2a  AND EAX,0x2
+004f9b2d  JZ 0x004f9b65
+004f9b2f  PUSH 0x4a20f0
+004f9b34  MOV ECX,dword ptr [EBP + -0x4]
+004f9b37  MOV EDX,dword ptr [ECX + -0x4]
+004f9b3a  PUSH EDX
+004f9b3b  PUSH 0x4
+004f9b3d  MOV EAX,dword ptr [EBP + -0x4]
+004f9b40  PUSH EAX
+004f9b41  CALL 0x00686e57
+004f9b46  MOV ECX,dword ptr [EBP + 0x8]
+004f9b49  AND ECX,0x1
+004f9b4c  JZ 0x004f9b5d
+004f9b4e  MOV EDX,dword ptr [EBP + -0x4]
+004f9b51  SUB EDX,0x4
+004f9b54  PUSH EDX
+004f9b55  CALL 0x00686cae
+004f9b5a  ADD ESP,0x4
+004f9b5d  MOV EAX,dword ptr [EBP + -0x4]
+004f9b60  SUB EAX,0x4
+004f9b63  JMP 0x004f9b84
+004f9b65  MOV ECX,dword ptr [EBP + -0x4]
+004f9b68  CALL 0x004a20f0
+004f9b6d  MOV EAX,dword ptr [EBP + 0x8]
+004f9b70  AND EAX,0x1
+004f9b73  JZ 0x004f9b81
+004f9b75  MOV ECX,dword ptr [EBP + -0x4]
+004f9b78  PUSH ECX
+004f9b79  CALL 0x00686cae
+004f9b7e  ADD ESP,0x4
+004f9b81  MOV EAX,dword ptr [EBP + -0x4]
+004f9b84  MOV ESP,EBP
+004f9b86  POP EBP
+004f9b87  RET 0x4

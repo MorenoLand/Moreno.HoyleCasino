@@ -1,0 +1,16 @@
+; FUN_006013c0  006013c0
+006013c0  PUSH EBP
+006013c1  MOV EBP,ESP
+006013c3  PUSH ECX
+006013c4  MOV dword ptr [EBP + -0x4],ECX
+006013c7  MOV EAX,dword ptr [EBP + -0x4]
+006013ca  CMP dword ptr [EAX + 0xc],0x1
+006013ce  JNZ 0x006013dc
+006013d0  MOV ECX,dword ptr [EBP + -0x4]
+006013d3  MOV dword ptr [ECX + 0xc],0xffffffff
+006013da  JMP 0x006013e6
+006013dc  MOV EDX,dword ptr [EBP + -0x4]
+006013df  MOV dword ptr [EDX + 0xc],0x1
+006013e6  MOV ESP,EBP
+006013e8  POP EBP
+006013e9  RET

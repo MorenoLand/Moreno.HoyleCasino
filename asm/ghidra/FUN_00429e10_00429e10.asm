@@ -1,0 +1,22 @@
+; FUN_00429e10  00429e10
+00429e10  PUSH EBP
+00429e11  MOV EBP,ESP
+00429e13  SUB ESP,0x8
+00429e16  MOV dword ptr [EBP + -0x8],ECX
+00429e19  MOV EAX,dword ptr [EBP + 0x8]
+00429e1c  MOV ECX,dword ptr [EBP + -0x8]
+00429e1f  MOV EDX,dword ptr [ECX + EAX*0x4 + 0x14]
+00429e23  MOV EAX,dword ptr [EBP + 0xc]
+00429e26  MOV ECX,dword ptr [EDX + EAX*0x4 + 0xafc]
+00429e2d  MOV dword ptr [EBP + -0x4],ECX
+00429e30  CMP dword ptr [EBP + -0x4],0x0
+00429e34  JNZ 0x00429e38
+00429e36  JMP 0x00429e45
+00429e38  MOV EDX,dword ptr [EBP + -0x4]
+00429e3b  MOV EAX,dword ptr [EDX]
+00429e3d  MOV ECX,dword ptr [EBP + -0x4]
+00429e40  MOV EDX,dword ptr [EAX + 0x70]
+00429e43  CALL EDX
+00429e45  MOV ESP,EBP
+00429e47  POP EBP
+00429e48  RET 0x8

@@ -1,0 +1,29 @@
+; FUN_005cec40  005cec40
+005cec40  PUSH EBP
+005cec41  MOV EBP,ESP
+005cec43  SUB ESP,0x3c
+005cec46  MOV EAX,[0x00781870]
+005cec4b  XOR EAX,EBP
+005cec4d  MOV dword ptr [EBP + -0x4],EAX
+005cec50  MOV dword ptr [EBP + -0x3c],ECX
+005cec53  MOV EAX,[0x007947e0]
+005cec58  MOV ECX,dword ptr [EAX + 0x4ef0]
+005cec5e  PUSH ECX
+005cec5f  MOV EDX,dword ptr [0x007947e0]
+005cec65  MOV EAX,dword ptr [EDX + 0x4ef8]
+005cec6b  PUSH EAX
+005cec6c  PUSH 0x6b38f0
+005cec71  LEA ECX,[EBP + -0x38]
+005cec74  PUSH ECX
+005cec75  CALL dword ptr [0x006b2220]
+005cec7b  ADD ESP,0x10
+005cec7e  LEA EDX,[EBP + -0x38]
+005cec81  PUSH EDX
+005cec82  MOV ECX,dword ptr [EBP + -0x3c]
+005cec85  CALL 0x005ceca0
+005cec8a  MOV ECX,dword ptr [EBP + -0x4]
+005cec8d  XOR ECX,EBP
+005cec8f  CALL 0x00686d72
+005cec94  MOV ESP,EBP
+005cec96  POP EBP
+005cec97  RET

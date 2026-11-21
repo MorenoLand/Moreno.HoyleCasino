@@ -1,0 +1,14 @@
+; FUN_0064c040  0064c040
+0064c040  PUSH EBP
+0064c041  MOV EBP,ESP
+0064c043  PUSH ECX
+0064c044  MOV dword ptr [EBP + -0x4],ECX
+0064c047  MOV EAX,dword ptr [EBP + 0x8]
+0064c04a  MOV byte ptr [EAX + 0x4],0x1
+0064c04e  MOV ECX,dword ptr [EBP + -0x4]
+0064c051  MOV byte ptr [ECX + 0x8],0x0
+0064c055  MOV EDX,dword ptr [EBP + -0x4]
+0064c058  MOV byte ptr [EDX + 0x9],0x0
+0064c05c  MOV ESP,EBP
+0064c05e  POP EBP
+0064c05f  RET 0x4

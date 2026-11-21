@@ -1,0 +1,2 @@
+00454950 00454950 aam 0x48
+00690880 006908e1 repe cmpsw word ptr [esi], word ptr es:[edi]

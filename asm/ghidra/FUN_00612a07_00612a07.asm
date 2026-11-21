@@ -1,0 +1,4 @@
+; FUN_00612a07  00612a07
+00612a07  MOV EDX,dword ptr [EBP + -0x14]
+00612a0a  ADD EDX,0x48
+00612a0d  MOV dword ptr [EBP + -0x14],EDX

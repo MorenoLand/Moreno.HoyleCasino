@@ -1,0 +1,18 @@
+; FUN_004c68c0  004c68c0
+004c68c0  PUSH EBP
+004c68c1  MOV EBP,ESP
+004c68c3  PUSH ECX
+004c68c4  MOV dword ptr [EBP + -0x4],ECX
+004c68c7  CMP dword ptr [EBP + 0x8],-0x1
+004c68cb  JZ 0x004c68db
+004c68cd  MOV EAX,dword ptr [EBP + -0x4]
+004c68d0  MOV ECX,dword ptr [EBP + 0x8]
+004c68d3  MOV dword ptr [EAX + 0x400],ECX
+004c68d9  JMP 0x004c68e8
+004c68db  MOV EDX,dword ptr [EBP + -0x4]
+004c68de  MOV dword ptr [EDX + 0x400],0x0
+004c68e8  MOV ECX,dword ptr [EBP + -0x4]
+004c68eb  CALL 0x004c6900
+004c68f0  MOV ESP,EBP
+004c68f2  POP EBP
+004c68f3  RET 0x4

@@ -1,0 +1,12 @@
+; FUN_0058fb20  0058fb20
+0058fb20  PUSH EBP
+0058fb21  MOV EBP,ESP
+0058fb23  PUSH ECX
+0058fb24  MOV dword ptr [EBP + -0x4],ECX
+0058fb27  MOV EAX,dword ptr [EBP + -0x4]
+0058fb2a  MOV dword ptr [EAX],0x6cde54
+0058fb30  MOV ECX,dword ptr [EBP + -0x4]
+0058fb33  CALL 0x00601ba0
+0058fb38  MOV ESP,EBP
+0058fb3a  POP EBP
+0058fb3b  RET

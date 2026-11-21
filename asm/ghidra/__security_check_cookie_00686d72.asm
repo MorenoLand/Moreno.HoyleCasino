@@ -1,0 +1,5 @@
+; __security_check_cookie  00686d72
+00686d72  CMP ECX,dword ptr [0x00781870]
+00686d78  JNZ 0x00686d7c
+00686d7a  RET
+00686d7c  JMP 0x00687585

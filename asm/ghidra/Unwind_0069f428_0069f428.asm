@@ -1,0 +1,4 @@
+; Unwind@0069f428  0069f428
+0069f428  MOV ECX,dword ptr [EBP + -0x20]
+0069f42b  ADD ECX,0x10
+0069f42e  JMP 0x0060c6a0

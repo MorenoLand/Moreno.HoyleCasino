@@ -1,0 +1,19 @@
+// FUN_005591a0  005591a0
+
+undefined1 __fastcall FUN_005591a0(int param_1)
+
+{
+  int iVar1;
+  int iVar2;
+  
+  if ((*(int *)(param_1 + 4) == 0) && (*(int *)(param_1 + 8) == 0)) {
+    FUN_005dcb00(0);
+    iVar1 = FUN_005d5a50();
+    iVar2 = FUN_005d0aa0();
+    if (iVar1 < iVar2) {
+      return 1;
+    }
+  }
+  return 0;
+}
+

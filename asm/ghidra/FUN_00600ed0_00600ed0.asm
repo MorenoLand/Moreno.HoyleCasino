@@ -1,0 +1,11 @@
+; FUN_00600ed0  00600ed0
+00600ed0  PUSH EBP
+00600ed1  MOV EBP,ESP
+00600ed3  PUSH ECX
+00600ed4  MOV dword ptr [EBP + -0x4],ECX
+00600ed7  MOV EAX,dword ptr [EBP + -0x4]
+00600eda  MOV ECX,dword ptr [EBP + 0x8]
+00600edd  MOV dword ptr [EAX + 0x1c],ECX
+00600ee0  MOV ESP,EBP
+00600ee2  POP EBP
+00600ee3  RET 0x4

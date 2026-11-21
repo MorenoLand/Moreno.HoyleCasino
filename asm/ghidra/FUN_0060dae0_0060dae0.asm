@@ -1,0 +1,31 @@
+; FUN_0060dae0  0060dae0
+0060dae0  PUSH EBP
+0060dae1  MOV EBP,ESP
+0060dae3  PUSH ECX
+0060dae4  MOV dword ptr [EBP + -0x4],ECX
+0060dae7  MOV EAX,[0x007960d8]
+0060daec  MOV ECX,dword ptr [EAX + 0x10]
+0060daef  MOV EDX,dword ptr [0x007960d8]
+0060daf5  MOV EAX,dword ptr [EDX + 0x10]
+0060daf8  MOV EDX,dword ptr [ECX]
+0060dafa  MOV ECX,EAX
+0060dafc  MOV EAX,dword ptr [EDX + 0x30]
+0060daff  CALL EAX
+0060db01  MOVZX ECX,AL
+0060db04  TEST ECX,ECX
+0060db06  JNZ 0x0060db0a
+0060db08  JMP 0x0060db31
+0060db0a  MOV byte ptr [0x015e55d2],0x1
+0060db11  MOV EDX,dword ptr [EBP + -0x4]
+0060db14  MOV EAX,dword ptr [EDX]
+0060db16  MOV ECX,dword ptr [EBP + -0x4]
+0060db19  MOV EDX,dword ptr [EAX + 0x34]
+0060db1c  CALL EDX
+0060db1e  MOV AL,byte ptr [EBP + 0x8]
+0060db21  PUSH EAX
+0060db22  MOV ECX,dword ptr [EBP + -0x4]
+0060db25  CALL 0x0060dd10
+0060db2a  MOV byte ptr [0x015e55d2],0x0
+0060db31  MOV ESP,EBP
+0060db33  POP EBP
+0060db34  RET 0x4

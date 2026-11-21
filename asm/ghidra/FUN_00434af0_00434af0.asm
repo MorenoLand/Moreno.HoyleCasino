@@ -1,0 +1,67 @@
+; FUN_00434af0  00434af0
+00434af0  PUSH EBP
+00434af1  MOV EBP,ESP
+00434af3  SUB ESP,0x24
+00434af6  MOV dword ptr [EBP + -0x20],ECX
+00434af9  MOV EAX,dword ptr [EBP + -0x20]
+00434afc  MOV ECX,dword ptr [EAX + 0xac4]
+00434b02  MOV dword ptr [EBP + -0x4],ECX
+00434b05  XOR EDX,EDX
+00434b07  CMP dword ptr [EBP + -0x4],0x0
+00434b0b  SETNZ DL
+00434b0e  MOVZX EAX,DL
+00434b11  TEST EAX,EAX
+00434b13  JNZ 0x00434bc2
+00434b19  XOR ECX,ECX
+00434b1b  SHL ECX,0x2
+00434b1e  MOV EDX,dword ptr [EBP + -0x20]
+00434b21  MOV EAX,dword ptr [EDX + ECX*0x1 + 0xacc]
+00434b28  MOV dword ptr [EBP + -0x8],EAX
+00434b2b  MOV ECX,0x1
+00434b30  SHL ECX,0x2
+00434b33  MOV EDX,dword ptr [EBP + -0x20]
+00434b36  MOV EAX,dword ptr [EDX + ECX*0x1 + 0xacc]
+00434b3d  MOV dword ptr [EBP + -0xc],EAX
+00434b40  MOV ECX,dword ptr [EBP + -0x8]
+00434b43  ADD ECX,dword ptr [EBP + -0xc]
+00434b46  CMP ECX,0x3
+00434b49  JLE 0x00434bc2
+00434b4b  XOR EDX,EDX
+00434b4d  SHL EDX,0x2
+00434b50  MOV EAX,dword ptr [EBP + -0x20]
+00434b53  MOV ECX,dword ptr [EAX + EDX*0x1 + 0xacc]
+00434b5a  MOV dword ptr [EBP + -0x10],ECX
+00434b5d  MOV EDX,0x1
+00434b62  SHL EDX,0x2
+00434b65  MOV EAX,dword ptr [EBP + -0x20]
+00434b68  MOV ECX,dword ptr [EAX + EDX*0x1 + 0xacc]
+00434b6f  MOV dword ptr [EBP + -0x14],ECX
+00434b72  MOV EDX,dword ptr [EBP + -0x10]
+00434b75  ADD EDX,dword ptr [EBP + -0x14]
+00434b78  CMP EDX,0xb
+00434b7b  JGE 0x00434bc2
+00434b7d  XOR EAX,EAX
+00434b7f  SHL EAX,0x2
+00434b82  MOV ECX,dword ptr [EBP + -0x20]
+00434b85  MOV EDX,dword ptr [ECX + EAX*0x1 + 0xacc]
+00434b8c  MOV dword ptr [EBP + -0x18],EDX
+00434b8f  MOV EAX,0x1
+00434b94  SHL EAX,0x2
+00434b97  MOV ECX,dword ptr [EBP + -0x20]
+00434b9a  MOV EDX,dword ptr [ECX + EAX*0x1 + 0xacc]
+00434ba1  MOV dword ptr [EBP + -0x1c],EDX
+00434ba4  MOV EAX,dword ptr [EBP + -0x18]
+00434ba7  ADD EAX,dword ptr [EBP + -0x1c]
+00434baa  XOR ECX,ECX
+00434bac  CMP EAX,0x7
+00434baf  SETZ CL
+00434bb2  MOVZX EDX,CL
+00434bb5  TEST EDX,EDX
+00434bb7  JNZ 0x00434bc2
+00434bb9  MOV dword ptr [EBP + -0x24],0x1
+00434bc0  JMP 0x00434bc9
+00434bc2  MOV dword ptr [EBP + -0x24],0x0
+00434bc9  MOV AL,byte ptr [EBP + -0x24]
+00434bcc  MOV ESP,EBP
+00434bce  POP EBP
+00434bcf  RET

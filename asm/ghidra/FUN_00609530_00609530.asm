@@ -1,0 +1,83 @@
+; FUN_00609530  00609530
+00609530  PUSH EBP
+00609531  MOV EBP,ESP
+00609533  SUB ESP,0x24
+00609536  MOV EAX,dword ptr [EBP + 0x8]
+00609539  MOV dword ptr [EBP + -0x4],EAX
+0060953c  MOV ECX,dword ptr [EBP + 0x14]
+0060953f  MOV dword ptr [EBP + -0x14],ECX
+00609542  CMP dword ptr [EBP + -0x14],0x0
+00609546  JZ 0x0060955d
+00609548  CMP dword ptr [EBP + -0x14],0x1
+0060954c  JZ 0x006095a2
+0060954e  CMP dword ptr [EBP + -0x14],0x2
+00609552  JZ 0x006095fc
+00609558  JMP 0x0060960b
+0060955d  MOV EDX,dword ptr [EBP + -0x4]
+00609560  MOV EAX,dword ptr [EDX + 0x4]
+00609563  CDQ
+00609564  MOV dword ptr [EBP + -0x1c],EAX
+00609567  MOV dword ptr [EBP + -0x18],EDX
+0060956a  MOV EAX,dword ptr [EBP + -0x18]
+0060956d  CMP EAX,dword ptr [EBP + 0x10]
+00609570  JL 0x0060958a
+00609572  JG 0x0060957c
+00609574  MOV ECX,dword ptr [EBP + -0x1c]
+00609577  CMP ECX,dword ptr [EBP + 0xc]
+0060957a  JC 0x0060958a
+0060957c  MOV EDX,dword ptr [EBP + 0xc]
+0060957f  MOV dword ptr [EBP + -0x10],EDX
+00609582  MOV EAX,dword ptr [EBP + 0x10]
+00609585  MOV dword ptr [EBP + -0xc],EAX
+00609588  JMP 0x00609597
+0060958a  MOV ECX,dword ptr [EBP + -0x4]
+0060958d  MOV EAX,dword ptr [ECX + 0x4]
+00609590  CDQ
+00609591  MOV dword ptr [EBP + -0x10],EAX
+00609594  MOV dword ptr [EBP + -0xc],EDX
+00609597  MOV EDX,dword ptr [EBP + -0x10]
+0060959a  MOV EAX,dword ptr [EBP + -0x4]
+0060959d  MOV dword ptr [EAX + 0x8],EDX
+006095a0  JMP 0x0060960b
+006095a2  MOV ECX,dword ptr [EBP + -0x4]
+006095a5  MOV EDX,dword ptr [EBP + -0x4]
+006095a8  MOV EAX,dword ptr [ECX + 0x4]
+006095ab  SUB EAX,dword ptr [EDX + 0x8]
+006095ae  MOV dword ptr [EBP + -0x8],EAX
+006095b1  MOV ECX,dword ptr [EBP + -0x8]
+006095b4  XOR EDX,EDX
+006095b6  MOV dword ptr [EBP + -0x24],ECX
+006095b9  MOV dword ptr [EBP + -0x20],EDX
+006095bc  MOV EAX,dword ptr [EBP + 0x10]
+006095bf  CMP EAX,dword ptr [EBP + -0x20]
+006095c2  JG 0x006095dc
+006095c4  JL 0x006095ce
+006095c6  MOV ECX,dword ptr [EBP + 0xc]
+006095c9  CMP ECX,dword ptr [EBP + -0x24]
+006095cc  JNC 0x006095dc
+006095ce  MOV EDX,dword ptr [EBP + 0xc]
+006095d1  MOV dword ptr [EBP + -0x10],EDX
+006095d4  MOV EAX,dword ptr [EBP + 0x10]
+006095d7  MOV dword ptr [EBP + -0xc],EAX
+006095da  JMP 0x006095e7
+006095dc  MOV ECX,dword ptr [EBP + -0x8]
+006095df  XOR EDX,EDX
+006095e1  MOV dword ptr [EBP + -0x10],ECX
+006095e4  MOV dword ptr [EBP + -0xc],EDX
+006095e7  MOV EAX,dword ptr [EBP + -0x4]
+006095ea  MOV EAX,dword ptr [EAX + 0x8]
+006095ed  CDQ
+006095ee  ADD EAX,dword ptr [EBP + -0x10]
+006095f1  ADC EDX,dword ptr [EBP + -0xc]
+006095f4  MOV ECX,dword ptr [EBP + -0x4]
+006095f7  MOV dword ptr [ECX + 0x8],EAX
+006095fa  JMP 0x0060960b
+006095fc  MOV EDX,dword ptr [EBP + -0x4]
+006095ff  MOV EAX,dword ptr [EDX + 0x4]
+00609602  ADD EAX,0x1
+00609605  MOV ECX,dword ptr [EBP + -0x4]
+00609608  MOV dword ptr [ECX + 0x8],EAX
+0060960b  XOR EAX,EAX
+0060960d  MOV ESP,EBP
+0060960f  POP EBP
+00609610  RET

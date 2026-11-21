@@ -1,0 +1,176 @@
+; FUN_0060b0b0  0060b0b0
+0060b0b0  PUSH EBP
+0060b0b1  MOV EBP,ESP
+0060b0b3  SUB ESP,0x238
+0060b0b9  MOV EAX,[0x00781870]
+0060b0be  XOR EAX,EBP
+0060b0c0  MOV dword ptr [EBP + -0x8],EAX
+0060b0c3  MOV dword ptr [EBP + 0xfffffdcc],ECX
+0060b0c9  MOVZX EAX,byte ptr [0x007960cb]
+0060b0d0  TEST EAX,EAX
+0060b0d2  JNZ 0x0060b38c
+0060b0d8  MOV ECX,dword ptr [EBP + 0xfffffdcc]
+0060b0de  MOVZX EDX,byte ptr [ECX + 0xa]
+0060b0e2  TEST EDX,EDX
+0060b0e4  JZ 0x0060b0ed
+0060b0e6  XOR EAX,EAX
+0060b0e8  JMP 0x0060b38e
+0060b0ed  MOV EAX,dword ptr [EBP + 0x8]
+0060b0f0  IMUL EAX,EAX,0x74
+0060b0f3  MOVZX ECX,byte ptr [EAX + 0x796d3c]
+0060b0fa  TEST ECX,ECX
+0060b0fc  JZ 0x0060b11c
+0060b0fe  MOV EDX,dword ptr [EBP + 0x8]
+0060b101  IMUL EDX,EDX,0x74
+0060b104  MOV EAX,dword ptr [EBP + 0x8]
+0060b107  IMUL EAX,EAX,0x74
+0060b10a  MOV ECX,dword ptr [EAX + 0x796d40]
+0060b110  MOV EDX,dword ptr [EDX + ECX*0x4 + 0x796d44]
+0060b117  MOV dword ptr [EBP + -0x4],EDX
+0060b11a  JMP 0x0060b12b
+0060b11c  MOV EAX,dword ptr [EBP + 0x8]
+0060b11f  IMUL EAX,EAX,0x74
+0060b122  MOV ECX,dword ptr [EAX + 0x796d38]
+0060b128  MOV dword ptr [EBP + -0x4],ECX
+0060b12b  MOV EDX,dword ptr [EBP + -0x4]
+0060b12e  PUSH EDX
+0060b12f  PUSH 0x6d816c
+0060b134  LEA EAX,[EBP + 0xfffffde8]
+0060b13a  PUSH EAX
+0060b13b  CALL dword ptr [0x006b2220]
+0060b141  ADD ESP,0xc
+0060b144  LEA ECX,[EBP + 0xfffffef0]
+0060b14a  PUSH ECX
+0060b14b  LEA EDX,[EBP + 0xfffffde8]
+0060b151  PUSH EDX
+0060b152  MOV ECX,dword ptr [EBP + 0xfffffdcc]
+0060b158  CALL 0x0060af50
+0060b15d  MOVZX EAX,AL
+0060b160  TEST EAX,EAX
+0060b162  JNZ 0x0060b18d
+0060b164  LEA ECX,[EBP + 0xfffffde8]
+0060b16a  PUSH ECX
+0060b16b  PUSH 0x6d8144
+0060b170  CALL 0x0062fde0
+0060b175  ADD ESP,0x8
+0060b178  MOV EDX,dword ptr [EBP + 0x8]
+0060b17b  IMUL EDX,EDX,0x74
+0060b17e  MOV byte ptr [EDX + 0x796d3c],0x0
+0060b185  OR EAX,0xffffffff
+0060b188  JMP 0x0060b38e
+0060b18d  LEA EAX,[EBP + 0xfffffef0]
+0060b193  PUSH EAX
+0060b194  PUSH 0x6d8124
+0060b199  CALL 0x0062fde0
+0060b19e  ADD ESP,0x8
+0060b1a1  PUSH 0x2f8
+0060b1a6  CALL 0x00686d82
+0060b1ab  ADD ESP,0x4
+0060b1ae  MOV dword ptr [EBP + 0xfffffddc],EAX
+0060b1b4  CMP dword ptr [EBP + 0xfffffddc],0x0
+0060b1bb  JZ 0x0060b272
+0060b1c1  MOV ECX,dword ptr [EBP + 0x8]
+0060b1c4  SHL ECX,0x1
+0060b1c6  MOV EDX,dword ptr [ECX*0x4 + 0x796ebc]
+0060b1cd  MOV dword ptr [EBP + 0xfffffdd0],EDX
+0060b1d3  MOV EAX,dword ptr [EBP + 0x8]
+0060b1d6  SHL EAX,0x1
+0060b1d8  MOV ECX,dword ptr [EAX*0x4 + 0x796eb8]
+0060b1df  MOV dword ptr [EBP + 0xfffffdd4],ECX
+0060b1e5  MOV EDX,dword ptr [EBP + 0x8]
+0060b1e8  MOV EAX,dword ptr [EDX*0x4 + 0x796d18]
+0060b1ef  MOV dword ptr [EBP + 0xfffffdd8],EAX
+0060b1f5  MOV ECX,dword ptr [EBP + 0xfffffddc]
+0060b1fb  MOV dword ptr [ECX],0x0
+0060b201  MOV EDX,dword ptr [EBP + 0xfffffddc]
+0060b207  MOV dword ptr [EDX + 0x2d8],0x0
+0060b211  MOV EAX,dword ptr [EBP + 0xfffffddc]
+0060b217  MOV dword ptr [EAX + 0x2dc],0x0
+0060b221  MOV ECX,dword ptr [EBP + 0xfffffddc]
+0060b227  MOV EDX,dword ptr [EBP + 0xfffffdd8]
+0060b22d  MOV dword ptr [ECX + 0x2e8],EDX
+0060b233  MOV EAX,dword ptr [EBP + 0xfffffddc]
+0060b239  MOV ECX,dword ptr [EBP + 0xfffffdd4]
+0060b23f  MOV dword ptr [EAX + 0x2e0],ECX
+0060b245  MOV EDX,dword ptr [EBP + 0xfffffddc]
+0060b24b  MOV EAX,dword ptr [EBP + 0xfffffdd0]
+0060b251  MOV dword ptr [EDX + 0x2e4],EAX
+0060b257  MOV ECX,dword ptr [EBP + 0xfffffddc]
+0060b25d  MOV byte ptr [ECX + 0x2f0],0x0
+0060b264  MOV EDX,dword ptr [EBP + 0xfffffddc]
+0060b26a  MOV dword ptr [EBP + 0xfffffdc8],EDX
+0060b270  JMP 0x0060b27c
+0060b272  MOV dword ptr [EBP + 0xfffffdc8],0x0
+0060b27c  MOV EAX,dword ptr [EBP + 0xfffffdc8]
+0060b282  MOV dword ptr [EBP + 0xfffffde0],EAX
+0060b288  MOV ECX,dword ptr [EBP + 0x8]
+0060b28b  IMUL ECX,ECX,0x74
+0060b28e  MOV EDX,dword ptr [EBP + 0xfffffde0]
+0060b294  MOV dword ptr [ECX + 0x796d28],EDX
+0060b29a  MOV EAX,dword ptr [EBP + 0x8]
+0060b29d  IMUL EAX,EAX,0x74
+0060b2a0  CMP dword ptr [EAX + 0x796d28],0x0
+0060b2a7  JNZ 0x0060b2be
+0060b2a9  PUSH 0x6d8104
+0060b2ae  CALL 0x0062fde0
+0060b2b3  ADD ESP,0x4
+0060b2b6  OR EAX,0xffffffff
+0060b2b9  JMP 0x0060b38e
+0060b2be  PUSH 0x15e5090
+0060b2c3  LEA ECX,[EBP + 0xfffffef0]
+0060b2c9  PUSH ECX
+0060b2ca  MOV EDX,dword ptr [EBP + 0x8]
+0060b2cd  IMUL EDX,EDX,0x74
+0060b2d0  MOV ECX,dword ptr [EDX + 0x796d28]
+0060b2d6  CALL 0x0062ce60
+0060b2db  MOV dword ptr [EBP + 0xfffffde4],EAX
+0060b2e1  CMP dword ptr [EBP + 0xfffffde4],0x0
+0060b2e8  JZ 0x0060b304
+0060b2ea  PUSH 0x15e5090
+0060b2ef  PUSH 0x6d80e4
+0060b2f4  CALL 0x0062fde0
+0060b2f9  ADD ESP,0x8
+0060b2fc  OR EAX,0xffffffff
+0060b2ff  JMP 0x0060b38e
+0060b304  PUSH ECX
+0060b305  FLD float ptr [EBP + 0x10]
+0060b308  FSTP float ptr [ESP]
+0060b30b  MOV EAX,dword ptr [EBP + 0x8]
+0060b30e  IMUL EAX,EAX,0x74
+0060b311  MOV ECX,dword ptr [EAX + 0x796d28]
+0060b317  CALL 0x0062d7e0
+0060b31c  CMP dword ptr [EBP + 0xc],0x0
+0060b320  JNZ 0x0060b337
+0060b322  PUSH 0x1
+0060b324  MOV ECX,dword ptr [EBP + 0x8]
+0060b327  IMUL ECX,ECX,0x74
+0060b32a  MOV ECX,dword ptr [ECX + 0x796d28]
+0060b330  CALL 0x0062d870
+0060b335  JMP 0x0060b357
+0060b337  CMP dword ptr [EBP + 0xc],0x1
+0060b33b  JLE 0x0060b344
+0060b33d  MOV dword ptr [EBP + 0xc],0x1
+0060b344  PUSH 0x0
+0060b346  MOV EDX,dword ptr [EBP + 0x8]
+0060b349  IMUL EDX,EDX,0x74
+0060b34c  MOV ECX,dword ptr [EDX + 0x796d28]
+0060b352  CALL 0x0062d870
+0060b357  MOV EAX,dword ptr [EBP + 0x8]
+0060b35a  IMUL EAX,EAX,0x74
+0060b35d  MOV byte ptr [EAX + 0x796d30],0x0
+0060b364  MOV ECX,dword ptr [EBP + 0x8]
+0060b367  IMUL ECX,ECX,0x74
+0060b36a  MOV dword ptr [ECX + 0x796d34],0x0
+0060b374  MOV EDX,dword ptr [EBP + 0x8]
+0060b377  IMUL EDX,EDX,0x74
+0060b37a  MOV ECX,dword ptr [EDX + 0x796d28]
+0060b380  CALL 0x0062d310
+0060b385  MOV EAX,dword ptr [EBP + 0x8]
+0060b388  JMP 0x0060b38e
+0060b38c  XOR EAX,EAX
+0060b38e  MOV ECX,dword ptr [EBP + -0x8]
+0060b391  XOR ECX,EBP
+0060b393  CALL 0x00686d72
+0060b398  MOV ESP,EBP
+0060b39a  POP EBP
+0060b39b  RET 0x10

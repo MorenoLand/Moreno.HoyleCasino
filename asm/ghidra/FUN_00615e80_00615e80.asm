@@ -1,0 +1,14 @@
+; FUN_00615e80  00615e80
+00615e80  PUSH EBP
+00615e81  MOV EBP,ESP
+00615e83  PUSH ECX
+00615e84  MOV dword ptr [EBP + -0x4],ECX
+00615e87  MOV EAX,dword ptr [EBP + -0x4]
+00615e8a  MOV ECX,dword ptr [EBP + 0x8]
+00615e8d  MOV dword ptr [EAX + 0x188],ECX
+00615e93  MOV EDX,dword ptr [EBP + -0x4]
+00615e96  MOV EAX,dword ptr [EBP + 0xc]
+00615e99  MOV dword ptr [EDX + 0x18c],EAX
+00615e9f  MOV ESP,EBP
+00615ea1  POP EBP
+00615ea2  RET 0x8

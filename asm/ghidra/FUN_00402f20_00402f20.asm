@@ -1,0 +1,19 @@
+; FUN_00402f20  00402f20
+00402f20  PUSH EBP
+00402f21  MOV EBP,ESP
+00402f23  PUSH ECX
+00402f24  MOV dword ptr [EBP + -0x4],ECX
+00402f27  MOV EAX,dword ptr [EBP + -0x4]
+00402f2a  MOV ECX,dword ptr [EBP + 0x8]
+00402f2d  MOV dword ptr [EAX + 0x74],ECX
+00402f30  MOV EDX,dword ptr [EBP + -0x4]
+00402f33  MOV EAX,dword ptr [EDX + 0x74]
+00402f36  PUSH EAX
+00402f37  MOV ECX,dword ptr [EBP + -0x4]
+00402f3a  MOV EDX,dword ptr [ECX]
+00402f3c  MOV ECX,dword ptr [EBP + -0x4]
+00402f3f  MOV EAX,dword ptr [EDX + 0xbc]
+00402f45  CALL EAX
+00402f47  MOV ESP,EBP
+00402f49  POP EBP
+00402f4a  RET 0x4

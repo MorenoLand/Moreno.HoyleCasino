@@ -1,0 +1,13 @@
+; FUN_004dd760  004dd760
+004dd760  PUSH EBP
+004dd761  MOV EBP,ESP
+004dd763  PUSH ECX
+004dd764  MOV dword ptr [EBP + -0x4],ECX
+004dd767  MOV EAX,dword ptr [EBP + -0x4]
+004dd76a  MOV ECX,dword ptr [EAX + 0x6c]
+004dd76d  ADD ECX,0x1
+004dd770  MOV EDX,dword ptr [EBP + -0x4]
+004dd773  MOV dword ptr [EDX + 0x6c],ECX
+004dd776  MOV ESP,EBP
+004dd778  POP EBP
+004dd779  RET

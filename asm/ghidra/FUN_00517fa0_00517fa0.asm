@@ -1,0 +1,21 @@
+; FUN_00517fa0  00517fa0
+00517fa0  PUSH EBP
+00517fa1  MOV EBP,ESP
+00517fa3  SUB ESP,0x20
+00517fa6  PUSH ESI
+00517fa7  MOV dword ptr [EBP + -0x1c],ECX
+00517faa  MOV EAX,dword ptr [EBP + 0x8]
+00517fad  PUSH EAX
+00517fae  MOV ECX,dword ptr [EBP + -0x1c]
+00517fb1  CALL 0x005fc3a0
+00517fb6  MOV ECX,dword ptr [EBP + -0x1c]
+00517fb9  MOV EDX,dword ptr [ECX + 0x14]
+00517fbc  MOV dword ptr [EBP + -0x20],EDX
+00517fbf  CMP dword ptr [EBP + -0x20],0x7
+00517fc3  JA 0x005188d0
+00517fc9  MOV EAX,dword ptr [EBP + -0x20]
+00517fcc  JMP dword ptr [EAX*0x4 + 0x5188d8]
+005188d0  POP ESI
+005188d1  MOV ESP,EBP
+005188d3  POP EBP
+005188d4  RET 0x4

@@ -1,0 +1,12 @@
+; FUN_005c6d2d  005c6d2d
+005c6d2d  MOV dword ptr [EBP + -0x4],0xffffffff
+005c6d34  MOV EAX,dword ptr [EBP + 0x10]
+005c6d37  MOV ECX,dword ptr [EBP + -0xc]
+005c6d3a  MOV dword ptr FS:[0x0],ECX
+005c6d41  POP ECX
+005c6d42  POP EDI
+005c6d43  POP ESI
+005c6d44  POP EBX
+005c6d45  MOV ESP,EBP
+005c6d47  POP EBP
+005c6d48  RET

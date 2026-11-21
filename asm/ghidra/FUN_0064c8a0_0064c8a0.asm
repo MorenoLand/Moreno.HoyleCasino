@@ -1,0 +1,16 @@
+; FUN_0064c8a0  0064c8a0
+0064c8a0  PUSH EBP
+0064c8a1  MOV EBP,ESP
+0064c8a3  SUB ESP,0x8
+0064c8a6  FILD dword ptr [EBP + 0x8]
+0064c8a9  FMUL double ptr [0x006b4b00]
+0064c8af  FIADD dword ptr [EBP + 0xc]
+0064c8b2  SUB ESP,0x8
+0064c8b5  FSTP double ptr [ESP]
+0064c8b8  LEA ECX,[EBP + -0x8]
+0064c8bb  CALL 0x0064c450
+0064c8c0  MOV EAX,dword ptr [EBP + -0x8]
+0064c8c3  MOV EDX,dword ptr [EBP + -0x4]
+0064c8c6  MOV ESP,EBP
+0064c8c8  POP EBP
+0064c8c9  RET

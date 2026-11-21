@@ -1,0 +1,66 @@
+; FUN_004c7230  004c7230
+004c7230  PUSH EBP
+004c7231  MOV EBP,ESP
+004c7233  SUB ESP,0xc
+004c7236  MOV dword ptr [EBP + -0xc],ECX
+004c7239  MOV ECX,dword ptr [EBP + -0xc]
+004c723c  CALL 0x004c70d0
+004c7241  CMP EAX,-0x1
+004c7244  JZ 0x004c724e
+004c7246  MOV ECX,dword ptr [EBP + -0xc]
+004c7249  CALL 0x004c8eb0
+004c724e  MOV dword ptr [EBP + -0x4],0x0
+004c7255  JMP 0x004c7260
+004c7257  MOV EAX,dword ptr [EBP + -0x4]
+004c725a  ADD EAX,0x1
+004c725d  MOV dword ptr [EBP + -0x4],EAX
+004c7260  MOV ECX,dword ptr [EBP + -0xc]
+004c7263  MOV ECX,dword ptr [ECX + 0x8]
+004c7266  CALL 0x0060c9a0
+004c726b  CMP dword ptr [EBP + -0x4],EAX
+004c726e  JGE 0x004c729b
+004c7270  MOV EDX,dword ptr [EBP + -0x4]
+004c7273  PUSH EDX
+004c7274  MOV EAX,dword ptr [EBP + -0xc]
+004c7277  MOV ECX,dword ptr [EAX + 0x8]
+004c727a  PUSH ECX
+004c727b  CALL 0x004c72f0
+004c7280  ADD ESP,0x8
+004c7283  MOV dword ptr [EBP + -0x8],EAX
+004c7286  CMP dword ptr [EBP + -0x8],0x0
+004c728a  JZ 0x004c7299
+004c728c  MOV EDX,dword ptr [EBP + -0x8]
+004c728f  MOV EAX,dword ptr [EDX]
+004c7291  MOV ECX,dword ptr [EBP + -0x8]
+004c7294  MOV EDX,dword ptr [EAX + 0x70]
+004c7297  CALL EDX
+004c7299  JMP 0x004c7257
+004c729b  MOV dword ptr [EBP + -0x4],0x0
+004c72a2  JMP 0x004c72ad
+004c72a4  MOV EAX,dword ptr [EBP + -0x4]
+004c72a7  ADD EAX,0x1
+004c72aa  MOV dword ptr [EBP + -0x4],EAX
+004c72ad  MOV ECX,dword ptr [EBP + -0xc]
+004c72b0  MOV ECX,dword ptr [ECX + 0xc]
+004c72b3  CALL 0x0060c9a0
+004c72b8  CMP dword ptr [EBP + -0x4],EAX
+004c72bb  JGE 0x004c72e8
+004c72bd  MOV EDX,dword ptr [EBP + -0x4]
+004c72c0  PUSH EDX
+004c72c1  MOV EAX,dword ptr [EBP + -0xc]
+004c72c4  MOV ECX,dword ptr [EAX + 0xc]
+004c72c7  PUSH ECX
+004c72c8  CALL 0x004c72f0
+004c72cd  ADD ESP,0x8
+004c72d0  MOV dword ptr [EBP + -0x8],EAX
+004c72d3  CMP dword ptr [EBP + -0x8],0x0
+004c72d7  JZ 0x004c72e6
+004c72d9  MOV EDX,dword ptr [EBP + -0x8]
+004c72dc  MOV EAX,dword ptr [EDX]
+004c72de  MOV ECX,dword ptr [EBP + -0x8]
+004c72e1  MOV EDX,dword ptr [EAX + 0x70]
+004c72e4  CALL EDX
+004c72e6  JMP 0x004c72a4
+004c72e8  MOV ESP,EBP
+004c72ea  POP EBP
+004c72eb  RET

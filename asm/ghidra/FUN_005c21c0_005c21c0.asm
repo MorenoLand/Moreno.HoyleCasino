@@ -1,0 +1,22 @@
+; FUN_005c21c0  005c21c0
+005c21c0  PUSH EBP
+005c21c1  MOV EBP,ESP
+005c21c3  SUB ESP,0xc
+005c21c6  MOV dword ptr [EBP + -0x4],ECX
+005c21c9  PUSH 0x0
+005c21cb  MOV ECX,dword ptr [0x0162ee84]
+005c21d1  CALL 0x00637810
+005c21d6  MOV dword ptr [EBP + -0x8],EAX
+005c21d9  FILD dword ptr [EBP + -0x8]
+005c21dc  FLD1
+005c21de  FADDP
+005c21e0  SUB ESP,0x8
+005c21e3  FSTP double ptr [ESP]
+005c21e6  CALL 0x00686fd8
+005c21eb  ADD ESP,0x8
+005c21ee  FSUBR double ptr [0x006d1d80]
+005c21f4  FSTP float ptr [EBP + -0xc]
+005c21f7  FLD float ptr [EBP + -0xc]
+005c21fa  MOV ESP,EBP
+005c21fc  POP EBP
+005c21fd  RET

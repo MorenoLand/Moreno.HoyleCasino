@@ -1,0 +1,40 @@
+; FUN_0040f220  0040f220
+0040f220  PUSH EBP
+0040f221  MOV EBP,ESP
+0040f223  SUB ESP,0xc
+0040f226  MOV dword ptr [EBP + -0xc],ECX
+0040f229  MOV EAX,dword ptr [EBP + -0xc]
+0040f22c  MOV ECX,dword ptr [EAX + 0x178]
+0040f232  MOV EDX,dword ptr [EBP + 0xc]
+0040f235  SHL EDX,0x5
+0040f238  LEA EAX,[ECX + EDX*0x1 + 0x48]
+0040f23c  MOV ECX,dword ptr [EBP + 0x10]
+0040f23f  MOV EDX,dword ptr [EAX + ECX*0x8]
+0040f242  MOV EAX,dword ptr [EAX + ECX*0x8 + 0x4]
+0040f246  MOV dword ptr [EBP + -0x8],EDX
+0040f249  MOV dword ptr [EBP + -0x4],EAX
+0040f24c  CMP dword ptr [EBP + 0xc],0x4
+0040f250  JGE 0x0040f281
+0040f252  MOV ECX,dword ptr [EBP + 0xc]
+0040f255  IMUL ECX,ECX,0x118
+0040f25b  ADD ECX,dword ptr [EBP + 0x10]
+0040f25e  MOV EDX,dword ptr [0x00790324]
+0040f264  CMP byte ptr [EDX + ECX*0x1 + 0x10c],0x0
+0040f26c  SETNZ AL
+0040f26f  MOVZX ECX,AL
+0040f272  TEST ECX,ECX
+0040f274  JZ 0x0040f281
+0040f276  MOV EAX,dword ptr [EBP + -0x8]
+0040f279  CDQ
+0040f27a  SUB EAX,EDX
+0040f27c  SAR EAX,0x1
+0040f27e  MOV dword ptr [EBP + -0x8],EAX
+0040f281  MOV EDX,dword ptr [EBP + 0x8]
+0040f284  MOV EAX,dword ptr [EBP + -0x8]
+0040f287  MOV dword ptr [EDX],EAX
+0040f289  MOV ECX,dword ptr [EBP + -0x4]
+0040f28c  MOV dword ptr [EDX + 0x4],ECX
+0040f28f  MOV EAX,dword ptr [EBP + 0x8]
+0040f292  MOV ESP,EBP
+0040f294  POP EBP
+0040f295  RET 0xc

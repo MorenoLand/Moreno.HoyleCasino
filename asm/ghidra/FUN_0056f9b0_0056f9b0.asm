@@ -1,0 +1,13 @@
+; FUN_0056f9b0  0056f9b0
+0056f9b0  PUSH EBP
+0056f9b1  MOV EBP,ESP
+0056f9b3  PUSH ECX
+0056f9b4  MOV dword ptr [EBP + -0x4],ECX
+0056f9b7  MOV ECX,dword ptr [EBP + -0x4]
+0056f9ba  CALL 0x00601a80
+0056f9bf  MOV EAX,dword ptr [EBP + -0x4]
+0056f9c2  MOV dword ptr [EAX],0x6ca364
+0056f9c8  MOV EAX,dword ptr [EBP + -0x4]
+0056f9cb  MOV ESP,EBP
+0056f9cd  POP EBP
+0056f9ce  RET

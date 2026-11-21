@@ -1,0 +1,124 @@
+; FUN_005b8090  005b8090
+005b8090  PUSH EBP
+005b8091  MOV EBP,ESP
+005b8093  SUB ESP,0x20
+005b8096  MOV dword ptr [EBP + -0x20],ECX
+005b8099  CMP dword ptr [EBP + 0xc],-0x1
+005b809d  JNZ 0x005b80ae
+005b809f  MOV EAX,dword ptr [EBP + 0x8]
+005b80a2  PUSH EAX
+005b80a3  MOV ECX,dword ptr [EBP + -0x20]
+005b80a6  CALL 0x005b4e50
+005b80ab  MOV dword ptr [EBP + 0xc],EAX
+005b80ae  MOV ECX,dword ptr [EBP + 0x8]
+005b80b1  PUSH ECX
+005b80b2  MOV ECX,dword ptr [EBP + -0x20]
+005b80b5  CALL 0x005b58f0
+005b80ba  MOV dword ptr [EBP + -0x4],EAX
+005b80bd  PUSH 0x1
+005b80bf  MOV EDX,dword ptr [EBP + 0xc]
+005b80c2  PUSH EDX
+005b80c3  MOV EAX,dword ptr [EBP + 0x8]
+005b80c6  PUSH EAX
+005b80c7  MOV ECX,dword ptr [EBP + -0x20]
+005b80ca  CALL 0x005b5c60
+005b80cf  PUSH EAX
+005b80d0  PUSH 0x0
+005b80d2  MOV ECX,dword ptr [EBP + -0x4]
+005b80d5  PUSH ECX
+005b80d6  MOV EDX,dword ptr [EBP + 0x8]
+005b80d9  PUSH EDX
+005b80da  MOV ECX,dword ptr [EBP + -0x20]
+005b80dd  CALL 0x005b7340
+005b80e2  PUSH 0x0
+005b80e4  PUSH 0x1
+005b80e6  MOV EAX,dword ptr [EBP + 0xc]
+005b80e9  PUSH EAX
+005b80ea  MOV ECX,dword ptr [EBP + 0x8]
+005b80ed  PUSH ECX
+005b80ee  MOV ECX,dword ptr [EBP + -0x20]
+005b80f1  CALL 0x005b7340
+005b80f6  MOV EDX,dword ptr [EBP + -0x4]
+005b80f9  PUSH EDX
+005b80fa  MOV EAX,dword ptr [EBP + 0x8]
+005b80fd  PUSH EAX
+005b80fe  MOV ECX,dword ptr [EBP + -0x20]
+005b8101  CALL 0x005b7090
+005b8106  MOV ECX,dword ptr [EBP + 0x8]
+005b8109  MOV EDX,dword ptr [EBP + -0x20]
+005b810c  MOV EAX,dword ptr [EDX + ECX*0x4 + 0x580]
+005b8113  MOV dword ptr [EBP + -0x18],EAX
+005b8116  MOV ECX,dword ptr [EBP + 0x8]
+005b8119  SHL ECX,0x5
+005b811c  MOV EDX,dword ptr [EBP + -0x18]
+005b811f  LEA EAX,[EDX + ECX*0x1 + 0x48]
+005b8123  XOR ECX,ECX
+005b8125  SHL ECX,0x3
+005b8128  MOV EDX,dword ptr [EAX + ECX*0x1]
+005b812b  MOV EAX,dword ptr [EAX + ECX*0x1 + 0x4]
+005b812f  MOV dword ptr [EBP + -0xc],EDX
+005b8132  MOV dword ptr [EBP + -0x8],EAX
+005b8135  MOV ECX,dword ptr [EBP + -0xc]
+005b8138  NEG ECX
+005b813a  MOV dword ptr [EBP + -0xc],ECX
+005b813d  MOV EDX,dword ptr [EBP + -0x8]
+005b8140  NEG EDX
+005b8142  MOV dword ptr [EBP + -0x8],EDX
+005b8145  MOV EAX,dword ptr [EBP + -0x8]
+005b8148  PUSH EAX
+005b8149  MOV ECX,dword ptr [EBP + -0xc]
+005b814c  PUSH ECX
+005b814d  MOV EDX,dword ptr [EBP + 0x8]
+005b8150  PUSH EDX
+005b8151  CALL 0x005dcb00
+005b8156  ADD ESP,0x4
+005b8159  MOV ECX,EAX
+005b815b  CALL 0x005d5cf0
+005b8160  MOV EAX,dword ptr [EBP + 0x8]
+005b8163  MOV ECX,dword ptr [EBP + -0x20]
+005b8166  MOV EDX,dword ptr [ECX + EAX*0x4 + 0x580]
+005b816d  MOV dword ptr [EBP + -0x1c],EDX
+005b8170  MOV EAX,dword ptr [EBP + 0x8]
+005b8173  SHL EAX,0x5
+005b8176  MOV ECX,dword ptr [EBP + -0x1c]
+005b8179  LEA EDX,[ECX + EAX*0x1 + 0x48]
+005b817d  XOR EAX,EAX
+005b817f  SHL EAX,0x3
+005b8182  MOV ECX,dword ptr [EDX + EAX*0x1]
+005b8185  MOV EDX,dword ptr [EDX + EAX*0x1 + 0x4]
+005b8189  MOV dword ptr [EBP + -0x14],ECX
+005b818c  MOV dword ptr [EBP + -0x10],EDX
+005b818f  MOV EAX,dword ptr [EBP + -0x4]
+005b8192  PUSH EAX
+005b8193  MOV ECX,dword ptr [EBP + 0x8]
+005b8196  PUSH ECX
+005b8197  MOV EDX,dword ptr [EBP + -0x10]
+005b819a  PUSH EDX
+005b819b  MOV EAX,dword ptr [EBP + -0x14]
+005b819e  PUSH EAX
+005b819f  MOV ECX,dword ptr [EBP + 0x8]
+005b81a2  MOV EDX,dword ptr [EBP + -0x20]
+005b81a5  MOV EAX,dword ptr [EDX + ECX*0x4 + 0x580]
+005b81ac  MOV ECX,dword ptr [EBP + 0x8]
+005b81af  MOV EDX,dword ptr [EBP + -0x20]
+005b81b2  MOV ECX,dword ptr [EDX + ECX*0x4 + 0x580]
+005b81b9  MOV EAX,dword ptr [EAX]
+005b81bb  MOV EDX,dword ptr [EAX + 0xb8]
+005b81c1  CALL EDX
+005b81c3  PUSH 0x0
+005b81c5  MOV EAX,dword ptr [EBP + -0x4]
+005b81c8  PUSH EAX
+005b81c9  MOV ECX,dword ptr [EBP + 0x8]
+005b81cc  PUSH ECX
+005b81cd  MOV ECX,dword ptr [EBP + -0x20]
+005b81d0  CALL 0x005b5f60
+005b81d5  CMP EAX,0x1
+005b81d8  JNZ 0x005b81e8
+005b81da  PUSH 0x1
+005b81dc  MOV EDX,dword ptr [EBP + 0x8]
+005b81df  PUSH EDX
+005b81e0  MOV ECX,dword ptr [EBP + -0x20]
+005b81e3  CALL 0x005b7480
+005b81e8  MOV ESP,EBP
+005b81ea  POP EBP
+005b81eb  RET 0x8

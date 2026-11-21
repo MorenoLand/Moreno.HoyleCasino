@@ -1,0 +1,16 @@
+; CVSToolsListBox  00466f00
+00466f00  PUSH EBP
+00466f01  MOV EBP,ESP
+00466f03  PUSH ECX
+00466f04  MOV dword ptr [EBP + -0x4],ECX
+00466f07  MOV ECX,dword ptr [EBP + -0x4]
+00466f0a  CALL 0x00601a80
+00466f0f  MOV EAX,dword ptr [EBP + -0x4]
+00466f12  MOV dword ptr [EAX],0x6bae0c
+00466f18  MOV ECX,dword ptr [EBP + -0x4]
+00466f1b  MOV EDX,dword ptr [EBP + 0x8]
+00466f1e  MOV dword ptr [ECX + 0x1dc],EDX
+00466f24  MOV EAX,dword ptr [EBP + -0x4]
+00466f27  MOV ESP,EBP
+00466f29  POP EBP
+00466f2a  RET 0x4

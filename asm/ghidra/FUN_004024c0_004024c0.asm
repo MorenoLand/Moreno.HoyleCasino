@@ -1,0 +1,25 @@
+; FUN_004024c0  004024c0
+004024c0  PUSH EBP
+004024c1  MOV EBP,ESP
+004024c3  SUB ESP,0x8
+004024c6  MOV dword ptr [EBP + -0x8],ECX
+004024c9  MOV dword ptr [EBP + -0x4],0x0
+004024d0  JMP 0x004024db
+004024d2  MOV EAX,dword ptr [EBP + -0x4]
+004024d5  ADD EAX,0x1
+004024d8  MOV dword ptr [EBP + -0x4],EAX
+004024db  CMP dword ptr [EBP + -0x4],0x3
+004024df  JGE 0x004024fe
+004024e1  MOV ECX,dword ptr [EBP + -0x4]
+004024e4  MOV EDX,dword ptr [EBP + -0x8]
+004024e7  MOV EAX,dword ptr [EDX + ECX*0x4 + 0x5c]
+004024eb  MOV ECX,dword ptr [EBP + -0x4]
+004024ee  MOV EDX,dword ptr [EBP + -0x8]
+004024f1  MOV ECX,dword ptr [EDX + ECX*0x4 + 0x5c]
+004024f5  MOV EAX,dword ptr [EAX]
+004024f7  MOV EDX,dword ptr [EAX + 0x70]
+004024fa  CALL EDX
+004024fc  JMP 0x004024d2
+004024fe  MOV ESP,EBP
+00402500  POP EBP
+00402501  RET

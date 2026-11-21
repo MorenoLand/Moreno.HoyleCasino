@@ -1,0 +1,40 @@
+; FUN_00626760  00626760
+00626760  PUSH EBP
+00626761  MOV EBP,ESP
+00626763  PUSH ECX
+00626764  MOV dword ptr [EBP + -0x4],ECX
+00626767  MOV ECX,dword ptr [EBP + -0x4]
+0062676a  CALL 0x005f5420
+0062676f  MOV EAX,dword ptr [EBP + -0x4]
+00626772  CMP dword ptr [EAX + 0x54],0x0
+00626776  JZ 0x0062678b
+00626778  MOV ECX,dword ptr [EBP + -0x4]
+0062677b  MOV EDX,dword ptr [ECX + 0x54]
+0062677e  MOV EAX,dword ptr [EBP + -0x4]
+00626781  MOV ECX,dword ptr [EAX + 0x54]
+00626784  MOV EDX,dword ptr [EDX]
+00626786  MOV EAX,dword ptr [EDX + 0x70]
+00626789  CALL EAX
+0062678b  MOV ECX,dword ptr [EBP + -0x4]
+0062678e  CMP dword ptr [ECX + 0x58],0x0
+00626792  JZ 0x006267a7
+00626794  MOV EDX,dword ptr [EBP + -0x4]
+00626797  MOV EAX,dword ptr [EDX + 0x58]
+0062679a  MOV ECX,dword ptr [EBP + -0x4]
+0062679d  MOV ECX,dword ptr [ECX + 0x58]
+006267a0  MOV EDX,dword ptr [EAX]
+006267a2  MOV EAX,dword ptr [EDX + 0x70]
+006267a5  CALL EAX
+006267a7  MOV ECX,dword ptr [EBP + -0x4]
+006267aa  CMP dword ptr [ECX + 0x5c],0x0
+006267ae  JZ 0x006267c3
+006267b0  MOV EDX,dword ptr [EBP + -0x4]
+006267b3  MOV EAX,dword ptr [EDX + 0x5c]
+006267b6  MOV ECX,dword ptr [EBP + -0x4]
+006267b9  MOV ECX,dword ptr [ECX + 0x5c]
+006267bc  MOV EDX,dword ptr [EAX]
+006267be  MOV EAX,dword ptr [EDX + 0x70]
+006267c1  CALL EAX
+006267c3  MOV ESP,EBP
+006267c5  POP EBP
+006267c6  RET

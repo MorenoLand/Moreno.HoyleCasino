@@ -1,0 +1,16 @@
+; CVSToolsListBox  00519b50
+00519b50  PUSH EBP
+00519b51  MOV EBP,ESP
+00519b53  PUSH ECX
+00519b54  MOV dword ptr [EBP + -0x4],ECX
+00519b57  MOV ECX,dword ptr [EBP + -0x4]
+00519b5a  CALL 0x00601a80
+00519b5f  MOV EAX,dword ptr [EBP + -0x4]
+00519b62  MOV dword ptr [EAX],0x6c1534
+00519b68  MOV ECX,dword ptr [EBP + -0x4]
+00519b6b  MOV EDX,dword ptr [EBP + 0x8]
+00519b6e  MOV dword ptr [ECX + 0x1e0],EDX
+00519b74  MOV EAX,dword ptr [EBP + -0x4]
+00519b77  MOV ESP,EBP
+00519b79  POP EBP
+00519b7a  RET 0x4

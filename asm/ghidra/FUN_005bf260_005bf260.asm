@@ -1,0 +1,11 @@
+; FUN_005bf260  005bf260
+005bf260  PUSH EBP
+005bf261  MOV EBP,ESP
+005bf263  PUSH ECX
+005bf264  MOV dword ptr [EBP + -0x4],ECX
+005bf267  MOV EAX,dword ptr [EBP + -0x4]
+005bf26a  MOV ECX,dword ptr [EBP + 0x8]
+005bf26d  MOV dword ptr [EAX + 0x4],ECX
+005bf270  MOV ESP,EBP
+005bf272  POP EBP
+005bf273  RET 0x4

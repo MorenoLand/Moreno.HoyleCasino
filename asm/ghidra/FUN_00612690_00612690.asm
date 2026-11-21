@@ -1,0 +1,28 @@
+; FUN_00612690  00612690
+00612690  PUSH EBP
+00612691  MOV EBP,ESP
+00612693  PUSH ECX
+00612694  MOV dword ptr [EBP + -0x4],ECX
+00612697  MOV EAX,dword ptr [EBP + -0x4]
+0061269a  MOV dword ptr [EAX],0x0
+006126a0  CMP dword ptr [EBP + 0xc],0x0
+006126a4  JZ 0x006126bc
+006126a6  MOV ECX,dword ptr [EBP + 0xc]
+006126a9  MOV EDX,dword ptr [ECX + 0x4]
+006126ac  CMP EDX,dword ptr [EBP + 0x8]
+006126af  JA 0x006126bc
+006126b1  MOV EAX,dword ptr [EBP + 0xc]
+006126b4  MOV ECX,dword ptr [EBP + 0x8]
+006126b7  CMP ECX,dword ptr [EAX + 0x8]
+006126ba  JBE 0x006126c2
+006126bc  CALL dword ptr [0x006b2274]
+006126c2  MOV EDX,dword ptr [EBP + -0x4]
+006126c5  MOV EAX,dword ptr [EBP + 0xc]
+006126c8  MOV dword ptr [EDX],EAX
+006126ca  MOV ECX,dword ptr [EBP + -0x4]
+006126cd  MOV EDX,dword ptr [EBP + 0x8]
+006126d0  MOV dword ptr [ECX + 0x4],EDX
+006126d3  MOV EAX,dword ptr [EBP + -0x4]
+006126d6  MOV ESP,EBP
+006126d8  POP EBP
+006126d9  RET 0x8

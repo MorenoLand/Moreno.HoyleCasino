@@ -1,0 +1,32 @@
+; FUN_0041af20  0041af20
+0041af20  PUSH EBP
+0041af21  MOV EBP,ESP
+0041af23  SUB ESP,0x10
+0041af26  MOV dword ptr [EBP + -0x10],ECX
+0041af29  MOV EAX,dword ptr [EBP + 0x8]
+0041af2c  MOV ECX,dword ptr [EBP + -0x10]
+0041af2f  MOV EDX,dword ptr [ECX + EAX*0x4 + 0x468]
+0041af36  MOV dword ptr [EBP + -0xc],EDX
+0041af39  MOV EAX,dword ptr [EBP + 0x8]
+0041af3c  SHL EAX,0x5
+0041af3f  MOV ECX,dword ptr [EBP + -0xc]
+0041af42  LEA EDX,[ECX + EAX*0x1 + 0x48]
+0041af46  XOR EAX,EAX
+0041af48  SHL EAX,0x3
+0041af4b  MOV ECX,dword ptr [EDX + EAX*0x1]
+0041af4e  MOV EDX,dword ptr [EDX + EAX*0x1 + 0x4]
+0041af52  MOV dword ptr [EBP + -0x8],ECX
+0041af55  MOV dword ptr [EBP + -0x4],EDX
+0041af58  MOV EAX,dword ptr [EBP + 0x8]
+0041af5b  PUSH EAX
+0041af5c  CALL 0x005dcb00
+0041af61  ADD ESP,0x4
+0041af64  MOV ECX,EAX
+0041af66  CALL 0x005d5a50
+0041af6b  XOR ECX,ECX
+0041af6d  CMP EAX,dword ptr [EBP + -0x8]
+0041af70  SETGE CL
+0041af73  MOV AL,CL
+0041af75  MOV ESP,EBP
+0041af77  POP EBP
+0041af78  RET 0x4

@@ -1,0 +1,28 @@
+; FUN_006130a0  006130a0
+006130a0  PUSH EBP
+006130a1  MOV EBP,ESP
+006130a3  SUB ESP,0x8
+006130a6  MOV dword ptr [EBP + -0x4],ECX
+006130a9  MOV EAX,dword ptr [EBP + -0x4]
+006130ac  MOV ECX,dword ptr [EBP + 0x8]
+006130af  CMP ECX,dword ptr [EAX + 0x8]
+006130b2  JL 0x006130de
+006130b4  MOV EDX,dword ptr [EBP + -0x4]
+006130b7  MOV EAX,dword ptr [EBP + 0x8]
+006130ba  CMP EAX,dword ptr [EDX + 0x10]
+006130bd  JGE 0x006130de
+006130bf  MOV ECX,dword ptr [EBP + -0x4]
+006130c2  MOV EDX,dword ptr [EBP + 0xc]
+006130c5  CMP EDX,dword ptr [ECX + 0xc]
+006130c8  JL 0x006130de
+006130ca  MOV EAX,dword ptr [EBP + -0x4]
+006130cd  MOV ECX,dword ptr [EBP + 0xc]
+006130d0  CMP ECX,dword ptr [EAX + 0x14]
+006130d3  JGE 0x006130de
+006130d5  MOV dword ptr [EBP + -0x8],0x1
+006130dc  JMP 0x006130e5
+006130de  MOV dword ptr [EBP + -0x8],0x0
+006130e5  MOV AL,byte ptr [EBP + -0x8]
+006130e8  MOV ESP,EBP
+006130ea  POP EBP
+006130eb  RET 0x8

@@ -1,0 +1,28 @@
+; FUN_00463f80  00463f80
+00463f80  PUSH EBP
+00463f81  MOV EBP,ESP
+00463f83  SUB ESP,0x8
+00463f86  MOV dword ptr [EBP + -0x8],ECX
+00463f89  MOV EAX,dword ptr [EBP + -0x8]
+00463f8c  MOVZX ECX,byte ptr [EAX]
+00463f8f  MOV EDX,dword ptr [0x007907a4]
+00463f95  MOVZX EAX,byte ptr [EDX]
+00463f98  CMP ECX,EAX
+00463f9a  JL 0x00463fb0
+00463f9c  MOV ECX,dword ptr [0x007913c8]
+00463fa2  MOV DL,byte ptr [ECX]
+00463fa4  MOV EAX,dword ptr [EBP + 0x8]
+00463fa7  MOV byte ptr [EAX],DL
+00463fa9  MOV EAX,dword ptr [EBP + 0x8]
+00463fac  JMP 0x00463fc7
+00463fb0  MOV ECX,dword ptr [EBP + -0x8]
+00463fb3  MOVZX EDX,byte ptr [ECX]
+00463fb6  ADD EDX,0x2
+00463fb9  MOV byte ptr [EBP + -0x1],DL
+00463fbc  MOV EAX,dword ptr [EBP + 0x8]
+00463fbf  MOV CL,byte ptr [EBP + -0x1]
+00463fc2  MOV byte ptr [EAX],CL
+00463fc4  MOV EAX,dword ptr [EBP + 0x8]
+00463fc7  MOV ESP,EBP
+00463fc9  POP EBP
+00463fca  RET 0x4

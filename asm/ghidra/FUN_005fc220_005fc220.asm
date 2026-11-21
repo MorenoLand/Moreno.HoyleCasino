@@ -1,0 +1,18 @@
+; FUN_005fc220  005fc220
+005fc220  PUSH EBP
+005fc221  MOV EBP,ESP
+005fc223  PUSH ECX
+005fc224  MOV dword ptr [EBP + -0x4],ECX
+005fc227  MOV EAX,dword ptr [EBP + -0x4]
+005fc22a  MOV ECX,dword ptr [EBP + 0x8]
+005fc22d  MOV dword ptr [EAX + 0xc],ECX
+005fc230  PUSH 0x0
+005fc232  PUSH 0x0
+005fc234  MOV EDX,dword ptr [EBP + -0x4]
+005fc237  MOV EAX,dword ptr [EDX]
+005fc239  MOV ECX,dword ptr [EBP + -0x4]
+005fc23c  MOV EDX,dword ptr [EAX + 0x8]
+005fc23f  CALL EDX
+005fc241  MOV ESP,EBP
+005fc243  POP EBP
+005fc244  RET 0x4

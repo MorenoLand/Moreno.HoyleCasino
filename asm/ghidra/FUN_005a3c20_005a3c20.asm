@@ -1,0 +1,12 @@
+; FUN_005a3c20  005a3c20
+005a3c20  PUSH EBP
+005a3c21  MOV EBP,ESP
+005a3c23  PUSH ECX
+005a3c24  MOV dword ptr [EBP + -0x4],ECX
+005a3c27  MOV EAX,dword ptr [EBP + -0x4]
+005a3c2a  ADD EAX,dword ptr [EBP + 0x8]
+005a3c2d  MOV CL,byte ptr [EBP + 0xc]
+005a3c30  MOV byte ptr [EAX + 0xf1],CL
+005a3c36  MOV ESP,EBP
+005a3c38  POP EBP
+005a3c39  RET 0x8

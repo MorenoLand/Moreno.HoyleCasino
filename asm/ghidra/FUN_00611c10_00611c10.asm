@@ -1,0 +1,21 @@
+; FUN_00611c10  00611c10
+00611c10  PUSH EBP
+00611c11  MOV EBP,ESP
+00611c13  PUSH ECX
+00611c14  MOV dword ptr [EBP + -0x4],ECX
+00611c17  MOV EAX,dword ptr [EBP + -0x4]
+00611c1a  CMP dword ptr [EAX],0x0
+00611c1d  JNZ 0x00611c25
+00611c1f  CALL dword ptr [0x006b2274]
+00611c25  MOV ECX,dword ptr [EBP + -0x4]
+00611c28  MOV EDX,dword ptr [ECX]
+00611c2a  MOV EAX,dword ptr [EBP + -0x4]
+00611c2d  MOV ECX,dword ptr [EAX + 0x4]
+00611c30  CMP ECX,dword ptr [EDX + 0x8]
+00611c33  JC 0x00611c3b
+00611c35  CALL dword ptr [0x006b2274]
+00611c3b  MOV EDX,dword ptr [EBP + -0x4]
+00611c3e  MOV EAX,dword ptr [EDX + 0x4]
+00611c41  MOV ESP,EBP
+00611c43  POP EBP
+00611c44  RET

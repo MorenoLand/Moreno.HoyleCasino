@@ -1,0 +1,20 @@
+; AssertValid  0066f810
+0066f810  PUSH EBP
+0066f811  MOV EBP,ESP
+0066f813  PUSH ECX
+0066f814  MOV dword ptr [EBP + -0x4],ECX
+0066f817  MOV ECX,dword ptr [EBP + -0x4]
+0066f81a  CALL 0x005f62b0
+0066f81f  MOV EAX,dword ptr [EBP + -0x4]
+0066f822  CMP dword ptr [EAX + 0x238],0x0
+0066f829  JZ 0x0066f844
+0066f82b  MOV ECX,dword ptr [EBP + -0x4]
+0066f82e  MOV EDX,dword ptr [ECX + 0x238]
+0066f834  MOV EAX,dword ptr [EBP + -0x4]
+0066f837  MOV ECX,dword ptr [EAX + 0x238]
+0066f83d  MOV EDX,dword ptr [EDX]
+0066f83f  MOV EAX,dword ptr [EDX + 0x70]
+0066f842  CALL EAX
+0066f844  MOV ESP,EBP
+0066f846  POP EBP
+0066f847  RET

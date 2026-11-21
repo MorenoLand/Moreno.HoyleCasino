@@ -1,0 +1,69 @@
+; FUN_00693aa0  00693aa0
+00693aa0  FLD float ptr [ESP + 0x4]
+00693aa4  FCOMP double ptr [0x006b2c50]
+00693aaa  FLD float ptr [ESP + 0x8]
+00693aae  FNSTSW AX
+00693ab0  FCOMP double ptr [0x006b2c50]
+00693ab6  AND EAX,0x4100
+00693abb  FNSTSW AX
+00693abd  JNZ 0x00693b18
+00693abf  AND EAX,0x4100
+00693ac4  JNZ 0x00693adb
+00693ac6  FLD float ptr [ESP + 0x4]
+00693aca  FMUL float ptr [ESP + 0x4]
+00693ace  FLD float ptr [ESP + 0x8]
+00693ad2  FMUL float ptr [ESP + 0x8]
+00693ad6  FADDP
+00693ad8  FSQRT
+00693ada  RET
+00693adb  FLD float ptr [ESP + 0x8]
+00693adf  FCHS
+00693ae1  FCOMP float ptr [ESP + 0x4]
+00693ae5  FNSTSW AX
+00693ae7  TEST AH,0x5
+00693aea  JP 0x00693b01
+00693aec  FLD float ptr [ESP + 0x4]
+00693af0  FMUL float ptr [ESP + 0x4]
+00693af4  FLD float ptr [ESP + 0x8]
+00693af8  FMUL float ptr [ESP + 0x8]
+00693afc  FSUBP
+00693afe  FSQRT
+00693b00  RET
+00693b01  FLD float ptr [ESP + 0x8]
+00693b05  FMUL float ptr [ESP + 0x8]
+00693b09  FLD float ptr [ESP + 0x4]
+00693b0d  FMUL float ptr [ESP + 0x4]
+00693b11  FSUBP
+00693b13  FSQRT
+00693b15  FCHS
+00693b17  RET
+00693b18  FLD float ptr [ESP + 0x4]
+00693b1c  TEST AH,0x5
+00693b1f  JP 0x00693b34
+00693b21  FMUL float ptr [ESP + 0x4]
+00693b25  FLD float ptr [ESP + 0x8]
+00693b29  FMUL float ptr [ESP + 0x8]
+00693b2d  FADDP
+00693b2f  FSQRT
+00693b31  FCHS
+00693b33  RET
+00693b34  FCHS
+00693b36  FCOMP float ptr [ESP + 0x8]
+00693b3a  FNSTSW AX
+00693b3c  AND EAX,0x4100
+00693b41  JNZ 0x00693b5a
+00693b43  FLD float ptr [ESP + 0x4]
+00693b47  FMUL float ptr [ESP + 0x4]
+00693b4b  FLD float ptr [ESP + 0x8]
+00693b4f  FMUL float ptr [ESP + 0x8]
+00693b53  FSUBP
+00693b55  FSQRT
+00693b57  FCHS
+00693b59  RET
+00693b5a  FLD float ptr [ESP + 0x8]
+00693b5e  FMUL float ptr [ESP + 0x8]
+00693b62  FLD float ptr [ESP + 0x4]
+00693b66  FMUL float ptr [ESP + 0x4]
+00693b6a  FSUBP
+00693b6c  FSQRT
+00693b6e  RET

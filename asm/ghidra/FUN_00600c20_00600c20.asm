@@ -1,0 +1,20 @@
+; FUN_00600c20  00600c20
+00600c20  PUSH EBP
+00600c21  MOV EBP,ESP
+00600c23  PUSH ECX
+00600c24  MOV dword ptr [EBP + -0x4],ECX
+00600c27  MOV ECX,dword ptr [EBP + -0x4]
+00600c2a  CALL 0x00600b30
+00600c2f  MOV EAX,dword ptr [EBP + -0x4]
+00600c32  MOV ECX,dword ptr [EAX + 0x1c]
+00600c35  SUB ECX,0x1
+00600c38  MOV EDX,dword ptr [EBP + -0x4]
+00600c3b  MOV dword ptr [EDX + 0x1c],ECX
+00600c3e  MOV EAX,dword ptr [EBP + -0x4]
+00600c41  CMP dword ptr [EAX + 0x1c],0x0
+00600c45  JG 0x00600c4e
+00600c47  MOV ECX,dword ptr [EBP + -0x4]
+00600c4a  MOV byte ptr [ECX + 0x18],0x0
+00600c4e  MOV ESP,EBP
+00600c50  POP EBP
+00600c51  RET

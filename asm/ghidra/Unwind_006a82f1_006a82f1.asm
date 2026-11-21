@@ -1,0 +1,4 @@
+; Unwind@006a82f1  006a82f1
+006a82f1  MOV ECX,dword ptr [EBP + -0x34]
+006a82f4  ADD ECX,0x1c
+006a82f7  JMP 0x005be320

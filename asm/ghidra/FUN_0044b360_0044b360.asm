@@ -1,0 +1,14 @@
+; FUN_0044b360  0044b360
+0044b360  PUSH EBP
+0044b361  MOV EBP,ESP
+0044b363  SUB ESP,0x14
+0044b366  MOV dword ptr [EBP + -0x14],ECX
+0044b369  MOV dword ptr [EBP + -0x10],0x1ab
+0044b370  MOV dword ptr [EBP + -0xc],0x7b
+0044b377  MOV dword ptr [EBP + -0x8],0x21a
+0044b37e  MOV dword ptr [EBP + -0x4],0x9
+0044b385  MOV EAX,dword ptr [EBP + 0x8]
+0044b388  MOV EAX,dword ptr [EBP + EAX*0x4 + -0x10]
+0044b38c  MOV ESP,EBP
+0044b38e  POP EBP
+0044b38f  RET 0x4

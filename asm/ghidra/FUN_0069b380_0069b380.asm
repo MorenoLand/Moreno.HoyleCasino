@@ -1,0 +1,10 @@
+; FUN_0069b380  0069b380
+0069b380  MOV EAX,dword ptr [ESP + 0x4]
+0069b384  MOV EDX,dword ptr [ESP + 0x8]
+0069b388  MOV ECX,dword ptr [EAX]
+0069b38a  MOV EAX,dword ptr [EDX]
+0069b38c  MOV ECX,dword ptr [ECX]
+0069b38e  MOV EDX,dword ptr [EAX]
+0069b390  SUB ECX,EDX
+0069b392  MOV EAX,ECX
+0069b394  RET

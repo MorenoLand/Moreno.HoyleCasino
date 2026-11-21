@@ -1,0 +1,16 @@
+; FUN_005e4210  005e4210
+005e4210  PUSH EBP
+005e4211  MOV EBP,ESP
+005e4213  SUB ESP,0xc
+005e4216  MOV dword ptr [EBP + -0xc],ECX
+005e4219  MOV dword ptr [EBP + -0x8],0x0
+005e4220  MOV dword ptr [EBP + -0x4],0x0
+005e4227  MOV EAX,dword ptr [EBP + 0x8]
+005e422a  MOV ECX,dword ptr [EBP + -0x8]
+005e422d  MOV dword ptr [EAX],ECX
+005e422f  MOV EDX,dword ptr [EBP + -0x4]
+005e4232  MOV dword ptr [EAX + 0x4],EDX
+005e4235  MOV EAX,dword ptr [EBP + 0x8]
+005e4238  MOV ESP,EBP
+005e423a  POP EBP
+005e423b  RET 0x8

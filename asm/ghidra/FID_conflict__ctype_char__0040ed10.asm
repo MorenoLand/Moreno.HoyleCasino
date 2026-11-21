@@ -1,0 +1,28 @@
+; FID_conflict:~ctype<char>  0040ed10
+0040ed10  PUSH EBP
+0040ed11  MOV EBP,ESP
+0040ed13  PUSH -0x1
+0040ed15  PUSH 0x69db6a
+0040ed1a  MOV EAX,FS:[0x0]
+0040ed20  PUSH EAX
+0040ed21  PUSH ECX
+0040ed22  MOV EAX,[0x00781870]
+0040ed27  XOR EAX,EBP
+0040ed29  PUSH EAX
+0040ed2a  LEA EAX,[EBP + -0xc]
+0040ed2d  MOV FS:[0x0],EAX
+0040ed33  MOV dword ptr [EBP + -0x10],ECX
+0040ed36  MOV EAX,dword ptr [EBP + -0x10]
+0040ed39  MOV dword ptr [EAX],0x6b38fc
+0040ed3f  MOV dword ptr [EBP + -0x4],0x0
+0040ed46  MOV ECX,dword ptr [EBP + -0x10]
+0040ed49  CALL 0x0040f390
+0040ed4e  MOV dword ptr [EBP + -0x4],0xffffffff
+0040ed55  MOV ECX,dword ptr [EBP + -0x10]
+0040ed58  CALL 0x005cc230
+0040ed5d  MOV ECX,dword ptr [EBP + -0xc]
+0040ed60  MOV dword ptr FS:[0x0],ECX
+0040ed67  POP ECX
+0040ed68  MOV ESP,EBP
+0040ed6a  POP EBP
+0040ed6b  RET

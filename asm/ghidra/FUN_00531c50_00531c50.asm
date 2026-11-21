@@ -1,0 +1,19 @@
+; FUN_00531c50  00531c50
+00531c50  PUSH EBP
+00531c51  MOV EBP,ESP
+00531c53  PUSH ECX
+00531c54  MOV dword ptr [EBP + -0x4],ECX
+00531c57  MOV EAX,dword ptr [EBP + -0x4]
+00531c5a  MOV byte ptr [EAX + 0x1c0],0x1
+00531c61  MOV ECX,dword ptr [EBP + -0x4]
+00531c64  MOV EDX,dword ptr [EBP + 0xc]
+00531c67  MOV dword ptr [ECX + 0x1a4],EDX
+00531c6d  MOV EAX,dword ptr [EBP + 0x8]
+00531c70  PUSH EAX
+00531c71  MOV ECX,dword ptr [EBP + -0x4]
+00531c74  CALL 0x00531c90
+00531c79  MOV ECX,dword ptr [EBP + -0x4]
+00531c7c  MOV dword ptr [ECX + 0x18c],0x0
+00531c86  MOV ESP,EBP
+00531c88  POP EBP
+00531c89  RET 0x8

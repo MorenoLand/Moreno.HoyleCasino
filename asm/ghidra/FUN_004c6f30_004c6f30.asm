@@ -1,0 +1,11 @@
+; FUN_004c6f30  004c6f30
+004c6f30  PUSH EBP
+004c6f31  MOV EBP,ESP
+004c6f33  PUSH ECX
+004c6f34  MOV dword ptr [EBP + -0x4],ECX
+004c6f37  MOV EAX,dword ptr [EBP + -0x4]
+004c6f3a  MOV ECX,dword ptr [EBP + 0x8]
+004c6f3d  MOV dword ptr [EAX + 0x410],ECX
+004c6f43  MOV ESP,EBP
+004c6f45  POP EBP
+004c6f46  RET 0x4

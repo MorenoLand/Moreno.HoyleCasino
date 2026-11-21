@@ -1,0 +1,40 @@
+; FUN_00426a40  00426a40
+00426a40  PUSH EBP
+00426a41  MOV EBP,ESP
+00426a43  SUB ESP,0x1c
+00426a46  MOV dword ptr [EBP + -0x1c],ECX
+00426a49  MOV dword ptr [EBP + -0x14],0x2
+00426a50  MOV dword ptr [EBP + -0x10],0x0
+00426a57  MOV dword ptr [EBP + -0xc],0x1
+00426a5e  MOV dword ptr [EBP + -0x8],0x3
+00426a65  MOV dword ptr [EBP + -0x4],0x0
+00426a6c  JMP 0x00426a77
+00426a6e  MOV EAX,dword ptr [EBP + -0x4]
+00426a71  ADD EAX,0x1
+00426a74  MOV dword ptr [EBP + -0x4],EAX
+00426a77  CMP dword ptr [EBP + -0x4],0x4
+00426a7b  JGE 0x00426abb
+00426a7d  MOV ECX,dword ptr [EBP + -0x4]
+00426a80  MOV EDX,dword ptr [EBP + ECX*0x4 + -0x14]
+00426a84  PUSH EDX
+00426a85  MOV ECX,dword ptr [EBP + -0x1c]
+00426a88  CALL 0x00426500
+00426a8d  MOVZX EAX,AL
+00426a90  TEST EAX,EAX
+00426a92  JZ 0x00426ab9
+00426a94  MOV ECX,dword ptr [EBP + -0x4]
+00426a97  MOV EDX,dword ptr [EBP + ECX*0x4 + -0x14]
+00426a9b  MOV EAX,dword ptr [EBP + -0x1c]
+00426a9e  MOV CL,byte ptr [EAX + EDX*0x1 + 0xa5]
+00426aa5  MOV byte ptr [EBP + -0x15],CL
+00426aa8  MOVZX EDX,byte ptr [EBP + -0x15]
+00426aac  TEST EDX,EDX
+00426aae  JNZ 0x00426ab9
+00426ab0  MOV EAX,dword ptr [EBP + -0x4]
+00426ab3  MOV EAX,dword ptr [EBP + EAX*0x4 + -0x14]
+00426ab7  JMP 0x00426abe
+00426ab9  JMP 0x00426a6e
+00426abb  OR EAX,0xffffffff
+00426abe  MOV ESP,EBP
+00426ac0  POP EBP
+00426ac1  RET

@@ -1,0 +1,68 @@
+; FUN_004f7ae0  004f7ae0
+004f7ae0  PUSH EBP
+004f7ae1  MOV EBP,ESP
+004f7ae3  SUB ESP,0x8
+004f7ae6  MOV dword ptr [EBP + -0x8],ECX
+004f7ae9  MOV EAX,dword ptr [EBP + -0x8]
+004f7aec  MOVZX ECX,byte ptr [EAX + 0x1]
+004f7af0  TEST ECX,ECX
+004f7af2  JNZ 0x004f7b0b
+004f7af4  PUSH 0x40a
+004f7af9  PUSH 0x6bfe08
+004f7afe  PUSH 0x6bfe6c
+004f7b03  CALL 0x005e9f20
+004f7b08  ADD ESP,0xc
+004f7b0b  MOV EAX,dword ptr [EBP + -0x8]
+004f7b0e  MOVZX ECX,byte ptr [EAX + 0x3]
+004f7b12  TEST ECX,ECX
+004f7b14  JNZ 0x004f7b2d
+004f7b16  PUSH 0x40b
+004f7b1b  PUSH 0x6bfe08
+004f7b20  PUSH 0x6c0138
+004f7b25  CALL 0x005e9f20
+004f7b2a  ADD ESP,0xc
+004f7b2d  MOV EAX,dword ptr [EBP + -0x8]
+004f7b30  MOVZX ECX,byte ptr [EAX + 0x5]
+004f7b34  TEST ECX,ECX
+004f7b36  JNZ 0x004f7b4f
+004f7b38  PUSH 0x40c
+004f7b3d  PUSH 0x6bfe08
+004f7b42  PUSH 0x6c02e0
+004f7b47  CALL 0x005e9f20
+004f7b4c  ADD ESP,0xc
+004f7b4f  MOV EAX,dword ptr [EBP + -0x8]
+004f7b52  MOVZX ECX,byte ptr [EAX + 0x4]
+004f7b56  TEST ECX,ECX
+004f7b58  JZ 0x004f7b71
+004f7b5a  PUSH 0x40d
+004f7b5f  PUSH 0x6bfe08
+004f7b64  PUSH 0x6c02c4
+004f7b69  CALL 0x005e9f20
+004f7b6e  ADD ESP,0xc
+004f7b71  MOV word ptr [EBP + -0x4],0x0
+004f7b77  JMP 0x004f7b85
+004f7b79  MOV AX,word ptr [EBP + -0x4]
+004f7b7d  ADD AX,0x1
+004f7b81  MOV word ptr [EBP + -0x4],AX
+004f7b85  MOVSX ECX,word ptr [EBP + -0x4]
+004f7b89  MOV EDX,dword ptr [EBP + -0x8]
+004f7b8c  MOVSX EAX,word ptr [EDX + 0x6]
+004f7b90  CMP ECX,EAX
+004f7b92  JGE 0x004f7bbc
+004f7b94  MOVSX ECX,word ptr [EBP + -0x4]
+004f7b98  MOV EDX,dword ptr [EBP + -0x8]
+004f7b9b  MOV EAX,dword ptr [EDX + 0x40]
+004f7b9e  MOVZX ECX,byte ptr [EAX + ECX*0x1]
+004f7ba2  TEST ECX,ECX
+004f7ba4  JNZ 0x004f7bba
+004f7ba6  MOVSX EDX,word ptr [EBP + -0x4]
+004f7baa  MOV EAX,dword ptr [EBP + -0x8]
+004f7bad  MOV ECX,dword ptr [EAX + 0x40]
+004f7bb0  MOV byte ptr [EDX + ECX*0x1],0x1
+004f7bb4  MOV AX,word ptr [EBP + -0x4]
+004f7bb8  JMP 0x004f7bc0
+004f7bba  JMP 0x004f7b79
+004f7bbc  OR AX,0xffff
+004f7bc0  MOV ESP,EBP
+004f7bc2  POP EBP
+004f7bc3  RET

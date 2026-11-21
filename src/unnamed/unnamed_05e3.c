@@ -1,0 +1,103 @@
+#include "protos.h"
+
+void f_005e3130(void) /* sub_5E3130 */
+{
+    int fZ = 0, fS = 0, fC = 0, fO = 0, fP = 0, fA = 0; (void)fZ; (void)fS; (void)fC; (void)fO; (void)fP; (void)fA;
+    FN_ENTER(0x005e3130);
+    /* 005e3130: push ebp */ { u32 v = r_ebp; r_esp -= 4; W32(r_esp, v); }
+    /* 005e3131: mov ebp, esp */ r_ebp = r_esp;
+    /* 005e3133: push ecx */ { u32 v = r_ecx; r_esp -= 4; W32(r_esp, v); }
+    /* 005e3134: mov dword ptr [ebp - 4], ecx */ W32((u32)(r_ebp+0xfffffffcu), r_ecx);
+    /* 005e3137: mov eax, dword ptr [ebp - 4] */ r_eax = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e313a: mov ecx, dword ptr [ebp - 4] */ r_ecx = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e313d: mov dl, byte ptr [ecx + 0x4f38] */ r_edx = (r_edx & 0xffffff00u) | ((R8((u32)(r_ecx+0x4f38u))) & 0xffu);
+    /* 005e3143: mov byte ptr [eax + 0x4ee8], dl */ W8((u32)(r_eax+0x4ee8u), (u8)r_edx);
+    /* 005e3149: mov eax, dword ptr [ebp - 4] */ r_eax = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e314c: mov ecx, dword ptr [ebp - 4] */ r_ecx = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e314f: mov dl, byte ptr [ecx + 0x4f39] */ r_edx = (r_edx & 0xffffff00u) | ((R8((u32)(r_ecx+0x4f39u))) & 0xffu);
+    /* 005e3155: mov byte ptr [eax + 0x4ee9], dl */ W8((u32)(r_eax+0x4ee9u), (u8)r_edx);
+    /* 005e315b: mov eax, dword ptr [ebp - 4] */ r_eax = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e315e: mov ecx, dword ptr [ebp - 4] */ r_ecx = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e3161: mov dl, byte ptr [ecx + 0x4f3a] */ r_edx = (r_edx & 0xffffff00u) | ((R8((u32)(r_ecx+0x4f3au))) & 0xffu);
+    /* 005e3167: mov byte ptr [eax + 0x4eea], dl */ W8((u32)(r_eax+0x4eeau), (u8)r_edx);
+    /* 005e316d: mov eax, dword ptr [ebp - 4] */ r_eax = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e3170: mov ecx, dword ptr [ebp - 4] */ r_ecx = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e3173: mov edx, dword ptr [ecx + 0x4f3c] */ r_edx = R32((u32)(r_ecx+0x4f3cu));
+    /* 005e3179: mov dword ptr [eax + 0x4eec], edx */ W32((u32)(r_eax+0x4eecu), r_edx);
+    /* 005e317f: mov eax, dword ptr [ebp - 4] */ r_eax = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e3182: mov ecx, dword ptr [ebp - 4] */ r_ecx = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e3185: mov edx, dword ptr [ecx + 0x4f40] */ r_edx = R32((u32)(r_ecx+0x4f40u));
+    /* 005e318b: mov dword ptr [eax + 0x4ef0], edx */ W32((u32)(r_eax+0x4ef0u), r_edx);
+    /* 005e3191: mov eax, dword ptr [ebp - 4] */ r_eax = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e3194: mov ecx, dword ptr [ebp - 4] */ r_ecx = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e3197: mov edx, dword ptr [ecx + 0x4f44] */ r_edx = R32((u32)(r_ecx+0x4f44u));
+    /* 005e319d: mov dword ptr [eax + 0x4ef4], edx */ W32((u32)(r_eax+0x4ef4u), r_edx);
+    /* 005e31a3: mov eax, dword ptr [ebp - 4] */ r_eax = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e31a6: mov ecx, dword ptr [ebp - 4] */ r_ecx = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e31a9: mov edx, dword ptr [ecx + 0x4f48] */ r_edx = R32((u32)(r_ecx+0x4f48u));
+    /* 005e31af: mov dword ptr [eax + 0x4ef8], edx */ W32((u32)(r_eax+0x4ef8u), r_edx);
+    /* 005e31b5: mov eax, dword ptr [ebp - 4] */ r_eax = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e31b8: mov ecx, dword ptr [ebp - 4] */ r_ecx = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e31bb: mov edx, dword ptr [ecx + 0x4f4c] */ r_edx = R32((u32)(r_ecx+0x4f4cu));
+    /* 005e31c1: mov dword ptr [eax + 0x4efc], edx */ W32((u32)(r_eax+0x4efcu), r_edx);
+    /* 005e31c7: mov eax, dword ptr [ebp - 4] */ r_eax = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e31ca: mov ecx, dword ptr [ebp - 4] */ r_ecx = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e31cd: mov edx, dword ptr [ecx + 0x4f50] */ r_edx = R32((u32)(r_ecx+0x4f50u));
+    /* 005e31d3: mov dword ptr [eax + 0x4f00], edx */ W32((u32)(r_eax+0x4f00u), r_edx);
+    /* 005e31d9: mov eax, dword ptr [ebp - 4] */ r_eax = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e31dc: mov ecx, dword ptr [ebp - 4] */ r_ecx = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e31df: mov dl, byte ptr [ecx + 0x4f54] */ r_edx = (r_edx & 0xffffff00u) | ((R8((u32)(r_ecx+0x4f54u))) & 0xffu);
+    /* 005e31e5: mov byte ptr [eax + 0x4f04], dl */ W8((u32)(r_eax+0x4f04u), (u8)r_edx);
+    /* 005e31eb: mov eax, dword ptr [ebp - 4] */ r_eax = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e31ee: mov ecx, dword ptr [ebp - 4] */ r_ecx = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e31f1: mov dl, byte ptr [ecx + 0x4f55] */ r_edx = (r_edx & 0xffffff00u) | ((R8((u32)(r_ecx+0x4f55u))) & 0xffu);
+    /* 005e31f7: mov byte ptr [eax + 0x4f05], dl */ W8((u32)(r_eax+0x4f05u), (u8)r_edx);
+    /* 005e31fd: mov eax, dword ptr [ebp - 4] */ r_eax = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e3200: mov ecx, dword ptr [ebp - 4] */ r_ecx = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e3203: mov edx, dword ptr [ecx + 0x4f58] */ r_edx = R32((u32)(r_ecx+0x4f58u));
+    /* 005e3209: mov dword ptr [eax + 0x4f08], edx */ W32((u32)(r_eax+0x4f08u), r_edx);
+    /* 005e320f: mov eax, dword ptr [ebp - 4] */ r_eax = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e3212: mov ecx, dword ptr [ebp - 4] */ r_ecx = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e3215: mov edx, dword ptr [ecx + 0x4f5c] */ r_edx = R32((u32)(r_ecx+0x4f5cu));
+    /* 005e321b: mov dword ptr [eax + 0x4f0c], edx */ W32((u32)(r_eax+0x4f0cu), r_edx);
+    /* 005e3221: mov eax, dword ptr [ebp - 4] */ r_eax = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e3224: mov ecx, dword ptr [ebp - 4] */ r_ecx = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e3227: mov edx, dword ptr [ecx + 0x4f60] */ r_edx = R32((u32)(r_ecx+0x4f60u));
+    /* 005e322d: mov dword ptr [eax + 0x4f10], edx */ W32((u32)(r_eax+0x4f10u), r_edx);
+    /* 005e3233: mov eax, dword ptr [ebp - 4] */ r_eax = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e3236: mov ecx, dword ptr [ebp - 4] */ r_ecx = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e3239: mov edx, dword ptr [ecx + 0x4f64] */ r_edx = R32((u32)(r_ecx+0x4f64u));
+    /* 005e323f: mov dword ptr [eax + 0x4f14], edx */ W32((u32)(r_eax+0x4f14u), r_edx);
+    /* 005e3245: mov eax, dword ptr [ebp - 4] */ r_eax = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e3248: mov ecx, dword ptr [ebp - 4] */ r_ecx = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e324b: mov edx, dword ptr [ecx + 0x4f68] */ r_edx = R32((u32)(r_ecx+0x4f68u));
+    /* 005e3251: mov dword ptr [eax + 0x4f18], edx */ W32((u32)(r_eax+0x4f18u), r_edx);
+    /* 005e3257: mov eax, dword ptr [ebp - 4] */ r_eax = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e325a: mov ecx, dword ptr [ebp - 4] */ r_ecx = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e325d: mov edx, dword ptr [ecx + 0x4f6c] */ r_edx = R32((u32)(r_ecx+0x4f6cu));
+    /* 005e3263: mov dword ptr [eax + 0x4f1c], edx */ W32((u32)(r_eax+0x4f1cu), r_edx);
+    /* 005e3269: mov eax, dword ptr [ebp - 4] */ r_eax = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e326c: mov ecx, dword ptr [ebp - 4] */ r_ecx = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e326f: mov edx, dword ptr [ecx + 0x4f70] */ r_edx = R32((u32)(r_ecx+0x4f70u));
+    /* 005e3275: mov dword ptr [eax + 0x4f20], edx */ W32((u32)(r_eax+0x4f20u), r_edx);
+    /* 005e327b: mov eax, dword ptr [ebp - 4] */ r_eax = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e327e: mov ecx, dword ptr [ebp - 4] */ r_ecx = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e3281: mov edx, dword ptr [ecx + 0x4f74] */ r_edx = R32((u32)(r_ecx+0x4f74u));
+    /* 005e3287: mov dword ptr [eax + 0x4f24], edx */ W32((u32)(r_eax+0x4f24u), r_edx);
+    /* 005e328d: mov eax, dword ptr [ebp - 4] */ r_eax = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e3290: mov ecx, dword ptr [ebp - 4] */ r_ecx = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e3293: mov edx, dword ptr [ecx + 0x4f78] */ r_edx = R32((u32)(r_ecx+0x4f78u));
+    /* 005e3299: mov dword ptr [eax + 0x4f28], edx */ W32((u32)(r_eax+0x4f28u), r_edx);
+    /* 005e329f: mov eax, dword ptr [ebp - 4] */ r_eax = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e32a2: mov ecx, dword ptr [ebp - 4] */ r_ecx = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e32a5: mov edx, dword ptr [ecx + 0x4f7c] */ r_edx = R32((u32)(r_ecx+0x4f7cu));
+    /* 005e32ab: mov dword ptr [eax + 0x4f2c], edx */ W32((u32)(r_eax+0x4f2cu), r_edx);
+    /* 005e32b1: mov eax, dword ptr [ebp - 4] */ r_eax = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e32b4: mov ecx, dword ptr [ebp - 4] */ r_ecx = R32((u32)(r_ebp+0xfffffffcu));
+    /* 005e32b7: mov edx, dword ptr [ecx + 0x4f80] */ r_edx = R32((u32)(r_ecx+0x4f80u));
+    /* 005e32bd: mov dword ptr [eax + 0x4f30], edx */ W32((u32)(r_eax+0x4f30u), r_edx);
+    /* 005e32c3: mov esp, ebp */ r_esp = r_ebp;
+    /* 005e32c5: pop ebp */ { u32 v = R32(r_esp); r_esp += 4; r_ebp = v; }
+    /* 005e32c6: ret  */ FN_RET(0x005e3130); r_esp += 4; return;
+}
+

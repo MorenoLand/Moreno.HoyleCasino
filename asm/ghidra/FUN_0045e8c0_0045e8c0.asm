@@ -1,0 +1,11 @@
+; FUN_0045e8c0  0045e8c0
+0045e8c0  PUSH EBP
+0045e8c1  MOV EBP,ESP
+0045e8c3  PUSH ECX
+0045e8c4  MOV dword ptr [EBP + -0x4],ECX
+0045e8c7  MOV EAX,dword ptr [EBP + -0x4]
+0045e8ca  MOV ECX,dword ptr [EBP + 0x8]
+0045e8cd  MOV dword ptr [EAX + 0x80],ECX
+0045e8d3  MOV ESP,EBP
+0045e8d5  POP EBP
+0045e8d6  RET 0x4

@@ -1,0 +1,24 @@
+; FUN_0065ea70  0065ea70
+0065ea70  PUSH EBP
+0065ea71  MOV EBP,ESP
+0065ea73  SUB ESP,0x8
+0065ea76  MOV dword ptr [EBP + -0x4],ECX
+0065ea79  PUSH 0x0
+0065ea7b  MOV ECX,dword ptr [EBP + -0x4]
+0065ea7e  CALL 0x005fb720
+0065ea83  TEST EAX,EAX
+0065ea85  JZ 0x0065eaa6
+0065ea87  PUSH 0x0
+0065ea89  MOV ECX,dword ptr [EBP + -0x4]
+0065ea8c  CALL 0x005fb720
+0065ea91  MOV dword ptr [EBP + -0x8],EAX
+0065ea94  MOV EAX,dword ptr [EBP + -0x8]
+0065ea97  MOV EDX,dword ptr [EAX]
+0065ea99  MOV ECX,dword ptr [EBP + -0x8]
+0065ea9c  MOV EAX,dword ptr [EDX + 0xb8]
+0065eaa2  CALL EAX
+0065eaa4  JMP 0x0065eaa8
+0065eaa6  XOR EAX,EAX
+0065eaa8  MOV ESP,EBP
+0065eaaa  POP EBP
+0065eaab  RET

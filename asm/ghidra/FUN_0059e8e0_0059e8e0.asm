@@ -1,0 +1,13 @@
+; FUN_0059e8e0  0059e8e0
+0059e8e0  PUSH EBP
+0059e8e1  MOV EBP,ESP
+0059e8e3  PUSH ECX
+0059e8e4  MOV dword ptr [EBP + -0x4],ECX
+0059e8e7  MOV ECX,dword ptr [EBP + -0x4]
+0059e8ea  CALL 0x005e9e20
+0059e8ef  MOV EAX,dword ptr [EBP + -0x4]
+0059e8f2  MOV dword ptr [EAX],0x6cf084
+0059e8f8  MOV EAX,dword ptr [EBP + -0x4]
+0059e8fb  MOV ESP,EBP
+0059e8fd  POP EBP
+0059e8fe  RET

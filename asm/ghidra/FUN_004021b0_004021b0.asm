@@ -1,0 +1,25 @@
+; FUN_004021b0  004021b0
+004021b0  PUSH EBP
+004021b1  MOV EBP,ESP
+004021b3  SUB ESP,0x1c
+004021b6  MOV dword ptr [EBP + -0x1c],ECX
+004021b9  CMP dword ptr [EBP + 0x8],0x0
+004021bd  JNZ 0x004021df
+004021bf  MOV dword ptr [EBP + -0xc],0xdc
+004021c6  MOV dword ptr [EBP + -0x8],0xf0
+004021cd  MOV dword ptr [EBP + -0x4],0xf2
+004021d4  MOV EAX,dword ptr [EBP + 0xc]
+004021d7  MOV EAX,dword ptr [EBP + EAX*0x4 + -0xc]
+004021db  JMP 0x00402205
+004021df  CMP dword ptr [EBP + 0x8],0x4
+004021e3  JNZ 0x00402203
+004021e5  MOV dword ptr [EBP + -0x18],0x147
+004021ec  MOV dword ptr [EBP + -0x14],0x15b
+004021f3  MOV dword ptr [EBP + -0x10],0x15d
+004021fa  MOV ECX,dword ptr [EBP + 0xc]
+004021fd  MOV EAX,dword ptr [EBP + ECX*0x4 + -0x18]
+00402201  JMP 0x00402205
+00402203  XOR EAX,EAX
+00402205  MOV ESP,EBP
+00402207  POP EBP
+00402208  RET 0x8

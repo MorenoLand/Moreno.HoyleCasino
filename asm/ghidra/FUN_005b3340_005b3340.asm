@@ -1,0 +1,49 @@
+; FUN_005b3340  005b3340
+005b3340  PUSH EBP
+005b3341  MOV EBP,ESP
+005b3343  SUB ESP,0x18
+005b3346  MOV dword ptr [EBP + -0x14],ECX
+005b3349  MOV ECX,dword ptr [EBP + -0x14]
+005b334c  CALL 0x005b58a0
+005b3351  IMUL EAX,EAX,0x34
+005b3354  MOV ECX,dword ptr [EBP + -0x14]
+005b3357  CMP dword ptr [ECX + 0x5c4],EAX
+005b335d  JL 0x005b3363
+005b335f  XOR EAX,EAX
+005b3361  JMP 0x005b33db
+005b3363  MOV ECX,dword ptr [EBP + -0x14]
+005b3366  CALL 0x005b58a0
+005b336b  SHL EAX,0x1
+005b336d  MOV dword ptr [EBP + -0x18],EAX
+005b3370  FILD dword ptr [EBP + -0x18]
+005b3373  MOV EDX,dword ptr [EBP + -0x14]
+005b3376  FILD dword ptr [EDX + 0x5c4]
+005b337c  FDIV double ptr [0x006b4b18]
+005b3382  FSUBP
+005b3384  FSTP double ptr [EBP + -0x8]
+005b3387  FLD double ptr [0x006b3e40]
+005b338d  FCOMP double ptr [EBP + -0x8]
+005b3390  FNSTSW AX
+005b3392  TEST AH,0x41
+005b3395  JNZ 0x005b33a0
+005b3397  FLD double ptr [0x006b3e40]
+005b339d  FSTP double ptr [EBP + -0x8]
+005b33a0  MOV EAX,dword ptr [EBP + -0x14]
+005b33a3  FILD dword ptr [EAX + 0x5cc]
+005b33a9  FDIV double ptr [EBP + -0x8]
+005b33ac  FSTP double ptr [EBP + -0x10]
+005b33af  FLDZ
+005b33b1  FCOMP double ptr [EBP + -0x10]
+005b33b4  FNSTSW AX
+005b33b6  TEST AH,0x41
+005b33b9  JNZ 0x005b33cd
+005b33bb  FLD double ptr [EBP + -0x10]
+005b33be  FSUB double ptr [0x006b2c38]
+005b33c4  CALL 0x00686cc0
+005b33c9  JMP 0x005b33db
+005b33cd  FLD double ptr [EBP + -0x10]
+005b33d0  FADD double ptr [0x006b2c38]
+005b33d6  CALL 0x00686cc0
+005b33db  MOV ESP,EBP
+005b33dd  POP EBP
+005b33de  RET

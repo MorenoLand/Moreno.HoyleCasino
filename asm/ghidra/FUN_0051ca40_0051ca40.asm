@@ -1,0 +1,26 @@
+; FUN_0051ca40  0051ca40
+0051ca40  PUSH EBP
+0051ca41  MOV EBP,ESP
+0051ca43  SUB ESP,0x8
+0051ca46  MOV dword ptr [EBP + -0x4],ECX
+0051ca49  MOV EAX,dword ptr [EBP + 0x8]
+0051ca4c  MOV dword ptr [EBP + -0x8],EAX
+0051ca4f  MOV ECX,dword ptr [EBP + -0x8]
+0051ca52  SUB ECX,0x30e792
+0051ca58  MOV dword ptr [EBP + -0x8],ECX
+0051ca5b  CMP dword ptr [EBP + -0x8],0x3
+0051ca5f  JA 0x0051ca87
+0051ca61  MOV EDX,dword ptr [EBP + -0x8]
+0051ca64  JMP dword ptr [EDX*0x4 + 0x51ca94]
+0051ca6b  MOV EAX,0x5
+0051ca70  JMP 0x0051ca8c
+0051ca72  MOV EAX,0x19
+0051ca77  JMP 0x0051ca8c
+0051ca79  MOV EAX,0xfa
+0051ca7e  JMP 0x0051ca8c
+0051ca80  MOV EAX,0x3e8
+0051ca85  JMP 0x0051ca8c
+0051ca87  MOV EAX,0x5
+0051ca8c  MOV ESP,EBP
+0051ca8e  POP EBP
+0051ca8f  RET 0x4

@@ -1,0 +1,72 @@
+; FUN_0065ca80  0065ca80
+0065ca80  PUSH EBP
+0065ca81  MOV EBP,ESP
+0065ca83  SUB ESP,0x24
+0065ca86  MOV EAX,[0x00781870]
+0065ca8b  XOR EAX,EBP
+0065ca8d  MOV dword ptr [EBP + -0xc],EAX
+0065ca90  MOV dword ptr [EBP + -0x24],ECX
+0065ca93  MOV EAX,[0x0162ee84]
+0065ca98  MOV EDX,dword ptr [EAX]
+0065ca9a  MOV ECX,dword ptr [0x0162ee84]
+0065caa0  MOV EAX,dword ptr [EDX + 0x31c]
+0065caa6  CALL EAX
+0065caa8  MOV dword ptr [EBP + -0x4],EAX
+0065caab  PUSH 0x0
+0065caad  PUSH -0x1
+0065caaf  MOV ECX,dword ptr [EBP + -0x4]
+0065cab2  CALL 0x0063a3e0
+0065cab7  MOV ECX,dword ptr [EBP + -0x4]
+0065caba  CALL 0x0063aac0
+0065cabf  MOV dword ptr [EAX],0x2
+0065cac5  MOV dword ptr [EBP + -0x8],0x0
+0065cacc  JMP 0x0065cad7
+0065cace  MOV ECX,dword ptr [EBP + -0x8]
+0065cad1  ADD ECX,0x1
+0065cad4  MOV dword ptr [EBP + -0x8],ECX
+0065cad7  CMP dword ptr [EBP + -0x8],0x64
+0065cadb  JGE 0x0065cb48
+0065cadd  MOV EDX,dword ptr [EBP + -0x8]
+0065cae0  PUSH EDX
+0065cae1  PUSH 0x6d44ec
+0065cae6  LEA EAX,[EBP + -0x1c]
+0065cae9  PUSH EAX
+0065caea  CALL dword ptr [0x006b2220]
+0065caf0  ADD ESP,0xc
+0065caf3  LEA ECX,[EBP + -0x1c]
+0065caf6  PUSH ECX
+0065caf7  MOV ECX,dword ptr [EBP + -0x4]
+0065cafa  CALL 0x0063ab10
+0065caff  MOVZX EDX,AL
+0065cb02  TEST EDX,EDX
+0065cb04  JZ 0x0065cb46
+0065cb06  MOV EAX,dword ptr [EBP + -0x4]
+0065cb09  PUSH EAX
+0065cb0a  MOV ECX,dword ptr [0x0162ee84]
+0065cb10  MOV EDX,dword ptr [ECX]
+0065cb12  MOV ECX,dword ptr [0x0162ee84]
+0065cb18  MOV EAX,dword ptr [EDX + 0x368]
+0065cb1e  CALL EAX
+0065cb20  MOVZX ECX,AL
+0065cb23  TEST ECX,ECX
+0065cb25  JZ 0x0065cb29
+0065cb27  JMP 0x0065cace
+0065cb29  MOV EDX,dword ptr [EBP + 0x8]
+0065cb2c  PUSH EDX
+0065cb2d  MOV ECX,dword ptr [EBP + -0x4]
+0065cb30  CALL 0x0057a470
+0065cb35  PUSH EAX
+0065cb36  CALL 0x00686ec0
+0065cb3b  ADD ESP,0x8
+0065cb3e  TEST EAX,EAX
+0065cb40  JNZ 0x0065cb46
+0065cb42  MOV AL,0x1
+0065cb44  JMP 0x0065cb4a
+0065cb46  JMP 0x0065cace
+0065cb48  XOR AL,AL
+0065cb4a  MOV ECX,dword ptr [EBP + -0xc]
+0065cb4d  XOR ECX,EBP
+0065cb4f  CALL 0x00686d72
+0065cb54  MOV ESP,EBP
+0065cb56  POP EBP
+0065cb57  RET 0x4

@@ -1,0 +1,14 @@
+; GetMinSize  005d6020
+005d6020  PUSH EBP
+005d6021  MOV EBP,ESP
+005d6023  PUSH ECX
+005d6024  MOV dword ptr [EBP + -0x4],ECX
+005d6027  MOV EAX,dword ptr [EBP + -0x4]
+005d602a  MOV ECX,dword ptr [EAX + 0x4cc]
+005d6030  MOV EDX,dword ptr [EAX + 0x4d0]
+005d6036  MOV EAX,dword ptr [EBP + 0x8]
+005d6039  MOV dword ptr [EAX],ECX
+005d603b  MOV dword ptr [EAX + 0x4],EDX
+005d603e  MOV ESP,EBP
+005d6040  POP EBP
+005d6041  RET 0x4

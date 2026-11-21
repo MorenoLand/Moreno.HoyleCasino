@@ -1,0 +1,15 @@
+; FUN_005239f0  005239f0
+005239f0  PUSH EBP
+005239f1  MOV EBP,ESP
+005239f3  SUB ESP,0x14
+005239f6  MOV dword ptr [EBP + -0x14],ECX
+005239f9  MOV dword ptr [EBP + -0x10],0x0
+00523a00  MOV dword ptr [EBP + -0xc],0xfffffffd
+00523a07  MOV dword ptr [EBP + -0x8],0x0
+00523a0e  MOV dword ptr [EBP + -0x4],0x3
+00523a15  MOV EAX,dword ptr [EBP + 0x8]
+00523a18  MOV EAX,dword ptr [EBP + EAX*0x4 + -0x10]
+00523a1c  SUB EAX,0xa
+00523a1f  MOV ESP,EBP
+00523a21  POP EBP
+00523a22  RET 0x8

@@ -1,0 +1,32 @@
+; FUN_00612fe0  00612fe0
+00612fe0  PUSH EBP
+00612fe1  MOV EBP,ESP
+00612fe3  SUB ESP,0x8
+00612fe6  MOV dword ptr [EBP + -0x4],ECX
+00612fe9  MOV EAX,dword ptr [EBP + -0x4]
+00612fec  MOV ECX,dword ptr [EBP + 0x8]
+00612fef  MOV EDX,dword ptr [EAX + 0x8]
+00612ff2  CMP EDX,dword ptr [ECX + 0x8]
+00612ff5  JNZ 0x0061302a
+00612ff7  MOV EAX,dword ptr [EBP + -0x4]
+00612ffa  MOV ECX,dword ptr [EBP + 0x8]
+00612ffd  MOV EDX,dword ptr [EAX + 0x10]
+00613000  CMP EDX,dword ptr [ECX + 0x10]
+00613003  JNZ 0x0061302a
+00613005  MOV EAX,dword ptr [EBP + -0x4]
+00613008  MOV ECX,dword ptr [EBP + 0x8]
+0061300b  MOV EDX,dword ptr [EAX + 0xc]
+0061300e  CMP EDX,dword ptr [ECX + 0xc]
+00613011  JNZ 0x0061302a
+00613013  MOV EAX,dword ptr [EBP + -0x4]
+00613016  MOV ECX,dword ptr [EBP + 0x8]
+00613019  MOV EDX,dword ptr [EAX + 0x14]
+0061301c  CMP EDX,dword ptr [ECX + 0x14]
+0061301f  JNZ 0x0061302a
+00613021  MOV dword ptr [EBP + -0x8],0x1
+00613028  JMP 0x00613031
+0061302a  MOV dword ptr [EBP + -0x8],0x0
+00613031  MOV AL,byte ptr [EBP + -0x8]
+00613034  MOV ESP,EBP
+00613036  POP EBP
+00613037  RET 0x4

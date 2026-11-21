@@ -1,0 +1,33 @@
+; FUN_0065ef30  0065ef30
+0065ef30  PUSH EBP
+0065ef31  MOV EBP,ESP
+0065ef33  SUB ESP,0xc
+0065ef36  MOV dword ptr [EBP + -0xc],ECX
+0065ef39  PUSH 0x0
+0065ef3b  MOV ECX,dword ptr [EBP + -0xc]
+0065ef3e  CALL 0x005fb720
+0065ef43  MOV ECX,EAX
+0065ef45  CALL 0x005e4390
+0065ef4a  MOV dword ptr [EBP + -0x4],EAX
+0065ef4d  CMP dword ptr [EBP + -0x4],0x0
+0065ef51  JZ 0x0065ef83
+0065ef53  MOV EAX,dword ptr [EBP + -0x4]
+0065ef56  MOV CL,byte ptr [EBP + 0x8]
+0065ef59  MOV byte ptr [EAX + 0x3a],CL
+0065ef5c  MOVSX EDX,byte ptr [EBP + 0x8]
+0065ef60  CMP EDX,0x2
+0065ef63  JNZ 0x0065ef70
+0065ef65  MOV EAX,dword ptr [EBP + -0x4]
+0065ef68  MOV CL,byte ptr [EBP + 0xc]
+0065ef6b  MOV byte ptr [EAX + 0x3b],CL
+0065ef6e  JMP 0x0065ef83
+0065ef70  MOV EDX,dword ptr [EBP + 0x10]
+0065ef73  PUSH EDX
+0065ef74  MOV EAX,dword ptr [EBP + -0x4]
+0065ef77  ADD EAX,0x21
+0065ef7a  PUSH EAX
+0065ef7b  CALL 0x00686d8e
+0065ef80  ADD ESP,0x8
+0065ef83  MOV ESP,EBP
+0065ef85  POP EBP
+0065ef86  RET 0xc

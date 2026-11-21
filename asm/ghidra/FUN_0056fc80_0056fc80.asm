@@ -1,0 +1,14 @@
+; FUN_0056fc80  0056fc80
+0056fc80  PUSH EBP
+0056fc81  MOV EBP,ESP
+0056fc83  PUSH ECX
+0056fc84  MOV dword ptr [EBP + -0x4],ECX
+0056fc87  PUSH 0x0
+0056fc89  MOV ECX,dword ptr [EBP + -0x4]
+0056fc8c  CALL 0x005fc0d0
+0056fc91  MOV EAX,dword ptr [EBP + -0x4]
+0056fc94  MOV dword ptr [EAX],0x6ca550
+0056fc9a  MOV EAX,dword ptr [EBP + -0x4]
+0056fc9d  MOV ESP,EBP
+0056fc9f  POP EBP
+0056fca0  RET

@@ -1,0 +1,25 @@
+; FUN_004fa560  004fa560
+004fa560  PUSH EBP
+004fa561  MOV EBP,ESP
+004fa563  PUSH ECX
+004fa564  PUSH ESI
+004fa565  MOV dword ptr [EBP + -0x4],ECX
+004fa568  MOV EAX,dword ptr [EBP + -0x4]
+004fa56b  CMP dword ptr [EAX + 0xa4],0x0
+004fa572  JZ 0x004fa59d
+004fa574  MOV ECX,dword ptr [EBP + -0x4]
+004fa577  MOV ESI,dword ptr [ECX + 0xa4]
+004fa57d  MOV EDX,dword ptr [EBP + -0x4]
+004fa580  MOV ECX,dword ptr [EDX + 0xa4]
+004fa586  CALL 0x0047e420
+004fa58b  MOV EAX,dword ptr [ESI + EAX*0x4 + 0x4]
+004fa58f  MOV ECX,dword ptr [EAX + 0x4]
+004fa592  PUSH ECX
+004fa593  CALL 0x005dcb00
+004fa598  ADD ESP,0x4
+004fa59b  JMP 0x004fa59f
+004fa59d  XOR EAX,EAX
+004fa59f  POP ESI
+004fa5a0  MOV ESP,EBP
+004fa5a2  POP EBP
+004fa5a3  RET

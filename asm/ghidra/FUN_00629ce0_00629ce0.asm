@@ -1,0 +1,11 @@
+; FUN_00629ce0  00629ce0
+00629ce0  PUSH EBP
+00629ce1  MOV EBP,ESP
+00629ce3  PUSH ECX
+00629ce4  MOV dword ptr [EBP + -0x4],ECX
+00629ce7  MOV EAX,dword ptr [EBP + -0x4]
+00629cea  MOV CL,byte ptr [EBP + 0x8]
+00629ced  MOV byte ptr [EAX + 0xd],CL
+00629cf0  MOV ESP,EBP
+00629cf2  POP EBP
+00629cf3  RET 0x4

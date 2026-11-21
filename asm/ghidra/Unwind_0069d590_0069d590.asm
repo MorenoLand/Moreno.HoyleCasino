@@ -1,0 +1,3 @@
+; Unwind@0069d590  0069d590
+0069d590  MOV ECX,dword ptr [EBP + -0x4c]
+0069d593  JMP 0x005e9e40

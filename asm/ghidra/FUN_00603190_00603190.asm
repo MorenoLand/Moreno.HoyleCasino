@@ -1,0 +1,17 @@
+; FUN_00603190  00603190
+00603190  PUSH EBP
+00603191  MOV EBP,ESP
+00603193  PUSH ECX
+00603194  MOV dword ptr [EBP + -0x4],ECX
+00603197  MOV EAX,dword ptr [EBP + -0x4]
+0060319a  MOV ECX,dword ptr [EBP + 0x8]
+0060319d  MOV dword ptr [EAX + 0x1dc],ECX
+006031a3  MOV EDX,dword ptr [EBP + -0x4]
+006031a6  MOV EAX,dword ptr [EBP + 0xc]
+006031a9  MOV dword ptr [EDX + 0x1e0],EAX
+006031af  MOV ECX,dword ptr [EBP + -0x4]
+006031b2  MOV EDX,dword ptr [EBP + 0x10]
+006031b5  MOV dword ptr [ECX + 0x1e4],EDX
+006031bb  MOV ESP,EBP
+006031bd  POP EBP
+006031be  RET 0xc

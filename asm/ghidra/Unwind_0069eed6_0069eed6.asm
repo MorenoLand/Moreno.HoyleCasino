@@ -1,0 +1,5 @@
+; Unwind@0069eed6  0069eed6
+0069eed6  MOV EAX,[0x00790720]
+0069eedb  AND EAX,0xfffffffe
+0069eede  MOV [0x00790720],EAX
+0069eee3  RET

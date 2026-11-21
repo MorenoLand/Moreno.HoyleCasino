@@ -1,0 +1,23 @@
+; FUN_0058fb40  0058fb40
+0058fb40  PUSH EBP
+0058fb41  MOV EBP,ESP
+0058fb43  SUB ESP,0x8
+0058fb46  MOV dword ptr [EBP + -0x4],ECX
+0058fb49  MOV EAX,dword ptr [EBP + -0x4]
+0058fb4c  MOV ECX,dword ptr [EAX + 0x1e0]
+0058fb52  MOV dword ptr [EBP + -0x8],ECX
+0058fb55  CMP dword ptr [EBP + -0x8],0x0
+0058fb59  JZ 0x0058fb63
+0058fb5b  CMP dword ptr [EBP + -0x8],0x1
+0058fb5f  JZ 0x0058fb73
+0058fb61  JMP 0x0058fb81
+0058fb63  MOV EDX,dword ptr [EBP + -0x4]
+0058fb66  MOV ECX,dword ptr [EDX + 0x1dc]
+0058fb6c  CALL 0x0058f800
+0058fb71  JMP 0x0058fb81
+0058fb73  MOV EAX,dword ptr [EBP + -0x4]
+0058fb76  MOV ECX,dword ptr [EAX + 0x1dc]
+0058fb7c  CALL 0x0058f8a0
+0058fb81  MOV ESP,EBP
+0058fb83  POP EBP
+0058fb84  RET

@@ -1,0 +1,27 @@
+; FUN_006612a0  006612a0
+006612a0  PUSH EBP
+006612a1  MOV EBP,ESP
+006612a3  PUSH ECX
+006612a4  MOV dword ptr [EBP + -0x4],ECX
+006612a7  MOV EAX,dword ptr [EBP + 0x14]
+006612aa  PUSH EAX
+006612ab  MOV CL,byte ptr [EBP + 0x10]
+006612ae  PUSH ECX
+006612af  MOV EDX,dword ptr [EBP + 0xc]
+006612b2  PUSH EDX
+006612b3  MOV EAX,dword ptr [EBP + 0x8]
+006612b6  PUSH EAX
+006612b7  MOV ECX,dword ptr [EBP + -0x4]
+006612ba  CALL 0x00605b90
+006612bf  MOV ECX,dword ptr [EBP + -0x4]
+006612c2  MOV dword ptr [ECX],0x6df2a4
+006612c8  MOV EDX,dword ptr [EBP + -0x4]
+006612cb  MOV dword ptr [EDX + 0x1fc],0x0
+006612d5  MOV EAX,dword ptr [EBP + -0x4]
+006612d8  MOV dword ptr [EAX + 0x200],0x0
+006612e2  MOV ECX,dword ptr [EBP + -0x4]
+006612e5  MOV dword ptr [ECX + 0x204],0x0
+006612ef  MOV EAX,dword ptr [EBP + -0x4]
+006612f2  MOV ESP,EBP
+006612f4  POP EBP
+006612f5  RET 0x10

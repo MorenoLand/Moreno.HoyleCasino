@@ -1,0 +1,30 @@
+; FUN_0065da10  0065da10
+0065da10  PUSH EBP
+0065da11  MOV EBP,ESP
+0065da13  SUB ESP,0x8
+0065da16  MOV dword ptr [EBP + -0x4],ECX
+0065da19  MOV ECX,dword ptr [0x016306a4]
+0065da1f  CALL 0x0065a6e0
+0065da24  MOV EAX,dword ptr [EBP + 0x8]
+0065da27  MOV dword ptr [EBP + -0x8],EAX
+0065da2a  CMP dword ptr [EBP + -0x8],0x0
+0065da2e  JL 0x0065da68
+0065da30  CMP dword ptr [EBP + -0x8],0x1
+0065da34  JLE 0x0065da38
+0065da36  JMP 0x0065da68
+0065da38  CMP dword ptr [EBP + 0x8],0x0
+0065da3c  SETZ CL
+0065da3f  PUSH ECX
+0065da40  MOV ECX,dword ptr [0x016306a4]
+0065da46  CALL 0x00659cc0
+0065da4b  MOV EDX,dword ptr [EBP + -0x4]
+0065da4e  MOV EAX,dword ptr [EDX + 0x1bc]
+0065da54  PUSH EAX
+0065da55  MOV ECX,dword ptr [0x016306a4]
+0065da5b  MOV EDX,dword ptr [ECX]
+0065da5d  MOV ECX,dword ptr [0x016306a4]
+0065da63  MOV EAX,dword ptr [EDX + 0x18]
+0065da66  CALL EAX
+0065da68  MOV ESP,EBP
+0065da6a  POP EBP
+0065da6b  RET 0x4

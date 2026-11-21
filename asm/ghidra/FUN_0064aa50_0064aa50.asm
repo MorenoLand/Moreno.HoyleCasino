@@ -1,0 +1,21 @@
+; FUN_0064aa50  0064aa50
+0064aa50  PUSH EBP
+0064aa51  MOV EBP,ESP
+0064aa53  PUSH ECX
+0064aa54  MOV dword ptr [EBP + -0x4],ECX
+0064aa57  MOV EAX,dword ptr [EBP + -0x4]
+0064aa5a  CMP dword ptr [EAX + 0x438],0x0
+0064aa61  JZ 0x0064aa8a
+0064aa63  MOV ECX,dword ptr [0x015e55e8]
+0064aa69  CALL 0x005f3e50
+0064aa6e  MOV ECX,dword ptr [EBP + -0x4]
+0064aa71  CMP EAX,dword ptr [ECX + 0x438]
+0064aa77  JL 0x0064aa8a
+0064aa79  MOV EDX,dword ptr [EBP + -0x4]
+0064aa7c  MOV dword ptr [EDX + 0x438],0x0
+0064aa86  MOV AL,0x1
+0064aa88  JMP 0x0064aa8c
+0064aa8a  XOR AL,AL
+0064aa8c  MOV ESP,EBP
+0064aa8e  POP EBP
+0064aa8f  RET

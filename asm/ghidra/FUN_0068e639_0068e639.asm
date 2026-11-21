@@ -1,0 +1,16 @@
+; FUN_0068e639  0068e639
+0068e639  MOV dword ptr [EBP + -0x4],0xffffffff
+0068e640  MOV EAX,dword ptr [EBP + -0x18]
+0068e643  MOV byte ptr [EAX + 0x34],0x1
+0068e647  MOV ECX,dword ptr [EBP + -0x18]
+0068e64a  MOV byte ptr [ECX + 0x35],0x0
+0068e64e  MOV EAX,dword ptr [EBP + -0x18]
+0068e651  MOV ECX,dword ptr [EBP + -0xc]
+0068e654  MOV dword ptr FS:[0x0],ECX
+0068e65b  POP ECX
+0068e65c  POP EDI
+0068e65d  POP ESI
+0068e65e  POP EBX
+0068e65f  MOV ESP,EBP
+0068e661  POP EBP
+0068e662  RET

@@ -1,0 +1,31 @@
+; FUN_00663180  00663180
+00663180  PUSH EBP
+00663181  MOV EBP,ESP
+00663183  SUB ESP,0x18
+00663186  MOV dword ptr [EBP + -0x14],ECX
+00663189  LEA EAX,[EBP + -0x10]
+0066318c  PUSH EAX
+0066318d  MOV ECX,dword ptr [EBP + -0x14]
+00663190  CALL 0x00663080
+00663195  MOV ECX,0xf5
+0066319a  SUB ECX,dword ptr [EBP + -0xc]
+0066319d  MOV dword ptr [EBP + -0x18],ECX
+006631a0  FILD dword ptr [EBP + -0x18]
+006631a3  FSTP float ptr [EBP + -0x4]
+006631a6  FLD float ptr [EBP + -0x4]
+006631a9  FMUL double ptr [0x006df890]
+006631af  FMUL float ptr [EBP + -0x4]
+006631b2  FSTP float ptr [EBP + -0x8]
+006631b5  FILD dword ptr [EBP + -0x10]
+006631b8  FADD float ptr [EBP + -0x8]
+006631bb  CALL 0x00686cc0
+006631c0  MOV dword ptr [EBP + -0x10],EAX
+006631c3  MOV EDX,dword ptr [EBP + 0x8]
+006631c6  MOV EAX,dword ptr [EBP + -0x10]
+006631c9  MOV dword ptr [EDX],EAX
+006631cb  MOV ECX,dword ptr [EBP + -0xc]
+006631ce  MOV dword ptr [EDX + 0x4],ECX
+006631d1  MOV EAX,dword ptr [EBP + 0x8]
+006631d4  MOV ESP,EBP
+006631d6  POP EBP
+006631d7  RET 0x4

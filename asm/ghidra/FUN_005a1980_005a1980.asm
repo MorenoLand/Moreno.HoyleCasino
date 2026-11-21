@@ -1,0 +1,21 @@
+; FUN_005a1980  005a1980
+005a1980  PUSH EBP
+005a1981  MOV EBP,ESP
+005a1983  PUSH ECX
+005a1984  MOV dword ptr [EBP + -0x4],ECX
+005a1987  CMP dword ptr [EBP + 0x8],0x0
+005a198b  JNZ 0x005a1991
+005a198d  XOR AL,AL
+005a198f  JMP 0x005a19bb
+005a1991  MOV EAX,dword ptr [EBP + 0x8]
+005a1994  MOV dword ptr [EAX + 0x4],0x0
+005a199b  MOV ECX,dword ptr [EBP + 0x8]
+005a199e  MOV dword ptr [ECX + 0x8],0x0
+005a19a5  MOV EDX,dword ptr [EBP + 0x8]
+005a19a8  MOV dword ptr [EDX + 0xc],0x0
+005a19af  MOV EAX,dword ptr [EBP + 0x8]
+005a19b2  MOV dword ptr [EAX + 0x10],0x0
+005a19b9  MOV AL,0x1
+005a19bb  MOV ESP,EBP
+005a19bd  POP EBP
+005a19be  RET 0x4

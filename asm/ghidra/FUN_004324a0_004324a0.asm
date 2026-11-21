@@ -1,0 +1,14 @@
+; FUN_004324a0  004324a0
+004324a0  PUSH EBP
+004324a1  MOV EBP,ESP
+004324a3  SUB ESP,0x14
+004324a6  MOV dword ptr [EBP + -0x14],ECX
+004324a9  MOV dword ptr [EBP + -0x10],0xe5
+004324b0  MOV dword ptr [EBP + -0xc],0x182
+004324b7  MOV dword ptr [EBP + -0x8],0x217
+004324be  MOV dword ptr [EBP + -0x4],0x217
+004324c5  MOV EAX,dword ptr [EBP + 0x8]
+004324c8  MOV EAX,dword ptr [EBP + EAX*0x4 + -0x10]
+004324cc  MOV ESP,EBP
+004324ce  POP EBP
+004324cf  RET 0x4

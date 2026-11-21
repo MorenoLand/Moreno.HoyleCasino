@@ -1,0 +1,35 @@
+; FUN_00459a10  00459a10
+00459a10  PUSH EBP
+00459a11  MOV EBP,ESP
+00459a13  SUB ESP,0x10
+00459a16  MOV dword ptr [EBP + -0xc],ECX
+00459a19  MOV EAX,[0x00790738]
+00459a1e  MOV ECX,dword ptr [EAX + 0x104]
+00459a24  MOV dword ptr [EBP + -0x4],ECX
+00459a27  MOV EDX,dword ptr [EBP + -0xc]
+00459a2a  MOV EAX,dword ptr [EBP + -0x4]
+00459a2d  CMP EAX,dword ptr [EDX + 0x194]
+00459a33  JNZ 0x00459a7f
+00459a35  MOV ECX,dword ptr [EBP + -0xc]
+00459a38  MOV EDX,dword ptr [ECX + 0x194]
+00459a3e  MOV EAX,[0x00790738]
+00459a43  MOV CL,byte ptr [EAX + EDX*0x1 + 0xe0]
+00459a4a  MOV byte ptr [EBP + -0x5],CL
+00459a4d  MOVZX EDX,byte ptr [EBP + -0x5]
+00459a51  TEST EDX,EDX
+00459a53  JZ 0x00459a7f
+00459a55  MOV EAX,dword ptr [EBP + -0xc]
+00459a58  MOV ECX,dword ptr [EAX + 0x194]
+00459a5e  MOV EDX,dword ptr [0x00790738]
+00459a64  MOV AL,byte ptr [EDX + ECX*0x1 + 0xe5]
+00459a6b  MOV byte ptr [EBP + -0x6],AL
+00459a6e  MOVZX ECX,byte ptr [EBP + -0x6]
+00459a72  TEST ECX,ECX
+00459a74  JNZ 0x00459a7f
+00459a76  MOV dword ptr [EBP + -0x10],0x1
+00459a7d  JMP 0x00459a86
+00459a7f  MOV dword ptr [EBP + -0x10],0x0
+00459a86  MOV AL,byte ptr [EBP + -0x10]
+00459a89  MOV ESP,EBP
+00459a8b  POP EBP
+00459a8c  RET

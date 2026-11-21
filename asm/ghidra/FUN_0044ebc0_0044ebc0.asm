@@ -1,0 +1,66 @@
+; FUN_0044ebc0  0044ebc0
+0044ebc0  PUSH EBP
+0044ebc1  MOV EBP,ESP
+0044ebc3  SUB ESP,0x20
+0044ebc6  MOV EAX,[0x00781870]
+0044ebcb  XOR EAX,EBP
+0044ebcd  MOV dword ptr [EBP + -0x4],EAX
+0044ebd0  MOV dword ptr [EBP + -0x1c],ECX
+0044ebd3  MOV byte ptr [EBP + -0x16],0x0
+0044ebd7  MOV byte ptr [EBP + -0x15],0x0
+0044ebdb  LEA EAX,[EBP + -0x14]
+0044ebde  PUSH EAX
+0044ebdf  MOV ECX,dword ptr [EBP + 0x8]
+0044ebe2  MOV EDX,dword ptr [0x00790738]
+0044ebe8  MOV AX,word ptr [EDX + ECX*0x2 + 0xac]
+0044ebf0  PUSH EAX
+0044ebf1  MOV ECX,dword ptr [EBP + 0x8]
+0044ebf4  MOV EDX,dword ptr [0x00790738]
+0044ebfa  MOV AX,word ptr [EDX + ECX*0x2 + 0xa2]
+0044ec02  PUSH EAX
+0044ec03  MOV ECX,dword ptr [EBP + -0x1c]
+0044ec06  CALL 0x00452fd0
+0044ec0b  LEA ECX,[EBP + -0xc]
+0044ec0e  PUSH ECX
+0044ec0f  MOV EDX,dword ptr [EBP + 0x8]
+0044ec12  MOV EAX,[0x00790738]
+0044ec17  MOV CX,word ptr [EAX + EDX*0x2 + 0xac]
+0044ec1f  PUSH ECX
+0044ec20  MOV EDX,dword ptr [EBP + 0x8]
+0044ec23  MOV EAX,[0x00790738]
+0044ec28  MOV CX,word ptr [EAX + EDX*0x2 + 0xa2]
+0044ec30  PUSH ECX
+0044ec31  MOV EDX,dword ptr [EBP + 0x8]
+0044ec34  PUSH EDX
+0044ec35  MOV ECX,dword ptr [EBP + -0x1c]
+0044ec38  CALL 0x004530b0
+0044ec3d  MOVSX EAX,byte ptr [EBP + -0x14]
+0044ec41  CMP EAX,0x1
+0044ec44  JNZ 0x0044ec53
+0044ec46  MOVSX ECX,byte ptr [EBP + -0x11]
+0044ec4a  CMP ECX,0xc
+0044ec4d  JG 0x0044ec53
+0044ec4f  MOV byte ptr [EBP + -0x16],0x1
+0044ec53  MOVSX EDX,byte ptr [EBP + -0xc]
+0044ec57  CMP EDX,0x2
+0044ec5a  JG 0x0044ec69
+0044ec5c  MOVSX EAX,byte ptr [EBP + -0xb]
+0044ec60  CMP EAX,0xa
+0044ec63  JGE 0x0044ec69
+0044ec65  MOV byte ptr [EBP + -0x15],0x1
+0044ec69  MOVZX ECX,byte ptr [EBP + -0x16]
+0044ec6d  TEST ECX,ECX
+0044ec6f  JZ 0x0044ec82
+0044ec71  MOVZX EDX,byte ptr [EBP + -0x15]
+0044ec75  TEST EDX,EDX
+0044ec77  JZ 0x0044ec82
+0044ec79  MOV dword ptr [EBP + -0x20],0x1
+0044ec80  JMP 0x0044ec89
+0044ec82  MOV dword ptr [EBP + -0x20],0x0
+0044ec89  MOV AL,byte ptr [EBP + -0x20]
+0044ec8c  MOV ECX,dword ptr [EBP + -0x4]
+0044ec8f  XOR ECX,EBP
+0044ec91  CALL 0x00686d72
+0044ec96  MOV ESP,EBP
+0044ec98  POP EBP
+0044ec99  RET 0x4

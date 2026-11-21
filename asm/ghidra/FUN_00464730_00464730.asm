@@ -1,0 +1,20 @@
+; FUN_00464730  00464730
+00464730  PUSH EBP
+00464731  MOV EBP,ESP
+00464733  PUSH ECX
+00464734  MOV dword ptr [EBP + -0x4],ECX
+00464737  MOV EAX,dword ptr [EBP + -0x4]
+0046473a  MOV word ptr [EAX],0x0
+0046473f  MOV ECX,dword ptr [EBP + -0x4]
+00464742  MOV word ptr [ECX + 0x2],0x0
+00464748  MOV EDX,dword ptr [EBP + -0x4]
+0046474b  MOV word ptr [EDX + 0x4],0x0
+00464751  MOV EAX,dword ptr [EBP + -0x4]
+00464754  MOV word ptr [EAX + 0x6],0x0
+0046475a  MOV ECX,dword ptr [EBP + -0x4]
+0046475d  MOV byte ptr [ECX + 0x8],0x0
+00464761  MOV EDX,dword ptr [EBP + -0x4]
+00464764  MOV byte ptr [EDX + 0x9],0x0
+00464768  MOV ESP,EBP
+0046476a  POP EBP
+0046476b  RET

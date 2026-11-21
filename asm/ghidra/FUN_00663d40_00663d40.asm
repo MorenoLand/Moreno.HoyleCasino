@@ -1,0 +1,71 @@
+; FUN_00663d40  00663d40
+00663d40  PUSH EBP
+00663d41  MOV EBP,ESP
+00663d43  SUB ESP,0x128
+00663d49  MOV EAX,[0x00781870]
+00663d4e  XOR EAX,EBP
+00663d50  MOV dword ptr [EBP + -0x4],EAX
+00663d53  MOV dword ptr [EBP + 0xfffffedc],ECX
+00663d59  MOV EAX,dword ptr [EBP + 0x8]
+00663d5c  PUSH EAX
+00663d5d  MOV ECX,dword ptr [EBP + 0xfffffedc]
+00663d63  ADD ECX,0x4
+00663d66  CALL 0x0060ca40
+00663d6b  MOV dword ptr [EBP + 0xfffffee8],EAX
+00663d71  MOV ECX,dword ptr [EBP + 0xfffffee8]
+00663d77  ADD ECX,0x4
+00663d7a  PUSH ECX
+00663d7b  PUSH 0x6d61f8
+00663d80  PUSH 0x795fc0
+00663d85  PUSH 0x6de52c
+00663d8a  LEA EDX,[EBP + 0xfffffef0]
+00663d90  PUSH EDX
+00663d91  CALL dword ptr [0x006b2220]
+00663d97  ADD ESP,0x14
+00663d9a  MOV EAX,dword ptr [EBP + 0xfffffee8]
+00663da0  PUSH EAX
+00663da1  MOV ECX,dword ptr [EBP + 0xfffffedc]
+00663da7  ADD ECX,0x4
+00663daa  CALL 0x0060c890
+00663daf  MOV ECX,dword ptr [EBP + 0xfffffee8]
+00663db5  MOV dword ptr [EBP + 0xfffffee0],ECX
+00663dbb  MOV EDX,dword ptr [EBP + 0xfffffee0]
+00663dc1  MOV dword ptr [EBP + 0xfffffee4],EDX
+00663dc7  CMP dword ptr [EBP + 0xfffffee4],0x0
+00663dce  JZ 0x00663dec
+00663dd0  PUSH 0x1
+00663dd2  MOV EAX,dword ptr [EBP + 0xfffffee4]
+00663dd8  MOV EDX,dword ptr [EAX]
+00663dda  MOV ECX,dword ptr [EBP + 0xfffffee4]
+00663de0  MOV EAX,dword ptr [EDX]
+00663de2  CALL EAX
+00663de4  MOV dword ptr [EBP + 0xfffffed8],EAX
+00663dea  JMP 0x00663df6
+00663dec  MOV dword ptr [EBP + 0xfffffed8],0x0
+00663df6  LEA ECX,[EBP + 0xfffffef0]
+00663dfc  PUSH ECX
+00663dfd  CALL dword ptr [0x006b22a0]
+00663e03  ADD ESP,0x4
+00663e06  PUSH 0x6df8cc
+00663e0b  LEA EDX,[EBP + 0xfffffef0]
+00663e11  PUSH EDX
+00663e12  CALL dword ptr [0x006b22fc]
+00663e18  ADD ESP,0x8
+00663e1b  MOV dword ptr [EBP + 0xfffffeec],EAX
+00663e21  CMP dword ptr [EBP + 0xfffffeec],0x0
+00663e28  JZ 0x00663e4e
+00663e2a  PUSH 0x6df8c4
+00663e2f  MOV EAX,dword ptr [EBP + 0xfffffeec]
+00663e35  PUSH EAX
+00663e36  CALL 0x00686d8e
+00663e3b  ADD ESP,0x8
+00663e3e  LEA ECX,[EBP + 0xfffffef0]
+00663e44  PUSH ECX
+00663e45  CALL dword ptr [0x006b22a0]
+00663e4b  ADD ESP,0x4
+00663e4e  MOV ECX,dword ptr [EBP + -0x4]
+00663e51  XOR ECX,EBP
+00663e53  CALL 0x00686d72
+00663e58  MOV ESP,EBP
+00663e5a  POP EBP
+00663e5b  RET 0x4

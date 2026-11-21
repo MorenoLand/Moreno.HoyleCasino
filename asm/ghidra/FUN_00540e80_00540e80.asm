@@ -1,0 +1,27 @@
+; FUN_00540e80  00540e80
+00540e80  PUSH EBP
+00540e81  MOV EBP,ESP
+00540e83  SUB ESP,0xc
+00540e86  MOV dword ptr [EBP + -0xc],ECX
+00540e89  MOV EAX,dword ptr [EBP + 0x8]
+00540e8c  IMUL EAX,EAX,0x3
+00540e8f  MOV dword ptr [EBP + -0x8],EAX
+00540e92  MOV dword ptr [EBP + -0x4],0x0
+00540e99  JMP 0x00540ea4
+00540e9b  MOV ECX,dword ptr [EBP + -0x4]
+00540e9e  ADD ECX,0x1
+00540ea1  MOV dword ptr [EBP + -0x4],ECX
+00540ea4  CMP dword ptr [EBP + -0x4],0x3
+00540ea8  JGE 0x00540ec0
+00540eaa  MOV EDX,dword ptr [EBP + -0x8]
+00540ead  ADD EDX,dword ptr [EBP + -0x4]
+00540eb0  MOV EAX,dword ptr [EBP + -0xc]
+00540eb3  CMP dword ptr [EAX + EDX*0x8 + 0x38],0x0
+00540eb8  JLE 0x00540ebe
+00540eba  MOV AL,0x1
+00540ebc  JMP 0x00540ec2
+00540ebe  JMP 0x00540e9b
+00540ec0  XOR AL,AL
+00540ec2  MOV ESP,EBP
+00540ec4  POP EBP
+00540ec5  RET 0x4

@@ -1,0 +1,64 @@
+; FUN_00407d00  00407d00
+00407d00  PUSH EBP
+00407d01  MOV EBP,ESP
+00407d03  SUB ESP,0x30
+00407d06  MOV dword ptr [EBP + -0x30],ECX
+00407d09  MOV dword ptr [EBP + -0x14],0x2
+00407d10  MOV dword ptr [EBP + -0x10],0x0
+00407d17  MOV dword ptr [EBP + -0xc],0x1
+00407d1e  MOV dword ptr [EBP + -0x8],0x3
+00407d25  MOV dword ptr [EBP + -0x4],0x0
+00407d2c  JMP 0x00407d37
+00407d2e  MOV EAX,dword ptr [EBP + -0x4]
+00407d31  ADD EAX,0x1
+00407d34  MOV dword ptr [EBP + -0x4],EAX
+00407d37  CMP dword ptr [EBP + -0x4],0x4
+00407d3b  JGE 0x00407dcd
+00407d41  MOV ECX,dword ptr [EBP + -0x4]
+00407d44  MOV EDX,dword ptr [EBP + ECX*0x4 + -0x14]
+00407d48  PUSH EDX
+00407d49  CALL 0x005dcb00
+00407d4e  ADD ESP,0x4
+00407d51  MOV dword ptr [EBP + -0x1c],EAX
+00407d54  MOV ECX,dword ptr [EBP + -0x1c]
+00407d57  CALL 0x0063aac0
+00407d5c  MOV EAX,dword ptr [EAX]
+00407d5e  MOV dword ptr [EBP + -0x18],EAX
+00407d61  XOR ECX,ECX
+00407d63  CMP dword ptr [EBP + -0x18],0x0
+00407d67  SETZ CL
+00407d6a  MOVZX EDX,CL
+00407d6d  TEST EDX,EDX
+00407d6f  JNZ 0x00407dc8
+00407d71  MOV EAX,dword ptr [EBP + -0x4]
+00407d74  MOV ECX,dword ptr [EBP + EAX*0x4 + -0x14]
+00407d78  PUSH ECX
+00407d79  CALL 0x005dcb00
+00407d7e  ADD ESP,0x4
+00407d81  MOV dword ptr [EBP + -0x20],EAX
+00407d84  MOV EDX,dword ptr [EBP + -0x20]
+00407d87  MOV AL,byte ptr [EDX + 0x4a0]
+00407d8d  MOV byte ptr [EBP + -0x21],AL
+00407d90  MOVZX ECX,byte ptr [EBP + -0x21]
+00407d94  TEST ECX,ECX
+00407d96  JNZ 0x00407dc8
+00407d98  MOV EDX,dword ptr [EBP + -0x4]
+00407d9b  MOV EAX,dword ptr [EBP + EDX*0x4 + -0x14]
+00407d9f  PUSH EAX
+00407da0  CALL 0x005dcb00
+00407da5  ADD ESP,0x4
+00407da8  MOV dword ptr [EBP + -0x28],EAX
+00407dab  MOV ECX,dword ptr [EBP + -0x28]
+00407dae  MOV DL,byte ptr [ECX + 0x4a1]
+00407db4  MOV byte ptr [EBP + -0x29],DL
+00407db7  MOVZX EAX,byte ptr [EBP + -0x29]
+00407dbb  TEST EAX,EAX
+00407dbd  JNZ 0x00407dc8
+00407dbf  MOV ECX,dword ptr [EBP + -0x4]
+00407dc2  MOV EAX,dword ptr [EBP + ECX*0x4 + -0x14]
+00407dc6  JMP 0x00407dd0
+00407dc8  JMP 0x00407d2e
+00407dcd  OR EAX,0xffffffff
+00407dd0  MOV ESP,EBP
+00407dd2  POP EBP
+00407dd3  RET

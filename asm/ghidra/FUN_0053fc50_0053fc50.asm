@@ -1,0 +1,15 @@
+; FUN_0053fc50  0053fc50
+0053fc50  PUSH EBP
+0053fc51  MOV EBP,ESP
+0053fc53  PUSH ECX
+0053fc54  MOV dword ptr [EBP + -0x4],ECX
+0053fc57  MOV ECX,dword ptr [EBP + -0x4]
+0053fc5a  CALL 0x005e9e20
+0053fc5f  MOV EAX,dword ptr [EBP + -0x4]
+0053fc62  MOV dword ptr [EAX],0x6b3374
+0053fc68  MOV ECX,dword ptr [EBP + -0x4]
+0053fc6b  MOV dword ptr [ECX],0x6c620c
+0053fc71  MOV EAX,dword ptr [EBP + -0x4]
+0053fc74  MOV ESP,EBP
+0053fc76  POP EBP
+0053fc77  RET

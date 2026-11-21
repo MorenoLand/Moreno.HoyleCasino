@@ -1,0 +1,11 @@
+; FUN_004c70b0  004c70b0
+004c70b0  PUSH EBP
+004c70b1  MOV EBP,ESP
+004c70b3  PUSH ECX
+004c70b4  MOV dword ptr [EBP + -0x4],ECX
+004c70b7  MOV EAX,dword ptr [EBP + -0x4]
+004c70ba  MOV CL,byte ptr [EBP + 0x8]
+004c70bd  MOV byte ptr [EAX + 0x84],CL
+004c70c3  MOV ESP,EBP
+004c70c5  POP EBP
+004c70c6  RET 0x4

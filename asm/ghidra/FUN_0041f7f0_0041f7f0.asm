@@ -1,0 +1,15 @@
+; FUN_0041f7f0  0041f7f0
+0041f7f0  PUSH EBP
+0041f7f1  MOV EBP,ESP
+0041f7f3  SUB ESP,0x18
+0041f7f6  MOV dword ptr [EBP + -0x18],ECX
+0041f7f9  MOV dword ptr [EBP + -0x14],0x310e9a
+0041f800  MOV dword ptr [EBP + -0x10],0x310e9b
+0041f807  MOV dword ptr [EBP + -0xc],0x310e99
+0041f80e  MOV dword ptr [EBP + -0x8],0x310e9c
+0041f815  MOV dword ptr [EBP + -0x4],0x310e9d
+0041f81c  MOV EAX,dword ptr [EBP + 0x8]
+0041f81f  MOV EAX,dword ptr [EBP + EAX*0x4 + -0x14]
+0041f823  MOV ESP,EBP
+0041f825  POP EBP
+0041f826  RET 0x4

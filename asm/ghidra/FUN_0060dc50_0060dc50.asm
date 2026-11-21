@@ -1,0 +1,29 @@
+; FUN_0060dc50  0060dc50
+0060dc50  PUSH EBP
+0060dc51  MOV EBP,ESP
+0060dc53  CMP dword ptr [0x015e5190],0x0
+0060dc5a  JZ 0x0060dca6
+0060dc5c  MOV EAX,[0x015e5190]
+0060dc61  MOV ECX,dword ptr [EAX]
+0060dc63  MOV EDX,dword ptr [0x015e5190]
+0060dc69  PUSH EDX
+0060dc6a  MOV EAX,dword ptr [ECX + 0x4c]
+0060dc6d  CALL EAX
+0060dc6f  PUSH 0x8
+0060dc71  MOV ECX,dword ptr [EBP + 0x8]
+0060dc74  PUSH ECX
+0060dc75  MOV EDX,dword ptr [0x015e5190]
+0060dc7b  MOV EAX,dword ptr [EDX]
+0060dc7d  MOV ECX,dword ptr [0x015e5190]
+0060dc83  PUSH ECX
+0060dc84  MOV EDX,dword ptr [EAX + 0x50]
+0060dc87  CALL EDX
+0060dc89  MOV EAX,[0x015e5190]
+0060dc8e  MOV ECX,dword ptr [EAX]
+0060dc90  MOV EDX,dword ptr [0x015e5190]
+0060dc96  PUSH EDX
+0060dc97  MOV EAX,dword ptr [ECX + 0x8]
+0060dc9a  CALL EAX
+0060dc9c  MOV dword ptr [0x015e5190],0x0
+0060dca6  POP EBP
+0060dca7  RET

@@ -1,0 +1,18 @@
+; FUN_00577d40  00577d40
+00577d40  PUSH EBP
+00577d41  MOV EBP,ESP
+00577d43  PUSH ECX
+00577d44  MOV dword ptr [EBP + -0x4],ECX
+00577d47  PUSH 0x0
+00577d49  MOV ECX,dword ptr [EBP + -0x4]
+00577d4c  CALL 0x005fc0d0
+00577d51  MOV EAX,dword ptr [EBP + -0x4]
+00577d54  MOV dword ptr [EAX],0x6cb150
+00577d5a  MOV ECX,dword ptr [EBP + -0x4]
+00577d5d  MOV dword ptr [ECX + 0x20],0x0
+00577d64  MOV EDX,dword ptr [EBP + -0x4]
+00577d67  MOV dword ptr [EDX + 0x24],0x0
+00577d6e  MOV EAX,dword ptr [EBP + -0x4]
+00577d71  MOV ESP,EBP
+00577d73  POP EBP
+00577d74  RET

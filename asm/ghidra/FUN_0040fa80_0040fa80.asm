@@ -1,0 +1,33 @@
+; FUN_0040fa80  0040fa80
+0040fa80  PUSH EBP
+0040fa81  MOV EBP,ESP
+0040fa83  SUB ESP,0x8
+0040fa86  MOV dword ptr [EBP + -0x8],ECX
+0040fa89  MOV EAX,dword ptr [EBP + 0xc]
+0040fa8c  PUSH EAX
+0040fa8d  MOV ECX,dword ptr [EBP + 0x8]
+0040fa90  PUSH ECX
+0040fa91  MOV ECX,dword ptr [EBP + -0x8]
+0040fa94  CALL 0x0040f4a0
+0040fa99  MOV dword ptr [EBP + -0x4],EAX
+0040fa9c  PUSH 0x2
+0040fa9e  CALL 0x0062fbf0
+0040faa3  ADD ESP,0x4
+0040faa6  TEST EAX,EAX
+0040faa8  JZ 0x0040fabe
+0040faaa  PUSH 0x3
+0040faac  CALL 0x0062fbf0
+0040fab1  ADD ESP,0x4
+0040fab4  MOV EDX,dword ptr [EBP + -0x4]
+0040fab7  SUB EDX,EAX
+0040fab9  MOV dword ptr [EBP + -0x4],EDX
+0040fabc  JMP 0x0040face
+0040fabe  PUSH 0x3
+0040fac0  CALL 0x0062fbf0
+0040fac5  ADD ESP,0x4
+0040fac8  ADD EAX,dword ptr [EBP + -0x4]
+0040facb  MOV dword ptr [EBP + -0x4],EAX
+0040face  MOV EAX,dword ptr [EBP + -0x4]
+0040fad1  MOV ESP,EBP
+0040fad3  POP EBP
+0040fad4  RET 0x8

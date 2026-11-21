@@ -1,0 +1,13 @@
+; FUN_004d66f0  004d66f0
+004d66f0  PUSH EBP
+004d66f1  MOV EBP,ESP
+004d66f3  SUB ESP,0x8
+004d66f6  MOV dword ptr [EBP + -0x4],ECX
+004d66f9  MOV EAX,dword ptr [EBP + -0x4]
+004d66fc  MOVSX ECX,word ptr [EAX + 0x1ba]
+004d6703  MOV dword ptr [EBP + -0x8],ECX
+004d6706  FILD dword ptr [EBP + -0x8]
+004d6709  FDIV double ptr [0x006b4b00]
+004d670f  MOV ESP,EBP
+004d6711  POP EBP
+004d6712  RET

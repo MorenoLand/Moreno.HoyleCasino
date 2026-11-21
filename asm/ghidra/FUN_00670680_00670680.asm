@@ -1,0 +1,25 @@
+; FUN_00670680  00670680
+00670680  PUSH EBP
+00670681  MOV EBP,ESP
+00670683  PUSH ECX
+00670684  MOV dword ptr [EBP + -0x4],ECX
+00670687  MOV ECX,dword ptr [EBP + -0x4]
+0067068a  CALL 0x005f5bf0
+0067068f  MOV EAX,dword ptr [EBP + -0x4]
+00670692  MOV dword ptr [EAX],0x6e0f54
+00670698  MOV ECX,dword ptr [EBP + -0x4]
+0067069b  MOV dword ptr [ECX + 0x188],0x0
+006706a5  MOV EDX,dword ptr [EBP + -0x4]
+006706a8  MOV dword ptr [EDX + 0x18c],0x0
+006706b2  MOV EAX,dword ptr [EBP + -0x4]
+006706b5  MOV dword ptr [EAX + 0x194],0x0
+006706bf  MOV ECX,dword ptr [EBP + -0x4]
+006706c2  MOV dword ptr [ECX + 0x190],0x0
+006706cc  MOV EDX,dword ptr [EBP + -0x4]
+006706cf  MOV byte ptr [EDX + 0x184],0x0
+006706d6  MOV EAX,dword ptr [EBP + -0x4]
+006706d9  MOV dword ptr [EAX + 0x198],0x0
+006706e3  MOV EAX,dword ptr [EBP + -0x4]
+006706e6  MOV ESP,EBP
+006706e8  POP EBP
+006706e9  RET

@@ -1,0 +1,21 @@
+; FUN_00685dd0  00685dd0
+00685dd0  MOV ECX,dword ptr [ESP + 0x4]
+00685dd4  MOV EAX,dword ptr [ECX + 0x4]
+00685dd7  TEST EAX,EAX
+00685dd9  JZ 0x00685dfd
+00685ddb  MOV EAX,dword ptr [ESP + 0x8]
+00685ddf  TEST EAX,EAX
+00685de1  JGE 0x00685df5
+00685de3  CMP dword ptr [ECX + 0x58],0x3
+00685de7  JL 0x00685dfd
+00685de9  MOV EAX,dword ptr [ECX + 0x60]
+00685dec  MOV EDX,dword ptr [ECX + 0x48]
+00685def  SHL EAX,0x5
+00685df2  ADD EAX,EDX
+00685df4  RET
+00685df5  CMP EAX,dword ptr [ECX + 0x34]
+00685df8  JL 0x00685dec
+00685dfa  XOR EAX,EAX
+00685dfc  RET
+00685dfd  MOV EAX,dword ptr [ECX + 0x48]
+00685e00  RET

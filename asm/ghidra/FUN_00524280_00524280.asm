@@ -1,0 +1,40 @@
+; FUN_00524280  00524280
+00524280  PUSH EBP
+00524281  MOV EBP,ESP
+00524283  PUSH ECX
+00524284  MOV dword ptr [EBP + -0x4],ECX
+00524287  PUSH 0x0
+00524289  MOV EAX,dword ptr [EBP + 0x10]
+0052428c  PUSH EAX
+0052428d  MOV ECX,dword ptr [EBP + 0xc]
+00524290  PUSH ECX
+00524291  MOV EDX,dword ptr [EBP + 0x8]
+00524294  PUSH EDX
+00524295  MOV ECX,dword ptr [EBP + -0x4]
+00524298  CALL 0x00606e60
+0052429d  MOV EAX,dword ptr [EBP + -0x4]
+005242a0  MOV dword ptr [EAX],0x6c2ff0
+005242a6  MOV ECX,dword ptr [EBP + -0x4]
+005242a9  FLDZ
+005242ab  FSTP float ptr [ECX + 0x30]
+005242ae  MOV EDX,dword ptr [EBP + -0x4]
+005242b1  FLD1
+005242b3  FSTP float ptr [EDX + 0x34]
+005242b6  MOV EAX,dword ptr [EBP + -0x4]
+005242b9  MOV ECX,dword ptr [EBP + 0x14]
+005242bc  MOV dword ptr [EAX + 0x2c],ECX
+005242bf  MOV EDX,dword ptr [EBP + -0x4]
+005242c2  MOV dword ptr [EDX + 0x38],0xa
+005242c9  MOV EAX,dword ptr [EBP + -0x4]
+005242cc  FILD dword ptr [EAX + 0x38]
+005242cf  FLD1
+005242d1  FDIVRP
+005242d3  MOV ECX,dword ptr [EBP + -0x4]
+005242d6  FSTP float ptr [ECX + 0x3c]
+005242d9  MOV EDX,dword ptr [EBP + -0x4]
+005242dc  FLD1
+005242de  FSTP float ptr [EDX + 0x40]
+005242e1  MOV EAX,dword ptr [EBP + -0x4]
+005242e4  MOV ESP,EBP
+005242e6  POP EBP
+005242e7  RET 0x10

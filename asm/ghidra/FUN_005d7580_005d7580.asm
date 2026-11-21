@@ -1,0 +1,17 @@
+; FUN_005d7580  005d7580
+005d7580  PUSH EBP
+005d7581  MOV EBP,ESP
+005d7583  PUSH ECX
+005d7584  MOV dword ptr [EBP + -0x4],ECX
+005d7587  MOV ECX,dword ptr [EBP + -0x4]
+005d758a  CALL 0x005f5bf0
+005d758f  MOV EAX,dword ptr [EBP + -0x4]
+005d7592  MOV dword ptr [EAX],0x6d3eb4
+005d7598  MOV ECX,dword ptr [EBP + -0x4]
+005d759b  MOV dword ptr [ECX + 0x184],0x0
+005d75a5  MOV EDX,dword ptr [EBP + -0x4]
+005d75a8  MOV dword ptr [EDX + 0x188],0x0
+005d75b2  MOV EAX,dword ptr [EBP + -0x4]
+005d75b5  MOV ESP,EBP
+005d75b7  POP EBP
+005d75b8  RET

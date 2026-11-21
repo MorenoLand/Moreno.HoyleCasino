@@ -1,0 +1,64 @@
+; FUN_0063d4b0  0063d4b0
+0063d4b0  PUSH EBP
+0063d4b1  MOV EBP,ESP
+0063d4b3  SUB ESP,0x8
+0063d4b6  MOV dword ptr [EBP + -0x8],ECX
+0063d4b9  CMP dword ptr [EBP + 0x8],0x0
+0063d4bd  JZ 0x0063d563
+0063d4c3  MOV EAX,dword ptr [EBP + 0x8]
+0063d4c6  CMP dword ptr [EAX + 0x8],0x0
+0063d4ca  JZ 0x0063d4e8
+0063d4cc  MOV ECX,dword ptr [EBP + 0x8]
+0063d4cf  MOV EDX,dword ptr [ECX + 0x8]
+0063d4d2  PUSH EDX
+0063d4d3  PUSH 0x0
+0063d4d5  MOV EAX,dword ptr [EBP + 0xc]
+0063d4d8  PUSH EAX
+0063d4d9  MOV ECX,dword ptr [EBP + -0x8]
+0063d4dc  CALL 0x005fb480
+0063d4e1  MOV ECX,EAX
+0063d4e3  CALL 0x005ff5a0
+0063d4e8  MOV ECX,dword ptr [EBP + 0x8]
+0063d4eb  CMP dword ptr [ECX + 0xc],0x0
+0063d4ef  JZ 0x0063d50d
+0063d4f1  MOV EDX,dword ptr [EBP + 0x8]
+0063d4f4  MOV EAX,dword ptr [EDX + 0xc]
+0063d4f7  PUSH EAX
+0063d4f8  PUSH 0x0
+0063d4fa  MOV ECX,dword ptr [EBP + 0xc]
+0063d4fd  PUSH ECX
+0063d4fe  MOV ECX,dword ptr [EBP + -0x8]
+0063d501  CALL 0x005fb480
+0063d506  MOV ECX,EAX
+0063d508  CALL 0x005ff5a0
+0063d50d  MOV EDX,dword ptr [EBP + 0x8]
+0063d510  CMP dword ptr [EDX + 0x14],0x0
+0063d514  JZ 0x0063d563
+0063d516  MOV dword ptr [EBP + -0x4],0x0
+0063d51d  JMP 0x0063d528
+0063d51f  MOV EAX,dword ptr [EBP + -0x4]
+0063d522  ADD EAX,0x1
+0063d525  MOV dword ptr [EBP + -0x4],EAX
+0063d528  CMP dword ptr [EBP + -0x4],0x1b
+0063d52c  JGE 0x0063d563
+0063d52e  MOV ECX,dword ptr [EBP + 0x8]
+0063d531  MOV EDX,dword ptr [ECX + 0x14]
+0063d534  MOV EAX,dword ptr [EBP + -0x4]
+0063d537  CMP dword ptr [EDX + EAX*0x4 + 0x5c],0x0
+0063d53c  JZ 0x0063d561
+0063d53e  MOV ECX,dword ptr [EBP + 0x8]
+0063d541  MOV EDX,dword ptr [ECX + 0x14]
+0063d544  MOV EAX,dword ptr [EBP + -0x4]
+0063d547  MOV ECX,dword ptr [EDX + EAX*0x4 + 0x5c]
+0063d54b  PUSH ECX
+0063d54c  PUSH 0x0
+0063d54e  MOV EDX,dword ptr [EBP + 0xc]
+0063d551  PUSH EDX
+0063d552  MOV ECX,dword ptr [EBP + -0x8]
+0063d555  CALL 0x005fb480
+0063d55a  MOV ECX,EAX
+0063d55c  CALL 0x005ff5a0
+0063d561  JMP 0x0063d51f
+0063d563  MOV ESP,EBP
+0063d565  POP EBP
+0063d566  RET 0x8

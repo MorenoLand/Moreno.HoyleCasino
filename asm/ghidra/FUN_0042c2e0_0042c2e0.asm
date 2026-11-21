@@ -1,0 +1,18 @@
+; FUN_0042c2e0  0042c2e0
+0042c2e0  PUSH EBP
+0042c2e1  MOV EBP,ESP
+0042c2e3  PUSH ECX
+0042c2e4  MOV dword ptr [EBP + -0x4],ECX
+0042c2e7  MOV EAX,dword ptr [EBP + 0xc]
+0042c2ea  PUSH EAX
+0042c2eb  MOV ECX,dword ptr [EBP + 0x8]
+0042c2ee  PUSH ECX
+0042c2ef  MOV EDX,dword ptr [EBP + -0x4]
+0042c2f2  MOV EAX,dword ptr [EDX]
+0042c2f4  MOV ECX,dword ptr [EBP + -0x4]
+0042c2f7  MOV EDX,dword ptr [EAX + 0xd4]
+0042c2fd  CALL EDX
+0042c2ff  SUB EAX,0x3
+0042c302  MOV ESP,EBP
+0042c304  POP EBP
+0042c305  RET 0x8

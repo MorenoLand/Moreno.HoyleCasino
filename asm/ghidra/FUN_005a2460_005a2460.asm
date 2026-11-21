@@ -1,0 +1,64 @@
+; FUN_005a2460  005a2460
+005a2460  PUSH EBP
+005a2461  MOV EBP,ESP
+005a2463  SUB ESP,0x30
+005a2466  MOV dword ptr [EBP + -0x30],ECX
+005a2469  MOV dword ptr [EBP + -0x10],0x2
+005a2470  MOV dword ptr [EBP + -0xc],0x0
+005a2477  MOV dword ptr [EBP + -0x8],0x1
+005a247e  MOV dword ptr [EBP + -0x4],0x3
+005a2485  MOV dword ptr [EBP + -0x14],0x0
+005a248c  JMP 0x005a2497
+005a248e  MOV EAX,dword ptr [EBP + -0x14]
+005a2491  ADD EAX,0x1
+005a2494  MOV dword ptr [EBP + -0x14],EAX
+005a2497  CMP dword ptr [EBP + -0x14],0x4
+005a249b  JGE 0x005a252d
+005a24a1  MOV ECX,dword ptr [EBP + -0x14]
+005a24a4  MOV EDX,dword ptr [EBP + ECX*0x4 + -0x10]
+005a24a8  PUSH EDX
+005a24a9  CALL 0x005dcb00
+005a24ae  ADD ESP,0x4
+005a24b1  MOV dword ptr [EBP + -0x1c],EAX
+005a24b4  MOV ECX,dword ptr [EBP + -0x1c]
+005a24b7  CALL 0x0063aac0
+005a24bc  MOV EAX,dword ptr [EAX]
+005a24be  MOV dword ptr [EBP + -0x18],EAX
+005a24c1  XOR ECX,ECX
+005a24c3  CMP dword ptr [EBP + -0x18],0x0
+005a24c7  SETZ CL
+005a24ca  MOVZX EDX,CL
+005a24cd  TEST EDX,EDX
+005a24cf  JNZ 0x005a2528
+005a24d1  MOV EAX,dword ptr [EBP + -0x14]
+005a24d4  MOV ECX,dword ptr [EBP + EAX*0x4 + -0x10]
+005a24d8  PUSH ECX
+005a24d9  CALL 0x005dcb00
+005a24de  ADD ESP,0x4
+005a24e1  MOV dword ptr [EBP + -0x20],EAX
+005a24e4  MOV EDX,dword ptr [EBP + -0x20]
+005a24e7  MOV AL,byte ptr [EDX + 0x4a0]
+005a24ed  MOV byte ptr [EBP + -0x21],AL
+005a24f0  MOVZX ECX,byte ptr [EBP + -0x21]
+005a24f4  TEST ECX,ECX
+005a24f6  JNZ 0x005a2528
+005a24f8  MOV EDX,dword ptr [EBP + -0x14]
+005a24fb  MOV EAX,dword ptr [EBP + EDX*0x4 + -0x10]
+005a24ff  PUSH EAX
+005a2500  CALL 0x005dcb00
+005a2505  ADD ESP,0x4
+005a2508  MOV dword ptr [EBP + -0x28],EAX
+005a250b  MOV ECX,dword ptr [EBP + -0x28]
+005a250e  MOV DL,byte ptr [ECX + 0x4a1]
+005a2514  MOV byte ptr [EBP + -0x29],DL
+005a2517  MOVZX EAX,byte ptr [EBP + -0x29]
+005a251b  TEST EAX,EAX
+005a251d  JNZ 0x005a2528
+005a251f  MOV ECX,dword ptr [EBP + -0x14]
+005a2522  MOV EAX,dword ptr [EBP + ECX*0x4 + -0x10]
+005a2526  JMP 0x005a2530
+005a2528  JMP 0x005a248e
+005a252d  OR EAX,0xffffffff
+005a2530  MOV ESP,EBP
+005a2532  POP EBP
+005a2533  RET

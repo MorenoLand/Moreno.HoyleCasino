@@ -1,0 +1,75 @@
+// FUN_005a7240  005a7240
+
+int FUN_005a7240(int param_1,int param_2,int param_3)
+
+{
+  char cVar1;
+  undefined4 uVar2;
+  int iVar3;
+  int local_cc [49];
+  int local_8;
+  
+  local_cc[0] = 0x180;
+  local_cc[1] = 0xd2;
+  local_cc[2] = 0x143;
+  local_cc[3] = 0xec;
+  local_cc[4] = 0x192;
+  local_cc[5] = 0xd2;
+  local_cc[6] = 0x176;
+  local_cc[7] = 0x78;
+  local_cc[8] = 0x143;
+  local_cc[9] = 0x93;
+  local_cc[10] = 0x192;
+  local_cc[0xb] = 0x93;
+  local_cc[0xc] = 0xc0;
+  local_cc[0xd] = 0xec;
+  local_cc[0xe] = 0x91;
+  local_cc[0xf] = 0xec;
+  local_cc[0x10] = 0xe0;
+  local_cc[0x11] = 0xec;
+  local_cc[0x12] = 0xca;
+  local_cc[0x13] = 0x93;
+  local_cc[0x14] = 0x9b;
+  local_cc[0x15] = 0x93;
+  local_cc[0x16] = 0xea;
+  local_cc[0x17] = 0x93;
+  local_cc[0x18] = 0x203;
+  local_cc[0x19] = 0xae;
+  local_cc[0x1a] = 0x1d5;
+  local_cc[0x1b] = 0xae;
+  local_cc[0x1c] = 0x224;
+  local_cc[0x1d] = 0xae;
+  local_cc[0x1e] = 0x203;
+  local_cc[0x1f] = 0x59;
+  local_cc[0x20] = 0x1d5;
+  local_cc[0x21] = 0x59;
+  local_cc[0x22] = 0x224;
+  local_cc[0x23] = 0x59;
+  local_cc[0x24] = 0x39;
+  local_cc[0x25] = 0xae;
+  local_cc[0x26] = 1;
+  local_cc[0x27] = 0xae;
+  local_cc[0x28] = 0x50;
+  local_cc[0x29] = 0xae;
+  local_cc[0x2a] = 0x39;
+  local_cc[0x2b] = 0x59;
+  local_cc[0x2c] = 1;
+  local_cc[0x2d] = 0x59;
+  local_cc[0x2e] = 0x50;
+  local_cc[0x2f] = 0x59;
+  if (param_1 == 4) {
+    local_8 = param_3 * 0xe + 0x109;
+  }
+  else {
+    iVar3 = param_2;
+    uVar2 = FUN_005b58f0(param_1);
+    local_cc[0x30] = FUN_005a7190(uVar2,iVar3);
+    local_8 = param_3 * 0xc + local_cc[param_1 * 0xc + (param_2 + local_cc[0x30]) * 2];
+    cVar1 = FUN_005b60a0(param_1,param_2);
+    if ((cVar1 != '\0') && (param_3 == 2)) {
+      local_8 = local_8 + -0x14;
+    }
+  }
+  return local_8;
+}
+

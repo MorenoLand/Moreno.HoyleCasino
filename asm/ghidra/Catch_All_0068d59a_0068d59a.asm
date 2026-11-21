@@ -1,0 +1,6 @@
+; Catch_All@0068d59a  0068d59a
+0068d59a  MOV ECX,dword ptr [EBP + 0xffffff38]
+0068d5a0  CALL 0x0068dc60
+0068d5a5  PUSH 0x0
+0068d5a7  PUSH 0x0
+0068d5a9  CALL 0x00686fc0

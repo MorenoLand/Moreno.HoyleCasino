@@ -1,0 +1,29 @@
+; FUN_0066ad70  0066ad70
+0066ad70  PUSH EBP
+0066ad71  MOV EBP,ESP
+0066ad73  PUSH -0x1
+0066ad75  PUSH 0x6acd1b
+0066ad7a  MOV EAX,FS:[0x0]
+0066ad80  PUSH EAX
+0066ad81  PUSH ECX
+0066ad82  MOV EAX,[0x00781870]
+0066ad87  XOR EAX,EBP
+0066ad89  PUSH EAX
+0066ad8a  LEA EAX,[EBP + -0xc]
+0066ad8d  MOV FS:[0x0],EAX
+0066ad93  MOV dword ptr [EBP + -0x10],ECX
+0066ad96  MOV EAX,dword ptr [EBP + -0x10]
+0066ad99  MOV dword ptr [EAX],0x6e02ac
+0066ad9f  MOV dword ptr [EBP + -0x4],0x0
+0066ada6  PUSH 0x0
+0066ada8  MOV ECX,dword ptr [0x0162ee84]
+0066adae  CALL 0x005f38b0
+0066adb3  MOV dword ptr [EBP + -0x4],0xffffffff
+0066adba  MOV ECX,dword ptr [EBP + -0x10]
+0066adbd  CALL 0x0064cc80
+0066adc2  MOV ECX,dword ptr [EBP + -0xc]
+0066adc5  MOV dword ptr FS:[0x0],ECX
+0066adcc  POP ECX
+0066adcd  MOV ESP,EBP
+0066adcf  POP EBP
+0066add0  RET

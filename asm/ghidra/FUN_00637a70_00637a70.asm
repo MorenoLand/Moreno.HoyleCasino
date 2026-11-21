@@ -1,0 +1,31 @@
+; FUN_00637a70  00637a70
+00637a70  PUSH EBP
+00637a71  MOV EBP,ESP
+00637a73  SUB ESP,0xc
+00637a76  MOV dword ptr [EBP + -0xc],ECX
+00637a79  MOVZX EAX,byte ptr [0x00795f94]
+00637a80  TEST EAX,EAX
+00637a82  JZ 0x00637a96
+00637a84  MOV ECX,dword ptr [EBP + -0xc]
+00637a87  MOV EDX,dword ptr [ECX]
+00637a89  MOV ECX,dword ptr [EBP + -0xc]
+00637a8c  MOV EAX,dword ptr [EDX + 0x1dc]
+00637a92  CALL EAX
+00637a94  JMP 0x00637ac4
+00637a96  MOV ECX,dword ptr [EBP + -0xc]
+00637a99  CALL 0x006375b0
+00637a9e  MOV ECX,EAX
+00637aa0  CALL 0x0063a040
+00637aa5  MOV dword ptr [EBP + -0x4],EAX
+00637aa8  CMP dword ptr [EBP + -0x4],-0x1
+00637aac  JNZ 0x00637ac1
+00637aae  MOV ECX,dword ptr [EBP + -0xc]
+00637ab1  MOV EDX,dword ptr [ECX]
+00637ab3  MOV ECX,dword ptr [EBP + -0xc]
+00637ab6  MOV EAX,dword ptr [EDX + 0x1e0]
+00637abc  CALL EAX
+00637abe  MOV dword ptr [EBP + -0x4],EAX
+00637ac1  MOV EAX,dword ptr [EBP + -0x4]
+00637ac4  MOV ESP,EBP
+00637ac6  POP EBP
+00637ac7  RET

@@ -1,0 +1,17 @@
+; FUN_005d2440  005d2440
+005d2440  PUSH EBP
+005d2441  MOV EBP,ESP
+005d2443  SUB ESP,0x8
+005d2446  MOV dword ptr [EBP + -0x4],ECX
+005d2449  MOV EAX,dword ptr [EBP + 0x8]
+005d244c  MOV dword ptr [EBP + -0x8],EAX
+005d244f  MOV ECX,dword ptr [EBP + -0x8]
+005d2452  SUB ECX,0x64
+005d2455  MOV dword ptr [EBP + -0x8],ECX
+005d2458  CMP dword ptr [EBP + -0x8],0x6
+005d245c  JA 0x005d24b8
+005d245e  MOV EDX,dword ptr [EBP + -0x8]
+005d2461  JMP dword ptr [EDX*0x4 + 0x5d24c0]
+005d24b8  MOV ESP,EBP
+005d24ba  POP EBP
+005d24bb  RET 0x4

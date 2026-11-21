@@ -1,0 +1,27 @@
+; FUN_0064c6a0  0064c6a0
+0064c6a0  PUSH EBP
+0064c6a1  MOV EBP,ESP
+0064c6a3  PUSH ECX
+0064c6a4  MOV dword ptr [EBP + -0x4],ECX
+0064c6a7  MOV EAX,dword ptr [EBP + -0x4]
+0064c6aa  MOV ECX,dword ptr [EAX]
+0064c6ac  CMP ECX,dword ptr [EBP + 0x8]
+0064c6af  JGE 0x0064c6b5
+0064c6b1  MOV AL,0x1
+0064c6b3  JMP 0x0064c6d4
+0064c6b5  MOV EDX,dword ptr [EBP + -0x4]
+0064c6b8  MOV EAX,dword ptr [EDX]
+0064c6ba  CMP EAX,dword ptr [EBP + 0x8]
+0064c6bd  JLE 0x0064c6c3
+0064c6bf  XOR AL,AL
+0064c6c1  JMP 0x0064c6d4
+0064c6c3  MOV ECX,dword ptr [EBP + -0x4]
+0064c6c6  MOV EDX,dword ptr [ECX + 0x4]
+0064c6c9  CMP EDX,dword ptr [EBP + 0xc]
+0064c6cc  JGE 0x0064c6d2
+0064c6ce  MOV AL,0x1
+0064c6d0  JMP 0x0064c6d4
+0064c6d2  XOR AL,AL
+0064c6d4  MOV ESP,EBP
+0064c6d6  POP EBP
+0064c6d7  RET 0x8

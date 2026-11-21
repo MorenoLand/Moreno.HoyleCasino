@@ -1,0 +1,16 @@
+; FUN_0040dc40  0040dc40
+0040dc40  PUSH EBP
+0040dc41  MOV EBP,ESP
+0040dc43  PUSH ECX
+0040dc44  MOV dword ptr [EBP + -0x4],ECX
+0040dc47  MOV EAX,dword ptr [EBP + -0x4]
+0040dc4a  CMP dword ptr [EAX + 0x38],0x0
+0040dc4e  JZ 0x0040dc65
+0040dc50  MOV ECX,dword ptr [EBP + -0x4]
+0040dc53  MOV ECX,dword ptr [ECX + 0x38]
+0040dc56  CALL 0x005f8990
+0040dc5b  MOV EDX,dword ptr [EBP + -0x4]
+0040dc5e  MOV dword ptr [EDX + 0x38],0x0
+0040dc65  MOV ESP,EBP
+0040dc67  POP EBP
+0040dc68  RET

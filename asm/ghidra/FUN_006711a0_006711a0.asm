@@ -1,0 +1,27 @@
+; FUN_006711a0  006711a0
+006711a0  PUSH EBP
+006711a1  MOV EBP,ESP
+006711a3  SUB ESP,0x8
+006711a6  MOV dword ptr [EBP + -0x8],ECX
+006711a9  MOV ECX,dword ptr [EBP + -0x8]
+006711ac  CALL 0x005eaaf0
+006711b1  MOV EAX,dword ptr [EBP + -0x8]
+006711b4  MOV dword ptr [EAX],0x6e101c
+006711ba  MOV ECX,dword ptr [EBP + -0x8]
+006711bd  MOV EDX,dword ptr [EBP + 0x8]
+006711c0  MOV dword ptr [ECX + 0x188],EDX
+006711c6  MOV dword ptr [EBP + -0x4],0x0
+006711cd  JMP 0x006711d8
+006711cf  MOV EAX,dword ptr [EBP + -0x4]
+006711d2  ADD EAX,0x1
+006711d5  MOV dword ptr [EBP + -0x4],EAX
+006711d8  CMP dword ptr [EBP + -0x4],0x4
+006711dc  JGE 0x006711f1
+006711de  MOV ECX,dword ptr [EBP + -0x4]
+006711e1  MOV EDX,dword ptr [EBP + -0x8]
+006711e4  MOV dword ptr [EDX + ECX*0x4 + 0x178],0x0
+006711ef  JMP 0x006711cf
+006711f1  MOV EAX,dword ptr [EBP + -0x8]
+006711f4  MOV ESP,EBP
+006711f6  POP EBP
+006711f7  RET 0x4

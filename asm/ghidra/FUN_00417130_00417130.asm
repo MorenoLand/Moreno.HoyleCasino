@@ -1,0 +1,41 @@
+; FUN_00417130  00417130
+00417130  PUSH EBP
+00417131  MOV EBP,ESP
+00417133  SUB ESP,0x2c
+00417136  MOV dword ptr [EBP + -0x2c],ECX
+00417139  MOV dword ptr [EBP + -0x28],0x149
+00417140  MOV dword ptr [EBP + -0x24],0xdb
+00417147  MOV dword ptr [EBP + -0x20],0x86
+0041714e  MOV dword ptr [EBP + -0x1c],0xdb
+00417155  MOV dword ptr [EBP + -0x18],0x1ca
+0041715c  MOV dword ptr [EBP + -0x14],0x93
+00417163  MOV dword ptr [EBP + -0x10],0x5
+0041716a  MOV dword ptr [EBP + -0xc],0x93
+00417171  MOV dword ptr [EBP + -0x8],0x0
+00417178  MOV dword ptr [EBP + -0x4],0x0
+0041717f  CMP dword ptr [EBP + 0xc],0x4
+00417183  JGE 0x0041719d
+00417185  MOV EAX,dword ptr [EBP + 0xc]
+00417188  MOV ECX,dword ptr [EBP + EAX*0x8 + -0x28]
+0041718c  MOV EDX,dword ptr [EBP + EAX*0x8 + -0x24]
+00417190  MOV EAX,dword ptr [EBP + 0x8]
+00417193  MOV dword ptr [EAX],ECX
+00417195  MOV dword ptr [EAX + 0x4],EDX
+00417198  MOV EAX,dword ptr [EBP + 0x8]
+0041719b  JMP 0x004171c9
+0041719d  XOR ECX,ECX
+0041719f  JNZ 0x004171b8
+004171a1  PUSH 0x2c3
+004171a6  PUSH 0x6b4450
+004171ab  PUSH 0x6b2f58
+004171b0  CALL 0x005e9f20
+004171b5  ADD ESP,0xc
+004171b8  MOV EAX,dword ptr [EBP + 0x8]
+004171bb  MOV ECX,dword ptr [EBP + -0x8]
+004171be  MOV dword ptr [EAX],ECX
+004171c0  MOV EDX,dword ptr [EBP + -0x4]
+004171c3  MOV dword ptr [EAX + 0x4],EDX
+004171c6  MOV EAX,dword ptr [EBP + 0x8]
+004171c9  MOV ESP,EBP
+004171cb  POP EBP
+004171cc  RET 0x8

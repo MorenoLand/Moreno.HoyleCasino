@@ -1,0 +1,19 @@
+; FUN_0051eb90  0051eb90
+0051eb90  PUSH EBP
+0051eb91  MOV EBP,ESP
+0051eb93  SUB ESP,0x8
+0051eb96  MOV dword ptr [EBP + -0x8],ECX
+0051eb99  MOV EAX,dword ptr [EBP + -0x8]
+0051eb9c  MOV CL,byte ptr [EAX + 0x1c0]
+0051eba2  MOV byte ptr [EBP + -0x1],CL
+0051eba5  MOVZX EDX,byte ptr [EBP + -0x1]
+0051eba9  TEST EDX,EDX
+0051ebab  JZ 0x0051ebba
+0051ebad  MOV ECX,dword ptr [0x00791eb8]
+0051ebb3  CALL 0x004fc8e0
+0051ebb8  JMP 0x0051ebc5
+0051ebba  MOV ECX,dword ptr [0x00793160]
+0051ebc0  CALL 0x00520240
+0051ebc5  MOV ESP,EBP
+0051ebc7  POP EBP
+0051ebc8  RET

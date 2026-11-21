@@ -1,0 +1,34 @@
+; FUN_006275c0  006275c0
+006275c0  PUSH EBP
+006275c1  MOV EBP,ESP
+006275c3  PUSH ECX
+006275c4  MOV dword ptr [EBP + -0x4],ECX
+006275c7  CMP dword ptr [EBP + 0xc],0x0
+006275cb  JZ 0x006275d8
+006275cd  MOV EAX,dword ptr [EBP + 0xc]
+006275d0  MOV ECX,dword ptr [EBP + -0x4]
+006275d3  MOV DL,byte ptr [ECX + 0x48]
+006275d6  MOV byte ptr [EAX],DL
+006275d8  CMP dword ptr [EBP + 0x10],0x0
+006275dc  JZ 0x006275e9
+006275de  MOV EAX,dword ptr [EBP + 0x10]
+006275e1  MOV ECX,dword ptr [EBP + -0x4]
+006275e4  MOV DL,byte ptr [ECX + 0x49]
+006275e7  MOV byte ptr [EAX],DL
+006275e9  CMP dword ptr [EBP + 0x14],0x0
+006275ed  JZ 0x006275fa
+006275ef  MOV EAX,dword ptr [EBP + 0x14]
+006275f2  MOV ECX,dword ptr [EBP + -0x4]
+006275f5  MOV DL,byte ptr [ECX + 0x4a]
+006275f8  MOV byte ptr [EAX],DL
+006275fa  MOV EAX,dword ptr [EBP + -0x4]
+006275fd  ADD EAX,0x48
+00627600  MOV ECX,dword ptr [EBP + 0x8]
+00627603  MOV DX,word ptr [EAX]
+00627606  MOV word ptr [ECX],DX
+00627609  MOV AL,byte ptr [EAX + 0x2]
+0062760c  MOV byte ptr [ECX + 0x2],AL
+0062760f  MOV EAX,dword ptr [EBP + 0x8]
+00627612  MOV ESP,EBP
+00627614  POP EBP
+00627615  RET 0x10

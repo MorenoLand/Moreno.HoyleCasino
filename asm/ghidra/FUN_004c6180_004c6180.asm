@@ -1,0 +1,18 @@
+; FUN_004c6180  004c6180
+004c6180  PUSH EBP
+004c6181  MOV EBP,ESP
+004c6183  SUB ESP,0xc
+004c6186  MOV dword ptr [EBP + -0xc],ECX
+004c6189  MOV EAX,dword ptr [EBP + -0xc]
+004c618c  MOV ECX,dword ptr [EAX + 0x4]
+004c618f  PUSH ECX
+004c6190  CALL 0x005dcb00
+004c6195  ADD ESP,0x4
+004c6198  MOV dword ptr [EBP + -0x4],EAX
+004c619b  MOV EDX,dword ptr [EBP + -0x4]
+004c619e  MOV EAX,dword ptr [EDX + 0x20]
+004c61a1  MOV dword ptr [EBP + -0x8],EAX
+004c61a4  MOV EAX,dword ptr [EBP + -0x8]
+004c61a7  MOV ESP,EBP
+004c61a9  POP EBP
+004c61aa  RET

@@ -1,0 +1,32 @@
+; FID_conflict:_Immortalize<std::_Generic_error_category>  0062da70
+0062da70  PUSH EBP
+0062da71  MOV EBP,ESP
+0062da73  PUSH -0x1
+0062da75  PUSH 0x6ab74e
+0062da7a  MOV EAX,FS:[0x0]
+0062da80  PUSH EAX
+0062da81  MOV EAX,[0x00781870]
+0062da86  XOR EAX,EBP
+0062da88  PUSH EAX
+0062da89  LEA EAX,[EBP + -0xc]
+0062da8c  MOV FS:[0x0],EAX
+0062da92  MOV EAX,[0x0162ee60]
+0062da97  AND EAX,0x1
+0062da9a  JNZ 0x0062dad0
+0062da9c  MOV ECX,dword ptr [0x0162ee60]
+0062daa2  OR ECX,0x1
+0062daa5  MOV dword ptr [0x0162ee60],ECX
+0062daab  MOV dword ptr [EBP + -0x4],0x0
+0062dab2  MOV ECX,0x162ee20
+0062dab7  CALL 0x0062d8f0
+0062dabc  PUSH 0x6b1b40
+0062dac1  CALL 0x00686f8f
+0062dac6  ADD ESP,0x4
+0062dac9  MOV dword ptr [EBP + -0x4],0xffffffff
+0062dad0  MOV EAX,0x162ee20
+0062dad5  MOV ECX,dword ptr [EBP + -0xc]
+0062dad8  MOV dword ptr FS:[0x0],ECX
+0062dadf  POP ECX
+0062dae0  MOV ESP,EBP
+0062dae2  POP EBP
+0062dae3  RET

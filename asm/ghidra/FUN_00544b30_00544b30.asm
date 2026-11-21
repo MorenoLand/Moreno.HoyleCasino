@@ -1,0 +1,31 @@
+; FUN_00544b30  00544b30
+00544b30  PUSH EBP
+00544b31  MOV EBP,ESP
+00544b33  SUB ESP,0xc
+00544b36  MOV dword ptr [EBP + -0x8],ECX
+00544b39  MOV dword ptr [EBP + -0x4],0xffffffff
+00544b40  MOV EAX,dword ptr [EBP + 0x8]
+00544b43  PUSH EAX
+00544b44  MOV ECX,dword ptr [0x0162ee84]
+00544b4a  MOV ECX,dword ptr [ECX + 0x14]
+00544b4d  CALL 0x005fb300
+00544b52  MOV dword ptr [EBP + -0xc],EAX
+00544b55  MOV EDX,dword ptr [EBP + -0xc]
+00544b58  MOV EAX,dword ptr [EDX]
+00544b5a  MOV ECX,dword ptr [EBP + -0xc]
+00544b5d  MOV EDX,dword ptr [EAX + 0xd0]
+00544b63  CALL EDX
+00544b65  MOV EAX,dword ptr [EBP + 0x8]
+00544b68  PUSH EAX
+00544b69  MOV ECX,dword ptr [EBP + -0x8]
+00544b6c  CALL 0x00544a70
+00544b71  MOV dword ptr [EBP + -0x4],EAX
+00544b74  CMP dword ptr [EBP + -0x4],-0x1
+00544b78  JZ 0x00544b89
+00544b7a  MOV ECX,dword ptr [EBP + -0x4]
+00544b7d  PUSH ECX
+00544b7e  MOV ECX,dword ptr [0x0162ee80]
+00544b84  CALL 0x005f2ba0
+00544b89  MOV ESP,EBP
+00544b8b  POP EBP
+00544b8c  RET 0x4

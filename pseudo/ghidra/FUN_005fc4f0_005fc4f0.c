@@ -1,0 +1,60 @@
+// FUN_005fc4f0  005fc4f0
+
+void FUN_005fc4f0(void)
+
+{
+  DAT_007950a8 = 0;
+  DAT_007950ac = 0;
+  DAT_007950b0 = 0;
+  DAT_007950bc = 0;
+  DAT_007951c0 = 0;
+  DAT_007952c4 = 0;
+  DAT_007950b4 = 0;
+  DAT_007950b5 = 0;
+  DAT_007950b8 = 0;
+  DAT_00795f6c = 0;
+  DAT_00795f94 = 0;
+  DAT_00795fb3 = 0;
+  DAT_00795fb4 = 1;
+  DAT_00795f95 = 0;
+  DAT_00795f96 = 0;
+  DAT_00795f98 = 0;
+  DAT_00795fa0 = 0;
+  DAT_00795fa1 = 0;
+  DAT_00795fa2 = 0;
+  DAT_00795fa3 = 0;
+  DAT_00795fa4 = 0;
+  DAT_00795fa5 = 0;
+  DAT_00795fa8 = 0;
+  DAT_00795fac = 0;
+  DAT_00795fb0 = 0;
+  DAT_00795fb2 = 0;
+  DAT_00795fb6 = 0;
+  DAT_00795fb7 = 0;
+  DAT_00795f97 = 1;
+  DAT_00795f9c = 0x2000000;
+  DAT_00795fbb = 0;
+  DAT_00795fbc = 0;
+  DAT_00795fbd = 0;
+  DAT_00795fbe = 0;
+  DAT_00795fbf = 0;
+  DAT_00795fc0 = 0;
+  DAT_007960c4 = 1;
+  DAT_007960c5 = 1;
+  DAT_007960c6 = 0;
+  DAT_007960c7 = 0;
+  DAT_007960c8 = 0;
+  DAT_007960c9 = 0;
+  DAT_007960ca = 0;
+  DAT_007960cb = 0;
+  DAT_007960cc = 0;
+  DAT_00795fb8 = 0;
+  DAT_00795fb9 = 1;
+  DAT_00795fba = 0;
+  DAT_007960cd = 0;
+  DAT_007960ce = 0;
+  DAT_007960d4 = 1;
+  DAT_00795f90 = 2;
+  return;
+}
+

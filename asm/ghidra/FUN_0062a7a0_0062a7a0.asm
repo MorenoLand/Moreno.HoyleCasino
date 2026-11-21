@@ -1,0 +1,14 @@
+; FUN_0062a7a0  0062a7a0
+0062a7a0  PUSH EBP
+0062a7a1  MOV EBP,ESP
+0062a7a3  PUSH ECX
+0062a7a4  MOV dword ptr [EBP + -0x4],ECX
+0062a7a7  MOV EAX,dword ptr [EBP + -0x4]
+0062a7aa  MOV dword ptr [EAX],0x6d95e4
+0062a7b0  MOV ECX,dword ptr [EBP + -0x4]
+0062a7b3  MOV dword ptr [ECX + 0x1e0],0x0
+0062a7bd  MOV ECX,dword ptr [EBP + -0x4]
+0062a7c0  CALL 0x00601ba0
+0062a7c5  MOV ESP,EBP
+0062a7c7  POP EBP
+0062a7c8  RET

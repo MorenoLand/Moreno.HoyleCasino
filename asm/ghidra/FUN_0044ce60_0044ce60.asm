@@ -1,0 +1,15 @@
+; FUN_0044ce60  0044ce60
+0044ce60  PUSH EBP
+0044ce61  MOV EBP,ESP
+0044ce63  PUSH ECX
+0044ce64  MOV dword ptr [EBP + -0x4],ECX
+0044ce67  CMP dword ptr [EBP + 0x8],-0x1
+0044ce6b  JNZ 0x0044ce71
+0044ce6d  MOV AL,0x1
+0044ce6f  JMP 0x0044ce7d
+0044ce71  MOV EAX,dword ptr [EBP + -0x4]
+0044ce74  ADD EAX,dword ptr [EBP + 0x8]
+0044ce77  MOV AL,byte ptr [EAX + 0xc9]
+0044ce7d  MOV ESP,EBP
+0044ce7f  POP EBP
+0044ce80  RET 0x4

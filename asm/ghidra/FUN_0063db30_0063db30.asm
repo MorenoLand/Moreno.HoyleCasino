@@ -1,0 +1,13 @@
+; FUN_0063db30  0063db30
+0063db30  PUSH EBP
+0063db31  MOV EBP,ESP
+0063db33  PUSH ECX
+0063db34  MOV dword ptr [EBP + -0x4],ECX
+0063db37  MOV EAX,dword ptr [EBP + -0x4]
+0063db3a  MOV ECX,dword ptr [EAX + 0x1e8]
+0063db40  CALL 0x005f8990
+0063db45  MOV ECX,dword ptr [EBP + -0x4]
+0063db48  MOV dword ptr [ECX + 0x1e8],0x0
+0063db52  MOV ESP,EBP
+0063db54  POP EBP
+0063db55  RET

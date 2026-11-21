@@ -1,0 +1,17 @@
+; FUN_0042d300  0042d300
+0042d300  PUSH EBP
+0042d301  MOV EBP,ESP
+0042d303  PUSH ECX
+0042d304  MOV dword ptr [EBP + -0x4],ECX
+0042d307  MOV ECX,dword ptr [EBP + -0x4]
+0042d30a  CALL 0x005f5bf0
+0042d30f  MOV EAX,dword ptr [EBP + -0x4]
+0042d312  MOV dword ptr [EAX],0x6b6ccc
+0042d318  MOV ECX,dword ptr [EBP + -0x4]
+0042d31b  MOV dword ptr [ECX + 0x184],0x5
+0042d325  MOV EDX,dword ptr [EBP + -0x4]
+0042d328  MOV byte ptr [EDX + 0x18d],0x0
+0042d32f  MOV EAX,dword ptr [EBP + -0x4]
+0042d332  MOV ESP,EBP
+0042d334  POP EBP
+0042d335  RET

@@ -1,0 +1,18 @@
+; FUN_0047bbe0  0047bbe0
+0047bbe0  PUSH EBP
+0047bbe1  MOV EBP,ESP
+0047bbe3  PUSH ECX
+0047bbe4  MOV dword ptr [EBP + -0x4],ECX
+0047bbe7  CMP dword ptr [EBP + 0x8],0x1
+0047bbeb  JGE 0x0047bc04
+0047bbed  PUSH 0x368
+0047bbf2  PUSH 0x6bc694
+0047bbf7  PUSH 0x6bc7f4
+0047bbfc  CALL 0x005e9f20
+0047bc01  ADD ESP,0xc
+0047bc04  MOV ECX,dword ptr [EBP + -0x4]
+0047bc07  MOV EDX,dword ptr [EBP + 0x8]
+0047bc0a  MOV dword ptr [ECX + 0x430],EDX
+0047bc10  MOV ESP,EBP
+0047bc12  POP EBP
+0047bc13  RET 0x4

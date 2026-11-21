@@ -1,0 +1,58 @@
+; FUN_00571990  00571990
+00571990  PUSH EBP
+00571991  MOV EBP,ESP
+00571993  SUB ESP,0xc
+00571996  MOV dword ptr [EBP + -0xc],ECX
+00571999  MOV dword ptr [EBP + -0x8],0x0
+005719a0  JMP 0x005719ab
+005719a2  MOV EAX,dword ptr [EBP + -0x8]
+005719a5  ADD EAX,0x1
+005719a8  MOV dword ptr [EBP + -0x8],EAX
+005719ab  CMP dword ptr [EBP + -0x8],0x7
+005719af  JGE 0x005719c2
+005719b1  MOV ECX,dword ptr [EBP + -0x8]
+005719b4  MOV EDX,dword ptr [EBP + -0xc]
+005719b7  CMP dword ptr [EDX + ECX*0x4 + 0x18],-0x1
+005719bc  JNZ 0x005719c0
+005719be  JMP 0x005719c2
+005719c0  JMP 0x005719a2
+005719c2  CMP dword ptr [EBP + -0x8],0x0
+005719c6  JNZ 0x005719cc
+005719c8  JMP 0x00571a41
+005719cc  CMP dword ptr [EBP + -0x8],0x1
+005719d0  JNZ 0x005719dc
+005719d2  MOV EAX,[0x00748918]
+005719d7  MOV dword ptr [EBP + -0x4],EAX
+005719da  JMP 0x00571a06
+005719dc  CMP dword ptr [EBP + -0x8],0x3
+005719e0  JGE 0x005719ed
+005719e2  MOV ECX,dword ptr [0x0074891c]
+005719e8  MOV dword ptr [EBP + -0x4],ECX
+005719eb  JMP 0x00571a06
+005719ed  CMP dword ptr [EBP + -0x8],0x7
+005719f1  JGE 0x005719fe
+005719f3  MOV EDX,dword ptr [0x00748920]
+005719f9  MOV dword ptr [EBP + -0x4],EDX
+005719fc  JMP 0x00571a06
+005719fe  MOV EAX,[0x00748924]
+00571a03  MOV dword ptr [EBP + -0x4],EAX
+00571a06  MOV ECX,dword ptr [EBP + -0xc]
+00571a09  MOV EDX,dword ptr [ECX + 0x3c]
+00571a0c  ADD EDX,dword ptr [EBP + -0x4]
+00571a0f  MOV EAX,dword ptr [EBP + -0xc]
+00571a12  MOV dword ptr [EAX + 0x3c],EDX
+00571a15  MOV ECX,dword ptr [EBP + -0x8]
+00571a18  MOV EDX,dword ptr [EBP + -0xc]
+00571a1b  MOV EAX,dword ptr [EDX + ECX*0x4 + 0x60]
+00571a1f  ADD EAX,dword ptr [EBP + -0x4]
+00571a22  MOV ECX,dword ptr [EBP + -0x8]
+00571a25  MOV EDX,dword ptr [EBP + -0xc]
+00571a28  MOV dword ptr [EDX + ECX*0x4 + 0x60],EAX
+00571a2c  MOV EAX,dword ptr [EBP + -0xc]
+00571a2f  MOV ECX,dword ptr [EAX + 0x80]
+00571a35  ADD ECX,dword ptr [EBP + -0x4]
+00571a38  MOV EDX,dword ptr [EBP + -0xc]
+00571a3b  MOV dword ptr [EDX + 0x80],ECX
+00571a41  MOV ESP,EBP
+00571a43  POP EBP
+00571a44  RET

@@ -1,0 +1,18 @@
+// FUN_00459580  00459580
+
+void __fastcall FUN_00459580(int param_1)
+
+{
+  undefined4 *puVar1;
+  int local_8;
+  
+  for (local_8 = 0; local_8 < 2; local_8 = local_8 + 1) {
+    puVar1 = *(undefined4 **)(param_1 + 0x7c + local_8 * 4);
+    if (puVar1 != (undefined4 *)0x0) {
+      (**(code **)*puVar1)(1);
+    }
+    *(undefined4 *)(param_1 + 0x7c + local_8 * 4) = 0;
+  }
+  return;
+}
+

@@ -1,0 +1,15 @@
+; FUN_00403ca0  00403ca0
+00403ca0  PUSH EBP
+00403ca1  MOV EBP,ESP
+00403ca3  SUB ESP,0x8
+00403ca6  MOV dword ptr [EBP + -0x4],ECX
+00403ca9  MOV ECX,dword ptr [EBP + -0x4]
+00403cac  CALL 0x005fc360
+00403cb1  MOV dword ptr [EBP + -0x8],EAX
+00403cb4  CMP dword ptr [EBP + -0x8],0x6
+00403cb8  JA 0x00403ef0
+00403cbe  MOV EAX,dword ptr [EBP + -0x8]
+00403cc1  JMP dword ptr [EAX*0x4 + 0x403ef4]
+00403ef0  MOV ESP,EBP
+00403ef2  POP EBP
+00403ef3  RET

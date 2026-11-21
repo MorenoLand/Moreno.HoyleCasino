@@ -1,0 +1,14 @@
+; FUN_00540ba0  00540ba0
+00540ba0  PUSH EBP
+00540ba1  MOV EBP,ESP
+00540ba3  PUSH ECX
+00540ba4  MOV dword ptr [EBP + -0x4],ECX
+00540ba7  MOV EAX,dword ptr [EBP + 0x8]
+00540baa  IMUL EAX,EAX,0x6
+00540bad  MOV ECX,dword ptr [EBP + -0x4]
+00540bb0  LEA EDX,[ECX + EAX*0x1 + 0xc8]
+00540bb7  MOV EAX,dword ptr [EBP + 0xc]
+00540bba  MOV AX,word ptr [EDX + EAX*0x2]
+00540bbe  MOV ESP,EBP
+00540bc0  POP EBP
+00540bc1  RET 0x8

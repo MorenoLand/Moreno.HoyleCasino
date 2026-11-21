@@ -1,0 +1,67 @@
+; FUN_005d7f40  005d7f40
+005d7f40  PUSH EBP
+005d7f41  MOV EBP,ESP
+005d7f43  PUSH ECX
+005d7f44  MOV dword ptr [EBP + -0x4],ECX
+005d7f47  MOV EAX,dword ptr [EBP + 0x8]
+005d7f4a  CMP dword ptr [EAX + 0x18],0x3
+005d7f4e  JZ 0x005d7f5c
+005d7f50  CALL dword ptr [0x006b20bc]
+005d7f56  MOV ECX,dword ptr [EBP + -0x4]
+005d7f59  MOV dword ptr [ECX + 0x60],EAX
+005d7f5c  MOV EDX,dword ptr [EBP + 0x8]
+005d7f5f  CMP dword ptr [EDX + 0x18],0x1
+005d7f63  JZ 0x005d7f6e
+005d7f65  MOV EAX,dword ptr [EBP + 0x8]
+005d7f68  CMP dword ptr [EAX + 0x18],0x4
+005d7f6c  JNZ 0x005d7f93
+005d7f6e  CMP dword ptr [0x00793578],0x0
+005d7f75  JZ 0x005d7f93
+005d7f77  MOV ECX,dword ptr [0x00793578]
+005d7f7d  MOVZX EDX,byte ptr [ECX + 0x1bd]
+005d7f84  TEST EDX,EDX
+005d7f86  JZ 0x005d7f93
+005d7f88  MOV ECX,dword ptr [0x00793578]
+005d7f8e  CALL 0x0057c240
+005d7f93  MOV EAX,dword ptr [EBP + 0x8]
+005d7f96  CMP dword ptr [EAX + 0x18],0x4
+005d7f9a  JNZ 0x005d8004
+005d7f9c  MOV ECX,dword ptr [EBP + 0x8]
+005d7f9f  MOVSX EDX,byte ptr [ECX + 0x14]
+005d7fa3  PUSH EDX
+005d7fa4  CALL dword ptr [0x006b2224]
+005d7faa  ADD ESP,0x4
+005d7fad  CMP EAX,0x6c
+005d7fb0  JNZ 0x005d8004
+005d7fb2  MOV EAX,dword ptr [EBP + 0x8]
+005d7fb5  MOVZX ECX,byte ptr [EAX + 0x4]
+005d7fb9  TEST ECX,ECX
+005d7fbb  JNZ 0x005d8004
+005d7fbd  MOV ECX,dword ptr [0x0162ee84]
+005d7fc3  CALL 0x005f3fe0
+005d7fc8  TEST EAX,EAX
+005d7fca  JNZ 0x005d8004
+005d7fcc  PUSH 0x0
+005d7fce  PUSH 0x1399
+005d7fd3  MOV ECX,dword ptr [EBP + -0x4]
+005d7fd6  CALL 0x005f2a60
+005d7fdb  TEST EAX,EAX
+005d7fdd  JZ 0x005d8004
+005d7fdf  PUSH 0x0
+005d7fe1  PUSH 0x1399
+005d7fe6  MOV ECX,dword ptr [EBP + -0x4]
+005d7fe9  CALL 0x005f2a60
+005d7fee  MOV ECX,EAX
+005d7ff0  CALL 0x006026d0
+005d7ff5  MOVZX EDX,AL
+005d7ff8  TEST EDX,EDX
+005d7ffa  JZ 0x005d8004
+005d7ffc  MOV ECX,dword ptr [EBP + -0x4]
+005d7fff  CALL 0x005dc1c0
+005d8004  MOV EAX,dword ptr [EBP + 0x8]
+005d8007  PUSH EAX
+005d8008  MOV ECX,dword ptr [EBP + -0x4]
+005d800b  CALL 0x00650360
+005d8010  MOV ESP,EBP
+005d8012  POP EBP
+005d8013  RET 0x4

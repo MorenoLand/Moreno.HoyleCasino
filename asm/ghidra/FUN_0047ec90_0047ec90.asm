@@ -1,0 +1,20 @@
+; FUN_0047ec90  0047ec90
+0047ec90  PUSH EBP
+0047ec91  MOV EBP,ESP
+0047ec93  PUSH ECX
+0047ec94  MOV dword ptr [EBP + -0x4],ECX
+0047ec97  MOV ECX,dword ptr [EBP + -0x4]
+0047ec9a  CALL 0x0047e700
+0047ec9f  CMP dword ptr [EBP + 0x8],0x0
+0047eca3  JLE 0x0047ecc3
+0047eca5  MOV EAX,dword ptr [EBP + -0x4]
+0047eca8  MOVSX ECX,word ptr [EAX + 0x7d0]
+0047ecaf  CMP ECX,0xc8
+0047ecb5  JGE 0x0047ecc3
+0047ecb7  MOV EDX,dword ptr [EBP + 0x8]
+0047ecba  PUSH EDX
+0047ecbb  MOV ECX,dword ptr [EBP + -0x4]
+0047ecbe  CALL 0x0047f0e0
+0047ecc3  MOV ESP,EBP
+0047ecc5  POP EBP
+0047ecc6  RET 0x4

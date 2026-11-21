@@ -1,0 +1,45 @@
+; FUN_00672a50  00672a50
+00672a50  PUSH EBP
+00672a51  MOV EBP,ESP
+00672a53  PUSH -0x1
+00672a55  PUSH 0x6ad29b
+00672a5a  MOV EAX,FS:[0x0]
+00672a60  PUSH EAX
+00672a61  PUSH ECX
+00672a62  MOV EAX,[0x00781870]
+00672a67  XOR EAX,EBP
+00672a69  PUSH EAX
+00672a6a  LEA EAX,[EBP + -0xc]
+00672a6d  MOV FS:[0x0],EAX
+00672a73  MOV dword ptr [EBP + -0x10],ECX
+00672a76  PUSH 0x0
+00672a78  PUSH 0x1
+00672a7a  MOV ECX,dword ptr [EBP + -0x10]
+00672a7d  CALL 0x005f71f0
+00672a82  MOV dword ptr [EBP + -0x4],0x0
+00672a89  MOV EAX,dword ptr [EBP + -0x10]
+00672a8c  MOV dword ptr [EAX],0x6e1334
+00672a92  MOV ECX,dword ptr [EBP + -0x10]
+00672a95  MOV dword ptr [ECX + 0x1bc],0xffffffff
+00672a9f  MOV EDX,dword ptr [EBP + -0x10]
+00672aa2  MOV byte ptr [EDX + 0x1c0],0x0
+00672aa9  MOV EAX,dword ptr [EBP + -0x10]
+00672aac  MOV dword ptr [EAX + 0x1f0],0x0
+00672ab6  MOV ECX,dword ptr [EBP + -0x10]
+00672ab9  MOV dword ptr [ECX + 0x1f4],0x0
+00672ac3  PUSH 0x0
+00672ac5  PUSH 0x36ee81
+00672aca  MOV ECX,dword ptr [EBP + -0x10]
+00672acd  CALL 0x005f83d0
+00672ad2  PUSH 0x0
+00672ad4  PUSH 0x0
+00672ad6  MOV ECX,dword ptr [EBP + -0x10]
+00672ad9  CALL 0x005f7340
+00672ade  MOV dword ptr [EBP + -0x4],0xffffffff
+00672ae5  MOV EAX,dword ptr [EBP + -0x10]
+00672ae8  MOV ECX,dword ptr [EBP + -0xc]
+00672aeb  MOV dword ptr FS:[0x0],ECX
+00672af2  POP ECX
+00672af3  MOV ESP,EBP
+00672af5  POP EBP
+00672af6  RET

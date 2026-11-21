@@ -1,0 +1,18 @@
+; FUN_0058fc90  0058fc90
+0058fc90  PUSH EBP
+0058fc91  MOV EBP,ESP
+0058fc93  PUSH ECX
+0058fc94  MOV dword ptr [EBP + -0x4],ECX
+0058fc97  MOV ECX,dword ptr [EBP + -0x4]
+0058fc9a  CALL 0x0058b0a0
+0058fc9f  MOV EAX,dword ptr [EBP + 0x8]
+0058fca2  AND EAX,0x1
+0058fca5  JZ 0x0058fcb3
+0058fca7  MOV ECX,dword ptr [EBP + -0x4]
+0058fcaa  PUSH ECX
+0058fcab  CALL 0x00686cae
+0058fcb0  ADD ESP,0x4
+0058fcb3  MOV EAX,dword ptr [EBP + -0x4]
+0058fcb6  MOV ESP,EBP
+0058fcb8  POP EBP
+0058fcb9  RET 0x4

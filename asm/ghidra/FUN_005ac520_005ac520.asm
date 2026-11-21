@@ -1,0 +1,21 @@
+; FUN_005ac520  005ac520
+005ac520  PUSH EBP
+005ac521  MOV EBP,ESP
+005ac523  SUB ESP,0x8
+005ac526  MOV dword ptr [EBP + -0x8],ECX
+005ac529  MOV dword ptr [EBP + -0x4],0x0
+005ac530  JMP 0x005ac53b
+005ac532  MOV EAX,dword ptr [EBP + -0x4]
+005ac535  ADD EAX,0x1
+005ac538  MOV dword ptr [EBP + -0x4],EAX
+005ac53b  CMP dword ptr [EBP + -0x4],0x4
+005ac53f  JGE 0x005ac551
+005ac541  PUSH 0x0
+005ac543  MOV ECX,dword ptr [EBP + -0x4]
+005ac546  PUSH ECX
+005ac547  MOV ECX,dword ptr [EBP + -0x8]
+005ac54a  CALL 0x005ac560
+005ac54f  JMP 0x005ac532
+005ac551  MOV ESP,EBP
+005ac553  POP EBP
+005ac554  RET

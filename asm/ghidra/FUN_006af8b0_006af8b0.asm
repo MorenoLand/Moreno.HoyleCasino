@@ -1,0 +1,6 @@
+; FUN_006af8b0  006af8b0
+006af8b0  PUSH EBP
+006af8b1  MOV EBP,ESP
+006af8b3  MOV byte ptr [0x007913a9],0xf0
+006af8ba  POP EBP
+006af8bb  RET

@@ -1,0 +1,16 @@
+; FUN_0061f190  0061f190
+0061f190  PUSH EBP
+0061f191  MOV EBP,ESP
+0061f193  PUSH ECX
+0061f194  MOV dword ptr [EBP + -0x4],ECX
+0061f197  MOV EAX,dword ptr [EBP + -0x4]
+0061f19a  CMP dword ptr [EAX + 0x15c],0x0
+0061f1a1  JZ 0x0061f1b8
+0061f1a3  MOV ECX,dword ptr [EBP + -0x4]
+0061f1a6  MOV EDX,dword ptr [ECX + 0x15c]
+0061f1ac  SUB EDX,0x1
+0061f1af  MOV EAX,dword ptr [EBP + -0x4]
+0061f1b2  MOV dword ptr [EAX + 0x15c],EDX
+0061f1b8  MOV ESP,EBP
+0061f1ba  POP EBP
+0061f1bb  RET

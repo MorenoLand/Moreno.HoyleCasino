@@ -1,0 +1,64 @@
+; FUN_005d4ff0  005d4ff0
+005d4ff0  PUSH EBP
+005d4ff1  MOV EBP,ESP
+005d4ff3  SUB ESP,0x1c
+005d4ff6  MOV dword ptr [EBP + -0x1c],ECX
+005d4ff9  CMP dword ptr [EBP + 0x8],-0x1
+005d4ffd  JNZ 0x005d500d
+005d4fff  MOV ECX,dword ptr [0x0162ee84]
+005d5005  CALL 0x005f3bf0
+005d500a  MOV dword ptr [EBP + 0x8],EAX
+005d500d  MOV EAX,dword ptr [EBP + -0x1c]
+005d5010  MOV ECX,dword ptr [EAX + 0x3a8]
+005d5016  MOV EDX,dword ptr [EBP + 0x8]
+005d5019  MOV EAX,dword ptr [ECX + EDX*0x4]
+005d501c  PUSH EAX
+005d501d  MOV ECX,dword ptr [EBP + 0x8]
+005d5020  PUSH ECX
+005d5021  MOV EDX,dword ptr [0x0162ee84]
+005d5027  MOV EAX,dword ptr [EDX]
+005d5029  MOV ECX,dword ptr [0x0162ee84]
+005d502f  MOV EDX,dword ptr [EAX + 0x32c]
+005d5035  CALL EDX
+005d5037  MOV ECX,dword ptr [0x0162ee84]
+005d503d  CALL 0x005f3bf0
+005d5042  CMP dword ptr [EBP + 0x8],EAX
+005d5045  JNZ 0x005d50b2
+005d5047  PUSH 0x0
+005d5049  PUSH 0x0
+005d504b  CALL 0x0064c8a0
+005d5050  ADD ESP,0x8
+005d5053  MOV dword ptr [EBP + -0x8],EAX
+005d5056  MOV dword ptr [EBP + -0x4],EDX
+005d5059  MOV EAX,dword ptr [EBP + -0x1c]
+005d505c  MOV ECX,dword ptr [EBP + -0x8]
+005d505f  MOV dword ptr [EAX + 0x4d4],ECX
+005d5065  MOV EDX,dword ptr [EBP + -0x4]
+005d5068  MOV dword ptr [EAX + 0x4d8],EDX
+005d506e  PUSH 0x0
+005d5070  PUSH 0x0
+005d5072  CALL 0x0064c8a0
+005d5077  ADD ESP,0x8
+005d507a  MOV dword ptr [EBP + -0x10],EAX
+005d507d  MOV dword ptr [EBP + -0xc],EDX
+005d5080  MOV EAX,dword ptr [EBP + -0xc]
+005d5083  PUSH EAX
+005d5084  MOV ECX,dword ptr [EBP + -0x10]
+005d5087  PUSH ECX
+005d5088  MOV ECX,dword ptr [EBP + -0x1c]
+005d508b  CALL 0x005d5f80
+005d5090  PUSH 0x0
+005d5092  PUSH 0x0
+005d5094  CALL 0x0064c8a0
+005d5099  ADD ESP,0x8
+005d509c  MOV dword ptr [EBP + -0x18],EAX
+005d509f  MOV dword ptr [EBP + -0x14],EDX
+005d50a2  MOV EDX,dword ptr [EBP + -0x14]
+005d50a5  PUSH EDX
+005d50a6  MOV EAX,dword ptr [EBP + -0x18]
+005d50a9  PUSH EAX
+005d50aa  MOV ECX,dword ptr [EBP + -0x1c]
+005d50ad  CALL 0x005d6050
+005d50b2  MOV ESP,EBP
+005d50b4  POP EBP
+005d50b5  RET 0x4

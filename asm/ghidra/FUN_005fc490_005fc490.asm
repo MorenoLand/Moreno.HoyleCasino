@@ -1,0 +1,16 @@
+; FUN_005fc490  005fc490
+005fc490  PUSH EBP
+005fc491  MOV EBP,ESP
+005fc493  PUSH ECX
+005fc494  MOV dword ptr [EBP + -0x4],ECX
+005fc497  MOV EAX,dword ptr [EBP + 0x8]
+005fc49a  IMUL EAX,EAX,0x3c
+005fc49d  PUSH EAX
+005fc49e  MOV ECX,dword ptr [EBP + -0x4]
+005fc4a1  MOV EDX,dword ptr [ECX]
+005fc4a3  MOV ECX,dword ptr [EBP + -0x4]
+005fc4a6  MOV EAX,dword ptr [EDX + 0x1c]
+005fc4a9  CALL EAX
+005fc4ab  MOV ESP,EBP
+005fc4ad  POP EBP
+005fc4ae  RET 0x4

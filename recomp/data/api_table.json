@@ -1,0 +1,2783 @@
+[
+ {
+  "module": "OpenAL32",
+  "name": "alGenBuffers",
+  "ea": "0x006b231c",
+  "nargs": 2,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "OpenAL32",
+  "name": "alGenSources",
+  "ea": "0x006b2320",
+  "nargs": 2,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "OpenAL32",
+  "name": "alGetError",
+  "ea": "0x006b2324",
+  "nargs": 0,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "OpenAL32",
+  "name": "alDeleteSources",
+  "ea": "0x006b2328",
+  "nargs": 2,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "OpenAL32",
+  "name": "alDeleteBuffers",
+  "ea": "0x006b232c",
+  "nargs": 2,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "OpenAL32",
+  "name": "alSourcei",
+  "ea": "0x006b2330",
+  "nargs": 3,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "OpenAL32",
+  "name": "alListenerfv",
+  "ea": "0x006b2334",
+  "nargs": 2,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "OpenAL32",
+  "name": "alGetListenerfv",
+  "ea": "0x006b2338",
+  "nargs": 2,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "OpenAL32",
+  "name": "alSourcef",
+  "ea": "0x006b233c",
+  "nargs": 3,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "OpenAL32",
+  "name": "alSourcefv",
+  "ea": "0x006b2340",
+  "nargs": 3,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "OpenAL32",
+  "name": "alGetSourcei",
+  "ea": "0x006b2344",
+  "nargs": 3,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "OpenAL32",
+  "name": "alSourceRewind",
+  "ea": "0x006b2348",
+  "nargs": 1,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "OpenAL32",
+  "name": "alSourceStop",
+  "ea": "0x006b234c",
+  "nargs": 1,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "OpenAL32",
+  "name": "alSourcePlay",
+  "ea": "0x006b2350",
+  "nargs": 1,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "OpenAL32",
+  "name": "alGetBufferi",
+  "ea": "0x006b2354",
+  "nargs": 3,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "OpenAL32",
+  "name": "alBufferData",
+  "ea": "0x006b2358",
+  "nargs": 5,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "OpenAL32",
+  "name": "alSourcePause",
+  "ea": "0x006b235c",
+  "nargs": 1,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "OpenAL32",
+  "name": "alSource3f",
+  "ea": "0x006b2360",
+  "nargs": 5,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "OpenAL32",
+  "name": "alSourceQueueBuffers",
+  "ea": "0x006b2364",
+  "nargs": 3,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "OpenAL32",
+  "name": "alcGetCurrentContext",
+  "ea": "0x006b2368",
+  "nargs": 0,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "OpenAL32",
+  "name": "alcGetContextsDevice",
+  "ea": "0x006b236c",
+  "nargs": 1,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "OpenAL32",
+  "name": "alcDestroyContext",
+  "ea": "0x006b2370",
+  "nargs": 1,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "OpenAL32",
+  "name": "alcCloseDevice",
+  "ea": "0x006b2374",
+  "nargs": 1,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "OpenAL32",
+  "name": "alcOpenDevice",
+  "ea": "0x006b2378",
+  "nargs": 1,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "OpenAL32",
+  "name": "alcCreateContext",
+  "ea": "0x006b237c",
+  "nargs": 2,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "OpenAL32",
+  "name": "alcMakeContextCurrent",
+  "ea": "0x006b2380",
+  "nargs": 1,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "OpenAL32",
+  "name": "alGetSourcef",
+  "ea": "0x006b2384",
+  "nargs": 3,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "OpenAL32",
+  "name": "alGetString",
+  "ea": "0x006b2388",
+  "nargs": 1,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "OpenAL32",
+  "name": "alSourceUnqueueBuffers",
+  "ea": "0x006b238c",
+  "nargs": 3,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "ReleaseDC",
+  "ea": "0x006b23b4",
+  "nargs": 2,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "DestroyWindow",
+  "ea": "0x006b23b8",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "SystemParametersInfoA",
+  "ea": "0x006b23bc",
+  "nargs": 4,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "CreateWindowExA",
+  "ea": "0x006b23c0",
+  "nargs": 12,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "GetDC",
+  "ea": "0x006b23c4",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "GetClientRect",
+  "ea": "0x006b23c8",
+  "nargs": 2,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "GetWindowRect",
+  "ea": "0x006b23cc",
+  "nargs": 2,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "MoveWindow",
+  "ea": "0x006b23d0",
+  "nargs": 6,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "SetWindowTextA",
+  "ea": "0x006b23d4",
+  "nargs": 2,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "GetWindowPlacement",
+  "ea": "0x006b23d8",
+  "nargs": 2,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "ShowWindow",
+  "ea": "0x006b23dc",
+  "nargs": 2,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "wvsprintfA",
+  "ea": "0x006b23e0",
+  "nargs": 3,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "InvalidateRect",
+  "ea": "0x006b23e4",
+  "nargs": 3,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "TranslateMessage",
+  "ea": "0x006b23e8",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "PeekMessageA",
+  "ea": "0x006b23ec",
+  "nargs": 5,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "GetWindowLongA",
+  "ea": "0x006b23f0",
+  "nargs": 2,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "GetDesktopWindow",
+  "ea": "0x006b23f4",
+  "nargs": 0,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "SetForegroundWindow",
+  "ea": "0x006b23f8",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "GetSystemMetrics",
+  "ea": "0x006b23fc",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "LoadIconA",
+  "ea": "0x006b2400",
+  "nargs": 2,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "LoadCursorA",
+  "ea": "0x006b2404",
+  "nargs": 2,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "RegisterClassA",
+  "ea": "0x006b2408",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "SetWindowLongA",
+  "ea": "0x006b240c",
+  "nargs": 3,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "WinHelpA",
+  "ea": "0x006b2410",
+  "nargs": 4,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "DestroyMenu",
+  "ea": "0x006b2414",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "DefWindowProcA",
+  "ea": "0x006b2418",
+  "nargs": 4,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "ReleaseCapture",
+  "ea": "0x006b241c",
+  "nargs": 0,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "SetCapture",
+  "ea": "0x006b2420",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "SendMessageA",
+  "ea": "0x006b2424",
+  "nargs": 4,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "EndPaint",
+  "ea": "0x006b2428",
+  "nargs": 2,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "OffsetRect",
+  "ea": "0x006b242c",
+  "nargs": 3,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "DispatchMessageA",
+  "ea": "0x006b2430",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "BeginPaint",
+  "ea": "0x006b2434",
+  "nargs": 2,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "wsprintfA",
+  "ea": "0x006b2438",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "GetAsyncKeyState",
+  "ea": "0x006b243c",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "MessageBoxA",
+  "ea": "0x006b2440",
+  "nargs": 4,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "GetDoubleClickTime",
+  "ea": "0x006b2444",
+  "nargs": 0,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "GetForegroundWindow",
+  "ea": "0x006b2448",
+  "nargs": 0,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "ShowCursor",
+  "ea": "0x006b244c",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "ClientToScreen",
+  "ea": "0x006b2450",
+  "nargs": 2,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "ScreenToClient",
+  "ea": "0x006b2454",
+  "nargs": 2,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "GetCursorPos",
+  "ea": "0x006b2458",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "GetMenu",
+  "ea": "0x006b245c",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "CheckMenuItem",
+  "ea": "0x006b2460",
+  "nargs": 3,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "USER32",
+  "name": "SetCursorPos",
+  "ea": "0x006b2464",
+  "nargs": 2,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "GDI32",
+  "name": "GetStockObject",
+  "ea": "0x006b2000",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "GDI32",
+  "name": "PatBlt",
+  "ea": "0x006b2004",
+  "nargs": 6,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "GDI32",
+  "name": "SetDIBitsToDevice",
+  "ea": "0x006b2008",
+  "nargs": 12,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "GDI32",
+  "name": "DeleteObject",
+  "ea": "0x006b200c",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "GDI32",
+  "name": "SelectPalette",
+  "ea": "0x006b2010",
+  "nargs": 3,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "GDI32",
+  "name": "GetDeviceCaps",
+  "ea": "0x006b2014",
+  "nargs": 2,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "GDI32",
+  "name": "AbortDoc",
+  "ea": "0x006b2018",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "GDI32",
+  "name": "StartDocA",
+  "ea": "0x006b201c",
+  "nargs": 2,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "GDI32",
+  "name": "CreateDCA",
+  "ea": "0x006b2020",
+  "nargs": 4,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "GDI32",
+  "name": "StartPage",
+  "ea": "0x006b2024",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "GDI32",
+  "name": "EndPage",
+  "ea": "0x006b2028",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "GDI32",
+  "name": "EndDoc",
+  "ea": "0x006b202c",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "GDI32",
+  "name": "StretchDIBits",
+  "ea": "0x006b2030",
+  "nargs": 13,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "GDI32",
+  "name": "DeleteDC",
+  "ea": "0x006b2034",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "SHELL32",
+  "name": "DragFinish",
+  "ea": "0x006b2394",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "SHELL32",
+  "name": "DragAcceptFiles",
+  "ea": "0x006b2398",
+  "nargs": 2,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "SHELL32",
+  "name": "SHGetSpecialFolderLocation",
+  "ea": "0x006b239c",
+  "nargs": 3,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "SHELL32",
+  "name": "SHGetPathFromIDListA",
+  "ea": "0x006b23a0",
+  "nargs": 2,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "SHELL32",
+  "name": "SHGetMalloc",
+  "ea": "0x006b23a4",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "SHELL32",
+  "name": "ShellExecuteA",
+  "ea": "0x006b23a8",
+  "nargs": 6,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "SHELL32",
+  "name": "DragQueryFileA",
+  "ea": "0x006b23ac",
+  "nargs": 4,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "freetype6",
+  "name": "#66",
+  "ea": "0x006b24e4",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "freetype6",
+  "name": "#67",
+  "ea": "0x006b24e0",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "freetype6",
+  "name": "#78",
+  "ea": "0x006b24d8",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "freetype6",
+  "name": "#82",
+  "ea": "0x006b24d4",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "freetype6",
+  "name": "#116",
+  "ea": "0x006b24dc",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "freetype6",
+  "name": "#125",
+  "ea": "0x006b24e8",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "freetype6",
+  "name": "#139",
+  "ea": "0x006b24ec",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "freetype6",
+  "name": "#168",
+  "ea": "0x006b24f0",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "ole32",
+  "name": "CoCreateInstance",
+  "ea": "0x006b24f8",
+  "nargs": 5,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "ole32",
+  "name": "CoUninitialize",
+  "ea": "0x006b24fc",
+  "nargs": 0,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "ole32",
+  "name": "CoInitialize",
+  "ea": "0x006b2500",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "WINMM",
+  "name": "waveOutGetDevCapsA",
+  "ea": "0x006b246c",
+  "nargs": 3,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "WINMM",
+  "name": "waveOutGetNumDevs",
+  "ea": "0x006b2470",
+  "nargs": 0,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "WINMM",
+  "name": "timeGetTime",
+  "ea": "0x006b2474",
+  "nargs": 0,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "WINMM",
+  "name": "joySetCapture",
+  "ea": "0x006b2478",
+  "nargs": 4,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "WINMM",
+  "name": "joySetThreshold",
+  "ea": "0x006b247c",
+  "nargs": 2,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "WINMM",
+  "name": "joyReleaseCapture",
+  "ea": "0x006b2480",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "WINMM",
+  "name": "timeBeginPeriod",
+  "ea": "0x006b2484",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "WINMM",
+  "name": "timeEndPeriod",
+  "ea": "0x006b2488",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "WINMM",
+  "name": "timeGetDevCaps",
+  "ea": "0x006b248c",
+  "nargs": 2,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "WINMM",
+  "name": "joyGetNumDevs",
+  "ea": "0x006b2490",
+  "nargs": 0,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "WINMM",
+  "name": "joyGetPos",
+  "ea": "0x006b2494",
+  "nargs": 2,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "WINMM",
+  "name": "PlaySoundA",
+  "ea": "0x006b2498",
+  "nargs": 3,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "GlobalFree",
+  "ea": "0x006b203c",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "GlobalLock",
+  "ea": "0x006b2040",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "GlobalUnlock",
+  "ea": "0x006b2044",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "FileTimeToLocalFileTime",
+  "ea": "0x006b2048",
+  "nargs": 2,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "FileTimeToDosDateTime",
+  "ea": "0x006b204c",
+  "nargs": 3,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "GetFileSize",
+  "ea": "0x006b2050",
+  "nargs": 2,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "GetFileTime",
+  "ea": "0x006b2054",
+  "nargs": 4,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "GetSystemInfo",
+  "ea": "0x006b2058",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "lstrlenA",
+  "ea": "0x006b205c",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "WriteFile",
+  "ea": "0x006b2060",
+  "nargs": 5,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "CopyFileA",
+  "ea": "0x006b2064",
+  "nargs": 3,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "CreateFileA",
+  "ea": "0x006b2068",
+  "nargs": 7,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "SetFilePointer",
+  "ea": "0x006b206c",
+  "nargs": 4,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "VirtualQuery",
+  "ea": "0x006b2070",
+  "nargs": 3,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "GetCurrentThread",
+  "ea": "0x006b2074",
+  "nargs": 0,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "IsBadReadPtr",
+  "ea": "0x006b2078",
+  "nargs": 2,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "GetSystemTimeAsFileTime",
+  "ea": "0x006b207c",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "GetCurrentProcessId",
+  "ea": "0x006b2080",
+  "nargs": 0,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "GetCurrentThreadId",
+  "ea": "0x006b2084",
+  "nargs": 0,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "QueryPerformanceCounter",
+  "ea": "0x006b2088",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "IsDebuggerPresent",
+  "ea": "0x006b208c",
+  "nargs": 0,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "SetUnhandledExceptionFilter",
+  "ea": "0x006b2090",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "UnhandledExceptionFilter",
+  "ea": "0x006b2094",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "GetCurrentProcess",
+  "ea": "0x006b2098",
+  "nargs": 0,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "TerminateProcess",
+  "ea": "0x006b209c",
+  "nargs": 2,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "InterlockedCompareExchange",
+  "ea": "0x006b20a0",
+  "nargs": 3,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "InterlockedExchange",
+  "ea": "0x006b20a4",
+  "nargs": 2,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "SetErrorMode",
+  "ea": "0x006b20a8",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "CloseHandle",
+  "ea": "0x006b20ac",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "CreateMutexA",
+  "ea": "0x006b20b0",
+  "nargs": 3,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "GetCommandLineA",
+  "ea": "0x006b20b4",
+  "nargs": 0,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "Sleep",
+  "ea": "0x006b20b8",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "GetTickCount",
+  "ea": "0x006b20bc",
+  "nargs": 0,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "lstrcpyA",
+  "ea": "0x006b20c0",
+  "nargs": 2,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "GetDriveTypeA",
+  "ea": "0x006b20c4",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "GlobalMemoryStatus",
+  "ea": "0x006b20c8",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "GetModuleFileNameA",
+  "ea": "0x006b20cc",
+  "nargs": 3,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "OutputDebugStringA",
+  "ea": "0x006b20d0",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "GetLastError",
+  "ea": "0x006b20d4",
+  "nargs": 0,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "FormatMessageA",
+  "ea": "0x006b20d8",
+  "nargs": 7,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "LocalFree",
+  "ea": "0x006b20dc",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "GetStartupInfoA",
+  "ea": "0x006b20e0",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "CreateProcessA",
+  "ea": "0x006b20e4",
+  "nargs": 10,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "KERNEL32",
+  "name": "GetFileAttributesA",
+  "ea": "0x006b20e8",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCP80",
+  "name": "??$?MDU?$char_traits@D@std@@V?$allocator@D@1@@std@@YA_NABV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@0@0@Z",
+  "ea": "0x006b20f0",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCP80",
+  "name": "??1?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ",
+  "ea": "0x006b20f4",
+  "nargs": 0,
+  "conv": "thiscall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCP80",
+  "name": "??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@ABV01@@Z",
+  "ea": "0x006b20f8",
+  "nargs": 1,
+  "conv": "thiscall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCP80",
+  "name": "??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@PBD@Z",
+  "ea": "0x006b20fc",
+  "nargs": 1,
+  "conv": "thiscall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCP80",
+  "name": "?c_str@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QBEPBDXZ",
+  "ea": "0x006b2100",
+  "nargs": 0,
+  "conv": "thiscall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCP80",
+  "name": "??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@ABV01@@Z",
+  "ea": "0x006b2104",
+  "nargs": 1,
+  "conv": "thiscall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCP80",
+  "name": "?append@?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV12@ABV12@@Z",
+  "ea": "0x006b2108",
+  "nargs": 1,
+  "conv": "thiscall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCP80",
+  "name": "??0?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAE@XZ",
+  "ea": "0x006b210c",
+  "nargs": 0,
+  "conv": "thiscall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCP80",
+  "name": "??A?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAADI@Z",
+  "ea": "0x006b2110",
+  "nargs": 1,
+  "conv": "thiscall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCP80",
+  "name": "??4?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@QAEAAV01@PBD@Z",
+  "ea": "0x006b2114",
+  "nargs": 1,
+  "conv": "thiscall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_onexit",
+  "ea": "0x006b211c",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_lock",
+  "ea": "0x006b2120",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_decode_pointer",
+  "ea": "0x006b2124",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_amsg_exit",
+  "ea": "0x006b2128",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "__getmainargs",
+  "ea": "0x006b212c",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_XcptFilter",
+  "ea": "0x006b2130",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_ismbblead",
+  "ea": "0x006b2134",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_acmdln",
+  "ea": "0x006b2138",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_initterm",
+  "ea": "0x006b213c",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_encode_pointer",
+  "ea": "0x006b2140",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "__dllonexit",
+  "ea": "0x006b2144",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_unlock",
+  "ea": "0x006b2148",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "?terminate@@YAXXZ",
+  "ea": "0x006b214c",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "memchr",
+  "ea": "0x006b2150",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_ftol",
+  "ea": "0x006b2154",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "realloc",
+  "ea": "0x006b2158",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_errno",
+  "ea": "0x006b215c",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "calloc",
+  "ea": "0x006b2160",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "isspace",
+  "ea": "0x006b2164",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_stat64i32",
+  "ea": "0x006b2168",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "strftime",
+  "ea": "0x006b216c",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "isdigit",
+  "ea": "0x006b2170",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_chdir",
+  "ea": "0x006b2174",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_rmdir",
+  "ea": "0x006b2178",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "fputs",
+  "ea": "0x006b217c",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "vsprintf",
+  "ea": "0x006b2180",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "bsearch",
+  "ea": "0x006b2184",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "islower",
+  "ea": "0x006b2188",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_mbsdec",
+  "ea": "0x006b218c",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_mbsnextc",
+  "ea": "0x006b2190",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_mbsinc",
+  "ea": "0x006b2194",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "__iob_func",
+  "ea": "0x006b2198",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "fprintf",
+  "ea": "0x006b219c",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_strdup",
+  "ea": "0x006b21a0",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "fflush",
+  "ea": "0x006b21a4",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "ftell",
+  "ea": "0x006b21a8",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_initterm_e",
+  "ea": "0x006b21ac",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_configthreadlocale",
+  "ea": "0x006b21b0",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "__setusermatherr",
+  "ea": "0x006b21b4",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_adjust_fdiv",
+  "ea": "0x006b21b8",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "__p__commode",
+  "ea": "0x006b21bc",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "__p__fmode",
+  "ea": "0x006b21c0",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "__set_app_type",
+  "ea": "0x006b21c4",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_except_handler4_common",
+  "ea": "0x006b21c8",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "?_type_info_dtor_internal_method@type_info@@QAEXXZ",
+  "ea": "0x006b21cc",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_crt_debugger_hook",
+  "ea": "0x006b21d0",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_invoke_watson",
+  "ea": "0x006b21d4",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_controlfp_s",
+  "ea": "0x006b21d8",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_itoa",
+  "ea": "0x006b21dc",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_strupr",
+  "ea": "0x006b21e0",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_stricmp",
+  "ea": "0x006b21e4",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "toupper",
+  "ea": "0x006b21e8",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "rename",
+  "ea": "0x006b21ec",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "feof",
+  "ea": "0x006b21f0",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "fscanf",
+  "ea": "0x006b21f4",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "fsetpos",
+  "ea": "0x006b21f8",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "fgetpos",
+  "ea": "0x006b21fc",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "ldexp",
+  "ea": "0x006b2200",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_CIpow",
+  "ea": "0x006b2204",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "frexp",
+  "ea": "0x006b2208",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_cexit",
+  "ea": "0x006b220c",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "??0exception@std@@QAE@ABV01@@Z",
+  "ea": "0x006b2210",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "??3@YAXPAX@Z",
+  "ea": "0x006b2214",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "__CxxFrameHandler3",
+  "ea": "0x006b2218",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "??2@YAPAXI@Z",
+  "ea": "0x006b221c",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "sprintf",
+  "ea": "0x006b2220",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "tolower",
+  "ea": "0x006b2224",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_purecall",
+  "ea": "0x006b2228",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "strcpy",
+  "ea": "0x006b222c",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "abs",
+  "ea": "0x006b2230",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "strcmp",
+  "ea": "0x006b2234",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "strcat",
+  "ea": "0x006b2238",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "atoi",
+  "ea": "0x006b223c",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "strlen",
+  "ea": "0x006b2240",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "ceil",
+  "ea": "0x006b2244",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "qsort",
+  "ea": "0x006b2248",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "__RTDynamicCast",
+  "ea": "0x006b224c",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "sqrt",
+  "ea": "0x006b2250",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "memset",
+  "ea": "0x006b2254",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "fclose",
+  "ea": "0x006b2258",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "fread",
+  "ea": "0x006b225c",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "fwrite",
+  "ea": "0x006b2260",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "strrchr",
+  "ea": "0x006b2264",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "floor",
+  "ea": "0x006b2268",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "fmod",
+  "ea": "0x006b226c",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_CxxThrowException",
+  "ea": "0x006b2270",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_invalid_parameter_noinfo",
+  "ea": "0x006b2274",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "??1exception@std@@UAE@XZ",
+  "ea": "0x006b2278",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "??0exception@std@@QAE@XZ",
+  "ea": "0x006b227c",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "memmove_s",
+  "ea": "0x006b2280",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "??0exception@std@@QAE@ABQBD@Z",
+  "ea": "0x006b2284",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "?what@exception@std@@UBEPBDXZ",
+  "ea": "0x006b2288",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "log10",
+  "ea": "0x006b228c",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "modf",
+  "ea": "0x006b2290",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "memcpy",
+  "ea": "0x006b2294",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_localtime64",
+  "ea": "0x006b2298",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_time64",
+  "ea": "0x006b229c",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "remove",
+  "ea": "0x006b22a0",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_strdate",
+  "ea": "0x006b22a4",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_filelength",
+  "ea": "0x006b22a8",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_fileno",
+  "ea": "0x006b22ac",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "malloc",
+  "ea": "0x006b22b0",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "fopen",
+  "ea": "0x006b22b4",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "strchr",
+  "ea": "0x006b22b8",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "free",
+  "ea": "0x006b22bc",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "strncpy",
+  "ea": "0x006b22c0",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "memcmp",
+  "ea": "0x006b22c4",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "sin",
+  "ea": "0x006b22c8",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "cos",
+  "ea": "0x006b22cc",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "atof",
+  "ea": "0x006b22d0",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "atol",
+  "ea": "0x006b22d4",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "memmove",
+  "ea": "0x006b22d8",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "??_V@YAXPAX@Z",
+  "ea": "0x006b22dc",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_exit",
+  "ea": "0x006b22e0",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "exit",
+  "ea": "0x006b22e4",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "fabs",
+  "ea": "0x006b22e8",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "putc",
+  "ea": "0x006b22ec",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_mkdir",
+  "ea": "0x006b22f0",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "strncmp",
+  "ea": "0x006b22f4",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "sscanf",
+  "ea": "0x006b22f8",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "strstr",
+  "ea": "0x006b22fc",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_findclose",
+  "ea": "0x006b2300",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_findnext64i32",
+  "ea": "0x006b2304",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_findfirst64i32",
+  "ea": "0x006b2308",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "fseek",
+  "ea": "0x006b230c",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "fgetc",
+  "ea": "0x006b2310",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "MSVCR80",
+  "name": "_splitpath",
+  "ea": "0x006b2314",
+  "nargs": 4,
+  "conv": "cdecl",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "comdlg32",
+  "name": "PrintDlgA",
+  "ea": "0x006b24b0",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "WINSPOOL",
+  "name": "DocumentPropertiesA",
+  "ea": "0x006b24a0",
+  "nargs": 6,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "WINSPOOL",
+  "name": "ClosePrinter",
+  "ea": "0x006b24a4",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "WINSPOOL",
+  "name": "OpenPrinterA",
+  "ea": "0x006b24a8",
+  "nargs": 3,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "dbghelp",
+  "name": "SymGetSymFromAddr",
+  "ea": "0x006b24b8",
+  "nargs": 4,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "dbghelp",
+  "name": "SymGetModuleBase",
+  "ea": "0x006b24bc",
+  "nargs": 2,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "dbghelp",
+  "name": "SymFunctionTableAccess",
+  "ea": "0x006b24c0",
+  "nargs": 2,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "dbghelp",
+  "name": "StackWalk",
+  "ea": "0x006b24c4",
+  "nargs": 9,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "dbghelp",
+  "name": "SymCleanup",
+  "ea": "0x006b24c8",
+  "nargs": 1,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ },
+ {
+  "module": "dbghelp",
+  "name": "SymInitialize",
+  "ea": "0x006b24cc",
+  "nargs": 3,
+  "conv": "stdcall",
+  "source": "nm",
+  "confidence": "high"
+ }
+]

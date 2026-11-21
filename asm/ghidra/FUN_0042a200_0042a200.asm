@@ -1,0 +1,34 @@
+; FUN_0042a200  0042a200
+0042a200  PUSH EBP
+0042a201  MOV EBP,ESP
+0042a203  SUB ESP,0x8
+0042a206  MOV dword ptr [EBP + -0x8],ECX
+0042a209  MOV EAX,dword ptr [EBP + -0x8]
+0042a20c  MOV ECX,dword ptr [EAX + 0x158]
+0042a212  MOV EDX,dword ptr [EBP + -0x8]
+0042a215  MOV EAX,dword ptr [EDX + 0x158]
+0042a21b  MOV EDX,dword ptr [ECX]
+0042a21d  MOV ECX,EAX
+0042a21f  MOV EAX,dword ptr [EDX + 0x70]
+0042a222  CALL EAX
+0042a224  MOV dword ptr [EBP + -0x4],0x0
+0042a22b  JMP 0x0042a236
+0042a22d  MOV ECX,dword ptr [EBP + -0x4]
+0042a230  ADD ECX,0x1
+0042a233  MOV dword ptr [EBP + -0x4],ECX
+0042a236  CMP dword ptr [EBP + -0x4],0x2
+0042a23a  JGE 0x0042a261
+0042a23c  MOV EDX,dword ptr [EBP + -0x4]
+0042a23f  MOV EAX,dword ptr [EBP + -0x8]
+0042a242  MOV ECX,dword ptr [EAX + EDX*0x4 + 0x150]
+0042a249  MOV EDX,dword ptr [EBP + -0x4]
+0042a24c  MOV EAX,dword ptr [EBP + -0x8]
+0042a24f  MOV EDX,dword ptr [EAX + EDX*0x4 + 0x150]
+0042a256  MOV EAX,dword ptr [ECX]
+0042a258  MOV ECX,EDX
+0042a25a  MOV EDX,dword ptr [EAX + 0x70]
+0042a25d  CALL EDX
+0042a25f  JMP 0x0042a22d
+0042a261  MOV ESP,EBP
+0042a263  POP EBP
+0042a264  RET

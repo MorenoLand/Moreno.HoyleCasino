@@ -1,0 +1,12 @@
+; FUN_00667bc0  00667bc0
+00667bc0  PUSH EBP
+00667bc1  MOV EBP,ESP
+00667bc3  PUSH ECX
+00667bc4  MOV dword ptr [EBP + -0x4],ECX
+00667bc7  MOV EAX,dword ptr [EBP + -0x4]
+00667bca  MOV dword ptr [EAX],0x6dfbe0
+00667bd0  MOV ECX,dword ptr [EBP + -0x4]
+00667bd3  CALL 0x005e9e40
+00667bd8  MOV ESP,EBP
+00667bda  POP EBP
+00667bdb  RET

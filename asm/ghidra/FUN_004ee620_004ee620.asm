@@ -1,0 +1,18 @@
+; FUN_004ee620  004ee620
+004ee620  PUSH EBP
+004ee621  MOV EBP,ESP
+004ee623  PUSH ECX
+004ee624  MOV dword ptr [EBP + -0x4],ECX
+004ee627  MOV EAX,dword ptr [EBP + -0x4]
+004ee62a  MOVSX ECX,word ptr [EAX + 0x64]
+004ee62e  CMP ECX,0x1
+004ee631  JNZ 0x004ee643
+004ee633  MOV EDX,dword ptr [EBP + -0x4]
+004ee636  MOVSX EAX,word ptr [EDX + 0x398]
+004ee63d  SHL EAX,0x1
+004ee63f  JMP 0x004ee64d
+004ee643  MOV EAX,dword ptr [EBP + -0x4]
+004ee646  MOV AX,word ptr [EAX + 0x398]
+004ee64d  MOV ESP,EBP
+004ee64f  POP EBP
+004ee650  RET

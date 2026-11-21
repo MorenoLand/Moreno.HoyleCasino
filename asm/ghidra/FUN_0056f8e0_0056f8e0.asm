@@ -1,0 +1,62 @@
+; FUN_0056f8e0  0056f8e0
+0056f8e0  PUSH EBP
+0056f8e1  MOV EBP,ESP
+0056f8e3  PUSH -0x1
+0056f8e5  PUSH 0x6a5efe
+0056f8ea  MOV EAX,FS:[0x0]
+0056f8f0  PUSH EAX
+0056f8f1  SUB ESP,0x1c
+0056f8f4  MOV EAX,[0x00781870]
+0056f8f9  XOR EAX,EBP
+0056f8fb  PUSH EAX
+0056f8fc  LEA EAX,[EBP + -0xc]
+0056f8ff  MOV FS:[0x0],EAX
+0056f905  MOV dword ptr [EBP + -0x20],ECX
+0056f908  MOV EAX,dword ptr [EBP + -0x20]
+0056f90b  CMP dword ptr [EAX + 0x4],0x0
+0056f90f  JZ 0x0056f94a
+0056f911  MOV ECX,dword ptr [EBP + -0x20]
+0056f914  MOV EDX,dword ptr [ECX + 0x4]
+0056f917  MOV dword ptr [EBP + -0x14],EDX
+0056f91a  MOV EAX,dword ptr [EBP + -0x14]
+0056f91d  MOV dword ptr [EBP + -0x10],EAX
+0056f920  CMP dword ptr [EBP + -0x10],0x0
+0056f924  JZ 0x0056f939
+0056f926  PUSH 0x1
+0056f928  MOV ECX,dword ptr [EBP + -0x10]
+0056f92b  MOV EDX,dword ptr [ECX]
+0056f92d  MOV ECX,dword ptr [EBP + -0x10]
+0056f930  MOV EAX,dword ptr [EDX]
+0056f932  CALL EAX
+0056f934  MOV dword ptr [EBP + -0x24],EAX
+0056f937  JMP 0x0056f940
+0056f939  MOV dword ptr [EBP + -0x24],0x0
+0056f940  MOV ECX,dword ptr [EBP + -0x20]
+0056f943  MOV dword ptr [ECX + 0x4],0x0
+0056f94a  MOV EDX,dword ptr [EBP + -0x20]
+0056f94d  CMP dword ptr [EDX + 0x4],0x0
+0056f951  JNZ 0x0056f99a
+0056f953  PUSH 0x84
+0056f958  CALL 0x00686d82
+0056f95d  ADD ESP,0x4
+0056f960  MOV dword ptr [EBP + -0x1c],EAX
+0056f963  MOV dword ptr [EBP + -0x4],0x0
+0056f96a  CMP dword ptr [EBP + -0x1c],0x0
+0056f96e  JZ 0x0056f97d
+0056f970  MOV ECX,dword ptr [EBP + -0x1c]
+0056f973  CALL 0x00571660
+0056f978  MOV dword ptr [EBP + -0x28],EAX
+0056f97b  JMP 0x0056f984
+0056f97d  MOV dword ptr [EBP + -0x28],0x0
+0056f984  MOV EAX,dword ptr [EBP + -0x28]
+0056f987  MOV dword ptr [EBP + -0x18],EAX
+0056f98a  MOV dword ptr [EBP + -0x4],0xffffffff
+0056f991  MOV ECX,dword ptr [EBP + -0x20]
+0056f994  MOV EDX,dword ptr [EBP + -0x18]
+0056f997  MOV dword ptr [ECX + 0x4],EDX
+0056f99a  MOV ECX,dword ptr [EBP + -0xc]
+0056f99d  MOV dword ptr FS:[0x0],ECX
+0056f9a4  POP ECX
+0056f9a5  MOV ESP,EBP
+0056f9a7  POP EBP
+0056f9a8  RET

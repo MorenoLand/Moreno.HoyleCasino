@@ -1,0 +1,15 @@
+; FUN_00637ad0  00637ad0
+00637ad0  PUSH EBP
+00637ad1  MOV EBP,ESP
+00637ad3  SUB ESP,0x8
+00637ad6  MOV dword ptr [EBP + -0x8],ECX
+00637ad9  MOV ECX,dword ptr [EBP + -0x8]
+00637adc  CALL 0x006375b0
+00637ae1  MOV dword ptr [EBP + -0x4],EAX
+00637ae4  MOV ECX,dword ptr [EBP + -0x4]
+00637ae7  CALL 0x0063aac0
+00637aec  MOV ECX,dword ptr [EBP + 0x8]
+00637aef  MOV dword ptr [EAX + 0x374],ECX
+00637af5  MOV ESP,EBP
+00637af7  POP EBP
+00637af8  RET 0x4

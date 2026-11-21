@@ -1,0 +1,74 @@
+; FUN_005718a0  005718a0
+005718a0  PUSH EBP
+005718a1  MOV EBP,ESP
+005718a3  SUB ESP,0xc
+005718a6  MOV dword ptr [EBP + -0xc],ECX
+005718a9  MOV dword ptr [EBP + -0x4],0x0
+005718b0  MOV ECX,dword ptr [EBP + -0xc]
+005718b3  CALL 0x00571cb0
+005718b8  MOVZX EAX,AL
+005718bb  TEST EAX,EAX
+005718bd  JZ 0x0057196a
+005718c3  MOV ECX,dword ptr [EBP + -0xc]
+005718c6  CALL 0x00571c30
+005718cb  MOV dword ptr [EBP + -0x8],EAX
+005718ce  CMP dword ptr [EBP + -0x8],0x8
+005718d2  JGE 0x0057193a
+005718d4  MOV ECX,dword ptr [EBP + -0x8]
+005718d7  MOV EDX,dword ptr [EBP + -0xc]
+005718da  MOV EAX,dword ptr [ECX*0x4 + 0x7488f0]
+005718e1  IMUL EAX,dword ptr [EDX + 0x38]
+005718e5  MOV dword ptr [EBP + -0x4],EAX
+005718e8  MOV ECX,dword ptr [EBP + -0xc]
+005718eb  MOV EDX,dword ptr [ECX + 0x3c]
+005718ee  ADD EDX,dword ptr [EBP + -0x4]
+005718f1  MOV EAX,dword ptr [EBP + -0xc]
+005718f4  MOV dword ptr [EAX + 0x3c],EDX
+005718f7  MOV ECX,dword ptr [EBP + -0x8]
+005718fa  MOV EDX,dword ptr [EBP + -0xc]
+005718fd  MOV EAX,dword ptr [EDX + ECX*0x4 + 0x40]
+00571901  ADD EAX,dword ptr [EBP + -0x4]
+00571904  MOV ECX,dword ptr [EBP + -0x8]
+00571907  MOV EDX,dword ptr [EBP + -0xc]
+0057190a  MOV dword ptr [EDX + ECX*0x4 + 0x40],EAX
+0057190e  MOV EAX,dword ptr [EBP + -0xc]
+00571911  MOV ECX,dword ptr [EAX + 0x60]
+00571914  ADD ECX,dword ptr [EBP + -0x4]
+00571917  MOV EDX,dword ptr [EBP + -0xc]
+0057191a  MOV dword ptr [EDX + 0x60],ECX
+0057191d  MOV EAX,dword ptr [EBP + -0xc]
+00571920  MOVZX ECX,byte ptr [EAX + 0x4]
+00571924  TEST ECX,ECX
+00571926  JZ 0x0057193a
+00571928  CMP dword ptr [EBP + -0x8],0x1
+0057192c  JZ 0x0057193a
+0057192e  MOV EDX,dword ptr [EBP + -0x8]
+00571931  PUSH EDX
+00571932  MOV ECX,dword ptr [EBP + -0xc]
+00571935  CALL 0x00571d30
+0057193a  CMP dword ptr [EBP + -0x8],0x8
+0057193e  JNZ 0x0057195c
+00571940  MOV EAX,dword ptr [EBP + -0xc]
+00571943  MOVZX ECX,byte ptr [EAX + 0x4]
+00571947  TEST ECX,ECX
+00571949  JNZ 0x0057195c
+0057194b  MOV EDX,dword ptr [EBP + -0xc]
+0057194e  MOV byte ptr [EDX + 0x4],0x1
+00571952  MOV EAX,dword ptr [EBP + -0xc]
+00571955  MOV dword ptr [EAX + 0x34],0x0
+0057195c  CMP dword ptr [EBP + -0x8],0x9
+00571960  JNZ 0x0057196a
+00571962  MOV ECX,dword ptr [EBP + -0xc]
+00571965  CALL 0x00571d90
+0057196a  MOV ECX,dword ptr [EBP + -0xc]
+0057196d  MOVZX EDX,byte ptr [ECX + 0x4]
+00571971  TEST EDX,EDX
+00571973  JZ 0x00571985
+00571975  MOV EAX,dword ptr [EBP + -0xc]
+00571978  CMP dword ptr [EAX + 0x34],0x14
+0057197c  JL 0x00571985
+0057197e  MOV ECX,dword ptr [EBP + -0xc]
+00571981  MOV byte ptr [ECX + 0x4],0x0
+00571985  MOV ESP,EBP
+00571987  POP EBP
+00571988  RET

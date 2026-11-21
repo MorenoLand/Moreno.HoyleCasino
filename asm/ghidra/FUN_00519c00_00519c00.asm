@@ -1,0 +1,20 @@
+; FUN_00519c00  00519c00
+00519c00  PUSH EBP
+00519c01  MOV EBP,ESP
+00519c03  PUSH ECX
+00519c04  MOV dword ptr [EBP + -0x4],ECX
+00519c07  MOV EAX,dword ptr [EBP + -0x4]
+00519c0a  MOV ECX,dword ptr [EAX + 0x1e4]
+00519c10  MOV EDX,dword ptr [EBP + -0x4]
+00519c13  MOV EAX,dword ptr [EDX + 0x1dc]
+00519c19  MOV dword ptr [ECX + 0x1c4],EAX
+00519c1f  MOV ECX,dword ptr [EBP + -0x4]
+00519c22  MOV EDX,dword ptr [ECX + 0x1e4]
+00519c28  MOV EAX,dword ptr [EBP + -0x4]
+00519c2b  MOV ECX,dword ptr [EAX + 0x1e4]
+00519c31  MOV EDX,dword ptr [EDX]
+00519c33  MOV EAX,dword ptr [EDX + 0x48]
+00519c36  CALL EAX
+00519c38  MOV ESP,EBP
+00519c3a  POP EBP
+00519c3b  RET

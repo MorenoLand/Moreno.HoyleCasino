@@ -1,0 +1,27 @@
+; FUN_00433980  00433980
+00433980  PUSH EBP
+00433981  MOV EBP,ESP
+00433983  PUSH ECX
+00433984  MOV dword ptr [EBP + -0x4],ECX
+00433987  CMP dword ptr [EBP + 0x8],0x0
+0043398b  JNZ 0x00433991
+0043398d  XOR AL,AL
+0043398f  JMP 0x004339d8
+00433991  MOV EAX,dword ptr [EBP + 0x8]
+00433994  MOV dword ptr [EAX],0x4
+0043399a  MOV ECX,dword ptr [EBP + 0x8]
+0043399d  MOV dword ptr [ECX + 0x4],0x1
+004339a4  MOV EDX,dword ptr [EBP + 0x8]
+004339a7  MOV dword ptr [EDX + 0x8],0x4
+004339ae  MOV EAX,dword ptr [EBP + 0x8]
+004339b1  MOV dword ptr [EAX + 0xc],0x1
+004339b8  MOV ECX,dword ptr [EBP + 0x8]
+004339bb  MOV dword ptr [ECX + 0x10],0x4
+004339c2  MOV EDX,dword ptr [EBP + 0x8]
+004339c5  MOV dword ptr [EDX + 0x14],0x0
+004339cc  MOV EAX,dword ptr [EBP + 0x8]
+004339cf  MOV dword ptr [EAX + 0x18],0x3
+004339d6  MOV AL,0x1
+004339d8  MOV ESP,EBP
+004339da  POP EBP
+004339db  RET 0x8

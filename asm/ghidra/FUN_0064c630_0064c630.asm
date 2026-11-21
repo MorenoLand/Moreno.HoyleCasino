@@ -1,0 +1,38 @@
+; FUN_0064c630  0064c630
+0064c630  PUSH EBP
+0064c631  MOV EBP,ESP
+0064c633  SUB ESP,0x18
+0064c636  MOV dword ptr [EBP + -0x14],ECX
+0064c639  MOV EAX,dword ptr [EBP + -0x14]
+0064c63c  MOV ECX,dword ptr [EAX + 0x4]
+0064c63f  PUSH ECX
+0064c640  MOV EDX,dword ptr [EBP + -0x14]
+0064c643  MOV EAX,dword ptr [EDX]
+0064c645  PUSH EAX
+0064c646  CALL 0x0064c8a0
+0064c64b  ADD ESP,0x8
+0064c64e  MOV dword ptr [EBP + -0x10],EAX
+0064c651  MOV dword ptr [EBP + -0xc],EDX
+0064c654  MOV ECX,dword ptr [EBP + -0x10]
+0064c657  MOV dword ptr [EBP + -0x8],ECX
+0064c65a  MOV EDX,dword ptr [EBP + -0xc]
+0064c65d  MOV dword ptr [EBP + -0x4],EDX
+0064c660  MOV EAX,dword ptr [EBP + 0xc]
+0064c663  NEG EAX
+0064c665  MOV dword ptr [EBP + -0x18],EAX
+0064c668  FILD dword ptr [EBP + -0x18]
+0064c66b  FMUL double ptr [0x006b4b00]
+0064c671  FISUB dword ptr [EBP + 0x10]
+0064c674  SUB ESP,0x8
+0064c677  FSTP double ptr [ESP]
+0064c67a  LEA ECX,[EBP + -0x8]
+0064c67d  CALL 0x0064c510
+0064c682  MOV ECX,dword ptr [EBP + 0x8]
+0064c685  MOV EDX,dword ptr [EBP + -0x8]
+0064c688  MOV dword ptr [ECX],EDX
+0064c68a  MOV EAX,dword ptr [EBP + -0x4]
+0064c68d  MOV dword ptr [ECX + 0x4],EAX
+0064c690  MOV EAX,dword ptr [EBP + 0x8]
+0064c693  MOV ESP,EBP
+0064c695  POP EBP
+0064c696  RET 0xc

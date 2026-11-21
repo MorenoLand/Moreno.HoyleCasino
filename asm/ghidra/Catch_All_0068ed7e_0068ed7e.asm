@@ -1,0 +1,8 @@
+; Catch_All@0068ed7e  0068ed7e
+0068ed7e  MOV EAX,dword ptr [EBP + -0x14]
+0068ed81  PUSH EAX
+0068ed82  CALL 0x00686cae
+0068ed87  ADD ESP,0x4
+0068ed8a  PUSH 0x0
+0068ed8c  PUSH 0x0
+0068ed8e  CALL 0x00686fc0

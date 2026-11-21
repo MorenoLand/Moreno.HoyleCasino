@@ -1,0 +1,14 @@
+; FUN_00416cc0  00416cc0
+00416cc0  PUSH EBP
+00416cc1  MOV EBP,ESP
+00416cc3  SUB ESP,0x58
+00416cc6  MOV dword ptr [EBP + -0x4],ECX
+00416cc9  MOVSX EAX,byte ptr [EBP + 0x8]
+00416ccd  MOV dword ptr [EBP + -0x8],EAX
+00416cd0  CMP dword ptr [EBP + -0x8],0x3
+00416cd4  JA 0x0041710f
+00416cda  MOV ECX,dword ptr [EBP + -0x8]
+00416cdd  JMP dword ptr [ECX*0x4 + 0x417118]
+0041710f  MOV ESP,EBP
+00417111  POP EBP
+00417112  RET 0x4

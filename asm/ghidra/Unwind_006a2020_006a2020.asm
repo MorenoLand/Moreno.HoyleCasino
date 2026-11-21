@@ -1,0 +1,8 @@
+; Unwind@006a2020  006a2020
+006a2020  MOV EAX,dword ptr [EBP + 0xfffff7ac]
+006a2026  AND EAX,0x400000
+006a202b  JZ 0x006a2046
+006a2031  AND dword ptr [EBP + 0xfffff7ac],0xffbfffff
+006a203b  LEA ECX,[EBP + 0xfffff7e8]
+006a2041  JMP 0x00484470
+006a2046  RET

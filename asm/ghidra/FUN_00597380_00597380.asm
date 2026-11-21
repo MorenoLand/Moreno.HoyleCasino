@@ -1,0 +1,27 @@
+; FUN_00597380  00597380
+00597380  PUSH EBP
+00597381  MOV EBP,ESP
+00597383  PUSH ECX
+00597384  MOV dword ptr [EBP + -0x4],ECX
+00597387  CMP dword ptr [EBP + 0x8],0x0
+0059738b  JNZ 0x00597391
+0059738d  XOR AL,AL
+0059738f  JMP 0x005973d8
+00597391  MOV EAX,dword ptr [EBP + 0x8]
+00597394  MOV dword ptr [EAX],0x4
+0059739a  MOV ECX,dword ptr [EBP + 0x8]
+0059739d  MOV dword ptr [ECX + 0x4],0x1
+005973a4  MOV EDX,dword ptr [EBP + 0x8]
+005973a7  MOV dword ptr [EDX + 0x8],0x4
+005973ae  MOV EAX,dword ptr [EBP + 0x8]
+005973b1  MOV dword ptr [EAX + 0xc],0x1
+005973b8  MOV ECX,dword ptr [EBP + 0x8]
+005973bb  MOV dword ptr [ECX + 0x10],0x4
+005973c2  MOV EDX,dword ptr [EBP + 0x8]
+005973c5  MOV dword ptr [EDX + 0x14],0x0
+005973cc  MOV EAX,dword ptr [EBP + 0x8]
+005973cf  MOV dword ptr [EAX + 0x18],0x3
+005973d6  MOV AL,0x1
+005973d8  MOV ESP,EBP
+005973da  POP EBP
+005973db  RET 0x8

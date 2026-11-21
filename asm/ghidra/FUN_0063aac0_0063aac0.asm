@@ -1,0 +1,10 @@
+; FUN_0063aac0  0063aac0
+0063aac0  PUSH EBP
+0063aac1  MOV EBP,ESP
+0063aac3  PUSH ECX
+0063aac4  MOV dword ptr [EBP + -0x4],ECX
+0063aac7  MOV EAX,dword ptr [EBP + -0x4]
+0063aaca  ADD EAX,0x28
+0063aacd  MOV ESP,EBP
+0063aacf  POP EBP
+0063aad0  RET

@@ -1,0 +1,9 @@
+; FUN_0065ded0  0065ded0
+0065ded0  PUSH EBP
+0065ded1  MOV EBP,ESP
+0065ded3  PUSH ECX
+0065ded4  MOV dword ptr [EBP + -0x4],ECX
+0065ded7  MOV EAX,0xb6
+0065dedc  MOV ESP,EBP
+0065dede  POP EBP
+0065dedf  RET

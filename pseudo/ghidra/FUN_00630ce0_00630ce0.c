@@ -1,0 +1,9 @@
+// FUN_00630ce0  00630ce0
+
+void FUN_00630ce0(void)
+
+{
+  FUN_00630f40("SID_SHELL_CDEJECTEDMESSAGE");
+  return;
+}
+

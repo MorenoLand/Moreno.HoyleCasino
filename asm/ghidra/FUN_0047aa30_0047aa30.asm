@@ -1,0 +1,34 @@
+; FUN_0047aa30  0047aa30
+0047aa30  PUSH EBP
+0047aa31  MOV EBP,ESP
+0047aa33  SUB ESP,0xc
+0047aa36  PUSH ESI
+0047aa37  MOV dword ptr [EBP + -0xc],ECX
+0047aa3a  MOV EAX,dword ptr [EBP + -0xc]
+0047aa3d  MOV byte ptr [EAX + 0x7d2],0x1
+0047aa44  MOV word ptr [EBP + -0x8],0x0
+0047aa4a  JMP 0x0047aa58
+0047aa4c  MOV CX,word ptr [EBP + -0x8]
+0047aa50  ADD CX,0x1
+0047aa54  MOV word ptr [EBP + -0x8],CX
+0047aa58  MOVSX ESI,word ptr [EBP + -0x8]
+0047aa5c  MOV ECX,dword ptr [0x00791364]
+0047aa62  CALL 0x0047f950
+0047aa67  CMP ESI,EAX
+0047aa69  JGE 0x0047aa91
+0047aa6b  MOVSX EDX,word ptr [EBP + -0x8]
+0047aa6f  PUSH EDX
+0047aa70  MOV ECX,dword ptr [EBP + -0xc]
+0047aa73  CALL 0x0047e390
+0047aa78  MOV dword ptr [EBP + -0x4],EAX
+0047aa7b  MOV ECX,dword ptr [EBP + -0x4]
+0047aa7e  CALL 0x004c6cb0
+0047aa83  TEST EAX,EAX
+0047aa85  JZ 0x0047aa8f
+0047aa87  MOV ECX,dword ptr [EBP + -0x4]
+0047aa8a  CALL 0x004c6b30
+0047aa8f  JMP 0x0047aa4c
+0047aa91  POP ESI
+0047aa92  MOV ESP,EBP
+0047aa94  POP EBP
+0047aa95  RET

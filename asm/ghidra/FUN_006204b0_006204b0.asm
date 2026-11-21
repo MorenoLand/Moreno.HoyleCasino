@@ -1,0 +1,14 @@
+; FUN_006204b0  006204b0
+006204b0  PUSH EBP
+006204b1  MOV EBP,ESP
+006204b3  MOV EAX,dword ptr [EBP + 0x8]
+006204b6  MOV ECX,dword ptr [EAX]
+006204b8  MOV EDX,dword ptr [EBP + 0xc]
+006204bb  MOV dword ptr [ECX],EDX
+006204bd  MOV EAX,dword ptr [EBP + 0x8]
+006204c0  MOV ECX,dword ptr [EAX]
+006204c2  ADD ECX,0x4
+006204c5  MOV EDX,dword ptr [EBP + 0x8]
+006204c8  MOV dword ptr [EDX],ECX
+006204ca  POP EBP
+006204cb  RET

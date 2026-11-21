@@ -1,0 +1,22 @@
+; FUN_004da470  004da470
+004da470  PUSH EBP
+004da471  MOV EBP,ESP
+004da473  PUSH ECX
+004da474  MOV dword ptr [EBP + -0x4],ECX
+004da477  MOV ECX,dword ptr [EBP + -0x4]
+004da47a  CALL 0x004c61b0
+004da47f  MOVZX EAX,AL
+004da482  TEST EAX,EAX
+004da484  JZ 0x004da493
+004da486  MOV ECX,dword ptr [0x00791364]
+004da48c  MOV byte ptr [ECX + 0x40a],0x1
+004da493  MOV EDX,dword ptr [EBP + -0x4]
+004da496  MOV EAX,dword ptr [EDX + 0x38]
+004da499  MOV ECX,dword ptr [EBP + -0x4]
+004da49c  MOV ECX,dword ptr [ECX + 0x38]
+004da49f  MOV EDX,dword ptr [EAX]
+004da4a1  MOV EAX,dword ptr [EDX + 0x74]
+004da4a4  CALL EAX
+004da4a6  MOV ESP,EBP
+004da4a8  POP EBP
+004da4a9  RET

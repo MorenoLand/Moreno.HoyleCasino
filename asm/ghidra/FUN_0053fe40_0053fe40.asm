@@ -1,0 +1,19 @@
+; FUN_0053fe40  0053fe40
+0053fe40  PUSH EBP
+0053fe41  MOV EBP,ESP
+0053fe43  SUB ESP,0x8
+0053fe46  MOV dword ptr [EBP + -0x8],ECX
+0053fe49  CMP dword ptr [EBP + 0x8],0x0
+0053fe4d  JNZ 0x0053fe53
+0053fe4f  XOR AL,AL
+0053fe51  JMP 0x0053fe68
+0053fe53  MOV EAX,dword ptr [EBP + 0x8]
+0053fe56  MOV dword ptr [EBP + -0x4],EAX
+0053fe59  MOV ECX,dword ptr [EBP + -0x4]
+0053fe5c  MOV byte ptr [ECX],0x1
+0053fe5f  MOV EDX,dword ptr [EBP + -0x4]
+0053fe62  MOV byte ptr [EDX + 0x1],0x1
+0053fe66  MOV AL,0x1
+0053fe68  MOV ESP,EBP
+0053fe6a  POP EBP
+0053fe6b  RET 0x4

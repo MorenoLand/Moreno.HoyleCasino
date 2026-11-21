@@ -1,0 +1,19 @@
+; FUN_0060acc0  0060acc0
+0060acc0  PUSH EBP
+0060acc1  MOV EBP,ESP
+0060acc3  PUSH ECX
+0060acc4  MOV dword ptr [EBP + -0x4],ECX
+0060acc7  MOVZX EAX,byte ptr [0x007960cb]
+0060acce  TEST EAX,EAX
+0060acd0  JNZ 0x0060ace7
+0060acd2  MOV ECX,dword ptr [EBP + -0x4]
+0060acd5  MOVZX EDX,byte ptr [ECX + 0xa]
+0060acd9  TEST EDX,EDX
+0060acdb  JZ 0x0060acdf
+0060acdd  JMP 0x0060acec
+0060acdf  MOV ECX,dword ptr [EBP + -0x4]
+0060ace2  CALL 0x0060acf0
+0060ace7  CALL 0x006112f0
+0060acec  MOV ESP,EBP
+0060acee  POP EBP
+0060acef  RET

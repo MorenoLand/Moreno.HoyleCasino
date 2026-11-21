@@ -1,0 +1,70 @@
+; FUN_0056aed0  0056aed0
+0056aed0  PUSH EBP
+0056aed1  MOV EBP,ESP
+0056aed3  SUB ESP,0xc
+0056aed6  MOV dword ptr [EBP + -0xc],ECX
+0056aed9  MOV EAX,dword ptr [EBP + 0x8]
+0056aedc  PUSH EAX
+0056aedd  MOV ECX,dword ptr [EBP + -0xc]
+0056aee0  CALL 0x0056afb0
+0056aee5  MOVZX ECX,AL
+0056aee8  TEST ECX,ECX
+0056aeea  JNZ 0x0056af03
+0056aeec  PUSH 0x4c6
+0056aef1  PUSH 0x6ca1a4
+0056aef6  PUSH 0x6ca23c
+0056aefb  CALL 0x005e9f20
+0056af00  ADD ESP,0xc
+0056af03  MOV dword ptr [EBP + -0x4],0x0
+0056af0a  JMP 0x0056af15
+0056af0c  MOV EAX,dword ptr [EBP + -0x4]
+0056af0f  ADD EAX,0x1
+0056af12  MOV dword ptr [EBP + -0x4],EAX
+0056af15  CMP dword ptr [EBP + -0x4],0x5
+0056af19  JGE 0x0056af7b
+0056af1b  MOV ECX,dword ptr [EBP + 0x8]
+0056af1e  IMUL ECX,ECX,0xa
+0056af21  MOV EDX,dword ptr [EBP + -0xc]
+0056af24  LEA EAX,[EDX + ECX*0x1 + 0xf6]
+0056af2b  MOV ECX,dword ptr [EBP + -0x4]
+0056af2e  MOVZX EDX,word ptr [EAX + ECX*0x2]
+0056af32  TEST EDX,EDX
+0056af34  JNZ 0x0056af79
+0056af36  MOV EAX,dword ptr [EBP + 0x8]
+0056af39  MOV ECX,dword ptr [EBP + -0xc]
+0056af3c  MOV ECX,dword ptr [ECX + EAX*0x4 + 0x2e8]
+0056af43  CALL 0x006436c0
+0056af48  MOV word ptr [EBP + -0x8],AX
+0056af4c  MOV DX,word ptr [EBP + -0x8]
+0056af50  PUSH EDX
+0056af51  MOV EAX,dword ptr [EBP + 0x8]
+0056af54  PUSH EAX
+0056af55  MOV ECX,dword ptr [EBP + -0xc]
+0056af58  CALL 0x0056ab30
+0056af5d  MOVZX ECX,AL
+0056af60  TEST ECX,ECX
+0056af62  JNZ 0x0056af36
+0056af64  MOV DX,word ptr [EBP + -0x8]
+0056af68  PUSH EDX
+0056af69  MOV EAX,dword ptr [EBP + -0x4]
+0056af6c  PUSH EAX
+0056af6d  MOV ECX,dword ptr [EBP + 0x8]
+0056af70  PUSH ECX
+0056af71  MOV ECX,dword ptr [EBP + -0xc]
+0056af74  CALL 0x0056b460
+0056af79  JMP 0x0056af0c
+0056af7b  MOV EDX,dword ptr [EBP + 0x8]
+0056af7e  PUSH EDX
+0056af7f  MOV ECX,dword ptr [EBP + -0xc]
+0056af82  CALL 0x0056afb0
+0056af87  MOVZX EAX,AL
+0056af8a  TEST EAX,EAX
+0056af8c  JNZ 0x0056afa5
+0056af8e  PUSH 0x4d4
+0056af93  PUSH 0x6ca1a4
+0056af98  PUSH 0x6ca23c
+0056af9d  CALL 0x005e9f20
+0056afa2  ADD ESP,0xc
+0056afa5  MOV ESP,EBP
+0056afa7  POP EBP
+0056afa8  RET 0x4

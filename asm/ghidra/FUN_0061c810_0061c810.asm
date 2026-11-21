@@ -1,0 +1,70 @@
+; FUN_0061c810  0061c810
+0061c810  PUSH EBP
+0061c811  MOV EBP,ESP
+0061c813  SUB ESP,0xc
+0061c816  MOV EAX,dword ptr [EBP + 0x8]
+0061c819  MOV ECX,dword ptr [EAX]
+0061c81b  MOV dword ptr [EBP + -0x8],ECX
+0061c81e  MOV EDX,dword ptr [EBP + 0x8]
+0061c821  ADD EDX,0x4
+0061c824  MOV dword ptr [EBP + 0x8],EDX
+0061c827  MOV EAX,dword ptr [EBP + 0x8]
+0061c82a  MOV ECX,dword ptr [EAX]
+0061c82c  MOV dword ptr [EBP + -0x8],ECX
+0061c82f  MOV EDX,dword ptr [EBP + 0x8]
+0061c832  ADD EDX,0x4
+0061c835  MOV dword ptr [EBP + 0x8],EDX
+0061c838  MOV EAX,dword ptr [EBP + 0x14]
+0061c83b  MOV ECX,dword ptr [EBP + 0x8]
+0061c83e  MOV dword ptr [EAX],ECX
+0061c840  MOV EDX,dword ptr [EBP + 0x8]
+0061c843  ADD EDX,0x300
+0061c849  MOV dword ptr [EBP + 0x8],EDX
+0061c84c  MOV EAX,dword ptr [EBP + 0x8]
+0061c84f  MOV CX,word ptr [EAX]
+0061c852  MOV word ptr [EBP + -0x4],CX
+0061c856  MOV EDX,dword ptr [EBP + 0x8]
+0061c859  ADD EDX,0x2
+0061c85c  MOV dword ptr [EBP + 0x8],EDX
+0061c85f  MOV EAX,dword ptr [EBP + 0xc]
+0061c862  MOV CX,word ptr [EBP + -0x4]
+0061c866  MOV word ptr [EAX],CX
+0061c869  MOV EDX,dword ptr [EBP + 0xc]
+0061c86c  MOVSX EAX,word ptr [EDX]
+0061c86f  XOR ECX,ECX
+0061c871  MOV EDX,0x8
+0061c876  MUL EDX
+0061c878  SETO CL
+0061c87b  NEG ECX
+0061c87d  OR ECX,EAX
+0061c87f  PUSH ECX
+0061c880  CALL 0x00686d82
+0061c885  ADD ESP,0x4
+0061c888  MOV dword ptr [EBP + -0xc],EAX
+0061c88b  MOV EAX,dword ptr [EBP + 0x10]
+0061c88e  MOV ECX,dword ptr [EBP + -0xc]
+0061c891  MOV dword ptr [EAX],ECX
+0061c893  MOV dword ptr [EBP + -0x8],0x0
+0061c89a  JMP 0x0061c8a5
+0061c89c  MOV EDX,dword ptr [EBP + -0x8]
+0061c89f  ADD EDX,0x1
+0061c8a2  MOV dword ptr [EBP + -0x8],EDX
+0061c8a5  MOV EAX,dword ptr [EBP + 0xc]
+0061c8a8  MOVSX ECX,word ptr [EAX]
+0061c8ab  CMP dword ptr [EBP + -0x8],ECX
+0061c8ae  JGE 0x0061c8ce
+0061c8b0  MOV EDX,dword ptr [EBP + -0x8]
+0061c8b3  PUSH EDX
+0061c8b4  MOV EAX,dword ptr [EBP + 0x10]
+0061c8b7  MOV ECX,dword ptr [EAX]
+0061c8b9  MOV EDX,dword ptr [EBP + -0x8]
+0061c8bc  LEA EAX,[ECX + EDX*0x8]
+0061c8bf  PUSH EAX
+0061c8c0  LEA ECX,[EBP + 0x8]
+0061c8c3  PUSH ECX
+0061c8c4  CALL 0x0061c8f0
+0061c8c9  ADD ESP,0xc
+0061c8cc  JMP 0x0061c89c
+0061c8ce  MOV ESP,EBP
+0061c8d0  POP EBP
+0061c8d1  RET

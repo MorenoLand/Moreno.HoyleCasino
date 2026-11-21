@@ -1,0 +1,29 @@
+; FUN_00518900  00518900
+00518900  PUSH EBP
+00518901  MOV EBP,ESP
+00518903  PUSH ECX
+00518904  MOV dword ptr [EBP + -0x4],ECX
+00518907  MOV EAX,dword ptr [EBP + 0xc]
+0051890a  PUSH EAX
+0051890b  MOV CL,byte ptr [EBP + 0x8]
+0051890e  PUSH ECX
+0051890f  MOV ECX,dword ptr [EBP + -0x4]
+00518912  CALL 0x005f71f0
+00518917  MOV EDX,dword ptr [EBP + -0x4]
+0051891a  MOV dword ptr [EDX],0x6c13dc
+00518920  MOV EAX,dword ptr [EBP + -0x4]
+00518923  MOV dword ptr [EAX + 0x1d4],0x0
+0051892d  MOV ECX,dword ptr [EBP + -0x4]
+00518930  MOV dword ptr [ECX + 0x1d8],0x0
+0051893a  MOV EDX,dword ptr [EBP + -0x4]
+0051893d  MOV dword ptr [EDX + 0x1dc],0x0
+00518947  MOV EAX,dword ptr [EBP + -0x4]
+0051894a  MOV dword ptr [EAX + 0x1bc],0x0
+00518954  MOV ECX,dword ptr [EBP + -0x4]
+00518957  MOV dword ptr [ECX + 0x1c0],0x0
+00518961  MOV EDX,dword ptr [EBP + -0x4]
+00518964  MOV dword ptr [EDX + 0x1c8],0x0
+0051896e  MOV EAX,dword ptr [EBP + -0x4]
+00518971  MOV ESP,EBP
+00518973  POP EBP
+00518974  RET 0x8

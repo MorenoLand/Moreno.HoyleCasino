@@ -1,0 +1,5 @@
+; Unwind@006a73d0  006a73d0
+006a73d0  MOV EAX,[0x007935ac]
+006a73d5  AND EAX,0xfffffffe
+006a73d8  MOV [0x007935ac],EAX
+006a73dd  RET

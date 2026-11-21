@@ -1,0 +1,23 @@
+// FUN_00559d00  00559d00
+
+int __fastcall FUN_00559d00(int param_1)
+
+{
+  int iVar1;
+  int local_c;
+  int local_8;
+  
+  local_c = 0;
+  local_8 = 0;
+  while( true ) {
+    iVar1 = FUN_00559380();
+    if (iVar1 <= local_8) break;
+    iVar1 = FUN_005593d0(*(undefined2 *)(param_1 + 4 + local_8 * 2));
+    if (iVar1 == 0x14) {
+      local_c = local_c + 1;
+    }
+    local_8 = local_8 + 1;
+  }
+  return local_c;
+}
+

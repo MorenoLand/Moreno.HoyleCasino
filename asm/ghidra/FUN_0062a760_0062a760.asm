@@ -1,0 +1,19 @@
+; FUN_0062a760  0062a760
+0062a760  PUSH EBP
+0062a761  MOV EBP,ESP
+0062a763  PUSH ECX
+0062a764  MOV dword ptr [EBP + -0x4],ECX
+0062a767  MOV ECX,dword ptr [EBP + -0x4]
+0062a76a  CALL 0x00601a80
+0062a76f  MOV EAX,dword ptr [EBP + -0x4]
+0062a772  MOV dword ptr [EAX],0x6d95e4
+0062a778  MOV ECX,dword ptr [EBP + -0x4]
+0062a77b  MOV EDX,dword ptr [EBP + 0x8]
+0062a77e  MOV dword ptr [ECX + 0x1e0],EDX
+0062a784  MOV EAX,dword ptr [EBP + -0x4]
+0062a787  MOV ECX,dword ptr [EBP + 0xc]
+0062a78a  MOV dword ptr [EAX + 0x1dc],ECX
+0062a790  MOV EAX,dword ptr [EBP + -0x4]
+0062a793  MOV ESP,EBP
+0062a795  POP EBP
+0062a796  RET 0x8

@@ -1,0 +1,18 @@
+; FUN_005fbd70  005fbd70
+005fbd70  PUSH EBP
+005fbd71  MOV EBP,ESP
+005fbd73  PUSH ECX
+005fbd74  MOV dword ptr [EBP + -0x4],ECX
+005fbd77  PUSH 0x1
+005fbd79  MOV EAX,dword ptr [EBP + -0x4]
+005fbd7c  ADD EAX,0xb4
+005fbd81  PUSH EAX
+005fbd82  MOV ECX,dword ptr [EBP + 0xc]
+005fbd85  PUSH ECX
+005fbd86  MOV EDX,dword ptr [EBP + 0x8]
+005fbd89  PUSH EDX
+005fbd8a  MOV ECX,dword ptr [EBP + -0x4]
+005fbd8d  CALL 0x005fb930
+005fbd92  MOV ESP,EBP
+005fbd94  POP EBP
+005fbd95  RET 0x8

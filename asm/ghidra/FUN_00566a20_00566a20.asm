@@ -1,0 +1,26 @@
+; FUN_00566a20  00566a20
+00566a20  PUSH EBP
+00566a21  MOV EBP,ESP
+00566a23  PUSH ECX
+00566a24  MOV dword ptr [EBP + -0x4],ECX
+00566a27  MOV EAX,dword ptr [EBP + -0x4]
+00566a2a  MOV ECX,dword ptr [EAX + 0x4]
+00566a2d  MOV EDX,dword ptr [EBP + -0x4]
+00566a30  MOV EAX,dword ptr [EDX + 0x4]
+00566a33  MOV EDX,dword ptr [ECX]
+00566a35  MOV ECX,EAX
+00566a37  MOV EAX,dword ptr [EDX + 0x70]
+00566a3a  CALL EAX
+00566a3c  MOV ECX,dword ptr [EBP + -0x4]
+00566a3f  MOV EDX,dword ptr [ECX + 0x8]
+00566a42  MOV EAX,dword ptr [EBP + -0x4]
+00566a45  MOV ECX,dword ptr [EAX + 0x8]
+00566a48  MOV EDX,dword ptr [EDX]
+00566a4a  MOV EAX,dword ptr [EDX + 0x70]
+00566a4d  CALL EAX
+00566a4f  MOV ECX,dword ptr [EBP + -0x4]
+00566a52  MOV ECX,dword ptr [ECX + 0xc]
+00566a55  CALL 0x00566310
+00566a5a  MOV ESP,EBP
+00566a5c  POP EBP
+00566a5d  RET

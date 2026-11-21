@@ -1,0 +1,17 @@
+; FUN_005b70b0  005b70b0
+005b70b0  PUSH EBP
+005b70b1  MOV EBP,ESP
+005b70b3  PUSH ECX
+005b70b4  MOV dword ptr [EBP + -0x4],ECX
+005b70b7  MOV EAX,dword ptr [EBP + 0x8]
+005b70ba  IMUL EAX,EAX,0x118
+005b70c0  MOV ECX,dword ptr [EBP + -0x4]
+005b70c3  LEA EDX,[ECX + EAX*0x1 + 0x4]
+005b70c7  MOV EAX,dword ptr [EBP + 0xc]
+005b70ca  IMUL EAX,EAX,0x16
+005b70cd  ADD EDX,dword ptr [EBP + 0x10]
+005b70d0  MOV CL,byte ptr [EBP + 0x14]
+005b70d3  MOV byte ptr [EAX + EDX*0x1],CL
+005b70d6  MOV ESP,EBP
+005b70d8  POP EBP
+005b70d9  RET 0x10

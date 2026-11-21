@@ -1,0 +1,20 @@
+; FUN_0060ca10  0060ca10
+0060ca10  PUSH EBP
+0060ca11  MOV EBP,ESP
+0060ca13  PUSH ECX
+0060ca14  MOV dword ptr [EBP + -0x4],ECX
+0060ca17  MOV EAX,dword ptr [EBP + -0x4]
+0060ca1a  MOV ECX,dword ptr [EAX + 0x4]
+0060ca1d  SHL ECX,0x2
+0060ca20  PUSH ECX
+0060ca21  PUSH 0x0
+0060ca23  MOV EDX,dword ptr [EBP + -0x4]
+0060ca26  MOV EAX,dword ptr [EDX + 0xc]
+0060ca29  PUSH EAX
+0060ca2a  CALL 0x00686fa2
+0060ca2f  ADD ESP,0xc
+0060ca32  MOV ECX,dword ptr [EBP + -0x4]
+0060ca35  MOV dword ptr [ECX + 0x4],0x0
+0060ca3c  MOV ESP,EBP
+0060ca3e  POP EBP
+0060ca3f  RET

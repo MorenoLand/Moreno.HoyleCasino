@@ -1,0 +1,18 @@
+; FUN_00671aa0  00671aa0
+00671aa0  PUSH EBP
+00671aa1  MOV EBP,ESP
+00671aa3  PUSH ECX
+00671aa4  MOV dword ptr [EBP + -0x4],ECX
+00671aa7  MOV EAX,dword ptr [EBP + -0x4]
+00671aaa  MOV ECX,dword ptr [EAX + 0x1e0]
+00671ab0  MOV EDX,dword ptr [EBP + -0x4]
+00671ab3  MOV EAX,dword ptr [EDX + 0x1e0]
+00671ab9  MOV EDX,dword ptr [ECX]
+00671abb  MOV ECX,EAX
+00671abd  MOV EAX,dword ptr [EDX + 0x70]
+00671ac0  CALL EAX
+00671ac2  MOV ECX,dword ptr [EBP + -0x4]
+00671ac5  CALL 0x00602550
+00671aca  MOV ESP,EBP
+00671acc  POP EBP
+00671acd  RET

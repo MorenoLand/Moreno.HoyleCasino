@@ -1,0 +1,11 @@
+; FUN_005eb720  005eb720
+005eb720  PUSH EBP
+005eb721  MOV EBP,ESP
+005eb723  PUSH ECX
+005eb724  MOV dword ptr [EBP + -0x4],ECX
+005eb727  MOV EAX,dword ptr [EBP + -0x4]
+005eb72a  MOV CL,byte ptr [EBP + 0x8]
+005eb72d  MOV byte ptr [EAX + 0x16e],CL
+005eb733  MOV ESP,EBP
+005eb735  POP EBP
+005eb736  RET 0x4

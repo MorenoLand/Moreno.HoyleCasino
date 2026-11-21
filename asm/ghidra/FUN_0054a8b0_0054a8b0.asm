@@ -1,0 +1,36 @@
+; FUN_0054a8b0  0054a8b0
+0054a8b0  PUSH EBP
+0054a8b1  MOV EBP,ESP
+0054a8b3  SUB ESP,0x14
+0054a8b6  PUSH ESI
+0054a8b7  MOV dword ptr [EBP + -0x10],ECX
+0054a8ba  MOV EAX,dword ptr [EBP + -0x10]
+0054a8bd  MOV ECX,dword ptr [EAX + 0x4]
+0054a8c0  MOV dword ptr [EBP + -0x8],ECX
+0054a8c3  MOV EDX,dword ptr [EBP + -0x10]
+0054a8c6  MOV EAX,dword ptr [EDX + 0x8]
+0054a8c9  MOV dword ptr [EBP + -0x4],EAX
+0054a8cc  MOV ECX,dword ptr [EBP + -0x10]
+0054a8cf  CALL 0x005d1470
+0054a8d4  MOV ESI,EAX
+0054a8d6  MOV ECX,dword ptr [EBP + -0x10]
+0054a8d9  CALL 0x005d0aa0
+0054a8de  XOR ECX,ECX
+0054a8e0  CMP ESI,EAX
+0054a8e2  SETGE CL
+0054a8e5  MOV byte ptr [EBP + -0x9],CL
+0054a8e8  CMP dword ptr [EBP + -0x8],0x0
+0054a8ec  JNZ 0x0054a905
+0054a8ee  CMP dword ptr [EBP + -0x4],0x0
+0054a8f2  JNZ 0x0054a905
+0054a8f4  MOVZX EDX,byte ptr [EBP + -0x9]
+0054a8f8  TEST EDX,EDX
+0054a8fa  JNZ 0x0054a905
+0054a8fc  MOV dword ptr [EBP + -0x14],0x1
+0054a903  JMP 0x0054a90c
+0054a905  MOV dword ptr [EBP + -0x14],0x0
+0054a90c  MOV AL,byte ptr [EBP + -0x14]
+0054a90f  POP ESI
+0054a910  MOV ESP,EBP
+0054a912  POP EBP
+0054a913  RET

@@ -1,0 +1,24 @@
+; FUN_00688d90  00688d90
+00688d90  PUSH EBP
+00688d91  MOV EBP,ESP
+00688d93  SUB ESP,0x8
+00688d96  MOV dword ptr [EBP + -0x4],ECX
+00688d99  MOV EAX,dword ptr [EBP + -0x4]
+00688d9c  CMP dword ptr [EAX + 0x208],0x0
+00688da3  JZ 0x00688dcb
+00688da5  MOV ECX,dword ptr [EBP + -0x4]
+00688da8  MOV EDX,dword ptr [ECX + 0x208]
+00688dae  MOV EAX,dword ptr [EBP + -0x4]
+00688db1  MOV ECX,dword ptr [EAX + 0x208]
+00688db7  MOV EDX,dword ptr [EDX]
+00688db9  MOV EAX,dword ptr [EDX + 0x4]
+00688dbc  CALL EAX
+00688dbe  TEST EAX,EAX
+00688dc0  JZ 0x00688dcb
+00688dc2  MOV dword ptr [EBP + -0x8],0x1
+00688dc9  JMP 0x00688dd2
+00688dcb  MOV dword ptr [EBP + -0x8],0x0
+00688dd2  MOV AL,byte ptr [EBP + -0x8]
+00688dd5  MOV ESP,EBP
+00688dd7  POP EBP
+00688dd8  RET

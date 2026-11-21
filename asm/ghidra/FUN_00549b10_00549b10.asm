@@ -1,0 +1,79 @@
+; FUN_00549b10  00549b10
+00549b10  PUSH EBP
+00549b11  MOV EBP,ESP
+00549b13  SUB ESP,0x28
+00549b16  MOV dword ptr [EBP + -0x28],ECX
+00549b19  MOV ECX,dword ptr [EBP + -0x28]
+00549b1c  CALL 0x00549910
+00549b21  MOVZX EAX,AL
+00549b24  TEST EAX,EAX
+00549b26  JNZ 0x00549b3f
+00549b28  PUSH 0x2bf
+00549b2d  PUSH 0x6c702c
+00549b32  PUSH 0x6c7064
+00549b37  CALL 0x005e9f20
+00549b3c  ADD ESP,0xc
+00549b3f  MOV EDX,dword ptr [EBP + -0x28]
+00549b42  MOV EAX,dword ptr [EDX + 0x8]
+00549b45  MOV dword ptr [EBP + -0x4],EAX
+00549b48  MOV ECX,dword ptr [EBP + -0x28]
+00549b4b  MOV EDX,dword ptr [ECX + 0x4]
+00549b4e  MOV dword ptr [EBP + -0x18],EDX
+00549b51  MOV EAX,dword ptr [EBP + -0x18]
+00549b54  CMP EAX,dword ptr [EBP + -0x4]
+00549b57  JL 0x00549b73
+00549b59  MOV ECX,dword ptr [EBP + -0x28]
+00549b5c  MOV EDX,dword ptr [ECX + 0x4]
+00549b5f  MOV dword ptr [EBP + -0x1c],EDX
+00549b62  MOV EAX,dword ptr [EBP + -0x1c]
+00549b65  SUB EAX,dword ptr [EBP + -0x4]
+00549b68  PUSH EAX
+00549b69  MOV ECX,dword ptr [EBP + -0x28]
+00549b6c  CALL 0x005d0a20
+00549b71  JMP 0x00549bee
+00549b73  MOV ECX,dword ptr [EBP + -0x28]
+00549b76  MOV EDX,dword ptr [ECX + 0x4]
+00549b79  MOV dword ptr [EBP + -0x20],EDX
+00549b7c  CMP dword ptr [EBP + -0x20],0x0
+00549b80  JZ 0x00549b9e
+00549b82  MOV EAX,dword ptr [EBP + -0x28]
+00549b85  MOV ECX,dword ptr [EAX + 0x4]
+00549b88  MOV dword ptr [EBP + -0x24],ECX
+00549b8b  MOV EDX,dword ptr [EBP + -0x4]
+00549b8e  SUB EDX,dword ptr [EBP + -0x24]
+00549b91  MOV dword ptr [EBP + -0x4],EDX
+00549b94  PUSH 0x0
+00549b96  MOV ECX,dword ptr [EBP + -0x28]
+00549b99  CALL 0x005d0a20
+00549b9e  MOV EAX,dword ptr [EBP + -0x4]
+00549ba1  PUSH EAX
+00549ba2  LEA ECX,[EBP + -0x14]
+00549ba5  PUSH ECX
+00549ba6  MOV ECX,dword ptr [EBP + -0x28]
+00549ba9  CALL 0x005d0c30
+00549bae  MOV EDX,dword ptr [EAX]
+00549bb0  MOV EAX,dword ptr [EAX + 0x4]
+00549bb3  MOV dword ptr [EBP + -0xc],EDX
+00549bb6  MOV dword ptr [EBP + -0x8],EAX
+00549bb9  MOV ECX,dword ptr [EBP + -0x4]
+00549bbc  PUSH ECX
+00549bbd  MOV ECX,dword ptr [EBP + -0x28]
+00549bc0  CALL 0x005d0d60
+00549bc5  MOVZX EDX,AL
+00549bc8  TEST EDX,EDX
+00549bca  JZ 0x00549bee
+00549bcc  MOV EAX,dword ptr [EBP + -0xc]
+00549bcf  IMUL EAX,EAX,-0x1
+00549bd2  MOV dword ptr [EBP + -0xc],EAX
+00549bd5  MOV ECX,dword ptr [EBP + -0x8]
+00549bd8  IMUL ECX,ECX,-0x1
+00549bdb  MOV dword ptr [EBP + -0x8],ECX
+00549bde  MOV EDX,dword ptr [EBP + -0x8]
+00549be1  PUSH EDX
+00549be2  MOV EAX,dword ptr [EBP + -0xc]
+00549be5  PUSH EAX
+00549be6  MOV ECX,dword ptr [EBP + -0x28]
+00549be9  CALL 0x005d1420
+00549bee  MOV ESP,EBP
+00549bf0  POP EBP
+00549bf1  RET

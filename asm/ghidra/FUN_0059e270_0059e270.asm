@@ -1,0 +1,24 @@
+; FUN_0059e270  0059e270
+0059e270  PUSH EBP
+0059e271  MOV EBP,ESP
+0059e273  SUB ESP,0x8
+0059e276  MOV dword ptr [EBP + -0x8],ECX
+0059e279  MOV ECX,dword ptr [EBP + -0x8]
+0059e27c  CALL 0x005e9e20
+0059e281  MOV EAX,dword ptr [EBP + -0x8]
+0059e284  MOV dword ptr [EAX],0x6cf058
+0059e28a  MOV dword ptr [EBP + -0x4],0x0
+0059e291  JMP 0x0059e29c
+0059e293  MOV ECX,dword ptr [EBP + -0x4]
+0059e296  ADD ECX,0x1
+0059e299  MOV dword ptr [EBP + -0x4],ECX
+0059e29c  CMP dword ptr [EBP + -0x4],0x3
+0059e2a0  JGE 0x0059e2b2
+0059e2a2  MOV EDX,dword ptr [EBP + -0x4]
+0059e2a5  MOV EAX,dword ptr [EBP + -0x8]
+0059e2a8  MOV dword ptr [EAX + EDX*0x4 + 0x8],0x0
+0059e2b0  JMP 0x0059e293
+0059e2b2  MOV EAX,dword ptr [EBP + -0x8]
+0059e2b5  MOV ESP,EBP
+0059e2b7  POP EBP
+0059e2b8  RET

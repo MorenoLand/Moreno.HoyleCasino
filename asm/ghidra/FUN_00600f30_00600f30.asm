@@ -1,0 +1,20 @@
+; FUN_00600f30  00600f30
+00600f30  PUSH EBP
+00600f31  MOV EBP,ESP
+00600f33  PUSH ECX
+00600f34  MOV dword ptr [EBP + -0x4],ECX
+00600f37  MOV EAX,dword ptr [EBP + 0xc]
+00600f3a  PUSH EAX
+00600f3b  MOV ECX,dword ptr [EBP + -0x4]
+00600f3e  CALL 0x00600de0
+00600f43  MOV ECX,dword ptr [EBP + -0x4]
+00600f46  MOV dword ptr [ECX],0x6d74e4
+00600f4c  MOV EDX,dword ptr [EBP + -0x4]
+00600f4f  MOV dword ptr [EDX + 0xc],0x1
+00600f56  MOV EAX,dword ptr [EBP + -0x4]
+00600f59  MOV ECX,dword ptr [EBP + 0x8]
+00600f5c  MOV dword ptr [EAX + 0x1c],ECX
+00600f5f  MOV EAX,dword ptr [EBP + -0x4]
+00600f62  MOV ESP,EBP
+00600f64  POP EBP
+00600f65  RET 0x8

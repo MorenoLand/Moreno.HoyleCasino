@@ -1,0 +1,6 @@
+; Unwind@006a3f53  006a3f53
+006a3f53  MOV EAX,dword ptr [EBP + -0x5c]
+006a3f56  PUSH EAX
+006a3f57  CALL 0x00686cae
+006a3f5c  POP ECX
+006a3f5d  RET

@@ -1,0 +1,11 @@
+; FUN_0047d6d0  0047d6d0
+0047d6d0  PUSH EBP
+0047d6d1  MOV EBP,ESP
+0047d6d3  PUSH ECX
+0047d6d4  MOV dword ptr [EBP + -0x4],ECX
+0047d6d7  MOV EAX,dword ptr [EBP + -0x4]
+0047d6da  MOV ECX,dword ptr [EBP + 0x8]
+0047d6dd  MOV dword ptr [EAX + 0x470],ECX
+0047d6e3  MOV ESP,EBP
+0047d6e5  POP EBP
+0047d6e6  RET 0x4

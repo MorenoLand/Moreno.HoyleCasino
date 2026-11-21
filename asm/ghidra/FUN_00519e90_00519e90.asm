@@ -1,0 +1,41 @@
+; FUN_00519e90  00519e90
+00519e90  PUSH EBP
+00519e91  MOV EBP,ESP
+00519e93  SUB ESP,0xc
+00519e96  CALL 0x00520d60
+00519e9b  MOV dword ptr [EBP + -0x4],EAX
+00519e9e  MOV EAX,[0x007947e0]
+00519ea3  MOVZX ECX,byte ptr [EAX + 0x4f34]
+00519eaa  TEST ECX,ECX
+00519eac  JZ 0x00519eb9
+00519eae  MOV EDX,dword ptr [EBP + 0x8]
+00519eb1  ADD EDX,0x8
+00519eb4  MOV dword ptr [EBP + -0xc],EDX
+00519eb7  JMP 0x00519ebf
+00519eb9  MOV EAX,dword ptr [EBP + 0x8]
+00519ebc  MOV dword ptr [EBP + -0xc],EAX
+00519ebf  MOV ECX,dword ptr [EBP + -0xc]
+00519ec2  IMUL ECX,ECX,0x688
+00519ec8  MOV EDX,dword ptr [EBP + -0x4]
+00519ecb  LEA EAX,[EDX + ECX*0x1 + 0x4]
+00519ecf  MOV dword ptr [EBP + -0x8],EAX
+00519ed2  MOV ECX,dword ptr [EBP + -0x8]
+00519ed5  MOV EDX,dword ptr [ECX + 0x3e0]
+00519edb  ADD EDX,0x1
+00519ede  MOV EAX,dword ptr [EBP + -0x8]
+00519ee1  MOV dword ptr [EAX + 0x3e0],EDX
+00519ee7  MOVZX ECX,byte ptr [EBP + 0xc]
+00519eeb  TEST ECX,ECX
+00519eed  JZ 0x00519f04
+00519eef  MOV EDX,dword ptr [EBP + -0x8]
+00519ef2  MOV EAX,dword ptr [EDX + 0x3e4]
+00519ef8  ADD EAX,0x1
+00519efb  MOV ECX,dword ptr [EBP + -0x8]
+00519efe  MOV dword ptr [ECX + 0x3e4],EAX
+00519f04  MOV EDX,dword ptr [EBP + -0x4]
+00519f07  PUSH EDX
+00519f08  CALL 0x005209d0
+00519f0d  ADD ESP,0x4
+00519f10  MOV ESP,EBP
+00519f12  POP EBP
+00519f13  RET

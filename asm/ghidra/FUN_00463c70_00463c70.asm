@@ -1,0 +1,17 @@
+; FUN_00463c70  00463c70
+00463c70  PUSH EBP
+00463c71  MOV EBP,ESP
+00463c73  PUSH ECX
+00463c74  MOV dword ptr [EBP + -0x4],ECX
+00463c77  MOV ECX,dword ptr [EBP + -0x4]
+00463c7a  CALL 0x005e9e20
+00463c7f  MOV EAX,dword ptr [EBP + -0x4]
+00463c82  MOV dword ptr [EAX],0x6ba8e0
+00463c88  MOV ECX,dword ptr [EBP + -0x4]
+00463c8b  MOV byte ptr [ECX + 0x14],0x0
+00463c8f  MOV EDX,dword ptr [EBP + -0x4]
+00463c92  MOV dword ptr [EDX + 0x8],0x0
+00463c99  MOV EAX,dword ptr [EBP + -0x4]
+00463c9c  MOV ESP,EBP
+00463c9e  POP EBP
+00463c9f  RET

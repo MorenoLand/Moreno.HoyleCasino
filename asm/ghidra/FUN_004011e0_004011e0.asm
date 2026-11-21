@@ -1,0 +1,36 @@
+; FUN_004011e0  004011e0
+004011e0  PUSH EBP
+004011e1  MOV EBP,ESP
+004011e3  SUB ESP,0x38
+004011e6  MOV dword ptr [EBP + -0x38],ECX
+004011e9  MOV dword ptr [EBP + -0x28],0x8
+004011f0  MOV dword ptr [EBP + -0x24],0xa
+004011f7  MOV dword ptr [EBP + -0x20],0x2
+004011fe  MOV dword ptr [EBP + -0x1c],0x1
+00401205  MOV dword ptr [EBP + -0x18],0x5
+0040120c  MOV dword ptr [EBP + -0x14],0x5
+00401213  MOV dword ptr [EBP + -0x10],0x8
+0040121a  MOV dword ptr [EBP + -0xc],0x4
+00401221  MOV dword ptr [EBP + -0x8],0x6
+00401228  MOV dword ptr [EBP + -0x4],0xa
+0040122f  MOV EAX,dword ptr [EBP + 0x8]
+00401232  PUSH EAX
+00401233  CALL 0x005dcb00
+00401238  ADD ESP,0x4
+0040123b  MOV dword ptr [EBP + -0x30],EAX
+0040123e  MOV ECX,dword ptr [EBP + -0x30]
+00401241  MOV EDX,dword ptr [ECX + 0x8]
+00401244  MOV dword ptr [EBP + -0x34],EDX
+00401247  MOV EAX,dword ptr [EBP + -0x34]
+0040124a  PUSH EAX
+0040124b  MOV ECX,dword ptr [0x0162ee84]
+00401251  MOV EDX,dword ptr [ECX]
+00401253  MOV ECX,dword ptr [0x0162ee84]
+00401259  MOV EAX,dword ptr [EDX + 0x170]
+0040125f  CALL EAX
+00401261  MOV dword ptr [EBP + -0x2c],EAX
+00401264  MOV ECX,dword ptr [EBP + -0x2c]
+00401267  MOV EAX,dword ptr [EBP + ECX*0x4 + -0x28]
+0040126b  MOV ESP,EBP
+0040126d  POP EBP
+0040126e  RET 0x4

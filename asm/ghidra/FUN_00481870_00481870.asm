@@ -1,0 +1,23 @@
+; FUN_00481870  00481870
+00481870  PUSH EBP
+00481871  MOV EBP,ESP
+00481873  SUB ESP,0x24
+00481876  MOV dword ptr [EBP + -0x24],ECX
+00481879  MOV dword ptr [EBP + -0x20],0x1
+00481880  MOV dword ptr [EBP + -0x1c],0x2
+00481887  MOV dword ptr [EBP + -0x18],0x4
+0048188e  MOV dword ptr [EBP + -0x14],0x5
+00481895  MOV dword ptr [EBP + -0x10],0x6
+0048189c  MOV dword ptr [EBP + -0xc],0x7
+004818a3  MOV dword ptr [EBP + -0x8],0x9
+004818aa  MOV dword ptr [EBP + -0x4],0xa
+004818b1  CMP dword ptr [EBP + 0x8],0x0
+004818b5  JL 0x004818bd
+004818b7  CMP dword ptr [EBP + 0x8],0x7
+004818bb  JLE 0x004818c4
+004818bd  MOV dword ptr [EBP + 0x8],0x0
+004818c4  MOV EAX,dword ptr [EBP + 0x8]
+004818c7  MOV EAX,dword ptr [EBP + EAX*0x4 + -0x20]
+004818cb  MOV ESP,EBP
+004818cd  POP EBP
+004818ce  RET 0x4

@@ -1,0 +1,24 @@
+; FUN_005541c0  005541c0
+005541c0  PUSH EBP
+005541c1  MOV EBP,ESP
+005541c3  SUB ESP,0x34
+005541c6  MOV dword ptr [EBP + -0x34],ECX
+005541c9  MOV dword ptr [EBP + -0x2c],0x13895
+005541d0  MOV dword ptr [EBP + -0x28],0x1388f
+005541d7  MOV dword ptr [EBP + -0x24],0x13890
+005541de  MOV dword ptr [EBP + -0x20],0x1388e
+005541e5  MOV dword ptr [EBP + -0x1c],0x13891
+005541ec  MOV dword ptr [EBP + -0x18],0x13894
+005541f3  MOV dword ptr [EBP + -0x14],0x13896
+005541fa  MOV dword ptr [EBP + -0x10],0x13892
+00554201  MOV dword ptr [EBP + -0xc],0x13897
+00554208  MOV dword ptr [EBP + -0x8],0x13898
+0055420f  MOV dword ptr [EBP + -0x4],0x13893
+00554216  MOV EAX,[0x007947e0]
+0055421b  MOV ECX,dword ptr [EAX + 0x4f14]
+00554221  MOV dword ptr [EBP + -0x30],ECX
+00554224  MOV EDX,dword ptr [EBP + -0x30]
+00554227  MOV EAX,dword ptr [EBP + EDX*0x4 + -0x2c]
+0055422b  MOV ESP,EBP
+0055422d  POP EBP
+0055422e  RET

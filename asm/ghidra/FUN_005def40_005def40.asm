@@ -1,0 +1,17 @@
+; FUN_005def40  005def40
+005def40  PUSH EBP
+005def41  MOV EBP,ESP
+005def43  SUB ESP,0x8
+005def46  MOV dword ptr [EBP + -0x8],ECX
+005def49  MOV EAX,dword ptr [EBP + -0x8]
+005def4c  MOV CL,byte ptr [EAX + 0x25]
+005def4f  MOV byte ptr [EBP + -0x1],CL
+005def52  MOVZX EDX,byte ptr [EBP + -0x1]
+005def56  TEST EDX,EDX
+005def58  JZ 0x005def5e
+005def5a  XOR EAX,EAX
+005def5c  JMP 0x005def63
+005def5e  MOV EAX,0x30d590
+005def63  MOV ESP,EBP
+005def65  POP EBP
+005def66  RET

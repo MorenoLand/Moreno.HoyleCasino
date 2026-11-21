@@ -1,0 +1,25 @@
+; FUN_006152a0  006152a0
+006152a0  PUSH EBP
+006152a1  MOV EBP,ESP
+006152a3  SUB ESP,0x8
+006152a6  MOV dword ptr [EBP + -0x4],ECX
+006152a9  MOV EAX,dword ptr [EBP + -0x4]
+006152ac  MOV ECX,dword ptr [EBP + 0x8]
+006152af  CMP ECX,dword ptr [EAX + 0x6c]
+006152b2  JL 0x006152d8
+006152b4  MOV EDX,dword ptr [EBP + -0x4]
+006152b7  MOV EAX,dword ptr [EDX]
+006152b9  MOV ECX,dword ptr [EBP + -0x4]
+006152bc  MOV EDX,dword ptr [EAX + 0xbc]
+006152c2  CALL EDX
+006152c4  MOV ECX,dword ptr [EBP + -0x4]
+006152c7  ADD EAX,dword ptr [ECX + 0x6c]
+006152ca  CMP dword ptr [EBP + 0x8],EAX
+006152cd  JGE 0x006152d8
+006152cf  MOV dword ptr [EBP + -0x8],0x1
+006152d6  JMP 0x006152df
+006152d8  MOV dword ptr [EBP + -0x8],0x0
+006152df  MOV AL,byte ptr [EBP + -0x8]
+006152e2  MOV ESP,EBP
+006152e4  POP EBP
+006152e5  RET 0x4

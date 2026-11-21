@@ -1,0 +1,16 @@
+; FUN_004598e0  004598e0
+004598e0  PUSH EBP
+004598e1  MOV EBP,ESP
+004598e3  SUB ESP,0x18
+004598e6  MOV dword ptr [EBP + -0x18],ECX
+004598e9  MOV dword ptr [EBP + -0x14],0x7d3
+004598f0  MOV dword ptr [EBP + -0x10],0x7d4
+004598f7  MOV dword ptr [EBP + -0xc],0x7d2
+004598fe  MOV dword ptr [EBP + -0x8],0x7d5
+00459905  MOV dword ptr [EBP + -0x4],0x7d6
+0045990c  MOV EAX,dword ptr [EBP + -0x18]
+0045990f  MOV ECX,dword ptr [EAX + 0x194]
+00459915  MOV EAX,dword ptr [EBP + ECX*0x4 + -0x14]
+00459919  MOV ESP,EBP
+0045991b  POP EBP
+0045991c  RET

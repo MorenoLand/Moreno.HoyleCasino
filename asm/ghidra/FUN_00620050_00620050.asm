@@ -1,0 +1,38 @@
+; FUN_00620050  00620050
+00620050  PUSH EBP
+00620051  MOV EBP,ESP
+00620053  PUSH ECX
+00620054  PUSH ESI
+00620055  MOV dword ptr [EBP + -0x4],ECX
+00620058  MOV EAX,dword ptr [EBP + -0x4]
+0062005b  MOV ECX,dword ptr [EAX + 0x30c]
+00620061  MOV EDX,dword ptr [EBP + -0x4]
+00620064  MOV EAX,dword ptr [EDX + 0x310]
+0062006a  MOV EDX,dword ptr [EBP + -0x4]
+0062006d  MOV EDX,dword ptr [EDX + 0x30c]
+00620073  MOV ESI,dword ptr [EBP + -0x4]
+00620076  MOV ESI,dword ptr [ESI + 0x310]
+0062007c  MOV EDX,dword ptr [ESI + EDX*0x8 + -0x8]
+00620080  SUB EDX,0x1
+00620083  IMUL EDX,EDX,0x18
+00620086  MOV EAX,dword ptr [EAX + ECX*0x8 + -0x4]
+0062008a  MOV ECX,dword ptr [EBP + 0x8]
+0062008d  MOV dword ptr [EAX + EDX*0x1 + 0x8],ECX
+00620091  MOV EDX,dword ptr [EBP + -0x4]
+00620094  MOV EAX,dword ptr [EDX + 0x30c]
+0062009a  MOV ECX,dword ptr [EBP + -0x4]
+0062009d  MOV EDX,dword ptr [ECX + 0x310]
+006200a3  MOV ECX,dword ptr [EBP + -0x4]
+006200a6  MOV ECX,dword ptr [ECX + 0x30c]
+006200ac  MOV ESI,dword ptr [EBP + -0x4]
+006200af  MOV ESI,dword ptr [ESI + 0x310]
+006200b5  MOV ECX,dword ptr [ESI + ECX*0x8 + -0x8]
+006200b9  SUB ECX,0x1
+006200bc  IMUL ECX,ECX,0x18
+006200bf  MOV EDX,dword ptr [EDX + EAX*0x8 + -0x4]
+006200c3  MOV EAX,dword ptr [EBP + 0xc]
+006200c6  MOV dword ptr [EDX + ECX*0x1 + 0xc],EAX
+006200ca  POP ESI
+006200cb  MOV ESP,EBP
+006200cd  POP EBP
+006200ce  RET 0x8

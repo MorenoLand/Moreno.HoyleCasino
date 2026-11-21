@@ -1,0 +1,12 @@
+; FUN_00643da0  00643da0
+00643da0  PUSH EBP
+00643da1  MOV EBP,ESP
+00643da3  PUSH ECX
+00643da4  MOV dword ptr [EBP + -0x4],ECX
+00643da7  MOV EAX,dword ptr [EBP + -0x4]
+00643daa  MOV dword ptr [EAX],0x6dc45c
+00643db0  MOV ECX,dword ptr [EBP + -0x4]
+00643db3  CALL 0x005f5fa0
+00643db8  MOV ESP,EBP
+00643dba  POP EBP
+00643dbb  RET

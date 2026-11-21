@@ -1,0 +1,3 @@
+; Unwind@006a0c72  006a0c72
+006a0c72  LEA ECX,[EBP + -0x28]
+006a0c75  JMP 0x004646e0

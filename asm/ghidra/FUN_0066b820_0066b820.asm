@@ -1,0 +1,87 @@
+; FUN_0066b820  0066b820
+0066b820  PUSH EBP
+0066b821  MOV EBP,ESP
+0066b823  PUSH -0x1
+0066b825  PUSH 0x6acdf8
+0066b82a  MOV EAX,FS:[0x0]
+0066b830  PUSH EAX
+0066b831  SUB ESP,0xc
+0066b834  MOV EAX,[0x00781870]
+0066b839  XOR EAX,EBP
+0066b83b  PUSH EAX
+0066b83c  LEA EAX,[EBP + -0xc]
+0066b83f  MOV FS:[0x0],EAX
+0066b845  MOV dword ptr [EBP + -0x18],ECX
+0066b848  MOV ECX,dword ptr [EBP + -0x18]
+0066b84b  CALL 0x0064cbe0
+0066b850  MOV dword ptr [EBP + -0x4],0x0
+0066b857  MOV EAX,dword ptr [EBP + -0x18]
+0066b85a  MOV dword ptr [EAX],0x6e079c
+0066b860  MOV ECX,dword ptr [0x0162ee84]
+0066b866  MOV EDX,dword ptr [ECX]
+0066b868  MOV ECX,dword ptr [0x0162ee84]
+0066b86e  MOV EAX,dword ptr [EDX + 0x27c]
+0066b874  CALL EAX
+0066b876  PUSH EAX
+0066b877  MOV ECX,dword ptr [EBP + -0x18]
+0066b87a  CALL 0x005f1ad0
+0066b87f  PUSH 0x0
+0066b881  MOV ECX,dword ptr [0x0162ee84]
+0066b887  CALL 0x005f38b0
+0066b88c  MOV ECX,dword ptr [EBP + -0x18]
+0066b88f  MOV dword ptr [0x016306c0],ECX
+0066b895  MOV EDX,dword ptr [0x0162ee84]
+0066b89b  MOV EAX,dword ptr [EDX]
+0066b89d  MOV ECX,dword ptr [0x0162ee84]
+0066b8a3  MOV EDX,dword ptr [EAX + 0x25c]
+0066b8a9  CALL EDX
+0066b8ab  XOR ECX,ECX
+0066b8ad  MOV EDX,0x4
+0066b8b2  MUL EDX
+0066b8b4  SETO CL
+0066b8b7  NEG ECX
+0066b8b9  OR ECX,EAX
+0066b8bb  PUSH ECX
+0066b8bc  CALL 0x00686d82
+0066b8c1  ADD ESP,0x4
+0066b8c4  MOV dword ptr [EBP + -0x14],EAX
+0066b8c7  MOV EAX,dword ptr [EBP + -0x18]
+0066b8ca  MOV ECX,dword ptr [EBP + -0x14]
+0066b8cd  MOV dword ptr [EAX + 0x5c],ECX
+0066b8d0  MOV dword ptr [EBP + -0x10],0x0
+0066b8d7  JMP 0x0066b8e2
+0066b8d9  MOV EDX,dword ptr [EBP + -0x10]
+0066b8dc  ADD EDX,0x1
+0066b8df  MOV dword ptr [EBP + -0x10],EDX
+0066b8e2  MOV EAX,[0x0162ee84]
+0066b8e7  MOV EDX,dword ptr [EAX]
+0066b8e9  MOV ECX,dword ptr [0x0162ee84]
+0066b8ef  MOV EAX,dword ptr [EDX + 0x25c]
+0066b8f5  CALL EAX
+0066b8f7  CMP dword ptr [EBP + -0x10],EAX
+0066b8fa  JGE 0x0066b90e
+0066b8fc  MOV ECX,dword ptr [EBP + -0x18]
+0066b8ff  MOV EDX,dword ptr [ECX + 0x5c]
+0066b902  MOV EAX,dword ptr [EBP + -0x10]
+0066b905  MOV dword ptr [EDX + EAX*0x4],0x0
+0066b90c  JMP 0x0066b8d9
+0066b90e  MOV ECX,dword ptr [EBP + -0x18]
+0066b911  MOV dword ptr [ECX + 0x60],0x0
+0066b918  MOV EDX,dword ptr [EBP + -0x18]
+0066b91b  MOV dword ptr [EDX + 0x64],0x0
+0066b922  MOV EAX,dword ptr [EBP + -0x18]
+0066b925  MOV dword ptr [EAX + 0x68],0x0
+0066b92c  MOV ECX,dword ptr [EBP + -0x18]
+0066b92f  MOV dword ptr [ECX + 0x6c],0x0
+0066b936  MOV EDX,dword ptr [EBP + -0x18]
+0066b939  MOV dword ptr [EDX + 0x70],0x0
+0066b940  MOV EAX,dword ptr [EBP + -0x18]
+0066b943  MOV dword ptr [EAX + 0x74],0x0
+0066b94a  MOV dword ptr [EBP + -0x4],0xffffffff
+0066b951  MOV EAX,dword ptr [EBP + -0x18]
+0066b954  MOV ECX,dword ptr [EBP + -0xc]
+0066b957  MOV dword ptr FS:[0x0],ECX
+0066b95e  POP ECX
+0066b95f  MOV ESP,EBP
+0066b961  POP EBP
+0066b962  RET

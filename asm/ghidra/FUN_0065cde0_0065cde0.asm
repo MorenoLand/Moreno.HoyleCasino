@@ -1,0 +1,13 @@
+; FUN_0065cde0  0065cde0
+0065cde0  PUSH EBP
+0065cde1  MOV EBP,ESP
+0065cde3  PUSH ECX
+0065cde4  MOV dword ptr [EBP + -0x4],ECX
+0065cde7  PUSH 0x1
+0065cde9  MOV EAX,dword ptr [EBP + 0x8]
+0065cdec  PUSH EAX
+0065cded  MOV ECX,dword ptr [EBP + -0x4]
+0065cdf0  CALL 0x00615180
+0065cdf5  MOV ESP,EBP
+0065cdf7  POP EBP
+0065cdf8  RET 0x4

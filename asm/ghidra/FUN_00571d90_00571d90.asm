@@ -1,0 +1,20 @@
+; FUN_00571d90  00571d90
+00571d90  PUSH EBP
+00571d91  MOV EBP,ESP
+00571d93  SUB ESP,0x8
+00571d96  MOV dword ptr [EBP + -0x8],ECX
+00571d99  MOV word ptr [EBP + -0x4],0x0
+00571d9f  JMP 0x00571dad
+00571da1  MOV AX,word ptr [EBP + -0x4]
+00571da5  ADD AX,0x1
+00571da9  MOV word ptr [EBP + -0x4],AX
+00571dad  MOVSX ECX,word ptr [EBP + -0x4]
+00571db1  CMP ECX,0x7
+00571db4  JGE 0x00571dc7
+00571db6  MOVSX EDX,word ptr [EBP + -0x4]
+00571dba  MOV EAX,dword ptr [EBP + -0x8]
+00571dbd  MOV dword ptr [EAX + EDX*0x4 + 0x18],0xffffffff
+00571dc5  JMP 0x00571da1
+00571dc7  MOV ESP,EBP
+00571dc9  POP EBP
+00571dca  RET

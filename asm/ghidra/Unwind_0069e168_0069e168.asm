@@ -1,0 +1,3 @@
+; Unwind@0069e168  0069e168
+0069e168  MOV ECX,dword ptr [EBP + -0x10]
+0069e16b  JMP 0x005f5c40

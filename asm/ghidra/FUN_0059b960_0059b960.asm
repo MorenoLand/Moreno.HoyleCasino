@@ -1,0 +1,16 @@
+; FUN_0059b960  0059b960
+0059b960  PUSH EBP
+0059b961  MOV EBP,ESP
+0059b963  SUB ESP,0x1c
+0059b966  MOV dword ptr [EBP + -0x1c],ECX
+0059b969  MOV dword ptr [EBP + -0x18],0x310e9a
+0059b970  MOV dword ptr [EBP + -0x14],0x310e9b
+0059b977  MOV dword ptr [EBP + -0x10],0x310e99
+0059b97e  MOV dword ptr [EBP + -0xc],0x310e9c
+0059b985  MOV dword ptr [EBP + -0x8],0x310e9d
+0059b98c  MOV dword ptr [EBP + -0x4],0x310e9d
+0059b993  MOV EAX,dword ptr [EBP + 0x8]
+0059b996  MOV EAX,dword ptr [EBP + EAX*0x4 + -0x18]
+0059b99a  MOV ESP,EBP
+0059b99c  POP EBP
+0059b99d  RET 0x4

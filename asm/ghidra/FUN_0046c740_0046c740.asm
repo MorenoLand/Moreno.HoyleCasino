@@ -1,0 +1,18 @@
+; FUN_0046c740  0046c740
+0046c740  PUSH EBP
+0046c741  MOV EBP,ESP
+0046c743  PUSH ECX
+0046c744  MOV dword ptr [EBP + -0x4],ECX
+0046c747  MOV ECX,dword ptr [EBP + -0x4]
+0046c74a  CALL 0x00601a80
+0046c74f  MOV EAX,dword ptr [EBP + -0x4]
+0046c752  MOV dword ptr [EAX],0x6bbebc
+0046c758  MOV ECX,dword ptr [EBP + -0x4]
+0046c75b  MOV EDX,dword ptr [EBP + 0x8]
+0046c75e  MOV dword ptr [ECX + 0x1e0],EDX
+0046c764  MOV EAX,dword ptr [EBP + -0x4]
+0046c767  MOV byte ptr [EAX + 0x1dc],0x0
+0046c76e  MOV EAX,dword ptr [EBP + -0x4]
+0046c771  MOV ESP,EBP
+0046c773  POP EBP
+0046c774  RET 0x4

@@ -1,0 +1,70 @@
+; FUN_0048cc10  0048cc10
+0048cc10  PUSH EBP
+0048cc11  MOV EBP,ESP
+0048cc13  PUSH -0x1
+0048cc15  PUSH 0x6a03c5
+0048cc1a  MOV EAX,FS:[0x0]
+0048cc20  PUSH EAX
+0048cc21  SUB ESP,0x18
+0048cc24  MOV EAX,[0x00781870]
+0048cc29  XOR EAX,EBP
+0048cc2b  PUSH EAX
+0048cc2c  LEA EAX,[EBP + -0xc]
+0048cc2f  MOV FS:[0x0],EAX
+0048cc35  MOV dword ptr [EBP + -0x1c],ECX
+0048cc38  MOV dword ptr [EBP + -0x18],0x0
+0048cc3f  MOV AL,byte ptr [EBP + 0x28]
+0048cc42  PUSH EAX
+0048cc43  MOV CL,byte ptr [EBP + 0x24]
+0048cc46  PUSH ECX
+0048cc47  MOV DL,byte ptr [EBP + 0x20]
+0048cc4a  PUSH EDX
+0048cc4b  MOV AL,byte ptr [EBP + 0x1c]
+0048cc4e  PUSH EAX
+0048cc4f  MOV CL,byte ptr [EBP + 0x18]
+0048cc52  PUSH ECX
+0048cc53  MOV DL,byte ptr [EBP + 0x14]
+0048cc56  PUSH EDX
+0048cc57  MOV AL,byte ptr [EBP + 0x10]
+0048cc5a  PUSH EAX
+0048cc5b  MOV ECX,dword ptr [EBP + 0xc]
+0048cc5e  PUSH ECX
+0048cc5f  LEA EDX,[EBP + -0x14]
+0048cc62  PUSH EDX
+0048cc63  MOV ECX,dword ptr [EBP + -0x1c]
+0048cc66  CALL 0x0048c7b0
+0048cc6b  MOV dword ptr [EBP + -0x20],EAX
+0048cc6e  MOV EAX,dword ptr [EBP + -0x20]
+0048cc71  MOV dword ptr [EBP + -0x24],EAX
+0048cc74  MOV dword ptr [EBP + -0x4],0x1
+0048cc7b  MOV CL,byte ptr [EBP + 0x28]
+0048cc7e  PUSH ECX
+0048cc7f  MOV DL,byte ptr [EBP + 0x24]
+0048cc82  PUSH EDX
+0048cc83  MOV AL,byte ptr [EBP + 0x20]
+0048cc86  PUSH EAX
+0048cc87  MOV CL,byte ptr [EBP + 0x1c]
+0048cc8a  PUSH ECX
+0048cc8b  MOV DL,byte ptr [EBP + 0x18]
+0048cc8e  PUSH EDX
+0048cc8f  MOV AL,byte ptr [EBP + 0x14]
+0048cc92  PUSH EAX
+0048cc93  MOV CL,byte ptr [EBP + 0x10]
+0048cc96  PUSH ECX
+0048cc97  MOV EDX,dword ptr [EBP + 0x8]
+0048cc9a  PUSH EDX
+0048cc9b  MOV ECX,dword ptr [EBP + -0x24]
+0048cc9e  CALL 0x00485940
+0048cca3  MOV EAX,dword ptr [EBP + -0x18]
+0048cca6  OR EAX,0x1
+0048cca9  MOV dword ptr [EBP + -0x18],EAX
+0048ccac  MOV byte ptr [EBP + -0x4],0x0
+0048ccb0  LEA ECX,[EBP + -0x14]
+0048ccb3  CALL 0x00484470
+0048ccb8  MOV EAX,dword ptr [EBP + 0x8]
+0048ccbb  MOV ECX,dword ptr [EBP + -0xc]
+0048ccbe  MOV dword ptr FS:[0x0],ECX
+0048ccc5  POP ECX
+0048ccc6  MOV ESP,EBP
+0048ccc8  POP EBP
+0048ccc9  RET 0x24

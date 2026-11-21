@@ -1,0 +1,32 @@
+; FUN_0056a680  0056a680
+0056a680  PUSH EBP
+0056a681  MOV EBP,ESP
+0056a683  SUB ESP,0x10
+0056a686  MOV dword ptr [EBP + -0xc],ECX
+0056a689  MOV EAX,dword ptr [EBP + -0xc]
+0056a68c  MOV ECX,dword ptr [EAX + 0x4]
+0056a68f  MOV dword ptr [EBP + -0x4],ECX
+0056a692  CMP dword ptr [EBP + -0x4],0x0
+0056a696  JNZ 0x0056a6ce
+0056a698  MOV EDX,dword ptr [EBP + -0xc]
+0056a69b  MOV EAX,dword ptr [EDX + 0x8]
+0056a69e  MOV dword ptr [EBP + -0x8],EAX
+0056a6a1  CMP dword ptr [EBP + -0x8],0x0
+0056a6a5  JNZ 0x0056a6ce
+0056a6a7  MOV ECX,dword ptr [EBP + -0xc]
+0056a6aa  CALL 0x0056a560
+0056a6af  MOVZX ECX,AL
+0056a6b2  TEST ECX,ECX
+0056a6b4  JNZ 0x0056a6ce
+0056a6b6  MOV ECX,dword ptr [EBP + -0xc]
+0056a6b9  CALL 0x0056a510
+0056a6be  MOVZX EDX,AL
+0056a6c1  TEST EDX,EDX
+0056a6c3  JNZ 0x0056a6ce
+0056a6c5  MOV dword ptr [EBP + -0x10],0x1
+0056a6cc  JMP 0x0056a6d5
+0056a6ce  MOV dword ptr [EBP + -0x10],0x0
+0056a6d5  MOV AL,byte ptr [EBP + -0x10]
+0056a6d8  MOV ESP,EBP
+0056a6da  POP EBP
+0056a6db  RET

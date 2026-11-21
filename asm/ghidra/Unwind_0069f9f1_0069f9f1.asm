@@ -1,0 +1,3 @@
+; Unwind@0069f9f1  0069f9f1
+0069f9f1  LEA ECX,[EBP + 0xfffffe60]
+0069f9f7  JMP 0x004a20f0

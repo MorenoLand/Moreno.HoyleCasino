@@ -1,0 +1,22 @@
+; FUN_00606a60  00606a60
+00606a60  PUSH EBP
+00606a61  MOV EBP,ESP
+00606a63  PUSH ECX
+00606a64  MOV dword ptr [EBP + -0x4],ECX
+00606a67  MOV EAX,dword ptr [EBP + -0x4]
+00606a6a  MOV ECX,dword ptr [EBP + 0x8]
+00606a6d  MOV dword ptr [EAX + 0x4],ECX
+00606a70  MOV EDX,dword ptr [EBP + -0x4]
+00606a73  MOV EAX,dword ptr [EDX + 0x14]
+00606a76  PUSH EAX
+00606a77  MOV ECX,dword ptr [EBP + -0x4]
+00606a7a  MOV EDX,dword ptr [ECX + 0x10]
+00606a7d  PUSH EDX
+00606a7e  MOV EAX,dword ptr [EBP + -0x4]
+00606a81  MOV EDX,dword ptr [EAX]
+00606a83  MOV ECX,dword ptr [EBP + -0x4]
+00606a86  MOV EAX,dword ptr [EDX + 0xc]
+00606a89  CALL EAX
+00606a8b  MOV ESP,EBP
+00606a8d  POP EBP
+00606a8e  RET 0x4

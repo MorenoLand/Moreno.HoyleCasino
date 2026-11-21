@@ -1,0 +1,9 @@
+; FUN_00699560  00699560
+00699560  MOV EAX,dword ptr [ESP + 0x4]
+00699564  MOV ECX,dword ptr [EAX]
+00699566  AND ECX,0x7fffffff
+0069956c  MOV dword ptr [ESP + 0x4],ECX
+00699570  FILD dword ptr [ESP + 0x4]
+00699574  FMUL float ptr [0x006e5744]
+0069957a  FSUB float ptr [0x006e5740]
+00699580  RET

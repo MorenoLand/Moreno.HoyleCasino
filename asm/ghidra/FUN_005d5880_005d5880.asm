@@ -1,0 +1,21 @@
+; FUN_005d5880  005d5880
+005d5880  PUSH EBP
+005d5881  MOV EBP,ESP
+005d5883  SUB ESP,0x8
+005d5886  MOV dword ptr [EBP + -0x4],ECX
+005d5889  MOV EAX,dword ptr [EBP + -0x4]
+005d588c  CMP dword ptr [EAX + 0x4c4],0x0
+005d5893  JL 0x005d58b6
+005d5895  MOV ECX,dword ptr [EBP + -0x4]
+005d5898  CMP dword ptr [ECX + 0x4c4],0x0
+005d589f  JNZ 0x005d58ad
+005d58a1  MOV EDX,dword ptr [EBP + -0x4]
+005d58a4  CMP dword ptr [EDX + 0x4c8],0x0
+005d58ab  JL 0x005d58b6
+005d58ad  MOV dword ptr [EBP + -0x8],0x0
+005d58b4  JMP 0x005d58bd
+005d58b6  MOV dword ptr [EBP + -0x8],0x1
+005d58bd  MOV AL,byte ptr [EBP + -0x8]
+005d58c0  MOV ESP,EBP
+005d58c2  POP EBP
+005d58c3  RET

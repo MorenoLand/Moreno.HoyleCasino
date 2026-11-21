@@ -1,0 +1,12 @@
+; FUN_0058af90  0058af90
+0058af90  PUSH EBP
+0058af91  MOV EBP,ESP
+0058af93  PUSH ECX
+0058af94  MOV dword ptr [EBP + -0x4],ECX
+0058af97  MOV EAX,dword ptr [EBP + -0x4]
+0058af9a  MOV dword ptr [EAX],0x6cd09c
+0058afa0  MOV ECX,dword ptr [EBP + -0x4]
+0058afa3  CALL 0x00601ba0
+0058afa8  MOV ESP,EBP
+0058afaa  POP EBP
+0058afab  RET

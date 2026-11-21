@@ -1,0 +1,17 @@
+; FUN_005309f0  005309f0
+005309f0  PUSH EBP
+005309f1  MOV EBP,ESP
+005309f3  SUB ESP,0x10
+005309f6  MOV dword ptr [EBP + -0xc],ECX
+005309f9  MOV dword ptr [EBP + -0x8],0x0
+00530a00  MOV dword ptr [EBP + -0x4],0x19
+00530a07  MOV ECX,dword ptr [EBP + -0xc]
+00530a0a  CALL 0x005fc360
+00530a0f  MOV dword ptr [EBP + -0x10],EAX
+00530a12  CMP dword ptr [EBP + -0x10],0x5
+00530a16  JA 0x00530f08
+00530a1c  MOV EAX,dword ptr [EBP + -0x10]
+00530a1f  JMP dword ptr [EAX*0x4 + 0x530f0c]
+00530f08  MOV ESP,EBP
+00530f0a  POP EBP
+00530f0b  RET

@@ -1,0 +1,19 @@
+; FUN_0045a120  0045a120
+0045a120  PUSH EBP
+0045a121  MOV EBP,ESP
+0045a123  PUSH ECX
+0045a124  MOV dword ptr [EBP + -0x4],ECX
+0045a127  MOV ECX,dword ptr [EBP + -0x4]
+0045a12a  CALL 0x005cc1d0
+0045a12f  MOV EAX,dword ptr [EBP + -0x4]
+0045a132  MOV dword ptr [EAX],0x6b98b4
+0045a138  MOV ECX,dword ptr [EBP + -0x4]
+0045a13b  MOV EDX,dword ptr [EBP + 0x8]
+0045a13e  MOV dword ptr [ECX + 0xae0],EDX
+0045a144  MOV EAX,dword ptr [EBP + -0x4]
+0045a147  MOV ECX,dword ptr [EBP + 0xc]
+0045a14a  MOV dword ptr [EAX + 0xae4],ECX
+0045a150  MOV EAX,dword ptr [EBP + -0x4]
+0045a153  MOV ESP,EBP
+0045a155  POP EBP
+0045a156  RET 0x8

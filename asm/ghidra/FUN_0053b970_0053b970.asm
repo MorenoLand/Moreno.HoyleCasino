@@ -1,0 +1,66 @@
+; FUN_0053b970  0053b970
+0053b970  PUSH EBP
+0053b971  MOV EBP,ESP
+0053b973  PUSH -0x1
+0053b975  PUSH 0x6a4b67
+0053b97a  MOV EAX,FS:[0x0]
+0053b980  PUSH EAX
+0053b981  SUB ESP,0x10
+0053b984  MOV EAX,[0x00781870]
+0053b989  XOR EAX,EBP
+0053b98b  PUSH EAX
+0053b98c  LEA EAX,[EBP + -0xc]
+0053b98f  MOV FS:[0x0],EAX
+0053b995  MOV dword ptr [EBP + -0x18],ECX
+0053b998  MOV ECX,dword ptr [EBP + -0x18]
+0053b99b  CALL 0x0053b1a0
+0053b9a0  MOV EAX,dword ptr [EBP + -0x18]
+0053b9a3  CMP dword ptr [EAX + 0x4c],0x0
+0053b9a7  JNZ 0x0053ba15
+0053b9a9  PUSH 0x1bc
+0053b9ae  CALL 0x00686d82
+0053b9b3  ADD ESP,0x4
+0053b9b6  MOV dword ptr [EBP + -0x14],EAX
+0053b9b9  MOV dword ptr [EBP + -0x4],0x0
+0053b9c0  CMP dword ptr [EBP + -0x14],0x0
+0053b9c4  JZ 0x0053b9d3
+0053b9c6  MOV ECX,dword ptr [EBP + -0x14]
+0053b9c9  CALL 0x0053ccb0
+0053b9ce  MOV dword ptr [EBP + -0x1c],EAX
+0053b9d1  JMP 0x0053b9da
+0053b9d3  MOV dword ptr [EBP + -0x1c],0x0
+0053b9da  MOV ECX,dword ptr [EBP + -0x1c]
+0053b9dd  MOV dword ptr [EBP + -0x10],ECX
+0053b9e0  MOV dword ptr [EBP + -0x4],0xffffffff
+0053b9e7  MOV EDX,dword ptr [EBP + -0x18]
+0053b9ea  MOV EAX,dword ptr [EBP + -0x10]
+0053b9ed  MOV dword ptr [EDX + 0x4c],EAX
+0053b9f0  MOV ECX,dword ptr [EBP + -0x18]
+0053b9f3  MOV EDX,dword ptr [ECX + 0x4c]
+0053b9f6  MOV EAX,dword ptr [EBP + -0x18]
+0053b9f9  MOV ECX,dword ptr [EAX + 0x4c]
+0053b9fc  MOV EDX,dword ptr [EDX]
+0053b9fe  MOV EAX,dword ptr [EDX + 0x3c]
+0053ba01  CALL EAX
+0053ba03  PUSH 0xaa
+0053ba08  PUSH 0x0
+0053ba0a  MOV ECX,dword ptr [EBP + -0x18]
+0053ba0d  MOV ECX,dword ptr [ECX + 0x4c]
+0053ba10  CALL 0x005f7340
+0053ba15  MOV EDX,dword ptr [EBP + -0x18]
+0053ba18  MOV ECX,dword ptr [EDX + 0x4c]
+0053ba1b  CALL 0x005f85d0
+0053ba20  PUSH 0x1
+0053ba22  PUSH 0x310e9b
+0053ba27  MOV ECX,dword ptr [0x0162ee80]
+0053ba2d  CALL 0x005f2b20
+0053ba32  PUSH 0x1
+0053ba34  PUSH 0x310e9c
+0053ba39  MOV ECX,dword ptr [0x0162ee80]
+0053ba3f  CALL 0x005f2b20
+0053ba44  MOV ECX,dword ptr [EBP + -0xc]
+0053ba47  MOV dword ptr FS:[0x0],ECX
+0053ba4e  POP ECX
+0053ba4f  MOV ESP,EBP
+0053ba51  POP EBP
+0053ba52  RET

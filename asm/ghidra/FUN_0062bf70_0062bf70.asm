@@ -1,0 +1,40 @@
+; FUN_0062bf70  0062bf70
+0062bf70  PUSH EBP
+0062bf71  MOV EBP,ESP
+0062bf73  PUSH ECX
+0062bf74  MOV dword ptr [EBP + -0x4],ECX
+0062bf77  MOV EAX,dword ptr [EBP + -0x4]
+0062bf7a  MOV ECX,dword ptr [EAX + 0xc]
+0062bf7d  PUSH ECX
+0062bf7e  PUSH 0x1
+0062bf80  PUSH 0x18
+0062bf82  MOV EDX,dword ptr [EBP + -0x4]
+0062bf85  MOV EAX,dword ptr [EDX + 0x10]
+0062bf88  PUSH EAX
+0062bf89  CALL dword ptr [0x006b2260]
+0062bf8f  ADD ESP,0x10
+0062bf92  TEST EAX,EAX
+0062bf94  JNZ 0x0062bf9a
+0062bf96  XOR AL,AL
+0062bf98  JMP 0x0062bfc7
+0062bf9a  MOV ECX,dword ptr [EBP + -0x4]
+0062bf9d  MOV EDX,dword ptr [ECX + 0xc]
+0062bfa0  PUSH EDX
+0062bfa1  PUSH 0x1
+0062bfa3  MOV EAX,dword ptr [EBP + -0x4]
+0062bfa6  MOV ECX,dword ptr [EAX + 0x10]
+0062bfa9  MOV EDX,dword ptr [ECX + 0x10]
+0062bfac  PUSH EDX
+0062bfad  MOV EAX,dword ptr [EBP + -0x4]
+0062bfb0  MOV ECX,dword ptr [EAX + 0x14]
+0062bfb3  PUSH ECX
+0062bfb4  CALL dword ptr [0x006b2260]
+0062bfba  ADD ESP,0x10
+0062bfbd  TEST EAX,EAX
+0062bfbf  JNZ 0x0062bfc5
+0062bfc1  XOR AL,AL
+0062bfc3  JMP 0x0062bfc7
+0062bfc5  MOV AL,0x1
+0062bfc7  MOV ESP,EBP
+0062bfc9  POP EBP
+0062bfca  RET

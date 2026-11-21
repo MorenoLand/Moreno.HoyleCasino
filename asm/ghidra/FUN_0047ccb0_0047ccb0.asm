@@ -1,0 +1,16 @@
+; FUN_0047ccb0  0047ccb0
+0047ccb0  PUSH EBP
+0047ccb1  MOV EBP,ESP
+0047ccb3  PUSH ECX
+0047ccb4  MOV dword ptr [EBP + -0x4],ECX
+0047ccb7  CMP dword ptr [EBP + 0x8],-0x1
+0047ccbb  JNZ 0x0047ccc1
+0047ccbd  XOR EAX,EAX
+0047ccbf  JMP 0x0047cccd
+0047ccc1  MOV EAX,dword ptr [EBP + 0x8]
+0047ccc4  PUSH EAX
+0047ccc5  MOV ECX,dword ptr [EBP + -0x4]
+0047ccc8  CALL 0x0047e390
+0047cccd  MOV ESP,EBP
+0047cccf  POP EBP
+0047ccd0  RET 0x4

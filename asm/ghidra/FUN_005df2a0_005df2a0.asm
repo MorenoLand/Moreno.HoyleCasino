@@ -1,0 +1,9 @@
+; FUN_005df2a0  005df2a0
+005df2a0  PUSH EBP
+005df2a1  MOV EBP,ESP
+005df2a3  PUSH ECX
+005df2a4  MOV dword ptr [EBP + -0x4],ECX
+005df2a7  OR EAX,0xffffffff
+005df2aa  MOV ESP,EBP
+005df2ac  POP EBP
+005df2ad  RET

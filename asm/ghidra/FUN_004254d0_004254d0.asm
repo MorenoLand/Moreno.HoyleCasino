@@ -1,0 +1,27 @@
+; FUN_004254d0  004254d0
+004254d0  PUSH EBP
+004254d1  MOV EBP,ESP
+004254d3  PUSH ECX
+004254d4  MOV dword ptr [EBP + -0x4],ECX
+004254d7  CMP dword ptr [EBP + 0x8],0x0
+004254db  JNZ 0x004254e1
+004254dd  XOR AL,AL
+004254df  JMP 0x00425528
+004254e1  MOV EAX,dword ptr [EBP + 0x8]
+004254e4  MOV dword ptr [EAX],0x4
+004254ea  MOV ECX,dword ptr [EBP + 0x8]
+004254ed  MOV dword ptr [ECX + 0x4],0x1
+004254f4  MOV EDX,dword ptr [EBP + 0x8]
+004254f7  MOV dword ptr [EDX + 0x8],0x4
+004254fe  MOV EAX,dword ptr [EBP + 0x8]
+00425501  MOV dword ptr [EAX + 0xc],0x1
+00425508  MOV ECX,dword ptr [EBP + 0x8]
+0042550b  MOV dword ptr [ECX + 0x10],0x4
+00425512  MOV EDX,dword ptr [EBP + 0x8]
+00425515  MOV dword ptr [EDX + 0x14],0x0
+0042551c  MOV EAX,dword ptr [EBP + 0x8]
+0042551f  MOV dword ptr [EAX + 0x18],0x3
+00425526  MOV AL,0x1
+00425528  MOV ESP,EBP
+0042552a  POP EBP
+0042552b  RET 0x8

@@ -1,0 +1,27 @@
+; FUN_005797d0  005797d0
+005797d0  PUSH EBP
+005797d1  MOV EBP,ESP
+005797d3  PUSH ECX
+005797d4  MOV dword ptr [EBP + -0x4],ECX
+005797d7  CMP dword ptr [EBP + 0x8],0x0
+005797db  JNZ 0x005797e1
+005797dd  XOR AL,AL
+005797df  JMP 0x00579828
+005797e1  MOV EAX,dword ptr [EBP + 0x8]
+005797e4  MOV dword ptr [EAX],0x1
+005797ea  MOV ECX,dword ptr [EBP + 0x8]
+005797ed  MOV dword ptr [ECX + 0x4],0x1
+005797f4  MOV EDX,dword ptr [EBP + 0x8]
+005797f7  MOV dword ptr [EDX + 0x8],0x1
+005797fe  MOV EAX,dword ptr [EBP + 0x8]
+00579801  MOV dword ptr [EAX + 0xc],0x1
+00579808  MOV ECX,dword ptr [EBP + 0x8]
+0057980b  MOV dword ptr [ECX + 0x10],0x1
+00579812  MOV EDX,dword ptr [EBP + 0x8]
+00579815  MOV dword ptr [EDX + 0x14],0x0
+0057981c  MOV EAX,dword ptr [EBP + 0x8]
+0057981f  MOV dword ptr [EAX + 0x18],0x0
+00579826  MOV AL,0x1
+00579828  MOV ESP,EBP
+0057982a  POP EBP
+0057982b  RET 0x8

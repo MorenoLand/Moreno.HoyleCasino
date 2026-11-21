@@ -1,0 +1,68 @@
+; FUN_004122e0  004122e0
+004122e0  PUSH EBP
+004122e1  MOV EBP,ESP
+004122e3  PUSH ECX
+004122e4  MOV dword ptr [EBP + -0x4],ECX
+004122e7  MOV EAX,dword ptr [EBP + -0x4]
+004122ea  MOV byte ptr [EAX + 0x4],0x0
+004122ee  MOV ECX,dword ptr [EBP + -0x4]
+004122f1  MOV byte ptr [ECX + 0x6],0x0
+004122f5  MOV EDX,dword ptr [EBP + -0x4]
+004122f8  MOV byte ptr [EDX + 0x7],0x0
+004122fc  MOV EAX,dword ptr [EBP + -0x4]
+004122ff  MOV byte ptr [EAX + 0x8],0x0
+00412303  MOV ECX,dword ptr [EBP + -0x4]
+00412306  MOV byte ptr [ECX + 0x9],0x0
+0041230a  MOV EDX,dword ptr [EBP + -0x4]
+0041230d  MOV byte ptr [EDX + 0xb],0x0
+00412311  MOV EAX,dword ptr [EBP + -0x4]
+00412314  MOV byte ptr [EAX + 0xa],0x0
+00412318  MOV ECX,dword ptr [EBP + -0x4]
+0041231b  MOV byte ptr [ECX + 0xc],0x0
+0041231f  MOV EDX,dword ptr [EBP + -0x4]
+00412322  MOV byte ptr [EDX + 0xd],0x0
+00412326  MOV EAX,dword ptr [EBP + -0x4]
+00412329  MOV byte ptr [EAX + 0xe],0x0
+0041232d  MOV ECX,dword ptr [EBP + -0x4]
+00412330  MOV byte ptr [ECX + 0x10],0x0
+00412334  MOV EDX,dword ptr [EBP + -0x4]
+00412337  MOV byte ptr [EDX + 0x12],0x0
+0041233b  MOV EAX,dword ptr [EBP + -0x4]
+0041233e  MOV byte ptr [EAX + 0x11],0x0
+00412342  MOV ECX,dword ptr [EBP + -0x4]
+00412345  MOV byte ptr [ECX + 0x13],0x0
+00412349  MOV EDX,dword ptr [EBP + -0x4]
+0041234c  MOV byte ptr [EDX + 0xf],0x0
+00412350  MOV EAX,dword ptr [EBP + -0x4]
+00412353  MOV byte ptr [EAX + 0x18],0x0
+00412357  MOV ECX,dword ptr [EBP + -0x4]
+0041235a  MOV byte ptr [ECX + 0x19],0x0
+0041235e  CMP dword ptr [EBP + 0x8],0x0
+00412362  JNZ 0x00412391
+00412364  MOV ECX,dword ptr [0x00790324]
+0041236a  CALL 0x004189a0
+0041236f  MOV EDX,dword ptr [EBP + 0x8]
+00412372  PUSH EDX
+00412373  PUSH 0x1
+00412375  MOV EAX,[0x00790320]
+0041237a  MOV ECX,dword ptr [EAX + 0x4]
+0041237d  MOV EDX,dword ptr [0x00790320]
+00412383  MOV EAX,dword ptr [EDX + 0x4]
+00412386  MOV EDX,dword ptr [ECX]
+00412388  MOV ECX,EAX
+0041238a  MOV EAX,dword ptr [EDX + 0x8]
+0041238d  CALL EAX
+0041238f  JMP 0x004123b3
+00412391  MOV ECX,dword ptr [EBP + 0x8]
+00412394  PUSH ECX
+00412395  PUSH 0x1f4
+0041239a  MOV EDX,dword ptr [0x00790320]
+004123a0  MOV EAX,dword ptr [EDX + 0x4]
+004123a3  MOV ECX,dword ptr [0x00790320]
+004123a9  MOV ECX,dword ptr [ECX + 0x4]
+004123ac  MOV EDX,dword ptr [EAX]
+004123ae  MOV EAX,dword ptr [EDX + 0x8]
+004123b1  CALL EAX
+004123b3  MOV ESP,EBP
+004123b5  POP EBP
+004123b6  RET 0x4

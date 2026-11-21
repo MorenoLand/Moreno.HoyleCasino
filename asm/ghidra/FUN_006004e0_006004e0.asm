@@ -1,0 +1,21 @@
+; FUN_006004e0  006004e0
+006004e0  PUSH EBP
+006004e1  MOV EBP,ESP
+006004e3  PUSH ECX
+006004e4  MOV dword ptr [EBP + -0x4],ECX
+006004e7  MOV EAX,dword ptr [EBP + -0x4]
+006004ea  MOV ECX,dword ptr [EBP + 0x8]
+006004ed  MOV dword ptr [EAX + 0x4],ECX
+006004f0  MOV EDX,dword ptr [EBP + -0x4]
+006004f3  MOV ECX,dword ptr [EDX + 0x4]
+006004f6  CALL 0x005eb240
+006004fb  MOV ECX,dword ptr [EBP + -0x4]
+006004fe  MOV dword ptr [ECX + 0x14],EAX
+00600501  MOV EDX,dword ptr [EBP + -0x4]
+00600504  MOV byte ptr [EDX + 0x18],0x1
+00600508  MOV EAX,dword ptr [EBP + -0x4]
+0060050b  MOV CL,byte ptr [EBP + 0xc]
+0060050e  MOV byte ptr [EAX + 0x19],CL
+00600511  MOV ESP,EBP
+00600513  POP EBP
+00600514  RET 0x8

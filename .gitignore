@@ -1,0 +1,11 @@
+bin/
+build/
+orig/
+*.i64
+*.id0
+*.id1
+*.id2
+*.nam
+*.til
+*.log
+__pycache__/

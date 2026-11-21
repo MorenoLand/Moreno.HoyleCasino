@@ -1,0 +1,21 @@
+; Get  005fb3f0
+005fb3f0  PUSH EBP
+005fb3f1  MOV EBP,ESP
+005fb3f3  SUB ESP,0x8
+005fb3f6  MOV dword ptr [EBP + -0x8],ECX
+005fb3f9  MOV EAX,dword ptr [EBP + 0xc]
+005fb3fc  PUSH EAX
+005fb3fd  MOV ECX,dword ptr [EBP + -0x8]
+005fb400  CALL 0x005fb3a0
+005fb405  MOV dword ptr [EBP + -0x4],EAX
+005fb408  CMP dword ptr [EBP + -0x4],0x0
+005fb40c  JZ 0x005fb41c
+005fb40e  MOV ECX,dword ptr [EBP + 0x8]
+005fb411  PUSH ECX
+005fb412  MOV ECX,dword ptr [EBP + -0x4]
+005fb415  CALL 0x00606380
+005fb41a  JMP 0x005fb41e
+005fb41c  XOR EAX,EAX
+005fb41e  MOV ESP,EBP
+005fb420  POP EBP
+005fb421  RET 0x8

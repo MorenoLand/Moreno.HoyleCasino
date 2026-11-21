@@ -1,0 +1,15 @@
+; FUN_0041fd50  0041fd50
+0041fd50  PUSH EBP
+0041fd51  MOV EBP,ESP
+0041fd53  PUSH ECX
+0041fd54  MOV dword ptr [EBP + -0x4],ECX
+0041fd57  CMP dword ptr [EBP + 0xc],0x0
+0041fd5b  JNZ 0x0041fd69
+0041fd5d  MOV EAX,dword ptr [EBP + 0x8]
+0041fd60  MOV EAX,dword ptr [EAX*0x8 + 0x70cd2c]
+0041fd67  JMP 0x0041fd73
+0041fd69  MOV ECX,dword ptr [EBP + 0x8]
+0041fd6c  MOV EAX,dword ptr [ECX*0x8 + 0x70cd0c]
+0041fd73  MOV ESP,EBP
+0041fd75  POP EBP
+0041fd76  RET 0x8

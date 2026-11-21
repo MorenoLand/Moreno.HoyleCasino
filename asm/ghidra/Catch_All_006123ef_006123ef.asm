@@ -1,0 +1,41 @@
+; Catch_All@006123ef  006123ef
+006123ef  MOV EDX,dword ptr [EBP + 0x10]
+006123f2  IMUL EDX,EDX,0x48
+006123f5  MOV EAX,dword ptr [EBP + 0xfffffd6c]
+006123fb  ADD EDX,dword ptr [EAX + 0x8]
+006123fe  MOV dword ptr [EBP + 0xfffffe30],EDX
+00612404  MOV ECX,dword ptr [EBP + 0xfffffe30]
+0061240a  MOV dword ptr [EBP + 0xfffffe34],ECX
+00612410  MOV EDX,dword ptr [EBP + 0x10]
+00612413  IMUL EDX,EDX,0x48
+00612416  ADD EDX,dword ptr [EBP + 0xc]
+00612419  MOV dword ptr [EBP + 0xfffffe38],EDX
+0061241f  MOV AL,byte ptr [EBP + 0xfffffe62]
+00612425  MOV byte ptr [EBP + 0xfffffe63],AL
+0061242b  MOV ECX,dword ptr [EBP + 0xfffffe34]
+00612431  MOV dword ptr [EBP + 0xfffffe3c],ECX
+00612437  MOV EDX,dword ptr [EBP + 0xfffffe38]
+0061243d  MOV dword ptr [EBP + 0xfffffe40],EDX
+00612443  JMP 0x00612454
+00612445  MOV EAX,dword ptr [EBP + 0xfffffe40]
+0061244b  ADD EAX,0x48
+0061244e  MOV dword ptr [EBP + 0xfffffe40],EAX
+00612454  MOV ECX,dword ptr [EBP + 0xfffffe40]
+0061245a  CMP ECX,dword ptr [EBP + 0xfffffe3c]
+00612460  JZ 0x00612494
+00612462  MOV EDX,dword ptr [EBP + 0xfffffe40]
+00612468  ADD EDX,0x20
+0061246b  MOV dword ptr [EBP + 0xfffffe44],EDX
+00612471  MOV ECX,dword ptr [EBP + 0xfffffe44]
+00612477  CALL 0x005be450
+0061247c  XOR EAX,EAX
+0061247e  AND EAX,0x1
+00612481  JZ 0x00612492
+00612483  MOV ECX,dword ptr [EBP + 0xfffffe40]
+00612489  PUSH ECX
+0061248a  CALL 0x00686cae
+0061248f  ADD ESP,0x4
+00612492  JMP 0x00612445
+00612494  PUSH 0x0
+00612496  PUSH 0x0
+00612498  CALL 0x00686fc0

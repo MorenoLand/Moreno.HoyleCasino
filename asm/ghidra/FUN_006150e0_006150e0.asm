@@ -1,0 +1,31 @@
+; FUN_006150e0  006150e0
+006150e0  PUSH EBP
+006150e1  MOV EBP,ESP
+006150e3  PUSH ECX
+006150e4  MOV dword ptr [EBP + -0x4],ECX
+006150e7  MOV EAX,dword ptr [EBP + -0x4]
+006150ea  MOV byte ptr [EAX + 0x60],0x0
+006150ee  MOV ECX,dword ptr [EBP + -0x4]
+006150f1  MOV EDX,dword ptr [ECX + 0x58]
+006150f4  MOV EAX,dword ptr [EBP + -0x4]
+006150f7  MOV ECX,dword ptr [EAX + 0x58]
+006150fa  MOV EDX,dword ptr [EDX]
+006150fc  MOV EAX,dword ptr [EDX + 0x70]
+006150ff  CALL EAX
+00615101  MOV ECX,dword ptr [EBP + -0x4]
+00615104  MOV EDX,dword ptr [ECX + 0x54]
+00615107  MOV EAX,dword ptr [EBP + -0x4]
+0061510a  MOV ECX,dword ptr [EAX + 0x54]
+0061510d  MOV EDX,dword ptr [EDX]
+0061510f  MOV EAX,dword ptr [EDX + 0xd0]
+00615115  CALL EAX
+00615117  MOV ECX,dword ptr [EBP + -0x4]
+0061511a  MOV EDX,dword ptr [ECX + 0x50]
+0061511d  MOV EAX,dword ptr [EBP + -0x4]
+00615120  MOV ECX,dword ptr [EAX + 0x50]
+00615123  MOV EDX,dword ptr [EDX]
+00615125  MOV EAX,dword ptr [EDX + 0xd0]
+0061512b  CALL EAX
+0061512d  MOV ESP,EBP
+0061512f  POP EBP
+00615130  RET

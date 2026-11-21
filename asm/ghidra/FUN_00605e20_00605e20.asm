@@ -1,0 +1,62 @@
+; FUN_00605e20  00605e20
+00605e20  PUSH EBP
+00605e21  MOV EBP,ESP
+00605e23  SUB ESP,0xc
+00605e26  MOV dword ptr [EBP + -0xc],ECX
+00605e29  MOV EAX,dword ptr [EBP + -0xc]
+00605e2c  MOVZX ECX,byte ptr [EAX + 0x1f4]
+00605e33  TEST ECX,ECX
+00605e35  JZ 0x00605e65
+00605e37  MOV EDX,dword ptr [EBP + -0xc]
+00605e3a  MOV EAX,dword ptr [EDX + 0x1f0]
+00605e40  MOV dword ptr [EBP + -0x4],EAX
+00605e43  MOV ECX,dword ptr [EBP + -0x4]
+00605e46  CMP ECX,dword ptr [EBP + 0x8]
+00605e49  JNZ 0x00605e65
+00605e4b  MOV EDX,dword ptr [EBP + -0xc]
+00605e4e  MOV EAX,dword ptr [EDX + 0x1ec]
+00605e54  PUSH EAX
+00605e55  MOV ECX,dword ptr [0x015e55e4]
+00605e5b  CALL 0x005f2840
+00605e60  JMP 0x00605ee5
+00605e65  MOV ECX,dword ptr [EBP + -0xc]
+00605e68  MOV EDX,dword ptr [EBP + 0x8]
+00605e6b  MOV dword ptr [ECX + 0x1f0],EDX
+00605e71  MOV EAX,dword ptr [EBP + -0xc]
+00605e74  MOVZX ECX,byte ptr [EAX + 0x1f4]
+00605e7b  TEST ECX,ECX
+00605e7d  JZ 0x00605ea8
+00605e7f  PUSH 0x0
+00605e81  MOV EDX,dword ptr [EBP + 0x8]
+00605e84  PUSH EDX
+00605e85  MOV ECX,dword ptr [0x015e55e4]
+00605e8b  CALL 0x005f2a60
+00605e90  MOV ECX,EAX
+00605e92  CALL 0x00602b70
+00605e97  PUSH EAX
+00605e98  MOV EAX,dword ptr [EBP + -0xc]
+00605e9b  MOV EDX,dword ptr [EAX]
+00605e9d  MOV ECX,dword ptr [EBP + -0xc]
+00605ea0  MOV EAX,dword ptr [EDX + 0xe0]
+00605ea6  CALL EAX
+00605ea8  MOV ECX,dword ptr [EBP + -0xc]
+00605eab  MOV EDX,dword ptr [ECX + 0x1ec]
+00605eb1  PUSH EDX
+00605eb2  MOV ECX,dword ptr [0x015e55e4]
+00605eb8  CALL 0x005f2840
+00605ebd  MOVZX EAX,byte ptr [EBP + 0xc]
+00605ec1  TEST EAX,EAX
+00605ec3  JZ 0x00605ee5
+00605ec5  MOV ECX,dword ptr [EBP + -0xc]
+00605ec8  MOV EDX,dword ptr [ECX + 0x1f0]
+00605ece  MOV dword ptr [EBP + -0x8],EDX
+00605ed1  MOV EAX,dword ptr [EBP + -0x8]
+00605ed4  PUSH EAX
+00605ed5  MOV ECX,dword ptr [EBP + -0xc]
+00605ed8  MOV EDX,dword ptr [ECX]
+00605eda  MOV ECX,dword ptr [EBP + -0xc]
+00605edd  MOV EAX,dword ptr [EDX + 0xf4]
+00605ee3  CALL EAX
+00605ee5  MOV ESP,EBP
+00605ee7  POP EBP
+00605ee8  RET 0x8

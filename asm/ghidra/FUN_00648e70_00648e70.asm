@@ -1,0 +1,24 @@
+; FUN_00648e70  00648e70
+00648e70  PUSH EBP
+00648e71  MOV EBP,ESP
+00648e73  PUSH ECX
+00648e74  MOV dword ptr [EBP + -0x4],ECX
+00648e77  MOV EAX,dword ptr [EBP + 0x8]
+00648e7a  MOV byte ptr [EAX + 0x4],0x1
+00648e7e  MOV ECX,dword ptr [EBP + -0x4]
+00648e81  MOV byte ptr [ECX + 0x8],0x0
+00648e85  MOV EDX,dword ptr [EBP + -0x4]
+00648e88  MOV byte ptr [EDX + 0x9],0x0
+00648e8c  MOV EAX,dword ptr [EBP + -0x4]
+00648e8f  MOV ECX,dword ptr [EAX + 0x184]
+00648e95  PUSH ECX
+00648e96  MOV EDX,dword ptr [EBP + 0x8]
+00648e99  PUSH EDX
+00648e9a  MOV EAX,[0x0162ee80]
+00648e9f  MOV EDX,dword ptr [EAX]
+00648ea1  MOV ECX,dword ptr [0x0162ee80]
+00648ea7  MOV EAX,dword ptr [EDX + 0x128]
+00648ead  CALL EAX
+00648eaf  MOV ESP,EBP
+00648eb1  POP EBP
+00648eb2  RET 0x4

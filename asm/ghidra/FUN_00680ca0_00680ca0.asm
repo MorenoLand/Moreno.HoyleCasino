@@ -1,0 +1,66 @@
+; FUN_00680ca0  00680ca0
+00680ca0  PUSH EBP
+00680ca1  MOV EBP,ESP
+00680ca3  PUSH ECX
+00680ca4  MOV dword ptr [EBP + -0x4],ECX
+00680ca7  MOV EAX,dword ptr [EBP + 0x54]
+00680caa  PUSH EAX
+00680cab  MOV CL,byte ptr [EBP + 0x50]
+00680cae  PUSH ECX
+00680caf  MOV DL,byte ptr [EBP + 0x30]
+00680cb2  PUSH EDX
+00680cb3  MOV AL,byte ptr [EBP + 0x2c]
+00680cb6  PUSH EAX
+00680cb7  MOV CL,byte ptr [EBP + 0x28]
+00680cba  PUSH ECX
+00680cbb  MOV DL,byte ptr [EBP + 0x24]
+00680cbe  PUSH EDX
+00680cbf  MOV AL,byte ptr [EBP + 0x20]
+00680cc2  PUSH EAX
+00680cc3  MOV CL,byte ptr [EBP + 0x1c]
+00680cc6  PUSH ECX
+00680cc7  MOV EDX,dword ptr [EBP + 0x10]
+00680cca  PUSH EDX
+00680ccb  MOV EAX,dword ptr [EBP + 0xc]
+00680cce  PUSH EAX
+00680ccf  MOV ECX,dword ptr [EBP + 0x8]
+00680cd2  PUSH ECX
+00680cd3  MOV EDX,dword ptr [EBP + 0x18]
+00680cd6  PUSH EDX
+00680cd7  MOV EAX,dword ptr [EBP + 0x14]
+00680cda  PUSH EAX
+00680cdb  MOVSX ECX,byte ptr [EBP + 0x38]
+00680cdf  PUSH ECX
+00680ce0  MOV EDX,dword ptr [EBP + 0x34]
+00680ce3  PUSH EDX
+00680ce4  MOV ECX,dword ptr [EBP + -0x4]
+00680ce7  CALL 0x006260e0
+00680cec  MOV EAX,dword ptr [EBP + -0x4]
+00680cef  MOV ECX,dword ptr [EAX + 0x6c]
+00680cf2  MOV EDX,dword ptr [EBP + -0x4]
+00680cf5  MOV EAX,dword ptr [EDX + 0x4]
+00680cf8  MOV dword ptr [ECX + 0x4],EAX
+00680cfb  PUSH -0x1
+00680cfd  PUSH 0x5
+00680cff  MOV ECX,dword ptr [EBP + 0x10]
+00680d02  ADD ECX,0x1
+00680d05  PUSH ECX
+00680d06  MOV EDX,dword ptr [EBP + 0xc]
+00680d09  ADD EDX,dword ptr [EBP + 0x40]
+00680d0c  PUSH EDX
+00680d0d  MOV EAX,dword ptr [EBP + 0x8]
+00680d10  ADD EAX,dword ptr [EBP + 0x3c]
+00680d13  PUSH EAX
+00680d14  MOV ECX,dword ptr [EBP + 0x48]
+00680d17  PUSH ECX
+00680d18  MOV EDX,dword ptr [EBP + 0x44]
+00680d1b  PUSH EDX
+00680d1c  MOV EAX,dword ptr [EBP + 0x4c]
+00680d1f  PUSH EAX
+00680d20  PUSH 0x6b27f8
+00680d25  MOV ECX,dword ptr [EBP + -0x4]
+00680d28  MOV ECX,dword ptr [ECX + 0x6c]
+00680d2b  CALL 0x005ec8f0
+00680d30  MOV ESP,EBP
+00680d32  POP EBP
+00680d33  RET 0x50

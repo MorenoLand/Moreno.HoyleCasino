@@ -1,0 +1,64 @@
+; FUN_0044f840  0044f840
+0044f840  PUSH EBP
+0044f841  MOV EBP,ESP
+0044f843  PUSH ECX
+0044f844  PUSH ESI
+0044f845  MOV dword ptr [EBP + -0x4],ECX
+0044f848  CMP dword ptr [EBP + 0x8],-0x1
+0044f84c  JLE 0x0044f854
+0044f84e  CMP dword ptr [EBP + 0x8],0x7
+0044f852  JL 0x0044f86b
+0044f854  PUSH 0x172
+0044f859  PUSH 0x6b94a0
+0044f85e  PUSH 0x6b9504
+0044f863  CALL 0x005e9f20
+0044f868  ADD ESP,0xc
+0044f86b  CMP dword ptr [EBP + 0xc],-0x1
+0044f86f  JLE 0x0044f877
+0044f871  CMP dword ptr [EBP + 0xc],0x7
+0044f875  JL 0x0044f88e
+0044f877  PUSH 0x173
+0044f87c  PUSH 0x6b94a0
+0044f881  PUSH 0x6b94e8
+0044f886  CALL 0x005e9f20
+0044f88b  ADD ESP,0xc
+0044f88e  MOV EDX,dword ptr [EBP + 0x8]
+0044f891  MOV EAX,dword ptr [EBP + -0x4]
+0044f894  MOV CX,word ptr [EAX + EDX*0x2 + 0x4]
+0044f899  PUSH ECX
+0044f89a  MOV ECX,dword ptr [EBP + -0x4]
+0044f89d  CALL 0x0044f680
+0044f8a2  MOV ESI,EAX
+0044f8a4  MOV EDX,dword ptr [EBP + 0xc]
+0044f8a7  MOV EAX,dword ptr [EBP + -0x4]
+0044f8aa  MOV CX,word ptr [EAX + EDX*0x2 + 0x4]
+0044f8af  PUSH ECX
+0044f8b0  MOV ECX,dword ptr [EBP + -0x4]
+0044f8b3  CALL 0x0044f680
+0044f8b8  CMP ESI,EAX
+0044f8ba  JL 0x0044f8e0
+0044f8bc  MOV EDX,dword ptr [EBP + 0x10]
+0044f8bf  MOV EAX,dword ptr [EBP + 0x8]
+0044f8c2  MOV ECX,dword ptr [EBP + -0x4]
+0044f8c5  MOV AX,word ptr [ECX + EAX*0x2 + 0x4]
+0044f8ca  MOV word ptr [EDX],AX
+0044f8cd  MOV ECX,dword ptr [EBP + 0x14]
+0044f8d0  MOV EDX,dword ptr [EBP + 0xc]
+0044f8d3  MOV EAX,dword ptr [EBP + -0x4]
+0044f8d6  MOV DX,word ptr [EAX + EDX*0x2 + 0x4]
+0044f8db  MOV word ptr [ECX],DX
+0044f8de  JMP 0x0044f902
+0044f8e0  MOV EAX,dword ptr [EBP + 0x10]
+0044f8e3  MOV ECX,dword ptr [EBP + 0xc]
+0044f8e6  MOV EDX,dword ptr [EBP + -0x4]
+0044f8e9  MOV CX,word ptr [EDX + ECX*0x2 + 0x4]
+0044f8ee  MOV word ptr [EAX],CX
+0044f8f1  MOV EDX,dword ptr [EBP + 0x14]
+0044f8f4  MOV EAX,dword ptr [EBP + 0x8]
+0044f8f7  MOV ECX,dword ptr [EBP + -0x4]
+0044f8fa  MOV AX,word ptr [ECX + EAX*0x2 + 0x4]
+0044f8ff  MOV word ptr [EDX],AX
+0044f902  POP ESI
+0044f903  MOV ESP,EBP
+0044f905  POP EBP
+0044f906  RET 0x10

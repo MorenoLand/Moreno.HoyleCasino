@@ -1,0 +1,86 @@
+; FUN_00625500  00625500
+00625500  PUSH EBP
+00625501  MOV EBP,ESP
+00625503  SUB ESP,0x64
+00625506  MOV dword ptr [EBP + -0x18],ECX
+00625509  MOV EAX,dword ptr [EBP + 0x10]
+0062550c  MOV dword ptr [EBP + -0x1c],EAX
+0062550f  MOV ECX,dword ptr [EBP + -0x1c]
+00625512  SUB ECX,0x1
+00625515  MOV dword ptr [EBP + -0x1c],ECX
+00625518  CMP dword ptr [EBP + -0x1c],0x4
+0062551c  JA 0x00625907
+00625522  MOV EDX,dword ptr [EBP + -0x1c]
+00625525  JMP dword ptr [EDX*0x4 + 0x6259f4]
+00625907  CMP dword ptr [EBP + 0x10],0xa
+0062590b  JGE 0x0062592f
+0062590d  XOR EDX,EDX
+0062590f  JNZ 0x00625928
+00625911  PUSH 0xb4
+00625916  PUSH 0x6d8f30
+0062591b  PUSH 0x6b2f58
+00625920  CALL 0x005e9f20
+00625925  ADD ESP,0xc
+00625928  XOR AL,AL
+0062592a  JMP 0x006259ec
+0062592f  LEA ECX,[EBP + -0x8]
+00625932  PUSH ECX
+00625933  LEA EDX,[EBP + -0x4]
+00625936  PUSH EDX
+00625937  MOV EAX,dword ptr [EBP + -0x18]
+0062593a  MOV EDX,dword ptr [EAX]
+0062593c  MOV ECX,dword ptr [EBP + -0x18]
+0062593f  MOV EAX,dword ptr [EDX + 0x28]
+00625942  CALL EAX
+00625944  MOV ECX,dword ptr [EBP + 0xc]
+00625947  FILD dword ptr [ECX]
+00625949  FMUL float ptr [EBP + -0x4]
+0062594c  FADD double ptr [0x006b2c38]
+00625952  CALL 0x00686cc0
+00625957  MOV EDX,dword ptr [EBP + 0xc]
+0062595a  MOV dword ptr [EDX],EAX
+0062595c  MOV EAX,dword ptr [EBP + 0xc]
+0062595f  FILD dword ptr [EAX + 0x4]
+00625962  FMUL float ptr [EBP + -0x8]
+00625965  FADD double ptr [0x006b2c38]
+0062596b  CALL 0x00686cc0
+00625970  MOV ECX,dword ptr [EBP + 0xc]
+00625973  MOV dword ptr [ECX + 0x4],EAX
+00625976  FILD dword ptr [EBP + 0x10]
+00625979  FDIV double ptr [0x006b4b00]
+0062597f  FMUL float ptr [EBP + -0x4]
+00625982  FSTP float ptr [EBP + -0x4]
+00625985  FILD dword ptr [EBP + 0x10]
+00625988  FDIV double ptr [0x006b4b00]
+0062598e  FMUL float ptr [EBP + -0x8]
+00625991  FSTP float ptr [EBP + -0x8]
+00625994  MOV EDX,dword ptr [EBP + 0x8]
+00625997  MOV EAX,dword ptr [EBP + 0x8]
+0062599a  MOV ECX,dword ptr [EDX + 0x8]
+0062599d  SUB ECX,dword ptr [EAX]
+0062599f  MOV dword ptr [EBP + -0x60],ECX
+006259a2  FILD dword ptr [EBP + -0x60]
+006259a5  FMUL float ptr [EBP + -0x4]
+006259a8  FADD double ptr [0x006b2c38]
+006259ae  CALL 0x00686cc0
+006259b3  MOV EDX,dword ptr [EBP + 0xc]
+006259b6  ADD EAX,dword ptr [EDX]
+006259b8  MOV ECX,dword ptr [EBP + 0xc]
+006259bb  MOV dword ptr [ECX + 0x8],EAX
+006259be  MOV EDX,dword ptr [EBP + 0x8]
+006259c1  MOV EAX,dword ptr [EBP + 0x8]
+006259c4  MOV ECX,dword ptr [EDX + 0xc]
+006259c7  SUB ECX,dword ptr [EAX + 0x4]
+006259ca  MOV dword ptr [EBP + -0x64],ECX
+006259cd  FILD dword ptr [EBP + -0x64]
+006259d0  FMUL float ptr [EBP + -0x8]
+006259d3  FADD double ptr [0x006b2c38]
+006259d9  CALL 0x00686cc0
+006259de  MOV EDX,dword ptr [EBP + 0xc]
+006259e1  ADD EAX,dword ptr [EDX + 0x4]
+006259e4  MOV ECX,dword ptr [EBP + 0xc]
+006259e7  MOV dword ptr [ECX + 0xc],EAX
+006259ea  MOV AL,0x1
+006259ec  MOV ESP,EBP
+006259ee  POP EBP
+006259ef  RET 0xc

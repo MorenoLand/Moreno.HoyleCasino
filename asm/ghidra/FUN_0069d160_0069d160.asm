@@ -1,0 +1,4 @@
+; FUN_0069d160  0069d160
+0069d160  MOV EAX,dword ptr [ESP + 0x4]
+0069d164  FLD float ptr [EAX*0x4 + 0x790078]
+0069d16b  RET

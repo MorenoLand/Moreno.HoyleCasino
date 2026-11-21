@@ -1,0 +1,30 @@
+; FUN_00434a90  00434a90
+00434a90  PUSH EBP
+00434a91  MOV EBP,ESP
+00434a93  SUB ESP,0xc
+00434a96  MOV dword ptr [EBP + -0xc],ECX
+00434a99  MOV dword ptr [EBP + -0x4],0x0
+00434aa0  MOV dword ptr [EBP + -0x8],0x0
+00434aa7  JMP 0x00434ab2
+00434aa9  MOV EAX,dword ptr [EBP + -0x8]
+00434aac  ADD EAX,0x1
+00434aaf  MOV dword ptr [EBP + -0x8],EAX
+00434ab2  CMP dword ptr [EBP + -0x8],0x4
+00434ab6  JGE 0x00434ada
+00434ab8  MOV ECX,dword ptr [EBP + 0x8]
+00434abb  PUSH ECX
+00434abc  MOV EDX,dword ptr [EBP + -0x8]
+00434abf  PUSH EDX
+00434ac0  MOV ECX,dword ptr [EBP + -0xc]
+00434ac3  CALL 0x004369a0
+00434ac8  MOVZX EAX,AL
+00434acb  TEST EAX,EAX
+00434acd  JZ 0x00434ad8
+00434acf  MOV ECX,dword ptr [EBP + -0x4]
+00434ad2  ADD ECX,0x1
+00434ad5  MOV dword ptr [EBP + -0x4],ECX
+00434ad8  JMP 0x00434aa9
+00434ada  MOV EAX,dword ptr [EBP + -0x4]
+00434add  MOV ESP,EBP
+00434adf  POP EBP
+00434ae0  RET 0x4

@@ -1,0 +1,24 @@
+; FUN_0042a050  0042a050
+0042a050  PUSH EBP
+0042a051  MOV EBP,ESP
+0042a053  PUSH ECX
+0042a054  MOV dword ptr [EBP + -0x4],ECX
+0042a057  MOV EAX,dword ptr [EBP + 0x8]
+0042a05a  MOV ECX,dword ptr [EBP + -0x4]
+0042a05d  CMP dword ptr [ECX + EAX*0x4 + 0x14],0x0
+0042a062  JZ 0x0042a088
+0042a064  PUSH 0x0
+0042a066  MOV EDX,dword ptr [EBP + 0xc]
+0042a069  PUSH EDX
+0042a06a  MOV EAX,dword ptr [EBP + 0x8]
+0042a06d  MOV ECX,dword ptr [EBP + -0x4]
+0042a070  MOV EDX,dword ptr [ECX + EAX*0x4 + 0x14]
+0042a074  MOV EAX,dword ptr [EBP + 0x8]
+0042a077  MOV ECX,dword ptr [EBP + -0x4]
+0042a07a  MOV ECX,dword ptr [ECX + EAX*0x4 + 0x14]
+0042a07e  MOV EDX,dword ptr [EDX]
+0042a080  MOV EAX,dword ptr [EDX + 0xb8]
+0042a086  CALL EAX
+0042a088  MOV ESP,EBP
+0042a08a  POP EBP
+0042a08b  RET 0x8

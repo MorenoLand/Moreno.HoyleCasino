@@ -1,0 +1,17 @@
+; FUN_005d34e0  005d34e0
+005d34e0  PUSH EBP
+005d34e1  MOV EBP,ESP
+005d34e3  SUB ESP,0x8
+005d34e6  MOV dword ptr [EBP + -0x4],ECX
+005d34e9  MOV EAX,dword ptr [EBP + 0x8]
+005d34ec  MOV dword ptr [EBP + -0x8],EAX
+005d34ef  MOV ECX,dword ptr [EBP + -0x8]
+005d34f2  SUB ECX,0x64
+005d34f5  MOV dword ptr [EBP + -0x8],ECX
+005d34f8  CMP dword ptr [EBP + -0x8],0x29
+005d34fc  JA 0x005d398d
+005d3502  MOV EDX,dword ptr [EBP + -0x8]
+005d3505  JMP dword ptr [EDX*0x4 + 0x5d3994]
+005d398d  MOV ESP,EBP
+005d398f  POP EBP
+005d3990  RET 0x4

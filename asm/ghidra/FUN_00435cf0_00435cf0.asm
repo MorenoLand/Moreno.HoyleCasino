@@ -1,0 +1,26 @@
+; FUN_00435cf0  00435cf0
+00435cf0  PUSH EBP
+00435cf1  MOV EBP,ESP
+00435cf3  SUB ESP,0x8
+00435cf6  MOV dword ptr [EBP + -0x4],ECX
+00435cf9  CMP dword ptr [EBP + 0x8],0x3
+00435cfd  JZ 0x00435d2c
+00435cff  CMP dword ptr [EBP + 0x8],0x25
+00435d03  JZ 0x00435d2c
+00435d05  CMP dword ptr [EBP + 0x8],0x26
+00435d09  JZ 0x00435d2c
+00435d0b  CMP dword ptr [EBP + 0x8],0x27
+00435d0f  JZ 0x00435d2c
+00435d11  CMP dword ptr [EBP + 0x8],0x28
+00435d15  JZ 0x00435d2c
+00435d17  CMP dword ptr [EBP + 0x8],0x29
+00435d1b  JZ 0x00435d2c
+00435d1d  CMP dword ptr [EBP + 0x8],0x2a
+00435d21  JZ 0x00435d2c
+00435d23  MOV dword ptr [EBP + -0x8],0x0
+00435d2a  JMP 0x00435d33
+00435d2c  MOV dword ptr [EBP + -0x8],0x1
+00435d33  MOV AL,byte ptr [EBP + -0x8]
+00435d36  MOV ESP,EBP
+00435d38  POP EBP
+00435d39  RET 0x4

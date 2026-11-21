@@ -1,0 +1,41 @@
+; FUN_0041a2d0  0041a2d0
+0041a2d0  PUSH EBP
+0041a2d1  MOV EBP,ESP
+0041a2d3  SUB ESP,0x10
+0041a2d6  MOV dword ptr [EBP + -0x10],ECX
+0041a2d9  MOV EAX,dword ptr [EBP + 0xc]
+0041a2dc  MOV ECX,dword ptr [EBP + -0x10]
+0041a2df  MOV EDX,dword ptr [ECX + EAX*0x4 + 0x468]
+0041a2e6  MOV dword ptr [EBP + -0xc],EDX
+0041a2e9  MOV EAX,dword ptr [EBP + 0xc]
+0041a2ec  SHL EAX,0x5
+0041a2ef  MOV ECX,dword ptr [EBP + -0xc]
+0041a2f2  LEA EDX,[ECX + EAX*0x1 + 0x48]
+0041a2f6  XOR EAX,EAX
+0041a2f8  SHL EAX,0x3
+0041a2fb  MOV ECX,dword ptr [EDX + EAX*0x1]
+0041a2fe  MOV EDX,dword ptr [EDX + EAX*0x1 + 0x4]
+0041a302  MOV dword ptr [EBP + -0x8],ECX
+0041a305  MOV dword ptr [EBP + -0x4],EDX
+0041a308  MOV EAX,dword ptr [EBP + 0xc]
+0041a30b  IMUL EAX,EAX,0x118
+0041a311  MOV ECX,dword ptr [EBP + -0x10]
+0041a314  CMP byte ptr [ECX + EAX*0x1 + 0x10c],0x0
+0041a31c  SETNZ DL
+0041a31f  MOVZX EAX,DL
+0041a322  TEST EAX,EAX
+0041a324  JZ 0x0041a331
+0041a326  MOV EAX,dword ptr [EBP + -0x8]
+0041a329  CDQ
+0041a32a  SUB EAX,EDX
+0041a32c  SAR EAX,0x1
+0041a32e  MOV dword ptr [EBP + -0x8],EAX
+0041a331  MOV ECX,dword ptr [EBP + 0x8]
+0041a334  MOV EDX,dword ptr [EBP + -0x8]
+0041a337  MOV dword ptr [ECX],EDX
+0041a339  MOV EAX,dword ptr [EBP + -0x4]
+0041a33c  MOV dword ptr [ECX + 0x4],EAX
+0041a33f  MOV EAX,dword ptr [EBP + 0x8]
+0041a342  MOV ESP,EBP
+0041a344  POP EBP
+0041a345  RET 0x8

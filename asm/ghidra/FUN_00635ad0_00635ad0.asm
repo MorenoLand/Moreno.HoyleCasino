@@ -1,0 +1,21 @@
+; FUN_00635ad0  00635ad0
+00635ad0  PUSH EBP
+00635ad1  MOV EBP,ESP
+00635ad3  PUSH ECX
+00635ad4  MOV dword ptr [EBP + -0x4],ECX
+00635ad7  MOV EAX,dword ptr [EBP + -0x4]
+00635ada  MOV ECX,dword ptr [EAX + 0x58]
+00635add  CMP dword ptr [ECX],0x0
+00635ae0  JZ 0x00635af2
+00635ae2  MOV EDX,dword ptr [EBP + -0x4]
+00635ae5  MOV EAX,dword ptr [EDX]
+00635ae7  MOV ECX,dword ptr [EBP + -0x4]
+00635aea  MOV EDX,dword ptr [EAX + 0x358]
+00635af0  CALL EDX
+00635af2  MOV EAX,dword ptr [EBP + 0x8]
+00635af5  PUSH EAX
+00635af6  MOV ECX,dword ptr [EBP + -0x4]
+00635af9  CALL 0x005f3b90
+00635afe  MOV ESP,EBP
+00635b00  POP EBP
+00635b01  RET 0x4

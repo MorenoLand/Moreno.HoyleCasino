@@ -1,0 +1,20 @@
+; FUN_004fce40  004fce40
+004fce40  PUSH EBP
+004fce41  MOV EBP,ESP
+004fce43  PUSH ECX
+004fce44  MOV dword ptr [EBP + -0x4],ECX
+004fce47  MOV EAX,[0x007947e0]
+004fce4c  MOVZX ECX,byte ptr [EAX + 0x4ee8]
+004fce53  TEST ECX,ECX
+004fce55  JZ 0x004fce76
+004fce57  CMP dword ptr [0x00791eb8],0x0
+004fce5e  JZ 0x004fce76
+004fce60  MOV EDX,dword ptr [0x00791eb8]
+004fce66  MOV ECX,dword ptr [EDX + 0xa4]
+004fce6c  CALL 0x0047fdf0
+004fce71  MOVZX EAX,AL
+004fce74  JMP 0x004fce79
+004fce76  OR EAX,0xffffffff
+004fce79  MOV ESP,EBP
+004fce7b  POP EBP
+004fce7c  RET

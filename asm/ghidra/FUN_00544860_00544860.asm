@@ -1,0 +1,40 @@
+; FUN_00544860  00544860
+00544860  PUSH EBP
+00544861  MOV EBP,ESP
+00544863  SUB ESP,0x8
+00544866  MOV dword ptr [EBP + -0x8],ECX
+00544869  MOV dword ptr [EBP + -0x4],0xffffffff
+00544870  MOV EAX,dword ptr [EBP + 0x8]
+00544873  MOV ECX,dword ptr [EBP + -0x8]
+00544876  MOV EDX,dword ptr [ECX + EAX*0x4 + 0x8c]
+0054487d  MOV EAX,dword ptr [EBP + 0x8]
+00544880  MOV ECX,dword ptr [EBP + -0x8]
+00544883  MOV ECX,dword ptr [ECX + EAX*0x4 + 0x8c]
+0054488a  MOV EDX,dword ptr [EDX]
+0054488c  MOV EAX,dword ptr [EDX + 0xcc]
+00544892  CALL EAX
+00544894  PUSH 0x2
+00544896  MOV ECX,dword ptr [EBP + 0x8]
+00544899  MOV EDX,dword ptr [EBP + -0x8]
+0054489c  MOV EAX,dword ptr [EDX + ECX*0x4 + 0x8c]
+005448a3  MOV ECX,dword ptr [EBP + 0x8]
+005448a6  MOV EDX,dword ptr [EBP + -0x8]
+005448a9  MOV ECX,dword ptr [EDX + ECX*0x4 + 0x8c]
+005448b0  MOV EAX,dword ptr [EAX]
+005448b2  MOV EDX,dword ptr [EAX + 0x6c]
+005448b5  CALL EDX
+005448b7  MOV EAX,dword ptr [EBP + 0x8]
+005448ba  PUSH EAX
+005448bb  MOV ECX,dword ptr [EBP + -0x8]
+005448be  CALL 0x005449e0
+005448c3  MOV dword ptr [EBP + -0x4],EAX
+005448c6  CMP dword ptr [EBP + -0x4],-0x1
+005448ca  JZ 0x005448dd
+005448cc  PUSH 0x1
+005448ce  MOV ECX,dword ptr [EBP + -0x4]
+005448d1  PUSH ECX
+005448d2  MOV ECX,dword ptr [0x0162ee80]
+005448d8  CALL 0x005f2b20
+005448dd  MOV ESP,EBP
+005448df  POP EBP
+005448e0  RET 0x4

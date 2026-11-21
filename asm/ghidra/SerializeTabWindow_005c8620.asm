@@ -1,0 +1,20 @@
+; SerializeTabWindow  005c8620
+005c8620  PUSH EBP
+005c8621  MOV EBP,ESP
+005c8623  PUSH ECX
+005c8624  MOV dword ptr [EBP + -0x4],ECX
+005c8627  MOV EAX,dword ptr [EBP + -0x4]
+005c862a  CMP dword ptr [EAX + 0x80],0x0
+005c8631  JZ 0x005c8650
+005c8633  MOV ECX,dword ptr [EBP + 0x8]
+005c8636  PUSH ECX
+005c8637  MOV EDX,dword ptr [EBP + -0x4]
+005c863a  MOV EAX,dword ptr [EDX + 0x80]
+005c8640  MOV ECX,dword ptr [EBP + -0x4]
+005c8643  MOV ECX,dword ptr [ECX + 0x80]
+005c8649  MOV EDX,dword ptr [EAX]
+005c864b  MOV EAX,dword ptr [EDX + 0xc]
+005c864e  CALL EAX
+005c8650  MOV ESP,EBP
+005c8652  POP EBP
+005c8653  RET 0x4

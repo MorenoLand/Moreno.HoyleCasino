@@ -1,0 +1,20 @@
+; FUN_005f8510  005f8510
+005f8510  PUSH EBP
+005f8511  MOV EBP,ESP
+005f8513  PUSH ECX
+005f8514  MOV dword ptr [EBP + -0x4],ECX
+005f8517  MOV EAX,dword ptr [EBP + -0x4]
+005f851a  MOV ECX,dword ptr [EAX + 0x108]
+005f8520  ADD ECX,dword ptr [EBP + 0x8]
+005f8523  MOV EDX,dword ptr [EBP + -0x4]
+005f8526  MOV dword ptr [EDX + 0x110],ECX
+005f852c  MOV EAX,dword ptr [EBP + -0x4]
+005f852f  MOV ECX,dword ptr [EAX + 0x104]
+005f8535  ADD ECX,dword ptr [EBP + 0xc]
+005f8538  MOV EDX,dword ptr [EBP + -0x4]
+005f853b  MOV dword ptr [EDX + 0x10c],ECX
+005f8541  MOV ECX,dword ptr [EBP + -0x4]
+005f8544  CALL 0x005f9a80
+005f8549  MOV ESP,EBP
+005f854b  POP EBP
+005f854c  RET 0x8

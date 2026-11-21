@@ -1,0 +1,13 @@
+; FUN_005f3ee0  005f3ee0
+005f3ee0  PUSH EBP
+005f3ee1  MOV EBP,ESP
+005f3ee3  PUSH ECX
+005f3ee4  MOV dword ptr [EBP + -0x4],ECX
+005f3ee7  MOV EAX,dword ptr [EBP + 0x8]
+005f3eea  PUSH EAX
+005f3eeb  MOV ECX,dword ptr [EBP + -0x4]
+005f3eee  ADD ECX,0x4
+005f3ef1  CALL 0x0060c840
+005f3ef6  MOV ESP,EBP
+005f3ef8  POP EBP
+005f3ef9  RET 0x4

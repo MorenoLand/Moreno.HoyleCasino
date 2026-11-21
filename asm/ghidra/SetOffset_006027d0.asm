@@ -1,0 +1,20 @@
+; SetOffset  006027d0
+006027d0  PUSH EBP
+006027d1  MOV EBP,ESP
+006027d3  PUSH ECX
+006027d4  MOV dword ptr [EBP + -0x4],ECX
+006027d7  MOV EAX,dword ptr [EBP + -0x4]
+006027da  MOV ECX,dword ptr [EAX + 0x194]
+006027e0  CMP ECX,dword ptr [EBP + 0x8]
+006027e3  JZ 0x00602801
+006027e5  MOV EDX,dword ptr [EBP + -0x4]
+006027e8  MOV EAX,dword ptr [EBP + 0x8]
+006027eb  MOV dword ptr [EDX + 0x194],EAX
+006027f1  MOV ECX,dword ptr [EBP + -0x4]
+006027f4  MOV EDX,dword ptr [ECX]
+006027f6  MOV ECX,dword ptr [EBP + -0x4]
+006027f9  MOV EAX,dword ptr [EDX + 0xec]
+006027ff  CALL EAX
+00602801  MOV ESP,EBP
+00602803  POP EBP
+00602804  RET 0x4

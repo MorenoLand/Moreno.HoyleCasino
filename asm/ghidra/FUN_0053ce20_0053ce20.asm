@@ -1,0 +1,70 @@
+; FUN_0053ce20  0053ce20
+0053ce20  PUSH EBP
+0053ce21  MOV EBP,ESP
+0053ce23  SUB ESP,0x1c
+0053ce26  MOV dword ptr [EBP + -0x1c],ECX
+0053ce29  MOV dword ptr [EBP + -0xc],0x6c5b7c
+0053ce30  MOV dword ptr [EBP + -0x8],0x6c5d64
+0053ce37  MOV dword ptr [EBP + -0x14],0x0
+0053ce3e  MOV dword ptr [EBP + -0x10],0x1
+0053ce45  MOV EAX,[0x007933ec]
+0053ce4a  MOV ECX,dword ptr [EAX + 0xe8]
+0053ce50  MOV dword ptr [EBP + -0x4],ECX
+0053ce53  PUSH 0x0
+0053ce55  PUSH 0x424
+0053ce5a  MOV ECX,dword ptr [EBP + -0x1c]
+0053ce5d  CALL 0x005f83d0
+0053ce62  PUSH 0x14
+0053ce64  MOV ECX,dword ptr [EBP + -0x1c]
+0053ce67  CALL 0x005f89d0
+0053ce6c  PUSH 0x3
+0053ce6e  PUSH 0x0
+0053ce70  PUSH 0x49
+0053ce72  PUSH 0x6b6084
+0053ce77  CALL 0x00630f40
+0053ce7c  ADD ESP,0x4
+0053ce7f  PUSH EAX
+0053ce80  MOV ECX,dword ptr [EBP + -0x1c]
+0053ce83  CALL 0x005f73e0
+0053ce88  MOV dword ptr [EBP + -0x18],0x0
+0053ce8f  JMP 0x0053ce9a
+0053ce91  MOV EDX,dword ptr [EBP + -0x18]
+0053ce94  ADD EDX,0x1
+0053ce97  MOV dword ptr [EBP + -0x18],EDX
+0053ce9a  CMP dword ptr [EBP + -0x18],0x2
+0053ce9e  JGE 0x0053cef7
+0053cea0  PUSH 0x0
+0053cea2  PUSH -0x1
+0053cea4  PUSH 0x4a
+0053cea6  PUSH 0x4b
+0053cea8  PUSH 0x48
+0053ceaa  MOV EAX,dword ptr [EBP + -0x18]
+0053cead  MOV ECX,dword ptr [EBP + EAX*0x4 + -0xc]
+0053ceb1  PUSH ECX
+0053ceb2  CALL 0x00630f40
+0053ceb7  ADD ESP,0x4
+0053ceba  PUSH EAX
+0053cebb  PUSH 0x2
+0053cebd  MOV EDX,dword ptr [EBP + -0x18]
+0053cec0  IMUL EDX,EDX,0x23
+0053cec3  ADD EDX,0x26
+0053cec6  PUSH EDX
+0053cec7  PUSH 0xa
+0053cec9  PUSH 0x30d4de
+0053cece  MOV EAX,dword ptr [EBP + -0x18]
+0053ced1  MOV ECX,dword ptr [EBP + EAX*0x4 + -0x14]
+0053ced5  PUSH ECX
+0053ced6  PUSH 0x0
+0053ced8  MOV ECX,dword ptr [EBP + -0x1c]
+0053cedb  CALL 0x005f9de0
+0053cee0  PUSH 0x1
+0053cee2  MOV EDX,dword ptr [EBP + -0x18]
+0053cee5  PUSH EDX
+0053cee6  MOV ECX,dword ptr [EBP + -0x1c]
+0053cee9  CALL 0x005fb300
+0053ceee  MOV ECX,EAX
+0053cef0  CALL 0x005eb700
+0053cef5  JMP 0x0053ce91
+0053cef7  MOV ESP,EBP
+0053cef9  POP EBP
+0053cefa  RET

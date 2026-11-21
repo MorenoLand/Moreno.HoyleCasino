@@ -1,0 +1,26 @@
+; FUN_00554e60  00554e60
+00554e60  PUSH EBP
+00554e61  MOV EBP,ESP
+00554e63  PUSH ECX
+00554e64  MOV dword ptr [EBP + -0x4],ECX
+00554e67  MOV EAX,dword ptr [EBP + -0x4]
+00554e6a  MOV ECX,dword ptr [EAX + 0x8c]
+00554e70  CALL 0x0060fb10
+00554e75  CMP dword ptr [EBP + 0x8],EAX
+00554e78  SETLE CL
+00554e7b  PUSH ECX
+00554e7c  MOV EDX,dword ptr [EBP + 0x8]
+00554e7f  PUSH EDX
+00554e80  MOV EAX,dword ptr [EBP + -0x4]
+00554e83  MOV ECX,dword ptr [EAX + 0x8c]
+00554e89  CALL 0x0060fb30
+00554e8e  MOV ECX,dword ptr [EBP + -0x4]
+00554e91  MOV EDX,dword ptr [ECX + 0x8c]
+00554e97  MOV EAX,dword ptr [EBP + -0x4]
+00554e9a  MOV ECX,dword ptr [EAX + 0x8c]
+00554ea0  MOV EDX,dword ptr [EDX]
+00554ea2  MOV EAX,dword ptr [EDX + 0x74]
+00554ea5  CALL EAX
+00554ea7  MOV ESP,EBP
+00554ea9  POP EBP
+00554eaa  RET 0x4

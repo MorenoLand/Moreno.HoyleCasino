@@ -1,0 +1,12 @@
+; FUN_0059cf80  0059cf80
+0059cf80  PUSH EBP
+0059cf81  MOV EBP,ESP
+0059cf83  PUSH ECX
+0059cf84  MOV dword ptr [EBP + -0x4],ECX
+0059cf87  MOV EAX,dword ptr [EBP + -0x4]
+0059cf8a  MOV dword ptr [EAX],0x6ceef4
+0059cf90  MOV ECX,dword ptr [EBP + -0x4]
+0059cf93  CALL 0x005cc230
+0059cf98  MOV ESP,EBP
+0059cf9a  POP EBP
+0059cf9b  RET

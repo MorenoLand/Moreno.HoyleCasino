@@ -1,0 +1,16 @@
+; FUN_0047ec10  0047ec10
+0047ec10  PUSH EBP
+0047ec11  MOV EBP,ESP
+0047ec13  PUSH ECX
+0047ec14  MOV dword ptr [EBP + -0x4],ECX
+0047ec17  MOV EAX,dword ptr [EBP + -0x4]
+0047ec1a  MOV ECX,dword ptr [EAX + 0x498]
+0047ec20  MOV EDX,dword ptr [EBP + -0x4]
+0047ec23  MOV EAX,dword ptr [EDX + 0x498]
+0047ec29  MOV EDX,dword ptr [ECX]
+0047ec2b  MOV ECX,EAX
+0047ec2d  MOV EAX,dword ptr [EDX + 0x70]
+0047ec30  CALL EAX
+0047ec32  MOV ESP,EBP
+0047ec34  POP EBP
+0047ec35  RET

@@ -1,0 +1,12 @@
+// FUN_00612d56  00612d56
+
+undefined4 FUN_00612d56(void)
+
+{
+  int unaff_EBP;
+  
+  *(undefined4 *)(unaff_EBP + -4) = 0xffffffff;
+  ExceptionList = *(void **)(unaff_EBP + -0xc);
+  return *(undefined4 *)(unaff_EBP + 0x10);
+}
+

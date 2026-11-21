@@ -1,0 +1,64 @@
+; FUN_005a0fc0  005a0fc0
+005a0fc0  PUSH EBP
+005a0fc1  MOV EBP,ESP
+005a0fc3  SUB ESP,0x14
+005a0fc6  MOV dword ptr [EBP + -0x14],ECX
+005a0fc9  MOV dword ptr [EBP + -0x4],0x0
+005a0fd0  JMP 0x005a0fdb
+005a0fd2  MOV EAX,dword ptr [EBP + -0x4]
+005a0fd5  ADD EAX,0x1
+005a0fd8  MOV dword ptr [EBP + -0x4],EAX
+005a0fdb  CMP dword ptr [EBP + -0x4],0x3
+005a0fdf  JGE 0x005a1089
+005a0fe5  MOV ECX,dword ptr [EBP + 0x8]
+005a0fe8  IMUL ECX,ECX,0x3
+005a0feb  ADD ECX,dword ptr [EBP + -0x4]
+005a0fee  MOV EDX,dword ptr [0x007935d0]
+005a0ff4  MOV EAX,dword ptr [EDX + ECX*0x4 + 0x8]
+005a0ff8  MOV ECX,dword ptr [EBP + 0x8]
+005a0ffb  IMUL ECX,ECX,0x3
+005a0ffe  ADD ECX,dword ptr [EBP + -0x4]
+005a1001  MOV EDX,dword ptr [0x007935d0]
+005a1007  MOV ECX,dword ptr [EDX + ECX*0x4 + 0x8]
+005a100b  MOV EAX,dword ptr [EAX]
+005a100d  MOV EDX,dword ptr [EAX + 0xb4]
+005a1013  CALL EDX
+005a1015  MOVZX EAX,AL
+005a1018  TEST EAX,EAX
+005a101a  JZ 0x005a106c
+005a101c  MOV ECX,dword ptr [EBP + 0x8]
+005a101f  IMUL ECX,ECX,0x3
+005a1022  ADD ECX,dword ptr [EBP + -0x4]
+005a1025  MOV EDX,dword ptr [0x007935d0]
+005a102b  MOV EAX,dword ptr [EDX + ECX*0x4 + 0x8]
+005a102f  MOV dword ptr [EBP + -0x10],EAX
+005a1032  MOV ECX,dword ptr [EBP + 0x8]
+005a1035  SHL ECX,0x5
+005a1038  MOV EDX,dword ptr [EBP + -0x10]
+005a103b  LEA EAX,[EDX + ECX*0x1 + 0x48]
+005a103f  XOR ECX,ECX
+005a1041  SHL ECX,0x3
+005a1044  MOV EDX,dword ptr [EAX + ECX*0x1]
+005a1047  MOV EAX,dword ptr [EAX + ECX*0x1 + 0x4]
+005a104b  MOV dword ptr [EBP + -0xc],EDX
+005a104e  MOV dword ptr [EBP + -0x8],EAX
+005a1051  MOV ECX,dword ptr [EBP + -0x8]
+005a1054  PUSH ECX
+005a1055  MOV EDX,dword ptr [EBP + -0xc]
+005a1058  PUSH EDX
+005a1059  MOV EAX,dword ptr [EBP + 0x8]
+005a105c  PUSH EAX
+005a105d  CALL 0x005dcb00
+005a1062  ADD ESP,0x4
+005a1065  MOV ECX,EAX
+005a1067  CALL 0x005d5cf0
+005a106c  MOV ECX,dword ptr [EBP + 0x8]
+005a106f  IMUL ECX,ECX,0x3
+005a1072  ADD ECX,dword ptr [EBP + -0x4]
+005a1075  MOV EDX,dword ptr [0x007935d0]
+005a107b  MOV ECX,dword ptr [EDX + ECX*0x4 + 0x8]
+005a107f  CALL 0x005cb9b0
+005a1084  JMP 0x005a0fd2
+005a1089  MOV ESP,EBP
+005a108b  POP EBP
+005a108c  RET 0x4

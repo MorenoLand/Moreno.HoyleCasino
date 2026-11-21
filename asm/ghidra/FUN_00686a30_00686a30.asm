@@ -1,0 +1,10 @@
+; FUN_00686a30  00686a30
+00686a30  MOV EAX,dword ptr [ESP + 0x4]
+00686a34  XOR ECX,ECX
+00686a36  MOV dword ptr [EAX + 0x8],ECX
+00686a39  MOV dword ptr [EAX + 0xc],ECX
+00686a3c  MOV dword ptr [EAX + 0x10],ECX
+00686a3f  MOV dword ptr [EAX + 0x14],ECX
+00686a42  MOV dword ptr [EAX + 0x18],ECX
+00686a45  XOR EAX,EAX
+00686a47  RET

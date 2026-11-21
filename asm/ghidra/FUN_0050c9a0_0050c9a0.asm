@@ -1,0 +1,71 @@
+; FUN_0050c9a0  0050c9a0
+0050c9a0  PUSH EBP
+0050c9a1  MOV EBP,ESP
+0050c9a3  PUSH -0x1
+0050c9a5  PUSH 0x6a3c2c
+0050c9aa  MOV EAX,FS:[0x0]
+0050c9b0  PUSH EAX
+0050c9b1  SUB ESP,0x754
+0050c9b7  MOV EAX,[0x00781870]
+0050c9bc  XOR EAX,EBP
+0050c9be  MOV dword ptr [EBP + 0xffffff1c],EAX
+0050c9c4  PUSH ESI
+0050c9c5  PUSH EDI
+0050c9c6  PUSH EAX
+0050c9c7  LEA EAX,[EBP + -0xc]
+0050c9ca  MOV FS:[0x0],EAX
+0050c9d0  MOV dword ptr [EBP + 0xfffffb4c],ECX
+0050c9d6  MOV dword ptr [EBP + 0xfffffb54],0x0
+0050c9e0  MOV dword ptr [EBP + 0xfffffb50],0x0
+0050c9ea  MOV EAX,[0x00793150]
+0050c9ef  AND EAX,0x1
+0050c9f2  JNZ 0x0050ca28
+0050c9f4  MOV ECX,dword ptr [0x00793150]
+0050c9fa  OR ECX,0x1
+0050c9fd  MOV dword ptr [0x00793150],ECX
+0050ca03  MOV dword ptr [EBP + -0x4],0x0
+0050ca0a  MOV ECX,0x79314c
+0050ca0f  CALL 0x004a20d0
+0050ca14  PUSH 0x6b1b00
+0050ca19  CALL 0x00686f8f
+0050ca1e  ADD ESP,0x4
+0050ca21  MOV dword ptr [EBP + -0x4],0xffffffff
+0050ca28  MOV EDX,dword ptr [0x00793150]
+0050ca2e  AND EDX,0x2
+0050ca31  JNZ 0x0050ca65
+0050ca33  MOV EAX,[0x00793150]
+0050ca38  OR EAX,0x2
+0050ca3b  MOV [0x00793150],EAX
+0050ca40  MOV dword ptr [EBP + -0x4],0x1
+0050ca47  MOV ECX,0x793148
+0050ca4c  CALL 0x004a20d0
+0050ca51  PUSH 0x6b1af0
+0050ca56  CALL 0x00686f8f
+0050ca5b  ADD ESP,0x4
+0050ca5e  MOV dword ptr [EBP + -0x4],0xffffffff
+0050ca65  MOV ECX,dword ptr [EBP + 0xfffffb4c]
+0050ca6b  MOV EDX,dword ptr [ECX + 0xc]
+0050ca6e  MOV EAX,dword ptr [EDX + 0x4]
+0050ca71  MOV dword ptr [EBP + -0x10],EAX
+0050ca74  MOV ECX,dword ptr [EBP + 0x8]
+0050ca77  PUSH ECX
+0050ca78  MOV ECX,dword ptr [EBP + 0xfffffb4c]
+0050ca7e  CALL 0x005fc3a0
+0050ca83  MOV EDX,dword ptr [EBP + 0xfffffb4c]
+0050ca89  MOV EAX,dword ptr [EDX + 0x14]
+0050ca8c  MOV dword ptr [EBP + 0xfffffb48],EAX
+0050ca92  CMP dword ptr [EBP + 0xfffffb48],0x3c
+0050ca99  JA 0x00516cb0
+0050ca9f  MOV ECX,dword ptr [EBP + 0xfffffb48]
+0050caa5  JMP dword ptr [ECX*0x4 + 0x516cd0]
+00516cb0  MOV ECX,dword ptr [EBP + -0xc]
+00516cb3  MOV dword ptr FS:[0x0],ECX
+00516cba  POP ECX
+00516cbb  POP EDI
+00516cbc  POP ESI
+00516cbd  MOV ECX,dword ptr [EBP + 0xffffff1c]
+00516cc3  XOR ECX,EBP
+00516cc5  CALL 0x00686d72
+00516cca  MOV ESP,EBP
+00516ccc  POP EBP
+00516ccd  RET 0x4

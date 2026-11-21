@@ -1,0 +1,17 @@
+; FUN_00627c80  00627c80
+00627c80  PUSH EBP
+00627c81  MOV EBP,ESP
+00627c83  PUSH ECX
+00627c84  MOV dword ptr [EBP + -0x4],ECX
+00627c87  MOV ECX,dword ptr [EBP + -0x4]
+00627c8a  CALL 0x00627090
+00627c8f  MOV EAX,dword ptr [EBP + -0x4]
+00627c92  MOV dword ptr [EAX],0x6d928c
+00627c98  MOV ECX,dword ptr [EBP + -0x4]
+00627c9b  MOV dword ptr [ECX + 0x60],0x0
+00627ca2  MOV EDX,dword ptr [EBP + -0x4]
+00627ca5  MOV dword ptr [EDX + 0x64],0x0
+00627cac  MOV EAX,dword ptr [EBP + -0x4]
+00627caf  MOV ESP,EBP
+00627cb1  POP EBP
+00627cb2  RET

@@ -1,0 +1,25 @@
+; FUN_004fb7b0  004fb7b0
+004fb7b0  PUSH EBP
+004fb7b1  MOV EBP,ESP
+004fb7b3  SUB ESP,0x8
+004fb7b6  MOV dword ptr [EBP + -0x8],ECX
+004fb7b9  MOV ECX,dword ptr [EBP + -0x8]
+004fb7bc  CALL 0x005db2c0
+004fb7c1  PUSH -0x1
+004fb7c3  MOV ECX,dword ptr [0x007947e0]
+004fb7c9  CALL 0x005df700
+004fb7ce  MOV byte ptr [EBP + -0x1],AL
+004fb7d1  MOVZX EAX,byte ptr [EBP + -0x1]
+004fb7d5  TEST EAX,EAX
+004fb7d7  JZ 0x004fb7ea
+004fb7d9  PUSH 0x1
+004fb7db  PUSH 0x139c
+004fb7e0  MOV ECX,dword ptr [EBP + -0x8]
+004fb7e3  CALL 0x005f2b20
+004fb7e8  JMP 0x004fb7f7
+004fb7ea  PUSH 0x139c
+004fb7ef  MOV ECX,dword ptr [EBP + -0x8]
+004fb7f2  CALL 0x005f2ba0
+004fb7f7  MOV ESP,EBP
+004fb7f9  POP EBP
+004fb7fa  RET

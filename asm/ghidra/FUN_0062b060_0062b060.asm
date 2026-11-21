@@ -1,0 +1,27 @@
+; FUN_0062b060  0062b060
+0062b060  PUSH EBP
+0062b061  MOV EBP,ESP
+0062b063  SUB ESP,0x8
+0062b066  MOV EAX,dword ptr [EBP + 0x8]
+0062b069  MOV dword ptr [EBP + -0x8],EAX
+0062b06c  MOV ECX,dword ptr [EBP + 0xc]
+0062b06f  MOV dword ptr [EBP + -0x4],ECX
+0062b072  MOV EDX,dword ptr [EBP + -0x8]
+0062b075  MOV EAX,dword ptr [EBP + -0x4]
+0062b078  MOV ECX,dword ptr [EDX + 0x4]
+0062b07b  CMP ECX,dword ptr [EAX + 0x4]
+0062b07e  JNZ 0x0062b08e
+0062b080  MOV EDX,dword ptr [EBP + -0x8]
+0062b083  MOV EAX,dword ptr [EBP + -0x4]
+0062b086  MOV ECX,dword ptr [EDX]
+0062b088  SUB ECX,dword ptr [EAX]
+0062b08a  MOV EAX,ECX
+0062b08c  JMP 0x0062b09c
+0062b08e  MOV EDX,dword ptr [EBP + -0x8]
+0062b091  MOV EAX,dword ptr [EBP + -0x4]
+0062b094  MOV ECX,dword ptr [EDX + 0x4]
+0062b097  SUB ECX,dword ptr [EAX + 0x4]
+0062b09a  MOV EAX,ECX
+0062b09c  MOV ESP,EBP
+0062b09e  POP EBP
+0062b09f  RET

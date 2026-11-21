@@ -1,0 +1,27 @@
+; FUN_00571c30  00571c30
+00571c30  PUSH EBP
+00571c31  MOV EBP,ESP
+00571c33  SUB ESP,0xc
+00571c36  MOV dword ptr [EBP + -0xc],ECX
+00571c39  MOV dword ptr [EBP + -0x8],0x1
+00571c40  MOV dword ptr [EBP + -0x4],0x0
+00571c47  JMP 0x00571c52
+00571c49  MOV EAX,dword ptr [EBP + -0x4]
+00571c4c  ADD EAX,0x1
+00571c4f  MOV dword ptr [EBP + -0x4],EAX
+00571c52  CMP dword ptr [EBP + -0x4],0x4
+00571c56  JGE 0x00571c76
+00571c58  MOV ECX,dword ptr [EBP + -0x4]
+00571c5b  MOV EDX,dword ptr [EBP + -0xc]
+00571c5e  CMP dword ptr [EDX + ECX*0x4 + 0x8],0x1
+00571c63  JZ 0x00571c74
+00571c65  MOV EAX,dword ptr [EBP + -0x4]
+00571c68  MOV ECX,dword ptr [EBP + -0xc]
+00571c6b  MOV EDX,dword ptr [ECX + EAX*0x4 + 0x8]
+00571c6f  MOV dword ptr [EBP + -0x8],EDX
+00571c72  JMP 0x00571c76
+00571c74  JMP 0x00571c49
+00571c76  MOV EAX,dword ptr [EBP + -0x8]
+00571c79  MOV ESP,EBP
+00571c7b  POP EBP
+00571c7c  RET

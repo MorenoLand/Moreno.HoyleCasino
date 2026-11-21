@@ -1,0 +1,17 @@
+; FUN_00642e10  00642e10
+00642e10  PUSH EBP
+00642e11  MOV EBP,ESP
+00642e13  PUSH ECX
+00642e14  MOV dword ptr [EBP + -0x4],ECX
+00642e17  MOV ECX,dword ptr [EBP + -0x4]
+00642e1a  CALL 0x005e9e20
+00642e1f  MOV EAX,dword ptr [EBP + -0x4]
+00642e22  MOV dword ptr [EAX],0x6dc400
+00642e28  MOV ECX,dword ptr [EBP + -0x4]
+00642e2b  MOV dword ptr [ECX + 0x80c],0x0
+00642e35  MOV EDX,dword ptr [EBP + -0x4]
+00642e38  MOV dword ptr [EDX + 0x808],0x0
+00642e42  MOV EAX,dword ptr [EBP + -0x4]
+00642e45  MOV ESP,EBP
+00642e47  POP EBP
+00642e48  RET

@@ -1,0 +1,6 @@
+; Unwind@0069e9bf  0069e9bf
+0069e9bf  MOV EAX,dword ptr [EBP + -0x18]
+0069e9c2  PUSH EAX
+0069e9c3  CALL 0x00686cae
+0069e9c8  POP ECX
+0069e9c9  RET

@@ -1,0 +1,36 @@
+; FUN_005778f0  005778f0
+005778f0  PUSH EBP
+005778f1  MOV EBP,ESP
+005778f3  PUSH ECX
+005778f4  MOV dword ptr [EBP + -0x4],ECX
+005778f7  PUSH 0x0
+005778f9  MOV ECX,dword ptr [EBP + -0x4]
+005778fc  CALL 0x005fc0d0
+00577901  MOV EAX,dword ptr [EBP + -0x4]
+00577904  MOV dword ptr [EAX],0x6cb110
+0057790a  MOV ECX,dword ptr [EBP + -0x4]
+0057790d  MOV EDX,dword ptr [EBP + 0x8]
+00577910  MOV dword ptr [ECX + 0x20],EDX
+00577913  MOV EAX,dword ptr [EBP + -0x4]
+00577916  MOV ECX,dword ptr [EBP + 0xc]
+00577919  MOV dword ptr [EAX + 0x30],ECX
+0057791c  MOV EDX,dword ptr [EBP + -0x4]
+0057791f  MOV dword ptr [EDX + 0x24],0x1
+00577926  CALL dword ptr [0x006b20bc]
+0057792c  MOV ECX,dword ptr [EBP + -0x4]
+0057792f  MOV dword ptr [ECX + 0x28],EAX
+00577932  MOV EDX,dword ptr [EBP + -0x4]
+00577935  MOV EAX,dword ptr [EDX + 0x30]
+00577938  MOV ECX,dword ptr [EBP + -0x4]
+0057793b  MOV EDX,dword ptr [ECX + 0x20]
+0057793e  CMP EDX,dword ptr [EAX + 0x188]
+00577944  JGE 0x0057794f
+00577946  MOV EAX,dword ptr [EBP + -0x4]
+00577949  MOV byte ptr [EAX + 0x2c],0x0
+0057794d  JMP 0x00577956
+0057794f  MOV ECX,dword ptr [EBP + -0x4]
+00577952  MOV byte ptr [ECX + 0x2c],0x1
+00577956  MOV EAX,dword ptr [EBP + -0x4]
+00577959  MOV ESP,EBP
+0057795b  POP EBP
+0057795c  RET 0x8

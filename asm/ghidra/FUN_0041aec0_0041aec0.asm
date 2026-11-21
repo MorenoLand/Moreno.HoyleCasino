@@ -1,0 +1,30 @@
+; FUN_0041aec0  0041aec0
+0041aec0  PUSH EBP
+0041aec1  MOV EBP,ESP
+0041aec3  SUB ESP,0x8
+0041aec6  MOV dword ptr [EBP + -0x4],ECX
+0041aec9  MOV ECX,dword ptr [EBP + -0x4]
+0041aecc  CALL 0x00418580
+0041aed1  MOVZX EAX,AL
+0041aed4  TEST EAX,EAX
+0041aed6  JZ 0x0041af05
+0041aed8  MOV ECX,dword ptr [EBP + 0x8]
+0041aedb  PUSH ECX
+0041aedc  MOV ECX,dword ptr [EBP + -0x4]
+0041aedf  CALL 0x004194c0
+0041aee4  CMP EAX,0x1
+0041aee7  JNZ 0x0041af05
+0041aee9  PUSH 0x0
+0041aeeb  MOV EDX,dword ptr [EBP + 0x8]
+0041aeee  PUSH EDX
+0041aeef  MOV ECX,dword ptr [EBP + -0x4]
+0041aef2  CALL 0x00419530
+0041aef7  CMP EAX,0x2
+0041aefa  JNZ 0x0041af05
+0041aefc  MOV dword ptr [EBP + -0x8],0x1
+0041af03  JMP 0x0041af0c
+0041af05  MOV dword ptr [EBP + -0x8],0x0
+0041af0c  MOV AL,byte ptr [EBP + -0x8]
+0041af0f  MOV ESP,EBP
+0041af11  POP EBP
+0041af12  RET 0x4

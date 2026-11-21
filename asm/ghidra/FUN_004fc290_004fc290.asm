@@ -1,0 +1,19 @@
+; FUN_004fc290  004fc290
+004fc290  PUSH EBP
+004fc291  MOV EBP,ESP
+004fc293  SUB ESP,0x8
+004fc296  MOV dword ptr [EBP + -0x8],ECX
+004fc299  MOV EAX,[0x00791364]
+004fc29e  MOV ECX,dword ptr [EAX + 0xf4]
+004fc2a4  MOV dword ptr [EBP + -0x4],ECX
+004fc2a7  CMP dword ptr [EBP + -0x4],0x4
+004fc2ab  JNZ 0x004fc2bc
+004fc2ad  PUSH 0x6c07e0
+004fc2b2  CALL 0x00630f40
+004fc2b7  ADD ESP,0x4
+004fc2ba  JMP 0x004fc2c4
+004fc2bc  MOV ECX,dword ptr [EBP + -0x8]
+004fc2bf  CALL 0x004fa1a0
+004fc2c4  MOV ESP,EBP
+004fc2c6  POP EBP
+004fc2c7  RET

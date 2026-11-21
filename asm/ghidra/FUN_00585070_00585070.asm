@@ -1,0 +1,33 @@
+; FUN_00585070  00585070
+00585070  PUSH EBP
+00585071  MOV EBP,ESP
+00585073  PUSH ECX
+00585074  MOV dword ptr [EBP + -0x4],ECX
+00585077  MOV EAX,dword ptr [EBP + -0x4]
+0058507a  MOV byte ptr [EAX + 0x6c],0x0
+0058507e  MOV ECX,dword ptr [EBP + -0x4]
+00585081  CALL 0x00585100
+00585086  MOV ECX,dword ptr [EBP + -0x4]
+00585089  MOV EDX,dword ptr [ECX + 0x64]
+0058508c  MOV EAX,dword ptr [EBP + -0x4]
+0058508f  MOV ECX,dword ptr [EAX + 0x64]
+00585092  MOV EDX,dword ptr [EDX]
+00585094  MOV EAX,dword ptr [EDX + 0x70]
+00585097  CALL EAX
+00585099  MOV ECX,dword ptr [EBP + -0x4]
+0058509c  MOV EDX,dword ptr [ECX + 0x5c]
+0058509f  MOV EAX,dword ptr [EBP + -0x4]
+005850a2  MOV ECX,dword ptr [EAX + 0x5c]
+005850a5  MOV EDX,dword ptr [EDX]
+005850a7  MOV EAX,dword ptr [EDX + 0xd0]
+005850ad  CALL EAX
+005850af  MOV ECX,dword ptr [EBP + -0x4]
+005850b2  MOV EDX,dword ptr [ECX + 0x60]
+005850b5  MOV EAX,dword ptr [EBP + -0x4]
+005850b8  MOV ECX,dword ptr [EAX + 0x60]
+005850bb  MOV EDX,dword ptr [EDX]
+005850bd  MOV EAX,dword ptr [EDX + 0xd0]
+005850c3  CALL EAX
+005850c5  MOV ESP,EBP
+005850c7  POP EBP
+005850c8  RET

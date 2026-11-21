@@ -1,0 +1,10 @@
+; FUN_0064bfe0  0064bfe0
+0064bfe0  PUSH EBP
+0064bfe1  MOV EBP,ESP
+0064bfe3  PUSH ECX
+0064bfe4  MOV dword ptr [EBP + -0x4],ECX
+0064bfe7  MOV ECX,dword ptr [EBP + -0x4]
+0064bfea  CALL 0x00602550
+0064bfef  MOV ESP,EBP
+0064bff1  POP EBP
+0064bff2  RET

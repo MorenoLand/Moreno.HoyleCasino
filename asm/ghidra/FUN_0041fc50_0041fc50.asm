@@ -1,0 +1,22 @@
+; FUN_0041fc50  0041fc50
+0041fc50  PUSH EBP
+0041fc51  MOV EBP,ESP
+0041fc53  PUSH ECX
+0041fc54  MOV dword ptr [EBP + -0x4],ECX
+0041fc57  PUSH 0x3106cb
+0041fc5c  MOV ECX,dword ptr [0x0162ee80]
+0041fc62  CALL 0x005f2ba0
+0041fc67  PUSH 0x3106cc
+0041fc6c  MOV ECX,dword ptr [0x0162ee80]
+0041fc72  CALL 0x005f2ba0
+0041fc77  MOV EAX,dword ptr [EBP + -0x4]
+0041fc7a  CMP dword ptr [EAX + 0x40],0x0
+0041fc7e  JZ 0x0041fc95
+0041fc80  MOV ECX,dword ptr [EBP + -0x4]
+0041fc83  MOV ECX,dword ptr [ECX + 0x40]
+0041fc86  CALL 0x005f8990
+0041fc8b  MOV EDX,dword ptr [EBP + -0x4]
+0041fc8e  MOV dword ptr [EDX + 0x40],0x0
+0041fc95  MOV ESP,EBP
+0041fc97  POP EBP
+0041fc98  RET

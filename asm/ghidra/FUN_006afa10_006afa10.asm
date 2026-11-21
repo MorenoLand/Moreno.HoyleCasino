@@ -1,0 +1,6 @@
+; FUN_006afa10  006afa10
+006afa10  PUSH EBP
+006afa11  MOV EBP,ESP
+006afa13  MOV dword ptr [0x007913d4],0x7913ab
+006afa1d  POP EBP
+006afa1e  RET

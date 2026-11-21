@@ -1,0 +1,11 @@
+// Unwind@006a4920  006a4920
+
+void Unwind_006a4920(void)
+
+{
+  int unaff_EBP;
+  
+  operator_delete(*(void **)(unaff_EBP + -0x68));
+  return;
+}
+

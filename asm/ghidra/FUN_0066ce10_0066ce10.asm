@@ -1,0 +1,12 @@
+; FUN_0066ce10  0066ce10
+0066ce10  PUSH EBP
+0066ce11  MOV EBP,ESP
+0066ce13  PUSH ECX
+0066ce14  MOV dword ptr [EBP + -0x4],ECX
+0066ce17  MOV EAX,dword ptr [EBP + -0x4]
+0066ce1a  MOV dword ptr [EAX],0x6e0b2c
+0066ce20  MOV ECX,dword ptr [EBP + -0x4]
+0066ce23  CALL 0x00601ba0
+0066ce28  MOV ESP,EBP
+0066ce2a  POP EBP
+0066ce2b  RET

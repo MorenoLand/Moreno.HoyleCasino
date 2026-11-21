@@ -1,0 +1,108 @@
+; FUN_00698200  00698200
+00698200  MOV ECX,dword ptr [ESP + 0xc]
+00698204  PUSH ESI
+00698205  MOV ESI,dword ptr [ESP + 0x14]
+00698209  MOV EDX,ECX
+0069820b  PUSH EDI
+0069820c  MOV EDI,dword ptr [ESP + 0x10]
+00698210  SAR EDX,0x1
+00698212  SHL ESI,0x2
+00698215  LEA EAX,[EDI + EDX*0x4 + -0x20]
+00698219  SUB ECX,EDX
+0069821b  MOV EDX,dword ptr [ESP + 0xc]
+0069821f  LEA ECX,[EAX + ECX*0x4 + 0x1c]
+00698223  FLD float ptr [ECX + -0x4]
+00698226  FSUB float ptr [EAX + 0x18]
+00698229  FLD float ptr [ECX]
+0069822b  FSUB float ptr [EAX + 0x1c]
+0069822e  FLD float ptr [ECX + -0x4]
+00698231  FADD float ptr [EAX + 0x18]
+00698234  FSTP float ptr [ECX + -0x4]
+00698237  FLD float ptr [EAX + 0x1c]
+0069823a  FADD float ptr [ECX]
+0069823c  FSTP float ptr [ECX]
+0069823e  FLD ST0
+00698240  FMUL float ptr [EDX + 0x4]
+00698243  FLD ST2
+00698245  FMUL float ptr [EDX]
+00698247  FADDP
+00698249  FSTP float ptr [EAX + 0x18]
+0069824c  FMUL float ptr [EDX]
+0069824e  FXCH
+00698250  FMUL float ptr [EDX + 0x4]
+00698253  ADD EDX,ESI
+00698255  FSUBP
+00698257  FSTP float ptr [EAX + 0x1c]
+0069825a  FLD float ptr [ECX + -0xc]
+0069825d  FSUB float ptr [EAX + 0x10]
+00698260  FLD float ptr [ECX + -0x8]
+00698263  FSUB float ptr [EAX + 0x14]
+00698266  FLD float ptr [EAX + 0x10]
+00698269  FADD float ptr [ECX + -0xc]
+0069826c  FSTP float ptr [ECX + -0xc]
+0069826f  FLD float ptr [ECX + -0x8]
+00698272  FADD float ptr [EAX + 0x14]
+00698275  FSTP float ptr [ECX + -0x8]
+00698278  FLD ST0
+0069827a  FMUL float ptr [EDX + 0x4]
+0069827d  FLD ST2
+0069827f  FMUL float ptr [EDX]
+00698281  FADDP
+00698283  FSTP float ptr [EAX + 0x10]
+00698286  FMUL float ptr [EDX]
+00698288  FXCH
+0069828a  FMUL float ptr [EDX + 0x4]
+0069828d  ADD EDX,ESI
+0069828f  FSUBP
+00698291  FSTP float ptr [EAX + 0x14]
+00698294  FLD float ptr [ECX + -0x14]
+00698297  FSUB float ptr [EAX + 0x8]
+0069829a  FLD float ptr [ECX + -0x10]
+0069829d  FSUB float ptr [EAX + 0xc]
+006982a0  FLD float ptr [EAX + 0x8]
+006982a3  FADD float ptr [ECX + -0x14]
+006982a6  FSTP float ptr [ECX + -0x14]
+006982a9  FLD float ptr [EAX + 0xc]
+006982ac  FADD float ptr [ECX + -0x10]
+006982af  FSTP float ptr [ECX + -0x10]
+006982b2  FLD ST0
+006982b4  FMUL float ptr [EDX + 0x4]
+006982b7  FLD ST2
+006982b9  FMUL float ptr [EDX]
+006982bb  FADDP
+006982bd  FSTP float ptr [EAX + 0x8]
+006982c0  FMUL float ptr [EDX]
+006982c2  FXCH
+006982c4  FMUL float ptr [EDX + 0x4]
+006982c7  ADD EDX,ESI
+006982c9  FSUBP
+006982cb  FSTP float ptr [EAX + 0xc]
+006982ce  FLD float ptr [ECX + -0x1c]
+006982d1  FSUB float ptr [EAX]
+006982d3  FLD float ptr [ECX + -0x18]
+006982d6  FSUB float ptr [EAX + 0x4]
+006982d9  FLD float ptr [EAX]
+006982db  FADD float ptr [ECX + -0x1c]
+006982de  FSTP float ptr [ECX + -0x1c]
+006982e1  FLD float ptr [ECX + -0x18]
+006982e4  FADD float ptr [EAX + 0x4]
+006982e7  FSTP float ptr [ECX + -0x18]
+006982ea  SUB EAX,0x20
+006982ed  SUB ECX,0x20
+006982f0  FLD ST0
+006982f2  FMUL float ptr [EDX + 0x4]
+006982f5  FLD ST2
+006982f7  FMUL float ptr [EDX]
+006982f9  FADDP
+006982fb  FSTP float ptr [EAX + 0x20]
+006982fe  FMUL float ptr [EDX]
+00698300  FXCH
+00698302  FMUL float ptr [EDX + 0x4]
+00698305  ADD EDX,ESI
+00698307  CMP EAX,EDI
+00698309  FSUBP
+0069830b  FSTP float ptr [EAX + 0x24]
+0069830e  JNC 0x00698223
+00698314  POP EDI
+00698315  POP ESI
+00698316  RET

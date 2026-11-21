@@ -1,0 +1,19 @@
+; FUN_004074f0  004074f0
+004074f0  PUSH EBP
+004074f1  MOV EBP,ESP
+004074f3  PUSH ECX
+004074f4  MOV dword ptr [EBP + -0x4],ECX
+004074f7  MOV EAX,dword ptr [EBP + -0x4]
+004074fa  MOV ECX,dword ptr [EAX + 0x1c]
+004074fd  ADD ECX,0x1
+00407500  MOV EDX,dword ptr [EBP + -0x4]
+00407503  MOV dword ptr [EDX + 0x1c],ECX
+00407506  MOV EAX,dword ptr [EBP + -0x4]
+00407509  MOV ECX,dword ptr [EAX + 0x8]
+0040750c  MOV EDX,dword ptr [EBP + -0x4]
+0040750f  MOV EAX,dword ptr [EBP + -0x4]
+00407512  MOV EAX,dword ptr [EAX + 0x1c]
+00407515  MOV dword ptr [EDX + ECX*0x4 + 0x1ac],EAX
+0040751c  MOV ESP,EBP
+0040751e  POP EBP
+0040751f  RET

@@ -32,7 +32,7 @@ u64 wasm_import(u32 *a);
 /* ---------- presentation ---------- */
 EM_JS(void, wasm_present, (int bits, int fw, int fh, int bpp, int stride, int flip, int xs, int ys, int w, int h, int xd, int yd), {
     if (!Module['canvas'] || !bits || fw <= 0 || fh <= 0 || w <= 0 || h <= 0) return;
-    if (!Module.__praw) { Module.__praw = 1; document.title = "P:" + bits + "," + fw + "," + fh + "," + bpp + "," + stride + "," + flip + "," + xs + "," + ys + "," + w + "," + h + "," + xd + "," + yd; }
+    if (!Module.__praw) Module.__praw = 1;
     var c = Module['canvas'];
     if (c.width !== fw) c.width = fw;
     if (c.height !== fh) c.height = fh;
@@ -541,18 +541,179 @@ static u64 msvcp80(u32 *a)
 }
 
 /* ---------- OpenAL / WINMM / SHELL32 / OLE32 / FreeType ---------- */
+EM_JS(int, wasm_al, (int op, int a0, int a1, int a2, int a3, int a4), {
+    var A = Module.__al;
+    if (!A) A = Module.__al = { ctx: null, b: {}, s: {}, nb: 1, ns: 1, plays: 0, pcm: 0, bufplay: 0 };
+    function actx() {
+        if (!A.ctx) {
+            var C = window.AudioContext || window.webkitAudioContext;
+            if (!C) return null;
+            A.ctx = new C();
+        }
+        return A.ctx;
+    }
+    function fv(u) { var f = new Float32Array(1); new Uint32Array(f.buffer)[0] = u >>> 0; return f[0]; }
+    function mkbuf(id) {
+        var b = A.b[id]; if (!b || !A.ctx) return null;
+        var bytes = b.bits >> 3, frames = b.size / (b.ch * bytes);
+        if (!frames) return null;
+        var ab = A.ctx.createBuffer(b.ch, frames, b.freq), pcm = b.pcm;
+        for (var c = 0; c < b.ch; ++c) {
+            var out = ab.getChannelData(c), o = c * bytes;
+            if (b.bits == 8) { for (var i = 0; i < frames; ++i) { out[i] = (pcm[o] - 128) / 128; o += b.ch; } }
+            else { for (var i = 0; i < frames; ++i) { out[i] = (((pcm[o] | (pcm[o + 1] << 8)) << 16) >> 16) / 32768; o += b.ch * 2; } }
+        }
+        return ab;
+    }
+    function stop(s) { if (s.node) { s.node.onended = null; try { s.node.stop(); } catch (e) {} s.node = null; } }
+    function step(s) {
+        if (s.state != 0x1012) return;
+        if (s.playAt >= s.queue.length) { s.state = 0x1014; return; }
+        var ab = mkbuf(s.queue[s.playAt++]);
+        if (!ab) { step(s); return; }
+        var node = A.ctx.createBufferSource(), gain = A.ctx.createGain();
+        node.buffer = ab; node.playbackRate.value = s.pitch; gain.gain.value = s.gain;
+        node.connect(gain); gain.connect(A.ctx.destination);
+        node.onended = function () { if (s.node === node) { s.node = null; ++s.processed; ++A.bufplay; step(s); } };
+        s.node = node; ++A.plays; node.start();
+    }
+    switch (op) {
+    case 1:
+        for (var i = 0; i < a0; ++i) HEAP32[(a1 >> 2) + i] = A.nb++;
+        return 1;
+    case 2:
+        for (var i = 0; i < a0; ++i) { var id = A.ns++; HEAP32[(a1 >> 2) + i] = id; A.s[id] = { state: 0x1011, gain: 1, pitch: 1, loop: false, buffer: 0, queue: [], playAt: 0, processed: 0, node: null }; }
+        return 1;
+    case 3:
+        for (var i = 0; i < a0; ++i) delete A.b[HEAP32[(a1 >> 2) + i]];
+        return 1;
+    case 4:
+        for (var i = 0; i < a0; ++i) { var id = HEAP32[(a1 >> 2) + i], s = A.s[id]; if (s) { stop(s); delete A.s[id]; } }
+        return 1;
+    case 5:
+        var fmt = a1, ch = fmt >= 0x1102 ? 2 : 1, bits = (fmt == 0x1100 || fmt == 0x1102) ? 8 : 16;
+        A.b[a0] = { pcm: HEAPU8.slice(a2, a2 + a3), size: a3, freq: a4 || 22050, bits: bits, ch: ch };
+        ++A.pcm;
+        return 1;
+    case 6:
+        var s = A.s[a0]; if (!s) return 0;
+        if (a1 == 0x1009) { s.buffer = a2; s.queue = []; s.playAt = 0; s.processed = 0; s.state = 0x1011; }
+        else if (a1 == 0x1007) s.loop = !!a2;
+        return 1;
+    case 7:
+        var s = A.s[a0]; if (!s) return 0;
+        if (a1 == 0x100a) s.gain = fv(a2); else if (a1 == 0x1003) s.pitch = fv(a2);
+        return 1;
+    case 8:
+        return 1;
+    case 11:
+        var s = A.s[a0]; if (!s) return 0;
+        var c = actx(); if (!c) return 0;
+        if (c.state == "suspended") c.resume();
+        if (s.state == 0x1012) return 1;
+        stop(s); s.state = 0x1012; s.playAt = 0; s.processed = 0;
+        if (!s.queue.length && s.buffer) s.queue = [s.buffer];
+        if (s.loop && s.buffer) {
+            var ab = mkbuf(s.buffer); if (!ab) return 0;
+            var node = c.createBufferSource(), gain = c.createGain();
+            node.buffer = ab; node.loop = true; node.playbackRate.value = s.pitch; gain.gain.value = s.gain;
+            node.connect(gain); gain.connect(c.destination);
+            s.node = node; ++A.plays; node.start();
+        } else step(s);
+        return 1;
+    case 12:
+        var s = A.s[a0]; if (!s) return 0;
+        stop(s); s.state = 0x1014; s.playAt = 0; s.processed = 0; s.queue = [];
+        return 1;
+    case 13:
+        var s = A.s[a0]; if (!s) return 0;
+        stop(s); s.state = 0x1013;
+        return 1;
+    case 14:
+        var s = A.s[a0]; if (!s) return 0;
+        stop(s); s.playAt = 0; s.processed = 0; s.state = 0x1011;
+        return 1;
+    case 15:
+        var s = A.s[a0]; if (!s) return 0;
+        for (var i = 0; i < a1; ++i) s.queue.push(HEAP32[(a2 >> 2) + i]);
+        if (s.state == 0x1012 && !s.node) step(s);
+        return 1;
+    case 16:
+        var s = A.s[a0]; if (!s) return 0;
+        var n = 0;
+        while (n < a1 && s.processed > 0) { HEAP32[(a2 >> 2) + n] = s.queue.shift(); --s.processed; --s.playAt; ++n; }
+        return n;
+    case 17:
+        if (a0 == 0) {
+            var s = A.s[a1]; if (!s) { HEAP32[a3 >> 2] = 0; return 0; }
+            HEAP32[a3 >> 2] = a2 == 0x1010 ? s.state : (a2 == 0x1015 ? s.queue.length : (a2 == 0x1016 ? s.processed : 0));
+        } else {
+            var b = A.b[a1]; if (!b) { HEAP32[a3 >> 2] = 0; return 0; }
+            HEAP32[a3 >> 2] = a2 == 0x2001 ? b.freq : (a2 == 0x2002 ? b.bits : (a2 == 0x2003 ? b.ch : (a2 == 0x2004 ? b.size : 0)));
+        }
+        return 1;
+    case 18:
+        var s = A.s[a0]; if (!s) return 0;
+        HEAPF32[a2 >> 2] = a1 == 0x100a ? s.gain : (a1 == 0x1003 ? s.pitch : 0);
+        return 1;
+    case 19:
+        var c = actx(); if (!c) return 0;
+        if (c.state == "suspended") c.resume();
+        return 1;
+    }
+    return 0;
+});
+
+EM_JS(int, wasm_playsound, (int ptr, int flags), {
+    if (!ptr || !(flags & 4)) return 0;
+    var n = HEAPU32[(ptr + 4) >> 2] + 8;
+    if (n < 44 || n > 67108864) return 0;
+    var A = Module.__al;
+    if (!A) A = Module.__al = { ctx: null, b: {}, s: {}, nb: 1, ns: 1, plays: 0, pcm: 0, bufplay: 0 };
+    if (!A.ctx) {
+        var C = window.AudioContext || window.webkitAudioContext;
+        if (!C) return 0;
+        A.ctx = new C();
+    }
+    if (A.ctx.state == "suspended") A.ctx.resume();
+    var bytes = HEAPU8.slice(ptr, ptr + n).buffer, ctx = A.ctx;
+    ctx.decodeAudioData(bytes).then(function (buf) {
+        var src = ctx.createBufferSource();
+        src.buffer = buf; src.connect(ctx.destination); src.start(); ++A.plays;
+    }).catch(function () {});
+    return 1;
+});
+
 static u64 openal(u32 *a)
 {
     const char *n = wasm_current->name;
+    if (!strcmp(n, "alGenBuffers")) { wasm_al(1, (int)a[0], (int)a[1], 0, 0, 0); return 0; }
+    if (!strcmp(n, "alGenSources")) { wasm_al(2, (int)a[0], (int)a[1], 0, 0, 0); return 0; }
+    if (!strcmp(n, "alDeleteBuffers")) { wasm_al(3, (int)a[0], (int)a[1], 0, 0, 0); return 0; }
+    if (!strcmp(n, "alDeleteSources")) { wasm_al(4, (int)a[0], (int)a[1], 0, 0, 0); return 0; }
+    if (!strcmp(n, "alBufferData")) { wasm_al(5, (int)a[0], (int)a[1], (int)a[2], (int)a[3], (int)a[4]); return 0; }
+    if (!strcmp(n, "alSourcei")) { wasm_al(6, (int)a[0], (int)a[1], (int)a[2], 0, 0); return 0; }
+    if (!strcmp(n, "alSourcef")) { wasm_al(7, (int)a[0], (int)a[1], (int)a[2], 0, 0); return 0; }
+    if (!strcmp(n, "alSource3f") || !strcmp(n, "alSourcefv")) return 0;
+    if (!strcmp(n, "alSourcePlay")) { wasm_al(11, (int)a[0], 0, 0, 0, 0); return 0; }
+    if (!strcmp(n, "alSourceStop")) { wasm_al(12, (int)a[0], 0, 0, 0, 0); return 0; }
+    if (!strcmp(n, "alSourcePause")) { wasm_al(13, (int)a[0], 0, 0, 0, 0); return 0; }
+    if (!strcmp(n, "alSourceRewind")) { wasm_al(14, (int)a[0], 0, 0, 0, 0); return 0; }
+    if (!strcmp(n, "alSourceQueueBuffers")) { wasm_al(15, (int)a[0], (int)a[1], (int)a[2], 0, 0); return 0; }
+    if (!strcmp(n, "alSourceUnqueueBuffers")) return wasm_al(16, (int)a[0], (int)a[1], (int)a[2], 0, 0);
+    if (!strcmp(n, "alGetSourcei")) { wasm_al(17, 0, (int)a[0], (int)a[1], (int)a[2], 0); return 0; }
+    if (!strcmp(n, "alGetBufferi")) { wasm_al(17, 1, (int)a[0], (int)a[1], (int)a[2], 0); return 0; }
+    if (!strcmp(n, "alGetSourcef")) { wasm_al(18, (int)a[0], (int)a[1], (int)a[2], 0, 0); return 0; }
+    if (!strcmp(n, "alGetListenerfv")) { if (a[1] && a[0] == 0x1004) { W32(a[1], 0); W32(a[1] + 4, 0); W32(a[1] + 8, 0); } return 0; }
     if (!strcmp(n, "alGetError")) return 0;
-    if (!strcmp(n, "alGenBuffers") || !strcmp(n, "alGenSources")) {
-        for (u32 i = 0; i < a[0]; ++i) W32(a[1] + i * 4, 1 + i);
-        return 0;
-    }
-    if (!strcmp(n, "alDeleteBuffers") || !strcmp(n, "alDeleteSources") || !strcmp(n, "alBufferData") ||
-        !strncmp(n, "alSource", 8) || !strncmp(n, "alListener", 10) || !strncmp(n, "alc", 3)) return 0;
-    if (!strcmp(n, "alGetString")) return (u32)(uintptr_t)"wasm";
-    if (!strcmp(n, "alGetSourcei") || !strcmp(n, "alGetBufferi") || !strcmp(n, "alGetListenerfv") || !strcmp(n, "alGetSourcef")) return 0;
+    if (!strcmp(n, "alGetString")) return (u32)(uintptr_t)"OpenAL 1.1 wasm";
+    if (!strcmp(n, "alListenerfv")) return 0;
+    if (!strcmp(n, "alcOpenDevice")) return 1;
+    if (!strcmp(n, "alcCreateContext")) return 2;
+    if (!strcmp(n, "alcMakeContextCurrent")) return 1;
+    if (!strcmp(n, "alcGetCurrentContext")) return 2;
+    if (!strcmp(n, "alcGetContextsDevice")) return 1;
+    if (!strcmp(n, "alcDestroyContext") || !strcmp(n, "alcCloseDevice")) return 1;
     fprintf(stderr, "wasm: unimplemented OpenAL32!%s\n", n);
     abort();
 }
@@ -564,15 +725,15 @@ static u64 winmm(u32 *a)
     if (!strcmp(n, "joyGetNumDevs")) return 0;
     if (!strcmp(n, "joyGetPos") || !strcmp(n, "joyGetPosEx") || !strcmp(n, "joyGetDevCapsA")) return 1;
     if (!strcmp(n, "joySetCapture") || !strcmp(n, "joySetThreshold") || !strcmp(n, "joyReleaseCapture")) return 1;
-    if (!strcmp(n, "waveOutGetNumDevs")) return 0;
-    if (!strcmp(n, "waveOutGetDevCapsA")) return 1;
+    if (!strcmp(n, "waveOutGetNumDevs")) return 1;
+    if (!strcmp(n, "waveOutGetDevCapsA")) { if (a[1] && a[2]) memset((void *)(uintptr_t)a[1], 0, a[2]); return 0; }
     if (!strcmp(n, "timeGetDevCaps")) {
         if (a[0]) { W32(a[0], 1); W32(a[0] + 4, 1000); }
         return 0;
     }
     if (!strcmp(n, "timeGetTime")) return (u32)(emscripten_get_now());
     if (!strcmp(n, "timeBeginPeriod") || !strcmp(n, "timeEndPeriod")) return 0;
-    if (!strcmp(n, "PlaySoundA")) return 1;
+    if (!strcmp(n, "PlaySoundA")) return (u32)wasm_playsound((int)a[0], (int)a[2]);
     fprintf(stderr, "wasm: unimplemented WINMM!%s\n", n);
     abort();
 }

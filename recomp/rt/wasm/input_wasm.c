@@ -2,6 +2,8 @@
 #include <emscripten.h>
 #include <stdint.h>
 
+int wasm_al(int op, int a0, int a1, int a2, int a3, int a4);
+
 typedef struct { uint16_t type, key; int16_t x, y; } WasmEvent;
 static WasmEvent queue[256];
 static volatile unsigned head, tail;
@@ -17,7 +19,7 @@ EMSCRIPTEN_KEEPALIVE void wasm_input(int type, int x, int y, int key)
     head = next;
 }
 
-EMSCRIPTEN_KEEPALIVE void wasm_start(void) {}
+EMSCRIPTEN_KEEPALIVE void wasm_start(void) { wasm_al(19, 0, 0, 0, 0, 0); }
 
 int wasm_peek_event_ex(int *type, int *x, int *y, int *key, int consume)
 {

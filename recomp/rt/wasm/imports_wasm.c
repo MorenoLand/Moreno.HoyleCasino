@@ -207,10 +207,16 @@ static const char *wasm_path(const char *p)
 }
 
 /* ---------- KERNEL32 ---------- */
-static int in_msgbox(void)
+static u32 g_skipbox;
+void wasm_msgbox_ctor(unsigned obj, unsigned ret)
 {
-    const u32 *p = (const u32 *)(uintptr_t)r_esp;
-    for (int i = 0; i < 4096; ++i) if (p[i] >= 0x650c20u && p[i] < 0x6512a0u) return 1;
+    (void)ret;
+    const u32 *sp = (const u32 *)(uintptr_t)r_esp;
+    for (int i = 0; i < 8192; ++i) if (sp[i] >= 0x660000u && sp[i] < 0x680000u) { g_skipbox = obj; return; }
+}
+int wasm_msgbox_skip(unsigned obj)
+{
+    if (obj && obj == g_skipbox) { g_skipbox = 0; return 1; }
     return 0;
 }
 static int g_last_error;
@@ -417,9 +423,6 @@ static u64 user32(u32 *a)
                 else if (type == 3) { m = 0x0100; wp = (u32)key; }
                 else if (type == 4) { m = 0x0101; wp = (u32)key; }
                 else if (type == 5) { m = 0x0102; wp = (u32)key; }
-#ifdef __EMSCRIPTEN__
-                if (type == 2 && in_msgbox()) { m = 0x0102; wp = 13; }
-#endif
                 W32(msg + 0, target);
                 W32(msg + 4, m);
                 W32(msg + 8, wp);

@@ -4,6 +4,9 @@ void f_00650bb0(void) /* sciMessageBox::ctor */
 {
     int fZ = 0, fS = 0, fC = 0, fO = 0, fP = 0, fA = 0; (void)fZ; (void)fS; (void)fC; (void)fO; (void)fP; (void)fA;
     FN_ENTER(0x00650bb0);
+#ifdef __EMSCRIPTEN__
+    { extern void wasm_msgbox_ctor(unsigned, unsigned); wasm_msgbox_ctor(r_ecx, R32(r_esp)); }
+#endif
     /* 00650bb0: push ebp */ { u32 v = r_ebp; r_esp -= 4; W32(r_esp, v); }
     /* 00650bb1: mov ebp, esp */ r_ebp = r_esp;
     /* 00650bb3: sub esp, 8 */ {  u32 a = r_esp; u32 b = 0x8u; u32 r = (a - b) & 0xffffffffu; r_esp = r;  }
@@ -39,6 +42,12 @@ void f_00650c20(void) /* sciMessageBox::vfunc16 */
 {
     int fZ = 0, fS = 0, fC = 0, fO = 0, fP = 0, fA = 0; (void)fZ; (void)fS; (void)fC; (void)fO; (void)fP; (void)fA;
     FN_ENTER(0x00650c20);
+#ifdef __EMSCRIPTEN__
+    {
+        extern int wasm_msgbox_skip(unsigned);
+        if (wasm_msgbox_skip(r_ecx)) { W8(r_ecx + 0x1bcu, 1); r_eax = 0; return; }
+    }
+#endif
     /* 00650c20: push ebp */ { u32 v = r_ebp; r_esp -= 4; W32(r_esp, v); }
     /* 00650c21: mov ebp, esp */ r_ebp = r_esp;
     /* 00650c23: push -1 */ { u32 v = 0xffffffffu; r_esp -= 4; W32(r_esp, v); }

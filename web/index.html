@@ -15,10 +15,13 @@
 <canvas id="canvas" width="640" height="480" tabindex="0"></canvas>
 
 <script>
+  window.addEventListener('error', function (e) { console.log('[error] ' + e.message); });
+  window.addEventListener('unhandledrejection', function (e) { console.log('[reject] ' + e.reason); });
   var Module = {
     canvas: document.getElementById('canvas'),
     print: function (text) { console.log(text); },
     printErr: function (text) { console.log(text); },
+    onAbort: function (what) { console.log('[abort] ' + what); },
     onRuntimeInitialized: function () {
       window.__hoyleReady = true;
       Module.canvas.focus();

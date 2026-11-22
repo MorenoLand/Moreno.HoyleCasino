@@ -207,6 +207,12 @@ static const char *wasm_path(const char *p)
 }
 
 /* ---------- KERNEL32 ---------- */
+static int in_msgbox(void)
+{
+    const u32 *p = (const u32 *)(uintptr_t)r_esp;
+    for (int i = 0; i < 4096; ++i) if (p[i] >= 0x650c20u && p[i] < 0x6512a0u) return 1;
+    return 0;
+}
 static int g_last_error;
 static FILE *g_files[128];
 static int g_nfiles;
@@ -411,7 +417,10 @@ static u64 user32(u32 *a)
                 else if (type == 3) { m = 0x0100; wp = (u32)key; }
                 else if (type == 4) { m = 0x0101; wp = (u32)key; }
                 else if (type == 5) { m = 0x0102; wp = (u32)key; }
-                W32(msg + 0, g_hwnd);
+#ifdef __EMSCRIPTEN__
+                if (type == 2 && in_msgbox()) { m = 0x0102; wp = 13; }
+#endif
+                W32(msg + 0, target);
                 W32(msg + 4, m);
                 W32(msg + 8, wp);
                 W32(msg + 12, type >= 3 ? 1u : (((u32)(y & 0xffff) << 16) | (u32)(x & 0xffff)));            }
@@ -798,9 +807,38 @@ static u64 wasm_cocreate(u32 *a)
     return 0x80040111u;   /* CLASS_E_CLASSNOTAVAILABLE */
 }
 
+typedef int FT_Error;
+typedef void *FT_Library;
+typedef void *FT_Face;
+typedef long FT_Long;
+typedef unsigned long FT_ULong;
+typedef long FT_F26Dot6;
+typedef int FT_Int32;
+typedef unsigned int FT_UInt;
+typedef struct { long x, y; } FT_Vector;
+extern FT_Error FT_Init_FreeType(FT_Library *);
+extern FT_Error FT_Done_FreeType(FT_Library);
+extern FT_Error FT_New_Memory_Face(FT_Library, const unsigned char *, FT_Long, FT_Long, FT_Face *);
+extern FT_Error FT_Done_Face(FT_Face);
+extern FT_Error FT_Set_Char_Size(FT_Face, FT_F26Dot6, FT_F26Dot6, FT_UInt, FT_UInt);
+extern FT_Error FT_Load_Char(FT_Face, FT_ULong, FT_Int32);
+extern FT_UInt FT_Get_Char_Index(FT_Face, FT_ULong);
+extern FT_Error FT_Get_Kerning(FT_Face, FT_UInt, FT_UInt, FT_UInt, FT_Vector *);
+
 static u64 other(u32 *a)
 {
     const char *n = wasm_current->name;
+    if (!strcmp(wasm_current->module, "freetype6")) {
+        int ord = atoi(n[0] == '#' ? n + 1 : (strrchr(n, '_') ? strrchr(n, '_') + 1 : n));
+        if (ord == 116) return (u32)FT_Init_FreeType((FT_Library *)(uintptr_t)a[0]);
+        if (ord == 67) return (u32)FT_Done_FreeType((FT_Library)(uintptr_t)a[0]);
+        if (ord == 139) return (u32)FT_New_Memory_Face((FT_Library)(uintptr_t)a[0], (const unsigned char *)(uintptr_t)a[1], (FT_Long)a[2], (FT_Long)a[3], (FT_Face *)(uintptr_t)a[4]);
+        if (ord == 66) return (u32)FT_Done_Face((FT_Face)(uintptr_t)a[0]);
+        if (ord == 168) return (u32)FT_Set_Char_Size((FT_Face)(uintptr_t)a[0], (FT_F26Dot6)a[1], (FT_F26Dot6)a[2], (FT_UInt)a[3], (FT_UInt)a[4]);
+        if (ord == 125) return (u32)FT_Load_Char((FT_Face)(uintptr_t)a[0], (FT_ULong)a[1], (FT_Int32)a[2]);
+        if (ord == 78) return (u32)FT_Get_Char_Index((FT_Face)(uintptr_t)a[0], (FT_ULong)a[1]);
+        if (ord == 82) return (u32)FT_Get_Kerning((FT_Face)(uintptr_t)a[0], (FT_UInt)a[1], (FT_UInt)a[2], (FT_UInt)a[3], (FT_Vector *)(uintptr_t)a[4]);
+    }
     if (!strcmp(n, "SHGetMalloc") || !strcmp(n, "SHGetFileInfoA") || !strcmp(n, "Shell_NotifyIconA")) return 0;
     if (!strcmp(n, "SHGetSpecialFolderLocation")) {
         u32 pidl = (u32)(uintptr_t)calloc(1, 8);
@@ -817,8 +855,6 @@ static u64 other(u32 *a)
     if (!strcmp(n, "OleInitialize") || !strcmp(n, "OleUninitialize")) return 0;
     if (!strcmp(n, "CoInitialize") || !strcmp(n, "CoUninitialize")) return 0;
     if (!strcmp(n, "CoCreateInstance")) return wasm_cocreate(a);
-    if (!strcmp(n, "FT_Init_FreeType")) { if (a[0]) W32(a[0], 0x7000); return 0; }
-    if (!strncmp(n, "FT_", 3)) return 1;
     if (!strncmp(n, "Sym", 3) || !strncmp(n, "Image", 5)) return 0;
     if (!strcmp(n, "DocumentPropertiesA") || !strcmp(n, "ClosePrinter") || !strcmp(n, "OpenPrinterA")) return 0;
     if (!strcmp(n, "GetOpenFileNameA")) return 0;
@@ -1030,7 +1066,7 @@ static u64 msvcr80(u32 *a)
         time_t t = (time_t)(uint64_t)R32(a[0]) | ((time_t)(uint64_t)R32(a[0]+4) << 32);
         return (u32)(uintptr_t)localtime(&t);
     }
-    if (S("_filelength")) { FILE *f = (FILE *)(uintptr_t)a[0]; long c = ftell(f); fseek(f, 0, SEEK_END); long e = ftell(f); fseek(f, c, SEEK_SET); return (u32)e; }
+    if (S("_filelength")) { struct stat st; if (fstat((int)a[0], &st)) return 0xFFFFFFFFu; return (u32)st.st_size; }
     if (S("_fileno")) return (u32)fileno((FILE *)(uintptr_t)a[0]);
     if (S("__iob_func")) {
         static u32 iob[3];

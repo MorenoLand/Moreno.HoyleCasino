@@ -3,47 +3,33 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" href="data:,">
+<link rel="icon" href="hoylecasino.ico">
 <title>Hoyle Casino</title>
 <style>
   :root { color-scheme: dark; }
   html, body { height: 100%; margin: 0; background: #000; overflow: hidden; }
   canvas { display: block; width: 100vw; height: 100vh; background: #000; outline: none; }
-  #overlay { position: fixed; inset: 0; display: flex; flex-direction: column; gap: 12px; align-items: center; justify-content: center; background: #000c; text-align: center; padding: 24px; color: #ddd; font: 14px/1.4 system-ui, sans-serif; }
-  #overlay h1 { margin: 0; font-size: clamp(20px, 4vw, 34px); font-weight: 600; }
-  #overlay p { margin: 0; max-width: 46ch; color: #999; }
-  button { font: inherit; font-weight: 600; color: #000; background: #ddd; border: 0; border-radius: 6px; padding: 10px 18px; cursor: pointer; }
-  button:disabled { opacity: .4; cursor: default; }
 </style>
 </head>
 <body>
 <canvas id="canvas" width="640" height="480" tabindex="0"></canvas>
-<div id="overlay">
-  <h1>Hoyle Casino</h1>
-  <p>The game runs from the original data files. Use only a copy you legally own.</p>
-  <button id="start" disabled>Loading...</button>
-</div>
 
 <script>
-  // Emscripten reads this object before it starts the module.
   var Module = {
     canvas: document.getElementById('canvas'),
     print: function (text) { console.log(text); },
     printErr: function (text) { console.log(text); },
     onRuntimeInitialized: function () {
       window.__hoyleReady = true;
-      var button = document.getElementById('start');
-      button.disabled = false;
-      button.textContent = 'Start';
-      button.onclick = function () {
-        document.getElementById('overlay').style.display = 'none';
-        Module.canvas.focus();
+      Module.canvas.focus();
+      if (Module._wasm_start) Module._wasm_start();
+      Module.canvas.addEventListener('pointerdown', function () {
         if (Module._wasm_start) Module._wasm_start();
-      };
+      }, { once: true });
     }
   };
 </script>
-<script src="web.js?v=6"></script>
-<script src="hoyle.js?v=6"></script>
+<script src="web.js?v=7"></script>
+<script src="hoyle.js?v=7"></script>
 </body>
 </html>

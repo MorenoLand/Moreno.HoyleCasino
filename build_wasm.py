@@ -98,11 +98,13 @@ def main():
            "-sSTACK_SIZE=%d" % STACK_SIZE,
            "-sALLOW_MEMORY_GROWTH=1",
            "-sASYNCIFY=1",
+           "-sASYNCIFY_STACK_SIZE=1048576",
            "-sASSERTIONS=1",
            "-sSTACK_OVERFLOW_CHECK=0",
            "-sNO_EXIT_RUNTIME=1",
            "-sFORCE_FILESYSTEM=1",
            "-sMIN_FIREFOX_VERSION=115",
+           "-sUSE_FREETYPE=1",
            "-sENVIRONMENT=" + environment,
            "-sEXPORTED_FUNCTIONS=[" + exports + "]",
            "--preload-file=" + str(ROOT / "src" / "image.bin") + "@/image.bin"]
@@ -120,7 +122,7 @@ def main():
     if r.returncode:
         return r.returncode
     if args.web:
-        for name in ("index.html", "web.js"):
+        for name in ("index.html", "web.js", "hoylecasino.ico"):
             shutil.copy2(ROOT / "web" / name, out / name)
         final = ROOT / "bin" / "wasm"
         final.mkdir(parents=True, exist_ok=True)

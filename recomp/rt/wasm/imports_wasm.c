@@ -208,6 +208,10 @@ static const char *wasm_path(const char *p)
 
 /* ---------- KERNEL32 ---------- */
 static int g_last_error;
+static FILE *g_files[128];
+static int g_nfiles;
+static void file_add(FILE *f) { if (!f) return; for (int i = 0; i < g_nfiles; ++i) if (g_files[i] == f) return; if (g_nfiles < 128) g_files[g_nfiles++] = f; }
+static int file_take(FILE *f) { for (int i = 0; i < g_nfiles; ++i) if (g_files[i] == f) { g_files[i] = g_files[--g_nfiles]; return 1; } return 0; }
 
 static u64 kernel32(u32 *a)
 {
@@ -956,14 +960,25 @@ static u64 msvcr80(u32 *a)
     if (S("fopen")) {
         const char *gp = (const char *)(uintptr_t)a[0];
         const char *path = wasm_path(gp);
+        errno = 0;
         FILE *f = fopen(path, (const char *)(uintptr_t)a[1]);
         char alt[1024];
         if (!f && path_fallback(gp, alt, sizeof alt)) f = fopen(alt, (const char *)(uintptr_t)a[1]);
+        if (f) { errno = 0; file_add(f); }
         return (u32)(uintptr_t)f;
     }
-    if (S("fclose")) return (u32)fclose((FILE *)(uintptr_t)a[0]);
-    if (S("fread")) return (u32)fread((void *)(uintptr_t)a[0], a[1], a[2], (FILE *)(uintptr_t)a[3]);    if (S("fwrite")) return (u32)fwrite((const void *)(uintptr_t)a[0], a[1], a[2], (FILE *)(uintptr_t)a[3]);
-    if (S("fseek")) return (u32)fseek((FILE *)(uintptr_t)a[0], (long)(int)a[1], (int)a[2]);
+    if (S("fclose")) { FILE *f = (FILE *)(uintptr_t)a[0]; if (!f) { errno = 22; return 0xFFFFFFFFu; } if (!file_take(f)) { errno = 9; return 0xFFFFFFFFu; } int r = fclose(f); if (!r) errno = 0; return (u32)r; }
+    if (S("fread")) {
+        FILE *f = (FILE *)(uintptr_t)a[3]; if (!f) { errno = 22; return 0; } size_t r = fread((void *)(uintptr_t)a[0], a[1], a[2], f);
+        if (r || !ferror(f)) errno = 0;
+        return (u32)r;
+    }
+    if (S("fwrite")) return (u32)fwrite((const void *)(uintptr_t)a[0], a[1], a[2], (FILE *)(uintptr_t)a[3]);
+    if (S("fseek")) {
+        FILE *f = (FILE *)(uintptr_t)a[0]; if (!f) { errno = 22; return 0xFFFFFFFFu; } int r = fseek(f, (long)(int)a[1], (int)a[2]);
+        if (!r) errno = 0;
+        return (u32)r;
+    }
     if (S("fgetpos")) {
         long p = ftell((FILE *)(uintptr_t)a[0]);
         if (a[1]) { W32(a[1], (u32)p); W32(a[1] + 4, (u32)((u64)p >> 32)); }
@@ -973,7 +988,7 @@ static u64 msvcr80(u32 *a)
         u64 p = (u64)R32(a[1]) | ((u64)R32(a[1] + 4) << 32);
         return (u32)fseek((FILE *)(uintptr_t)a[0], (long)p, SEEK_SET);
     }
-    if (S("ftell")) return (u32)ftell((FILE *)(uintptr_t)a[0]);
+    if (S("ftell")) { FILE *f = (FILE *)(uintptr_t)a[0]; if (!f) { errno = 22; return 0xFFFFFFFFu; } long r = ftell(f); if (r >= 0) errno = 0; return (u32)r; }
     if (S("feof")) return (u32)feof((FILE *)(uintptr_t)a[0]);
     if (S("fgetc")) return (u32)fgetc((FILE *)(uintptr_t)a[0]);
     if (S("fputc") || S("putc")) return (u32)fputc((int)a[0], (FILE *)(uintptr_t)a[1]);

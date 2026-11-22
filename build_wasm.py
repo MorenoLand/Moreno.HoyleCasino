@@ -10,6 +10,7 @@ import os
 import shutil
 import subprocess
 import sys
+import time
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
@@ -64,7 +65,6 @@ def main():
     ap.add_argument("--preload-data", action="store_true", help="also preload bin/data as /data (large)")
     ap.add_argument("--data-dir", default="", help="preload this directory as /data instead of bin/data")
     ap.add_argument("--shell", default="")
-    ap.add_argument("--name", default="hoyle")
     ap.add_argument("--no-stack-check", action="store_true")
     args = ap.parse_args()
     if not EMCC.exists():
@@ -112,7 +112,7 @@ def main():
         cmd.append("--preload-file=" + str(ROOT / "bin" / "data") + "@/data")
     if args.no_stack_check:
         cmd.append("-sSTACK_OVERFLOW_CHECK=0")
-    cmd += ["-o", str(out / (args.name + ".js"))]
+    cmd += ["-o", str(out / "hoyle.js")]
     if args.shell:
         cmd += ["--shell-file", args.shell]
     print("linking %s" % (out / "hoyle.js"))
@@ -126,10 +126,14 @@ def main():
         final.mkdir(parents=True, exist_ok=True)
         for f in out.iterdir():
             if f.is_file():
-                try:
-                    os.replace(str(f), str(final / f.name))
-                except OSError as e:
-                    print("publish skip %s: %s" % (f.name, e))
+                for attempt in range(20):
+                    try:
+                        os.replace(str(f), str(final / f.name))
+                        break
+                    except OSError as e:
+                        if attempt == 19:
+                            print("publish failed %s: %s" % (f.name, e))
+                        time.sleep(0.1)
     print("built %s" % ((final if args.web else out) / "hoyle.js"))
     return 0
 

@@ -110,6 +110,8 @@ def main():
            "--preload-file=" + str(ROOT / "src" / "image.bin") + "@/image.bin"]
     if args.data_dir:
         cmd.append("--preload-file=" + str((ROOT / args.data_dir).resolve()) + "@/data")
+        if not (ROOT / args.data_dir / "Characters").is_dir():
+            print("warning: %s has no Characters folder; character voices and lip-sync will fail" % (ROOT / args.data_dir))
     elif args.preload_data:
         cmd.append("--preload-file=" + str(ROOT / "bin" / "data") + "@/data")
     if args.no_stack_check:
@@ -136,6 +138,14 @@ def main():
                         if attempt == 19:
                             print("publish failed %s: %s" % (f.name, e))
                         time.sleep(0.1)
+        data = final / "hoyle.data"
+        if data.exists():
+            blob = data.read_bytes()
+            parts = 4
+            step = (len(blob) + parts - 1) // parts
+            for i in range(parts):
+                (final / ("hoyle.data.part%d" % i)).write_bytes(blob[i * step:(i + 1) * step])
+            data.unlink()
     print("built %s" % ((final if args.web else out) / "hoyle.js"))
     return 0
 

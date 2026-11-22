@@ -250,7 +250,7 @@ const ApiStatic api_static[] = {
     {0x006b2240, "MSVCR80", "strlen", 4, 1},
     {0x006b2244, "MSVCR80", "ceil", 4, 1},
     {0x006b2248, "MSVCR80", "qsort", 4, 1},
-    {0x006b224c, "MSVCR80", "__RTDynamicCast", 4, 1},
+    {0x006b224c, "MSVCR80", "__RTDynamicCast", 5, 1},
     {0x006b2250, "MSVCR80", "sqrt", 4, 1},
     {0x006b2254, "MSVCR80", "memset", 4, 1},
     {0x006b2258, "MSVCR80", "fclose", 4, 1},

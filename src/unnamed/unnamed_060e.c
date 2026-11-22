@@ -1,5 +1,9 @@
 #include "protos.h"
+#if defined(__EMSCRIPTEN__)
+#include "wasm/windows_wasm.h"
+#else
 #include <windows.h>
+#endif
 
 void f_0060e050(void) /* sub_60E050 */
 {
